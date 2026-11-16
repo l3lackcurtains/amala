@@ -70,6 +70,13 @@
     "site": "https://fitmomtrader.com/",
     "siteLabel": "fitmomtrader.com"
   },
+  "profile": {
+    "instruments": ["NQ", "MNQ", "ES", "Gold (MGC)"],
+    "style": "mechanical session-range system — NY Initial Balance (9:30–10:30 ET) failed auctions + trend continuations, 15-min ORB, VWAP/Volume Profile",
+    "sessions": ["NY session 9:30–10:30 ET (Initial Balance)", "Asia/Tokyo 18:00–20:00 ET (gold side book)"],
+    "firms": ["micro-cap prop evaluations (MNQ)"],
+    "niche": "mechanical low-screen-time range trading with fixed 00 risk"
+  },
   "sources": {
     "category": "https://fitmomtrader.com/",
     "notes": "Crawled YouTube RSS feed (15 latest videos), all 15 watch pages (shortDescription, lengths, chapters), the about page (45.4K subs, channel description, external links), and 10 additional key videos found via search (strategy masterclasses, position sizing, prop-firm reviews). Site: fitmomtrader.com is a two-page funnel (waitlist-vsl + free-course); /blog, /about, /mentorship are 404 — no articles exist. Bonus sources: The Day Trading Show podcast episode (Oct 24, 2026, partial transcript) and a third-party pre-registered mechanization of her core strategy video with timestamps. Channel has 739 videos total; census covers the RSS window plus key evergreen strategy videos. Her $165K/2026, $62K month, $28K week and ~70% win-rate figures are her own stated claims, not independently verified. Researched 2026-11-16."

@@ -1,3 +1,14 @@
+---
+title: Psychology & Mindset
+trader: fitmomtrader
+topics:
+  - risk
+  - entries
+  - exits
+  - sizing
+  - sessions
+---
+
 ## Her story and identity
 
 - Krista (Krista Fudge), mom of three young kids. Podcast (The Day Trading Show, Oct 24, 2026):

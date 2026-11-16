@@ -1,3 +1,14 @@
+---
+title: Strategy Playbook
+trader: fitmomtrader
+topics:
+  - risk
+  - entries
+  - exits
+  - sizing
+  - sessions
+---
+
 ## What she trades
 
 - **NQ (Nasdaq futures) is her market.** Podcast (The Day Trading Show, Oct 24, 2026): asked "ES or NQ?" — "NQ. All NQ, no ES? Uh, maybe 5% of the time I'll take the trade on ES."

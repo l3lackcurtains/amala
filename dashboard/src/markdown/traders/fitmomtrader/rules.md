@@ -1,3 +1,14 @@
+---
+title: Trading Rules
+trader: fitmomtrader
+topics:
+  - risk
+  - entries
+  - exits
+  - sizing
+  - sessions
+---
+
 ## Risk & position sizing
 
 1. **Fixed-dollar risk per trade: $200.** Stated in "my trading strategy is boring, but it made me $100,000 in 2 months" (LfSeAMzKjwM, 2026-10-26), via the Active Edge PREREG mechanization: "Risk $200 per trade, at most 2 losses a day, sized from the stop with the position tool [26:00]–[27:32] (50K prop account, $2K drawdown example)."

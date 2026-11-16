@@ -1,0 +1,69 @@
+{
+  "slug": "danielholmes",
+  "name": "Daniel Holmes",
+  "show": "Daniel Holmes Trading",
+  "streamSlot": "Live trading every day",
+  "accent": "#22d3ee",
+  "accentSoft": "rgba(34, 211, 238, 0.12)",
+  "tagline": "Break-and-retest breakout scalper on Gold & NQ — streams live every day and founded his own prop firm, Oz Funded.",
+  "summary": "Daniel Holmes is a full-time day trader of Gold (XAUUSD) and NQ futures who streams his live sessions every day. His publicly documented method is breakout / break-and-retest scalping off support and resistance zones. He founded the prop firm Oz Funded and offers a 1-1 mentorship with a full refund promise.",
+  "oneLiner": "Break-and-retest breakout scalps on Gold & NQ, streamed live every day — base hits with support/resistance, no indicators.",
+  "keyQuote": "Watch the video below to see my trading playbook that makes me $500K every year, and how you can do the same. If you're not profitable by the end of the program, you get a full refund.",
+  "keyQuoteSource": "danielholmestrades.com",
+  "stats": [
+    { "label": "Videos analyzed", "value": "15" },
+    { "label": "Instruments", "value": "Gold + NQ" },
+    { "label": "Prop firm", "value": "Oz Funded" },
+    { "label": "Channel since", "value": "2023" }
+  ],
+  "highlights": [
+    "Break-and-retest breakout scalping off support and resistance zones — no indicator system documented; price action only.",
+    "Trades Gold (XAUUSD) as primary market, NQ second — most live streams are Gold sessions.",
+    "Trades live every day with real sessions streamed — transparency as a discipline mechanism.",
+    "Willing to trade news events live (e.g. a full NFP session stream).",
+    "Founded Oz Funded: his firm runs 6% target / no daily loss limit / 4% max trailing eval rules, 90% split, news allowed.",
+    "Mentorship with a full refund if the student is not profitable by the end — skin in the game."
+  ],
+  "sections": [
+    { "id": "strategy", "title": "Strategy Playbook", "file": "strategy", "lead": "Break-and-retest breakouts on Gold & NQ — what is documented publicly." },
+    { "id": "rules", "title": "Rules", "file": "rules", "lead": "His prop firm's rule framework (Oz Funded) + documented operating rules." },
+    { "id": "psychology", "title": "Psychology & Mindset", "file": "psychology", "lead": "Live transparency, blunt persona, lifestyle framing." }
+  ],
+  "videos": [
+    { "title": "The Exact Strategy I Use To Travel The World Trading", "url": "https://www.youtube.com/watch?v=19PPkV1rqxU", "date": "2026-09-28", "type": "video", "takeaway": "Flagship strategy video (22K views). YouTube keywords document the method: breakout strategy, support and resistance, break and retest, scalping, technical analysis." },
+    { "title": "Breakout strategy #trading", "url": "https://www.youtube.com/watch?v=z_RtBLTva4Y", "date": "2026-10-14", "type": "short", "takeaway": "Most-viewed content (34K views) — his breakout setup demonstration." },
+    { "title": "50k to 100k #trading", "url": "https://www.youtube.com/watch?v=93LiLHDCWu4", "date": "2026-09-28", "type": "short", "takeaway": "Account growth content — 34.6K views." },
+    { "title": "I Started a Prop Firm | Oz Funded", "url": "https://www.youtube.com/watch?v=q5ivu8KRBwQ", "date": "2026-10-24", "type": "video", "takeaway": "Announces Oz Funded with $2M in funded giveaways — he is the founder." },
+    { "title": "Trading Live Gold NQ", "url": "https://www.youtube.com/watch?v=KME1YkOFEY8", "date": "2026-11-16", "type": "live", "takeaway": "Latest live Gold/NQ session (14.2K views) with Oz Funded promo." },
+    { "title": "Trading Live Gold NQ", "url": "https://www.youtube.com/watch?v=8xKHvr0PKtM", "date": "2026-11-11", "type": "live", "takeaway": "Live Gold/NQ session (15.2K views)." },
+    { "title": "Trading Live Gold NQ", "url": "https://www.youtube.com/watch?v=jtwtK6WF40A", "date": "2026-11-03", "type": "live", "takeaway": "Live Gold/NQ session with pre-launch giveaway." },
+    { "title": "Trading Live Gold NQ", "url": "https://www.youtube.com/watch?v=RXBbmM58B5U", "date": "2026-10-28", "type": "live", "takeaway": "Live Gold/NQ session." },
+    { "title": "🔴 TRADING LIVE - Gold", "url": "https://www.youtube.com/watch?v=TLIrQeID4Nk", "date": "2026-10-21", "type": "live", "takeaway": "Live Gold session (9.5K views)." },
+    { "title": "🔴 TRADING LIVE - NFP", "url": "https://www.youtube.com/watch?v=Ldgk3XpnZVo", "date": "2026-10-03", "type": "live", "takeaway": "Trades the NFP news release live — documented willingness to trade news." },
+    { "title": "🔴 TRADING LIVE - Gold/NQ", "url": "https://www.youtube.com/watch?v=bVlIdEH3mGs", "date": "2026-09-29", "type": "live", "takeaway": "Live session trading both Gold and NQ." },
+    { "title": "Daniel Holmes Live Stream", "url": "https://www.youtube.com/watch?v=muIH2shclYE", "date": "2026-10-28", "type": "live", "takeaway": "Live stream (no views recorded — re-upload)." },
+    { "title": "LIVE!!! @Oz_Funded", "url": "https://www.youtube.com/shorts/kmZs1wpCHJs", "date": "2026-11-05", "type": "short", "takeaway": "Oz Funded shoutout short." },
+    { "title": "Villain arc #ozfunded", "url": "https://www.youtube.com/shorts/bNPuIhBbdRc", "date": "2026-10-28", "type": "short", "takeaway": "Persona/content-brand short." },
+    { "title": "Day in the life / fulltime trader #trading", "url": "https://www.youtube.com/shorts/mocJBdfPoPo", "date": "2026-10-19", "type": "short", "takeaway": "Lifestyle short — 21.7K views." }
+  ],
+  "articles": [
+    { "title": "Daniel Holmes Trading — landing page", "url": "https://danielholmestrades.com/", "date": "2026-11-16", "takeaway": "$500K/yr playbook claim, mentorship with full-refund promise, 'for serious traders only' positioning, income disclaimer." },
+    { "title": "Oz Funded — the prop firm he founded", "url": "https://www.ozfunded.com/", "date": "2026-11-16", "takeaway": "Full rule framework: 6% eval target, no daily loss limit, 4% max trailing, $1 pay-after-pass funded model (4% target / 8% max), 90% split, 48h payouts, news allowed, copy 3 accounts, Tradelocker." }
+  ],
+  "links": {
+    "youtube": "https://www.youtube.com/@DanielHolmesTrades",
+    "site": "https://danielholmestrades.com/",
+    "siteLabel": "danielholmestrades.com"
+  },
+  "profile": {
+    "instruments": ["Gold (XAUUSD)", "NQ"],
+    "style": "break-and-retest breakout scalping off support/resistance (price action)",
+    "sessions": ["Live trading every day"],
+    "firms": ["Oz Funded (founder)"],
+    "niche": "breakout scalping Gold & NQ, live-streamed daily"
+  },
+  "sources": {
+    "category": "https://www.youtube.com/@DanielHolmesTrades",
+    "notes": "15/15 RSS videos captured; 3 watch pages fetched for shortDescription/keywords (strategy keywords documented on the flagship video); ozfunded.com rules captured; danielholmestrades.com is a single landing page (no blog). Researched 2026-11-16. Live streams pre-dating the latest 15 RSS entries were not enumerable."
+  }
+}
