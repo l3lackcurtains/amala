@@ -16,31 +16,6 @@ From `my-tradingview-setup-emas-boxes-and-tools-explained`:
 
 ## 2. The EMA System (14 / 50 / 200)
 
-<figure class="chart">
-<svg viewBox="0 0 640 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="EMA retrace entry diagram">
-  <g stroke="#1e3126" stroke-width="1">
-    <line x1="40" y1="70" x2="600" y2="70"/><line x1="40" y1="130" x2="600" y2="130"/>
-    <line x1="40" y1="190" x2="600" y2="190"/><line x1="40" y1="250" x2="600" y2="250"/>
-    <line x1="40" y1="55" x2="40" y2="265" stroke="#2a4034"/>
-  </g>
-  <path d="M50,80 C140,110 220,140 300,150 C380,160 460,190 560,215" fill="none" stroke="#8aa392" stroke-width="1.5" stroke-dasharray="5 4"/>
-  <path d="M50,70 C140,100 220,128 300,140 C380,150 460,185 560,210" fill="none" stroke="#ffb86b" stroke-width="1.5"/>
-  <path d="M50,60 C120,92 180,118 230,118 C280,120 320,160 380,195 C440,225 500,245 560,255" fill="none" stroke="#60a5fa" stroke-width="1.5"/>
-  <path d="M50,52 L110,95 L140,80 L175,112 L200,90 L225,116 L255,134 L295,172 L335,207 L380,234 L425,254" fill="none" stroke="#e7eef5" stroke-width="2"/>
-  <line x1="200" y1="90" x2="200" y2="74" stroke="#e7eef5" stroke-width="2"/>
-  <circle cx="230" cy="120" r="4" fill="#46ef8e"/>
-  <text x="242" y="116" font-family="ui-monospace,Consolas,monospace" font-size="11" fill="#46ef8e">ENTRY — rejection at the 14 EMA</text>
-  <line x1="190" y1="72" x2="330" y2="72" stroke="#ff5f56" stroke-width="1" stroke-dasharray="4 3"/>
-  <text x="196" y="66" font-family="ui-monospace,Consolas,monospace" font-size="11" fill="#ff5f56">STOP — above retrace high (10–20 pts)</text>
-  <line x1="380" y1="225" x2="500" y2="225" stroke="#46ef8e" stroke-width="1" stroke-dasharray="4 3"/>
-  <text x="390" y="219" font-family="ui-monospace,Consolas,monospace" font-size="11" fill="#46ef8e">TARGET — prior extreme / 50+ pts</text>
-  <text x="470" y="78" font-family="ui-monospace,Consolas,monospace" font-size="11" fill="#60a5fa">14 EMA</text>
-  <text x="486" y="103" font-family="ui-monospace,Consolas,monospace" font-size="11" fill="#ffb86b">50 EMA</text>
-  <text x="500" y="128" font-family="ui-monospace,Consolas,monospace" font-size="11" fill="#8aa392">200 EMA</text>
-</svg>
-<figcaption>D-Money's repeating pattern: drop → retrace to the 14 EMA → rejection → continuation.</figcaption>
-</figure>
-
 From `everyone-says-emas-dont-work`, `how-i-use-the-14-50-and-200-ema-to-trade-nq-futures`, `how-i-find-a-entries-using-the-emas-nq-futures`, `how-to-identify-a-trend-day-before-it-happens`:
 
 - **EMAs are trend indicators, not entry signals.** "EMAs are not magic lines you trade blindly—they are pure trend indicators." They are *lagging* indicators used for **confluence** with price action, momentum, and higher-time-frame analysis.
@@ -54,25 +29,6 @@ From `everyone-says-emas-dont-work`, `how-i-use-the-14-50-and-200-ema-to-trade-n
 - **EMAs = stop-loss anchor:** "You want to enter a trade as close to the EMA as possible, allowing you to use the EMA as your stop-loss placement." Typical EMA-retracement stop is **10–20 points**.
 
 ## 3. Trend vs. Range/Chop Identification
-
-<figure class="chart">
-<svg viewBox="0 0 640 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Inside range chop vs breakout diagram">
-  <text x="60" y="38" font-family="ui-monospace,Consolas,monospace" font-size="12" fill="#86a08e">INSIDE YESTERDAY'S RANGE = CHOP</text>
-  <line x1="40" y1="90" x2="300" y2="90" stroke="#86a08e" stroke-width="1" stroke-dasharray="5 4"/>
-  <text x="46" y="84" font-family="ui-monospace,Consolas,monospace" font-size="10.5" fill="#86a08e">YH</text>
-  <line x1="40" y1="240" x2="300" y2="240" stroke="#86a08e" stroke-width="1" stroke-dasharray="5 4"/>
-  <text x="46" y="256" font-family="ui-monospace,Consolas,monospace" font-size="10.5" fill="#86a08e">YL</text>
-  <path d="M55,160 L80,120 L105,200 L130,112 L155,214 L180,124 L205,206 L230,116 L255,210 L282,150" fill="none" stroke="#e7eef5" stroke-width="2"/>
-  <text x="60" y="284" font-family="ui-monospace,Consolas,monospace" font-size="11" fill="#ffb86b">10–20 pt base hits only</text>
-  <text x="380" y="38" font-family="ui-monospace,Consolas,monospace" font-size="12" fill="#46ef8e">BREAK ABOVE = EXPANSION DAY</text>
-  <line x1="340" y1="90" x2="600" y2="90" stroke="#86a08e" stroke-width="1" stroke-dasharray="5 4"/>
-  <text x="346" y="84" font-family="ui-monospace,Consolas,monospace" font-size="10.5" fill="#86a08e">YH</text>
-  <path d="M355,200 L385,150 L410,172 L438,86 L470,58 L500,82 L532,48 L562,66 L594,38" fill="none" stroke="#e7eef5" stroke-width="2"/>
-  <circle cx="438" cy="86" r="4" fill="#46ef8e"/>
-  <text x="392" y="270" font-family="ui-monospace,Consolas,monospace" font-size="11" fill="#46ef8e">higher highs — ride the trend</text>
-</svg>
-<figcaption>Same level, two totally different days: respect the range, attack the break.</figcaption>
-</figure>
 
 ### The inside-range rule (his #1 pre-open tell)
 

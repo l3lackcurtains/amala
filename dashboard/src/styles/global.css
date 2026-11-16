@@ -450,19 +450,6 @@ a.meta-text:hover { color: var(--accent); }
 .pl-other details[open] summary::before { content: '▾ '; }
 .pl-other details summary:hover { color: var(--text); background: var(--card-2); }
 
-/* ================= teaching diagrams (inline svg) ================= */
-.md figure.chart {
-  margin: 18px 0; background: var(--bg-2);
-  border: 1px solid var(--border); border-radius: 6px;
-  padding: 14px 16px 10px;
-}
-.md figure.chart svg { display: block; width: 100%; height: auto; max-width: 660px; margin: 0 auto; }
-.md figure.chart figcaption {
-  margin-top: 10px; text-align: center;
-  font-family: var(--mono); font-size: 11.5px; color: var(--muted);
-}
-.md figure.chart figcaption::before { content: '// '; color: var(--accent); }
-
 /* ================= tables (articles) ================= */
 .table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 6px; background: var(--card); }
 table.data { width: 100%; border-collapse: collapse; font-size: 13px; }

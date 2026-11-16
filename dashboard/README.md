@@ -1,6 +1,6 @@
-# Gurans — Trader Strategy Library
+# Amala — Trader Strategy Library
 
-**Gurans** (गुराँस — the rhododendron, Nepal's national flower) — a data-driven study
+**Amala** (अमला — the amla fruit; "pure/clean" in Nepali) — a data-driven study
 dashboard for prop-firm traders (Denny, D-Money, Lucas, Zarb) built from research into
 their public blogs and YouTube channels — 100+ articles and 45+ videos analyzed.
 
