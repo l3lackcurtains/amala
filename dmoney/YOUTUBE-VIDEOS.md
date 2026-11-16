@@ -157,3 +157,20 @@ D-Money (Damareous Young), BDH Trading floor trader, streams 9am–12pm plus Pow
 - Power Hour 3–4 (setup 2–3): let the 1-hour candle open and join the momentum; 50 EMA on the 1H as the decision level; 3:50 MOC momentum candle.
 - Low-volume days: compare candle size to last week, size down, expect a one-direction grind.
 - Eval discipline on news days: goal = pass evals, not dollar targets; LOCK passed accounts.
+
+## Key older / popular videos (added 2026-11-16)
+
+Found by searching the @BDHTrading channel (popular/latest tabs, /streams tab, and YouTube site-wide search) for videos with "DMONEY"/"D Money" in the title. All are live sessions; watch-page descriptions are the channel's standard boilerplate (course promo, prop-firm deals, giveaway links) with no per-video strategy notes — the titles themselves document the topics ("POWER HOUR", "MARKET OPEN" = his two signature windows). Channel description confirms the handle: "Damareous Young A.K.A. DMoney."
+
+- `2Sj5POhmjeA` — **DMONEY SHOW! DayTrading LIVE! POWER HOUR!!!!** · 2026-07-06 · 19,945 views
+- `Fw7oJ3L4nfo` — **DMONEY SHOW! DayTrading LIVE! POWER HOUR!!!!** · 2026-06-11 · 13,343 views
+- `_ep4uxZnEpw` — **DayTrading LIVE! DMONEY CASHLEY YURI TRIO STREAM!** · 2026-10-20 · 68,994 views
+- `7_Uv5leh6pU` — **DAY TRADING LIVE! DMONEY & DENNY DOLLAS IN THE BDH!!** · 2026-09-08 · 51,783 views
+- `ay1hLfeLur4` — **Day Trading LIVE! BDH Network! Patrick Wieland and D Money!** · 2026-03-30 · 34,536 views
+- `3l4LKqhaczE` — **Day Trading LIVE! BDH Network! Patrick Wieland and D Money!** · 2026-03-31 · 31,431 views
+- `he6fPwAQFNs` — **Day Trading LIVE! BDH Network! Patrick Wieland and D Money!** · 2026-04-02 · 27,537 views
+- `fh5OTinVwD4` — **Day Trading LIVE! BDH Network! Patrick Wieland and DMoney!** · 2026-04-16 · 27,443 views
+- `6KkWt9rEbVE` — **DMONEY SHOW! DayTrading LIVE! MARKET OPEN!!!!** · 2026-08-11 · 24,705 views
+- `CNYkzxyGtBo` — **DMONEY SHOW! DayTrading LIVE! MARKET OPEN!!!!** · 2026-07-24 · 23,516 views
+- `iyKdsnfviak` — **DMONEY SHOW! DayTrading LIVE! MARKET OPEN!!!!** · 2026-07-09 · 23,389 views
+- `y74P7P87IiQ` — **DMONEY SHOW! DayTrading LIVE! MARKET OPEN!!!!** · 2026-07-10 · 23,049 views

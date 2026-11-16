@@ -112,3 +112,20 @@ Denny Jones ("Denny Dollas"), BDH Trading floor trader, streams 6–9am. Categor
 - Always a stop loss — the non-negotiable after losing live accounts.
 - "Two in the chamber" and "three bar reversal" appear as named setups he trades (also used by D-Money).
 - News events (elections, CPI): acknowledge you shouldn't trade them; if you do, the bear flag on new numbers is the vehicle.
+
+## Key older / popular videos (added 2026-11-16)
+
+Found by searching the @BDHTrading channel (popular/latest tabs, /streams tab, and YouTube site-wide search) for videos with "DENNY"/"Denny Dollas"/"Denny Diamonds" in the title. All are live sessions; watch-page descriptions are the channel's standard boilerplate (crew list, prop-firm deals, giveaway links) with no per-video strategy notes — the titles themselves document the topics. Channel description confirms the handle: "Denny Jones A.K.A. Denny Dollas."
+
+- `7_Uv5leh6pU` — **DAY TRADING LIVE! DMONEY & DENNY DOLLAS IN THE BDH!!** · 2026-09-08 · 51,783 views
+- `kbOjhBzCv-U` — **FRESH CASH FRIDAY WITH DMONEY AND DENNY DOLLAS! DayTrading LIVE!** · 2026-07-24 · 13,084 views
+- `5qj-5A8Zi6o` — **DMONEY/DENNY DOLLAS SHOW! DayTrading LIVE!** · 2026-07-09 · 12,084 views
+- `tkouVcDM-Vo` — **DMONEY/DENNY DOLLAS SHOW! DayTrading LIVE!** · 2026-07-10 · 10,304 views
+- `w3pM_wt_U_Q` — **LIVE NQ Futures Day Trading at the BDH | Denny Diamonds** · 2026-10-01 · 5,820 views
+- `J5f0-63vce4` — **LIVE NQ Futures Day Trading at the BDH | Denny Diamonds** · 2026-10-09 · 5,340 views
+- `h4AG3pqeH4c` — **LIVE NQ Futures Day Trading at the BDH | DENNY DIAMONDZ** · 2026-10-19 · 4,127 views
+- `zjcfq1EMFC8` — **DENNY LIVE! Futures Day Trading at the BDH** · 2026-09-28 · 3,902 views
+- `v_JRD7UUYXw` — **DENNY LIVE! Futures Day Trading at the BDH** · 2026-09-29 · 3,749 views
+- `ftl_GVyM3qM` — **LIVE NQ Futures Day Trading at the BDH | Denny Diamonds** · 2026-10-13 · 3,512 views
+- `fSnYsBxt-ik` — **LIVE NQ Futures Day Trading at the BDH | Denny Diamondzzz** · 2026-10-14 · 2,947 views
+- `qgRNJn10Uso` — **LIVE NQ Futures Day Trading at the BDH | Denny Diamondz** · 2026-10-15 · 2,430 views

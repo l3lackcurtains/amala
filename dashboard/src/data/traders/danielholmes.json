@@ -6,15 +6,27 @@
   "accent": "#22d3ee",
   "accentSoft": "rgba(34, 211, 238, 0.12)",
   "tagline": "Break-and-retest breakout scalper on Gold & NQ — streams live every day and founded his own prop firm, Oz Funded.",
-  "summary": "Daniel Holmes is a full-time day trader of Gold (XAUUSD) and NQ futures who streams his live sessions every day. His publicly documented method is breakout / break-and-retest scalping off support and resistance zones. He founded the prop firm Oz Funded and offers a 1-1 mentorship with a full refund promise.",
-  "oneLiner": "Break-and-retest breakout scalps on Gold & NQ, streamed live every day — base hits with support/resistance, no indicators.",
+  "summary": "Daniel Holmes is a full-time day trader of Gold (XAUUSD) and NQ futures who streams live every day. His documented method: 15-minute London breakout with retest, wick-flip / engulfing confirmation, pending-stop entries and a consistent 1:1 R:R — clean price action, no indicators. He founded the prop firm Oz Funded and his playbook is publicly taught in step-by-step videos (105K+ views).",
+  "oneLiner": "15m London gold breakout → retest → engulfing/closure confirmation → pending stop at the engulfing extreme → 1:1 target, live every day.",
   "keyQuote": "Watch the video below to see my trading playbook that makes me $500K every year, and how you can do the same. If you're not profitable by the end of the program, you get a full refund.",
   "keyQuoteSource": "danielholmestrades.com",
   "stats": [
-    { "label": "Videos analyzed", "value": "15" },
-    { "label": "Instruments", "value": "Gold + NQ" },
-    { "label": "Prop firm", "value": "Oz Funded" },
-    { "label": "Channel since", "value": "2023" }
+    {
+      "label": "Videos analyzed",
+      "value": "15"
+    },
+    {
+      "label": "Instruments",
+      "value": "Gold + NQ"
+    },
+    {
+      "label": "Prop firm",
+      "value": "Oz Funded"
+    },
+    {
+      "label": "Channel since",
+      "value": "2023"
+    }
   ],
   "highlights": [
     "Break-and-retest breakout scalping off support and resistance zones — no indicator system documented; price action only.",
@@ -25,30 +37,255 @@
     "Mentorship with a full refund if the student is not profitable by the end — skin in the game."
   ],
   "sections": [
-    { "id": "strategy", "title": "Strategy Playbook", "file": "strategy", "lead": "Break-and-retest breakouts on Gold & NQ — what is documented publicly." },
-    { "id": "rules", "title": "Rules", "file": "rules", "lead": "His prop firm's rule framework (Oz Funded) + documented operating rules." },
-    { "id": "psychology", "title": "Psychology & Mindset", "file": "psychology", "lead": "Live transparency, blunt persona, lifestyle framing." }
+    {
+      "id": "strategy",
+      "title": "Strategy Playbook",
+      "file": "strategy",
+      "lead": "Break-and-retest breakouts on Gold & NQ — what is documented publicly."
+    },
+    {
+      "id": "rules",
+      "title": "Rules",
+      "file": "rules",
+      "lead": "His prop firm's rule framework (Oz Funded) + documented operating rules."
+    },
+    {
+      "id": "psychology",
+      "title": "Psychology & Mindset",
+      "file": "psychology",
+      "lead": "Live transparency, blunt persona, lifestyle framing."
+    }
   ],
   "videos": [
-    { "title": "The Exact Strategy I Use To Travel The World Trading", "url": "https://www.youtube.com/watch?v=19PPkV1rqxU", "date": "2026-09-28", "type": "video", "takeaway": "Flagship strategy video (22K views). YouTube keywords document the method: breakout strategy, support and resistance, break and retest, scalping, technical analysis." },
-    { "title": "Breakout strategy #trading", "url": "https://www.youtube.com/watch?v=z_RtBLTva4Y", "date": "2026-10-14", "type": "short", "takeaway": "Most-viewed content (34K views) — his breakout setup demonstration." },
-    { "title": "50k to 100k #trading", "url": "https://www.youtube.com/watch?v=93LiLHDCWu4", "date": "2026-09-28", "type": "short", "takeaway": "Account growth content — 34.6K views." },
-    { "title": "I Started a Prop Firm | Oz Funded", "url": "https://www.youtube.com/watch?v=q5ivu8KRBwQ", "date": "2026-10-24", "type": "video", "takeaway": "Announces Oz Funded with $2M in funded giveaways — he is the founder." },
-    { "title": "Trading Live Gold NQ", "url": "https://www.youtube.com/watch?v=KME1YkOFEY8", "date": "2026-11-16", "type": "live", "takeaway": "Latest live Gold/NQ session (14.2K views) with Oz Funded promo." },
-    { "title": "Trading Live Gold NQ", "url": "https://www.youtube.com/watch?v=8xKHvr0PKtM", "date": "2026-11-11", "type": "live", "takeaway": "Live Gold/NQ session (15.2K views)." },
-    { "title": "Trading Live Gold NQ", "url": "https://www.youtube.com/watch?v=jtwtK6WF40A", "date": "2026-11-03", "type": "live", "takeaway": "Live Gold/NQ session with pre-launch giveaway." },
-    { "title": "Trading Live Gold NQ", "url": "https://www.youtube.com/watch?v=RXBbmM58B5U", "date": "2026-10-28", "type": "live", "takeaway": "Live Gold/NQ session." },
-    { "title": "🔴 TRADING LIVE - Gold", "url": "https://www.youtube.com/watch?v=TLIrQeID4Nk", "date": "2026-10-21", "type": "live", "takeaway": "Live Gold session (9.5K views)." },
-    { "title": "🔴 TRADING LIVE - NFP", "url": "https://www.youtube.com/watch?v=Ldgk3XpnZVo", "date": "2026-10-03", "type": "live", "takeaway": "Trades the NFP news release live — documented willingness to trade news." },
-    { "title": "🔴 TRADING LIVE - Gold/NQ", "url": "https://www.youtube.com/watch?v=bVlIdEH3mGs", "date": "2026-09-29", "type": "live", "takeaway": "Live session trading both Gold and NQ." },
-    { "title": "Daniel Holmes Live Stream", "url": "https://www.youtube.com/watch?v=muIH2shclYE", "date": "2026-10-28", "type": "live", "takeaway": "Live stream (no views recorded — re-upload)." },
-    { "title": "LIVE!!! @Oz_Funded", "url": "https://www.youtube.com/shorts/kmZs1wpCHJs", "date": "2026-11-05", "type": "short", "takeaway": "Oz Funded shoutout short." },
-    { "title": "Villain arc #ozfunded", "url": "https://www.youtube.com/shorts/bNPuIhBbdRc", "date": "2026-10-28", "type": "short", "takeaway": "Persona/content-brand short." },
-    { "title": "Day in the life / fulltime trader #trading", "url": "https://www.youtube.com/shorts/mocJBdfPoPo", "date": "2026-10-19", "type": "short", "takeaway": "Lifestyle short — 21.7K views." }
+    {
+      "title": "Trading Live Gold NQ",
+      "url": "https://www.youtube.com/watch?v=KME1YkOFEY8",
+      "date": "2026-11-16",
+      "type": "live",
+      "takeaway": "Latest live Gold/NQ session (14.2K views) with Oz Funded promo."
+    },
+    {
+      "title": "Trading Live Gold NQ",
+      "url": "https://www.youtube.com/watch?v=8xKHvr0PKtM",
+      "date": "2026-11-11",
+      "type": "live",
+      "takeaway": "Live Gold/NQ session (15.2K views)."
+    },
+    {
+      "title": "LIVE!!! @Oz_Funded",
+      "url": "https://www.youtube.com/shorts/kmZs1wpCHJs",
+      "date": "2026-11-05",
+      "type": "short",
+      "takeaway": "Oz Funded shoutout short."
+    },
+    {
+      "title": "Trading Live Gold NQ",
+      "url": "https://www.youtube.com/watch?v=jtwtK6WF40A",
+      "date": "2026-11-03",
+      "type": "live",
+      "takeaway": "Live Gold/NQ session with pre-launch giveaway."
+    },
+    {
+      "title": "Trading Live Gold NQ",
+      "url": "https://www.youtube.com/watch?v=RXBbmM58B5U",
+      "date": "2026-10-28",
+      "type": "live",
+      "takeaway": "Live Gold/NQ session."
+    },
+    {
+      "title": "Daniel Holmes Live Stream",
+      "url": "https://www.youtube.com/watch?v=muIH2shclYE",
+      "date": "2026-10-28",
+      "type": "live",
+      "takeaway": "Live stream (no views recorded — re-upload)."
+    },
+    {
+      "title": "Villain arc #ozfunded",
+      "url": "https://www.youtube.com/shorts/bNPuIhBbdRc",
+      "date": "2026-10-28",
+      "type": "short",
+      "takeaway": "Persona/content-brand short."
+    },
+    {
+      "title": "I Started a Prop Firm | Oz Funded",
+      "url": "https://www.youtube.com/watch?v=q5ivu8KRBwQ",
+      "date": "2026-10-24",
+      "type": "video",
+      "takeaway": "Announces Oz Funded with $2M in funded giveaways — he is the founder."
+    },
+    {
+      "title": "🔴 TRADING LIVE - Gold",
+      "url": "https://www.youtube.com/watch?v=TLIrQeID4Nk",
+      "date": "2026-10-21",
+      "type": "live",
+      "takeaway": "Live Gold session (9.5K views)."
+    },
+    {
+      "title": "Day in the life / fulltime trader #trading",
+      "url": "https://www.youtube.com/shorts/mocJBdfPoPo",
+      "date": "2026-10-19",
+      "type": "short",
+      "takeaway": "Lifestyle short — 21.7K views."
+    },
+    {
+      "title": "Breakout strategy #trading",
+      "url": "https://www.youtube.com/watch?v=z_RtBLTva4Y",
+      "date": "2026-10-14",
+      "type": "short",
+      "takeaway": "Most-viewed content (34K views) — his breakout setup demonstration."
+    },
+    {
+      "title": "🔴 TRADING LIVE - NFP",
+      "url": "https://www.youtube.com/watch?v=Ldgk3XpnZVo",
+      "date": "2026-10-03",
+      "type": "live",
+      "takeaway": "Trades the NFP news release live — documented willingness to trade news."
+    },
+    {
+      "title": "🔴 TRADING LIVE - Gold/NQ",
+      "url": "https://www.youtube.com/watch?v=bVlIdEH3mGs",
+      "date": "2026-09-29",
+      "type": "live",
+      "takeaway": "Live session trading both Gold and NQ."
+    },
+    {
+      "title": "The Exact Strategy I Use To Travel The World Trading",
+      "url": "https://www.youtube.com/watch?v=19PPkV1rqxU",
+      "date": "2026-09-28",
+      "type": "video",
+      "takeaway": "Flagship strategy video (22K views). YouTube keywords document the method: breakout strategy, support and resistance, break and retest, scalping, technical analysis."
+    },
+    {
+      "title": "50k to 100k #trading",
+      "url": "https://www.youtube.com/watch?v=93LiLHDCWu4",
+      "date": "2026-09-28",
+      "type": "short",
+      "takeaway": "Account growth content — 34.6K views."
+    },
+    {
+      "title": "How I Made 50k on a Single Trading Account (you can too)",
+      "url": "https://www.youtube.com/watch?v=vu3tQpmqg4g",
+      "date": "2026-08-17",
+      "type": "video",
+      "takeaway": "Per the description: his single account \"has crossed into the six figures\" — he shows how the $50K milestone was built on one account."
+    },
+    {
+      "title": "Pass Any Prop Firm in 3 Days (Simulation Session)",
+      "url": "https://www.youtube.com/watch?v=63gr8kfdAS0",
+      "date": "2026-08-06",
+      "type": "video",
+      "takeaway": "A recorded simulation session demonstrating how he passes prop firm evals in as little as 3 days."
+    },
+    {
+      "title": "From 0 to $42,995 in 26 Days (Full Proof)",
+      "url": "https://www.youtube.com/watch?v=pcR0QX2IcOY",
+      "date": "2026-08-01",
+      "type": "video",
+      "takeaway": "Documented account run from 0 to $42,995 in 26 days — a full-proof case study of his compounding/eval-passing pace."
+    },
+    {
+      "title": "Watch me make $4,484 trading this simple strategy",
+      "url": "https://www.youtube.com/watch?v=ghab6r76VP4",
+      "date": "2026-06-19",
+      "type": "video",
+      "takeaway": "A live-executed $4,484 session using his simple strategy — single-session execution proof."
+    },
+    {
+      "title": "I Made $189,720 In 2026 Using This Trading System (Full Course)",
+      "url": "https://www.youtube.com/watch?v=k_DIcwgC3uQ",
+      "date": "2026-06-10",
+      "type": "video",
+      "takeaway": "His full course on the trading system behind $189,720 in 2026 — the most complete public documentation of his method."
+    },
+    {
+      "title": "How Higher Timeframe Confluence Made Me $5,841 (Trade Recap)",
+      "url": "https://www.youtube.com/watch?v=-uH_6YRNhHA",
+      "date": "2026-06-07",
+      "type": "video",
+      "takeaway": "Trade recap showing $5,841 made by stacking higher-timeframe confluence before entries."
+    },
+    {
+      "title": "The Funded Trader Strategy Nobody Talks About",
+      "url": "https://www.youtube.com/watch?v=op9tCq_wtx4",
+      "date": "2026-05-12",
+      "type": "video",
+      "takeaway": "His funded-trader strategy angle that he says nobody else covers; description adds no further method detail."
+    },
+    {
+      "title": "Why Most Breakouts Fail (And How to Avoid It)",
+      "url": "https://www.youtube.com/watch?v=EA0arZ3mvNc",
+      "date": "2026-02-24",
+      "type": "video",
+      "takeaway": "Breakdown of why most breakouts fail and how to avoid the trap — core education for his breakout model."
+    },
+    {
+      "title": "How To Start Day Trading As A Beginner In 2026 [Full Tutorial]",
+      "url": "https://www.youtube.com/watch?v=7jebsVifBVI",
+      "date": "2026-02-13",
+      "type": "video",
+      "takeaway": "Full beginner tutorial to starting day trading in 2026, paired with his free trading journal template."
+    },
+    {
+      "title": "The Breakout Strategy I'm Using in 2026 (Step-By-Step)",
+      "url": "https://www.youtube.com/watch?v=CPpSOqgi9iI",
+      "date": "2025-12-31",
+      "type": "video",
+      "takeaway": "Step-by-step walkthrough of his current 2026 breakout strategy; runs alongside his daily NY-session live trading."
+    },
+    {
+      "title": "$52,352 payouts under 4 weeks (how i did it)",
+      "url": "https://www.youtube.com/watch?v=yZrG_HQuZJU",
+      "date": "2025-11-20",
+      "type": "video",
+      "takeaway": "Breakdown of how he pulled $52,352 in payouts in under 4 weeks; content ties to his daily London-session livestream."
+    },
+    {
+      "title": "Building a Profitable Trading Plan for a Stranger in 15 Minutes",
+      "url": "https://www.youtube.com/watch?v=ew8__NgcbOQ",
+      "date": "2025-10-24",
+      "type": "video",
+      "takeaway": "Builds a complete profitable trading plan live in 15 minutes — his planning framework demonstrated in one video."
+    },
+    {
+      "title": "My Breakout Strategy Explained ($5000 Trade)",
+      "url": "https://www.youtube.com/watch?v=DJOoQuDwhpM",
+      "date": "2025-10-14",
+      "type": "video",
+      "takeaway": "His breakout strategy explained through a $5,000 trade; confirmed live on his daily London-open livestream."
+    },
+    {
+      "title": "Stop Getting Faked Out! Secret Blueprint Revealed",
+      "url": "https://www.youtube.com/watch?v=1HXSEcNHHf4",
+      "date": "2025-08-24",
+      "type": "video",
+      "takeaway": "Per the description: \"a full breakdown of what you need to know for avoiding fake out trades\" — anti-fakeout blueprint for his break-and-retest model."
+    }
   ],
   "articles": [
-    { "title": "Daniel Holmes Trading — landing page", "url": "https://danielholmestrades.com/", "date": "2026-11-16", "takeaway": "$500K/yr playbook claim, mentorship with full-refund promise, 'for serious traders only' positioning, income disclaimer." },
-    { "title": "Oz Funded — the prop firm he founded", "url": "https://www.ozfunded.com/", "date": "2026-11-16", "takeaway": "Full rule framework: 6% eval target, no daily loss limit, 4% max trailing, $1 pay-after-pass funded model (4% target / 8% max), 90% split, 48h payouts, news allowed, copy 3 accounts, Tradelocker." }
+    {
+      "title": "Trading Nut #340 — How to Pass Prop Challenges in 2 Days & Scale to Six Figures",
+      "url": "https://tradingnut.com/daniel-holmes/",
+      "date": "2026-09-09",
+      "takeaway": "Full strategy interview: 15-minute Gold breakout with retest + wick flip, 1:1 RR, 2-day eval passing by risking the account on trade one, the prop-account cycle, and seven timestamped mindset lessons."
+    },
+    {
+      "title": "Daniel Holmes Trading — landing page",
+      "url": "https://danielholmestrades.com/",
+      "date": "2026-11-16",
+      "takeaway": "$500K/yr playbook claim, mentorship with full-refund promise, 'for serious traders only' positioning, income disclaimer."
+    },
+    {
+      "title": "Oz Funded — the prop firm he founded",
+      "url": "https://www.ozfunded.com/",
+      "date": "2026-11-16",
+      "takeaway": "Full rule framework: 6% eval target, no daily loss limit, 4% max trailing, $1 pay-after-pass funded model (4% target / 8% max), 90% split, 48h payouts, news allowed, copy 3 accounts, Tradelocker."
+    },
+    {
+      "title": "Instagram reel — 15m breakout + 1H engulfing + strong 30m closure",
+      "url": "https://www.instagram.com/reel/DF5NXy7TeY_/",
+      "date": "2026-02-11",
+      "takeaway": "The multi-timeframe confluence he documents for engulfing-confirmation entries."
+    }
   ],
   "links": {
     "youtube": "https://www.youtube.com/@DanielHolmesTrades",
@@ -56,10 +293,17 @@
     "siteLabel": "danielholmestrades.com"
   },
   "profile": {
-    "instruments": ["Gold (XAUUSD)", "NQ"],
+    "instruments": [
+      "Gold (XAUUSD)",
+      "NQ"
+    ],
     "style": "break-and-retest breakout scalping off support/resistance (price action)",
-    "sessions": ["Live trading every day"],
-    "firms": ["Oz Funded (founder)"],
+    "sessions": [
+      "Live trading every day"
+    ],
+    "firms": [
+      "Oz Funded (founder)"
+    ],
     "niche": "breakout scalping Gold & NQ, live-streamed daily"
   },
   "sources": {

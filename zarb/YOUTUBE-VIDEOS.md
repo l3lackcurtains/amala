@@ -125,3 +125,25 @@ Channel: "zach anthony" (@iamzarb), ID UCRwKDXA83i6W-D8z6JkNGww. All 15 videos i
 - **Description quality:** long-forms and live VODs have real descriptions (mostly affiliate links + one-line claims); all 10 shorts have empty descriptions — confirmed against watch-page `shortDescription`, not just RSS.
 - **Posting pattern:** quiet June→July (launch era), August short run, then Nov 2026 burst around the Liquidity Lab founding-member launch; the model explainer (8_NEAAT5Tyk) is his traffic engine (~18K views vs. low hundreds elsewhere).
 - **Consistent CTAs:** "code ZARB always" for Apex/Tradeify/Lucid/Top One (futures), Vest/MyFundedPerps (perps), iamzarb.com for the Lab, Edgeful as analytics sponsor on stream VODs.
+
+
+---
+
+## Key popular videos (added 2026-11-16)
+
+Source: popular-sorted channel tab (https://www.youtube.com/@iamzarb/videos?view=0&sort=p) + watch-page shortDescription. Strategy/rules/teaching titles selected; promos, guest streams and lifestyle content skipped. Videos #3 (8_NEAAT5Tyk), #7 (bR0HIdX7byM) and #11 (oeM6tpYBXFI) of the original census were re-selected and are already documented above — 12 NEW videos below.
+
+| ID | Title | Date | Views | Strategy content (from description) |
+|---|---|---|---|---|
+| ta7o29n_UcM | The Asia Scalping Model That Paid Me $34,000 Last Month | 2026-04-07 | 16K | Asia-session scalping model behind $34K/month in payouts; names Edgeful as his preferred trading data tool. |
+| Rewy8uRjprI | How I Turned a Losing Month Into $11K in Prop Firm Payouts | 2026-03-11 | 1.9K | Worked example of turning a losing month into an $11K payout — drawdown-to-payout recovery. Description is promo/links only. |
+| mgR7H-kL6BQ | My Secret Trading Setup Revealed That Made Me 60k payouts in 3 Months (Tradeify) | 2025-10-29 | 6K | Setup behind $60K of payouts in 3 months on Tradeify instant funding; invites requests for which stats/setups to break down next. |
+| g5rFhejmUto | How This Negative RR Model Made Me $40K in Prop Firm Payouts | 2025-09-22 | 13K | Negative RR model — counterintuitive risk/reward structure producing $40K in prop payouts (Lucid/Tradeify instant funding). |
+| ifmXjNASw4Q | I Used Negative RR to Make $42,000 in Prop Firm Payouts (Tradeify + Topstep) | 2025-09-13 | 15K | Description: pulled $42K in under 2 months from Tradeify & Topstep with his Negative RR model — it 'flips traditional risk/reward thinking' for fast, consistent payouts. |
+| tV-fJMzzbek | I Got a $12,000 Payout from Tradeify Using Negative RR (Insane) | 2025-08-06 | 6.6K | Single $12K Tradeify payout via the Negative RR model. Description is a mentorship link only. |
+| IKvo8puhD28 | Are These The Best Volume Profile Settings for Trading? | 2025-07-13 | 4.6K | Description: reveals 'my exact Volume Profile settings' — the daily-driver settings for his futures trading. |
+| 2duprLr0mtE | What ICT Didn't Tell You About Market Structure | 2025-06-22 | 1.1K | His addition to ICT market-structure teaching — what the original framework misses and how he fills the gap. |
+| EKSN-KXwBRw | The Only Setup I'll Ever Need | ICT x Volume Profile | 2025-06-10 | 5.5K | Description: breaks down his 'Forever Model' — an A+ setup combining ICT concepts with Volume Profile precision; 'the exact setup I wait for every week.' |
+| ZC1q9RZHIC0 | Volume Profile Is My Secret Weapon | 2025-06-02 | 2.6K | Description: combines ICT concepts with the Previous Day's POC from Volume Profile for smarter, cleaner trades — 'ICT x Volume Profile is my edge.' |
+| juenIDRqWlY | The Strategy That Finally Clicked: ICT Meets Volume Profile | 2025-05-20 | 32K | Description: how he combines ICT concepts with Volume Profile to build his strategy — 'this was the key for me.' |
+| RCQNP478eqA | The Truth About SMT Divergence – Most Traders Have It All Wrong! | 2025-04-01 | 295 | How he actually reads SMT Divergence, arguing most traders get it wrong; 'a game-changer — once you see it, you can't unsee it.' |

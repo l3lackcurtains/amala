@@ -11,12 +11,30 @@
   "keyQuote": "You must have a strict checklist. It doesn't matter if your checklist is different than mine; what matters is that you refuse to enter a trade until every single box is checked.",
   "keyQuoteSource": "Being Right Doesn't Make You Money",
   "stats": [
-    { "label": "Articles read", "value": "20" },
-    { "label": "Videos analyzed", "value": "7" },
-    { "label": "Best payout week", "value": "$24K" },
-    { "label": "2.5-week run (Oct 2026)", "value": "$50K" },
-    { "label": "Copy-traded accounts", "value": "5+" },
-    { "label": "Age", "value": "21" }
+    {
+      "label": "Articles read",
+      "value": "20"
+    },
+    {
+      "label": "Videos analyzed",
+      "value": "7"
+    },
+    {
+      "label": "Best payout week",
+      "value": "$24K"
+    },
+    {
+      "label": "2.5-week run (Oct 2026)",
+      "value": "$50K"
+    },
+    {
+      "label": "Copy-traded accounts",
+      "value": "5+"
+    },
+    {
+      "label": "Age",
+      "value": "21"
+    }
   ],
   "highlights": [
     "Wait for the actual candle close — never jump the gun on the wick.",
@@ -27,18 +45,26 @@
     "Scale laterally: 1 contract per account, more copy-traded accounts — never bigger size."
   ],
   "sections": [
-    { "id": "strategy", "title": "Strategy Playbook", "file": "strategy", "lead": "Asia session sniper system, NY open routine, flag setups, exact DCA method, and trade management." },
-    { "id": "rules", "title": "Trading Rules", "file": "rules", "lead": "Entry, sizing, DCA, stop, payout, and when-not-to-trade rules — plus his 10-rule operating system." },
-    { "id": "psychology", "title": "Psychology & Mindset", "file": "psychology", "lead": "Process over P&L, payout amnesia, the $18K day, and the second-income philosophy." }
+    {
+      "id": "strategy",
+      "title": "Strategy Playbook",
+      "file": "strategy",
+      "lead": "Asia session sniper system, NY open routine, flag setups, exact DCA method, and trade management."
+    },
+    {
+      "id": "rules",
+      "title": "Trading Rules",
+      "file": "rules",
+      "lead": "Entry, sizing, DCA, stop, payout, and when-not-to-trade rules — plus his 10-rule operating system."
+    },
+    {
+      "id": "psychology",
+      "title": "Psychology & Mindset",
+      "file": "psychology",
+      "lead": "Process over P&L, payout amnesia, the $18K day, and the second-income philosophy."
+    }
   ],
   "videos": [
-    {
-      "title": "What I Look For In The Asia Session",
-      "url": "https://www.youtube.com/watch?v=2qMuQZfB0co",
-      "date": "2026-11-12",
-      "type": "video",
-      "takeaway": "Complete overnight playbook: mark wick highs/lows at the 6 PM Globex open, wait out No Man's Land, then take the A+ 5-minute bull flag pulling back to VWAP with the 9/21 EMAs holding. Even conservative targeting gives a 2.5R trade; low-volatility sessions demand sniper entries."
-    },
     {
       "title": "I Was Right on These Trades and Still Got Wiped Out",
       "url": "https://www.youtube.com/watch?v=M0wACkBim_A",
@@ -47,18 +73,67 @@
       "takeaway": "Being right on direction is only half the battle — failing to account for market volatility can stop you out of a sound idea. Covers NQ wick stopouts, EMA entry timing, and the pitfalls of bearish markets."
     },
     {
-      "title": "Adding To A Trade (When Your In Drawdown) | My Exact Strategy",
-      "url": "https://www.youtube.com/watch?v=PjvckyPQQ4I",
-      "date": "2026-10-08",
-      "type": "video",
-      "takeaway": "The exact DCA method on the 5-minute chart: only average down with a clear bias, obvious target, and hard stop. Adds at the new low and the entry retest — while no candle CLOSES below the protected low — build 2 contracts into 4–6 by design, not panic."
+      "title": "DayTrading LIVE! LUCA$H Globex",
+      "url": "https://www.youtube.com/watch?v=vFza64IyftM",
+      "date": "2026-11-15",
+      "type": "live",
+      "takeaway": "Lucas Kennard's (\"Lucashhh\") live Globex/overnight session from the BDH floor — the Asia-session window where his bull/bear-flag checklist trades. Description is the channel's standard boilerplate (course promo, prop-firm deals) — no per-video strategy notes documented."
     },
     {
-      "title": "My Pre-Market Routine For The New York Open",
-      "url": "https://www.youtube.com/watch?v=2PvQjWRNRsU",
-      "date": "2026-10-02",
+      "title": "What I Look For In The Asia Session",
+      "url": "https://www.youtube.com/watch?v=2qMuQZfB0co",
+      "date": "2026-11-12",
       "type": "video",
-      "takeaway": "Daily 9:25 AM ritual: mark both sides of price (stacked wick highs, deep wick lows) and let the VWAP check be the tiebreaker at the bell. Hold above VWAP targets the London Highs; reject it and short the deep lows — 100 points to first target, 300 points in ~45 minutes."
+      "takeaway": "Complete overnight playbook: mark wick highs/lows at the 6 PM Globex open, wait out No Man's Land, then take the A+ 5-minute bull flag pulling back to VWAP with the 9/21 EMAs holding. Even conservative targeting gives a 2.5R trade; low-volatility sessions demand sniper entries."
+    },
+    {
+      "title": "DayTrading LIVE! LUCA$H Globex",
+      "url": "https://www.youtube.com/watch?v=gFzKnDc0hpk",
+      "date": "2026-11-08",
+      "type": "live",
+      "takeaway": "Lucas Kennard's (\"Lucashhh\") live Globex/overnight session from the BDH floor — the Asia-session window where his bull/bear-flag checklist trades. Description is the channel's standard boilerplate (course promo, prop-firm deals) — no per-video strategy notes documented."
+    },
+    {
+      "title": "DayTrading LIVE! LUCA$H Globex",
+      "url": "https://www.youtube.com/watch?v=7DtCK3jXBSQ",
+      "date": "2026-11-05",
+      "type": "live",
+      "takeaway": "Lucas Kennard's (\"Lucashhh\") live Globex/overnight session from the BDH floor — the Asia-session window where his bull/bear-flag checklist trades. Description is the channel's standard boilerplate (course promo, prop-firm deals) — no per-video strategy notes documented."
+    },
+    {
+      "title": "DayTrading LIVE! LUCA$H Globex",
+      "url": "https://www.youtube.com/watch?v=BLhwSJLzmdk",
+      "date": "2026-11-04",
+      "type": "live",
+      "takeaway": "Lucas Kennard's (\"Lucashhh\") live Globex/overnight session from the BDH floor — the Asia-session window where his bull/bear-flag checklist trades. Description is the channel's standard boilerplate (course promo, prop-firm deals) — no per-video strategy notes documented."
+    },
+    {
+      "title": "DayTrading LIVE! LUCA$H Globex",
+      "url": "https://www.youtube.com/watch?v=px4iYGpwwGY",
+      "date": "2026-11-03",
+      "type": "live",
+      "takeaway": "Lucas Kennard's (\"Lucashhh\") live Globex/overnight session from the BDH floor — the Asia-session window where his bull/bear-flag checklist trades. Description is the channel's standard boilerplate (course promo, prop-firm deals) — no per-video strategy notes documented."
+    },
+    {
+      "title": "DayTrading LIVE! LUCA$H Globex",
+      "url": "https://www.youtube.com/watch?v=v7S9SDm0WLg",
+      "date": "2026-11-02",
+      "type": "live",
+      "takeaway": "Lucas Kennard's (\"Lucashhh\") live Globex/overnight session from the BDH floor — the Asia-session window where his bull/bear-flag checklist trades. Description is the channel's standard boilerplate (course promo, prop-firm deals) — no per-video strategy notes documented."
+    },
+    {
+      "title": "DayTrading LIVE! LUCA$H Globex",
+      "url": "https://www.youtube.com/watch?v=EbOUzr32-7A",
+      "date": "2026-11-01",
+      "type": "live",
+      "takeaway": "Lucas Kennard's (\"Lucashhh\") live Globex/overnight session from the BDH floor — the Asia-session window where his bull/bear-flag checklist trades. Description is the channel's standard boilerplate (course promo, prop-firm deals) — no per-video strategy notes documented."
+    },
+    {
+      "title": "DayTrading LIVE! LUCA$H Globex",
+      "url": "https://www.youtube.com/watch?v=k3UqgLiVS6w",
+      "date": "2026-10-26",
+      "type": "live",
+      "takeaway": "Lucas Kennard's (\"Lucashhh\") live Globex/overnight session from the BDH floor — the Asia-session window where his bull/bear-flag checklist trades. Description is the channel's standard boilerplate (course promo, prop-firm deals) — no per-video strategy notes documented."
     },
     {
       "title": "Being Right Doesn't Make You Money",
@@ -75,11 +150,53 @@
       "takeaway": "A rule-breaking +$5,000 day is worse than a rule-following −$800 day — money is a lagging indicator of your success. He lost for over a year straight before $50,000 in 2.5 weeks once the process caught up."
     },
     {
+      "title": "DayTrading LIVE! LUCA$H Globex",
+      "url": "https://www.youtube.com/watch?v=Utl6owVA0eM",
+      "date": "2026-10-21",
+      "type": "live",
+      "takeaway": "Lucas Kennard's (\"Lucashhh\") live Globex/overnight session from the BDH floor — the Asia-session window where his bull/bear-flag checklist trades. Description is the channel's standard boilerplate (course promo, prop-firm deals) — no per-video strategy notes documented."
+    },
+    {
+      "title": "DayTrading LIVE! LUCA$H Globex",
+      "url": "https://www.youtube.com/watch?v=LNDQHyVDUuA",
+      "date": "2026-10-19",
+      "type": "live",
+      "takeaway": "Lucas Kennard's (\"Lucashhh\") live Globex/overnight session from the BDH floor — the Asia-session window where his bull/bear-flag checklist trades. Description is the channel's standard boilerplate (course promo, prop-firm deals) — no per-video strategy notes documented."
+    },
+    {
+      "title": "Adding To A Trade (When Your In Drawdown) | My Exact Strategy",
+      "url": "https://www.youtube.com/watch?v=PjvckyPQQ4I",
+      "date": "2026-10-08",
+      "type": "video",
+      "takeaway": "The exact DCA method on the 5-minute chart: only average down with a clear bias, obvious target, and hard stop. Adds at the new low and the entry retest — while no candle CLOSES below the protected low — build 2 contracts into 4–6 by design, not panic."
+    },
+    {
+      "title": "DayTrading LIVE! LUCA$H Globex",
+      "url": "https://www.youtube.com/watch?v=RJc54wPJMK8",
+      "date": "2026-10-05",
+      "type": "live",
+      "takeaway": "Lucas Kennard's (\"Lucashhh\") live Globex/overnight session from the BDH floor — the Asia-session window where his bull/bear-flag checklist trades. Description is the channel's standard boilerplate (course promo, prop-firm deals) — no per-video strategy notes documented."
+    },
+    {
+      "title": "My Pre-Market Routine For The New York Open",
+      "url": "https://www.youtube.com/watch?v=2PvQjWRNRsU",
+      "date": "2026-10-02",
+      "type": "video",
+      "takeaway": "Daily 9:25 AM ritual: mark both sides of price (stacked wick highs, deep wick lows) and let the VWAP check be the tiebreaker at the bell. Hold above VWAP targets the London Highs; reject it and short the deep lows — 100 points to first target, 300 points in ~45 minutes."
+    },
+    {
       "title": "The 5 Trades That Paid Me $24,000 This Week",
       "url": "https://www.youtube.com/watch?v=kAd0WPd9kt0",
       "date": "2026-09-29",
       "type": "video",
       "takeaway": "Five live 15-minute flag trades across copy-traded Lucid and Tradeify accounts — same structure every time: enter at the candle midpoint or the EMA loss, target the nearest wick. Built ~$24,000 of payouts in one week from small, repeated size."
+    },
+    {
+      "title": "DayTrading LIVE! LUCA$H Globex",
+      "url": "https://www.youtube.com/watch?v=_UmrgFDVrv0",
+      "date": "2026-09-21",
+      "type": "live",
+      "takeaway": "Lucas Kennard's (\"Lucashhh\") live Globex/overnight session from the BDH floor — the Asia-session window where his bull/bear-flag checklist trades. Description is the channel's standard boilerplate (course promo, prop-firm deals) — no per-video strategy notes documented."
     }
   ],
   "articles": [
@@ -205,10 +322,19 @@
     }
   ],
   "profile": {
-    "instruments": ["NQ"],
+    "instruments": [
+      "NQ"
+    ],
     "style": "bull/bear flag sniping at 9/21 EMA + VWAP confluence",
-    "sessions": ["Asia/Globex 6:00 PM", "NY open 9:30 AM"],
-    "firms": ["Tradeify", "Lucid", "Vest"],
+    "sessions": [
+      "Asia/Globex 6:00 PM",
+      "NY open 9:30 AM"
+    ],
+    "firms": [
+      "Tradeify",
+      "Lucid",
+      "Vest"
+    ],
     "niche": "overnight session sniping + structured DCA"
   },
   "links": {

@@ -25,13 +25,23 @@ const is = (p: string) => (activePath === p ? ' active' : '');
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="description" content={description} />
     <title>{title}</title>
+    <script is:inline>
+      // Set theme before first paint to avoid a flash.
+      try {
+        var t = localStorage.getItem('amala-theme');
+        if (t !== 'light' && t !== 'dark') {
+          t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        }
+        document.documentElement.dataset.theme = t;
+      } catch (e) { /* stay dark */ }
+    </script>
   </head>
   <body class="shell" style={style || undefined}>
     <aside id="sidebar">
@@ -71,6 +81,7 @@ const is = (p: string) => (activePath === p ? ' active' : '');
           <span class="s-key">Ctrl K</span>
           <div class="s-results" id="search-results"></div>
         </div>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle light or dark theme">☀</button>
       </header>
       <slot />
       <footer class="site-footer">
@@ -96,6 +107,23 @@ const is = (p: string) => (activePath === p ? ' active' : '');
       sidebar && sidebar.addEventListener('click', function (e) {
         if (e.target.closest && e.target.closest('a') && window.innerWidth < 1024) closeSb();
       });
+
+      // Theme toggle (light/dark, persisted; head script applies it before paint)
+      var themeBtn = document.getElementById('theme-toggle');
+      function syncThemeGlyph() {
+        var isLight = document.documentElement.dataset.theme === 'light';
+        themeBtn.textContent = isLight ? '☾' : '☀';
+        themeBtn.setAttribute('aria-label', 'Switch to ' + (isLight ? 'dark' : 'light') + ' theme');
+      }
+      if (themeBtn) {
+        syncThemeGlyph();
+        themeBtn.addEventListener('click', function () {
+          var next = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
+          document.documentElement.dataset.theme = next;
+          try { localStorage.setItem('amala-theme', next); } catch (e) {}
+          syncThemeGlyph();
+        });
+      }
 
       // Video type filter (Video Library page)
       document.addEventListener('click', function (e) {

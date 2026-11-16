@@ -32,6 +32,33 @@ Batch independent fetches in parallel. Retry failures once, then log as failed a
 - `ARTICLES.md` — every blog article found (or document site sections if landing page only)
 - `SOURCES.md` — every URL fetched, success/fail log, researched date
 
+## PHASE 1.5 — Study the actual video content (transcripts when available)
+
+Descriptions and titles are the floor, not the ceiling. For every video that looks like a
+teaching video (strategy/setup/how-to/explained/course/review), pull what is ACTUALLY SAID:
+
+1. **Try the transcript tool first:**
+   `node C:\Users\oled\Desktop\faltu\trading\tools\yt-transcript.cjs <videoId> [<videoId> ...]`
+   It writes `transcript-<id>.txt` files with `[MM:SS]` timestamps. On success, distill the
+   real taught material from the transcript into the playbook (this is what the user reads as
+   "deep content").
+2. **If it fails or returns nothing** (rate-limit 429, no caption tracks, empty timedtext — common
+   from datacenter IPs): do NOT retry more than once. Fall back to the description chapters/titles/
+   keywords already captured, plus websearch for interviews/podcasts/articles about the trader.
+   Never block the whole pipeline on transcripts.
+3. In the playbook md, cite transcript-derived points with `[MM:SS]` timestamps and the video
+   link, exactly like other sources.
+
+## PHASE 1.6 — Content-depth check (fast) — do NOT skip
+
+Before writing PHASE 2 files, grade the extracted material per trader topic:
+- **Rich enough** (specific steps/numbers/quotes): proceed straight to writing.
+- **Thin** (mostly link-only descriptions, live streams, promo text): run ONE targeted
+  websearch set (`"<name> trading strategy"`, `"<name> interview OR podcast OR mentorship"`)
+  and fetch the 1–3 best sources (interview/blog/reel pages) to fill the gaps — then proceed.
+- The goal: every playbook section must teach something concrete, or state honestly that the
+  public record doesn't document it.
+
 ## PHASE 2 — Dashboard data
 
 Write these files (paths + schema below). This makes the trader appear on the live dashboard

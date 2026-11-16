@@ -11,11 +11,26 @@
   "keyQuote": "One trade per account, per day. Win or lose, that account is done.",
   "keyQuoteSource": "One Trade Per Account Per Day: Why I Walk Away",
   "stats": [
-    { "label": "Articles read", "value": "34" },
-    { "label": "Videos analyzed", "value": "8" },
-    { "label": "Hard rules", "value": "35" },
-    { "label": "Fees → Payouts", "value": "$4.9K → $67K" },
-    { "label": "Funded accounts", "value": "20+" }
+    {
+      "label": "Articles read",
+      "value": "34"
+    },
+    {
+      "label": "Videos analyzed",
+      "value": "8"
+    },
+    {
+      "label": "Hard rules",
+      "value": "35"
+    },
+    {
+      "label": "Fees → Payouts",
+      "value": "$4.9K → $67K"
+    },
+    {
+      "label": "Funded accounts",
+      "value": "20+"
+    }
   ],
   "highlights": [
     "One trade per account, per day — win or lose, that account is locked for the next 24 hours, and he physically walks away from the screens.",
@@ -26,9 +41,24 @@
     "The business model: small wins, lots of accounts, and compounding — $4,992 of eval fees became $67,468 of payouts in one quarter."
   ],
   "sections": [
-    { "id": "strategy", "title": "Strategy Playbook", "file": "strategy", "lead": "Chop-box scalps, Two in the Chamber, the Globex first candle, and the multi-account business model." },
-    { "id": "rules", "title": "Trading Rules", "file": "rules", "lead": "35 hard rules — the golden walk-away rule, risk management, drawdown math, and when not to trade." },
-    { "id": "psychology", "title": "Psychology & Mindset", "file": "psychology", "lead": "Discipline as a daily fight, army-trained patience, and blowups owned in public." }
+    {
+      "id": "strategy",
+      "title": "Strategy Playbook",
+      "file": "strategy",
+      "lead": "Chop-box scalps, Two in the Chamber, the Globex first candle, and the multi-account business model."
+    },
+    {
+      "id": "rules",
+      "title": "Trading Rules",
+      "file": "rules",
+      "lead": "35 hard rules — the golden walk-away rule, risk management, drawdown math, and when not to trade."
+    },
+    {
+      "id": "psychology",
+      "title": "Psychology & Mindset",
+      "file": "psychology",
+      "lead": "Discipline as a daily fight, army-trained patience, and blowups owned in public."
+    }
   ],
   "videos": [
     {
@@ -81,11 +111,95 @@
       "takeaway": "Chop is one condition — consolidation — and a wick through the level is not a break; only a close is. Either don't trade it (\"there's no obligation to be in the market while it's ranging\") or buy low and sell high for 10–20 points, taking the scalp and getting out every time."
     },
     {
+      "title": "LIVE NQ Futures Day Trading at the BDH | DENNY DIAMONDZ",
+      "url": "https://www.youtube.com/watch?v=h4AG3pqeH4c",
+      "date": "2026-10-19",
+      "type": "live",
+      "takeaway": "Live NQ futures day-trading session from the BDH floor. Description is the channel's standard live-stream boilerplate (crew list, prop-firm deals, giveaway links) — no per-video strategy notes documented."
+    },
+    {
       "title": "I Took 4 Payouts In One Day On Vest Markets",
       "url": "https://www.youtube.com/watch?v=tR10ta35ILc",
       "date": "2026-10-16",
       "type": "video",
       "takeaway": "Vest's perpetual mechanics: static 6% max drawdown, and claims are instant and irrevocable — once claimed, the money is no longer at risk even if the account later breaches. He bought two accounts, took four payouts, lost one afterward, and still got paid."
+    },
+    {
+      "title": "LIVE NQ Futures Day Trading at the BDH | Denny Diamondz",
+      "url": "https://www.youtube.com/watch?v=qgRNJn10Uso",
+      "date": "2026-10-15",
+      "type": "live",
+      "takeaway": "Live NQ futures day-trading session from the BDH floor. Description is the channel's standard live-stream boilerplate (crew list, prop-firm deals, giveaway links) — no per-video strategy notes documented."
+    },
+    {
+      "title": "LIVE NQ Futures Day Trading at the BDH | Denny Diamondzzz",
+      "url": "https://www.youtube.com/watch?v=fSnYsBxt-ik",
+      "date": "2026-10-14",
+      "type": "live",
+      "takeaway": "Live NQ futures day-trading session from the BDH floor. Description is the channel's standard live-stream boilerplate (crew list, prop-firm deals, giveaway links) — no per-video strategy notes documented."
+    },
+    {
+      "title": "LIVE NQ Futures Day Trading at the BDH | Denny Diamonds",
+      "url": "https://www.youtube.com/watch?v=ftl_GVyM3qM",
+      "date": "2026-10-13",
+      "type": "live",
+      "takeaway": "Live NQ futures day-trading session from the BDH floor. Description is the channel's standard live-stream boilerplate (crew list, prop-firm deals, giveaway links) — no per-video strategy notes documented."
+    },
+    {
+      "title": "LIVE NQ Futures Day Trading at the BDH | Denny Diamonds",
+      "url": "https://www.youtube.com/watch?v=J5f0-63vce4",
+      "date": "2026-10-09",
+      "type": "live",
+      "takeaway": "Live NQ futures day-trading session from the BDH floor. Description is the channel's standard live-stream boilerplate (crew list, prop-firm deals, giveaway links) — no per-video strategy notes documented."
+    },
+    {
+      "title": "LIVE NQ Futures Day Trading at the BDH | Denny Diamonds",
+      "url": "https://www.youtube.com/watch?v=w3pM_wt_U_Q",
+      "date": "2026-10-01",
+      "type": "live",
+      "takeaway": "Live NQ futures day-trading session from the BDH floor. Description is the channel's standard live-stream boilerplate (crew list, prop-firm deals, giveaway links) — no per-video strategy notes documented."
+    },
+    {
+      "title": "DENNY LIVE! Futures Day Trading at the BDH",
+      "url": "https://www.youtube.com/watch?v=v_JRD7UUYXw",
+      "date": "2026-09-29",
+      "type": "live",
+      "takeaway": "Live NQ futures day-trading session from the BDH floor. Description is the channel's standard live-stream boilerplate (crew list, prop-firm deals, giveaway links) — no per-video strategy notes documented."
+    },
+    {
+      "title": "DENNY LIVE! Futures Day Trading at the BDH",
+      "url": "https://www.youtube.com/watch?v=zjcfq1EMFC8",
+      "date": "2026-09-28",
+      "type": "live",
+      "takeaway": "Live NQ futures day-trading session from the BDH floor. Description is the channel's standard live-stream boilerplate (crew list, prop-firm deals, giveaway links) — no per-video strategy notes documented."
+    },
+    {
+      "title": "DAY TRADING LIVE! DMONEY & DENNY DOLLAS IN THE BDH!!",
+      "url": "https://www.youtube.com/watch?v=7_Uv5leh6pU",
+      "date": "2026-09-08",
+      "type": "live",
+      "takeaway": "Joint live session from the BDH floor: D-Money and Denny (\"Denny Dollas\") trade NQ futures live. Description is the channel's standard boilerplate (crew list, prop-firm deals) — no per-video strategy notes documented."
+    },
+    {
+      "title": "FRESH CASH FRIDAY WITH DMONEY AND DENNY DOLLAS! DayTrading LIVE!",
+      "url": "https://www.youtube.com/watch?v=kbOjhBzCv-U",
+      "date": "2026-07-24",
+      "type": "live",
+      "takeaway": "Friday \"Fresh Cash\" live session with D-Money and Denny (\"Denny Dollas\") from the BDH floor. Description is the channel's standard boilerplate (course promo, giveaway links) — no per-video strategy notes documented."
+    },
+    {
+      "title": "DMONEY/DENNY DOLLAS SHOW! DayTrading LIVE!",
+      "url": "https://www.youtube.com/watch?v=tkouVcDM-Vo",
+      "date": "2026-07-10",
+      "type": "live",
+      "takeaway": "Joint live session from the BDH floor: D-Money and Denny (\"Denny Dollas\") trade NQ futures live. Description is the channel's standard boilerplate (crew list, prop-firm deals) — no per-video strategy notes documented."
+    },
+    {
+      "title": "DMONEY/DENNY DOLLAS SHOW! DayTrading LIVE!",
+      "url": "https://www.youtube.com/watch?v=5qj-5A8Zi6o",
+      "date": "2026-07-09",
+      "type": "live",
+      "takeaway": "Joint live session from the BDH floor: D-Money and Denny (\"Denny Dollas\") trade NQ futures live. Description is the channel's standard boilerplate (crew list, prop-firm deals) — no per-video strategy notes documented."
     }
   ],
   "articles": [
@@ -295,10 +409,23 @@
     }
   ],
   "profile": {
-    "instruments": ["NQ"],
+    "instruments": [
+      "NQ"
+    ],
     "style": "5-minute chop-box scalping and Globex first-candle reversals",
-    "sessions": ["Globex open 6:00 PM", "US mornings"],
-    "firms": ["Apex", "Tradeify", "Lucid", "BluSky", "Vest", "IQ Capital", "Take Profit Trader"],
+    "sessions": [
+      "Globex open 6:00 PM",
+      "US mornings"
+    ],
+    "firms": [
+      "Apex",
+      "Tradeify",
+      "Lucid",
+      "BluSky",
+      "Vest",
+      "IQ Capital",
+      "Take Profit Trader"
+    ],
     "niche": "multi-account payout farming"
   },
   "links": {
@@ -306,5 +433,8 @@
     "site": "https://onlypropfirms.com/bdh/dennys-trading-desk",
     "siteLabel": "Denny's Trading Desk"
   },
-  "sources": { "category": "https://onlypropfirms.com/bdh/dennys-trading-desk", "notes": "34/34 articles crawled pages 1–4; 8 video descriptions extracted; researched 2026-11-16" }
+  "sources": {
+    "category": "https://onlypropfirms.com/bdh/dennys-trading-desk",
+    "notes": "34/34 articles crawled pages 1–4; 8 video descriptions extracted; researched 2026-11-16"
+  }
 }

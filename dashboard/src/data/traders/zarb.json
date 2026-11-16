@@ -11,12 +11,30 @@
   "keyQuote": "WASL isn't a meme — it's a risk philosophy. Stops that are too tight get you wicked out of good trades before they ever play out.",
   "keyQuoteSource": "iamzarb.com — WASL Gang section",
   "stats": [
-    { "label": "Prop payouts", "value": "$250K+" },
-    { "label": "Videos analyzed", "value": "15" },
-    { "label": "Payouts in 2 months", "value": "$64K" },
-    { "label": "2026 milestone (July)", "value": "$100K" },
-    { "label": "Free community", "value": "2,200+" },
-    { "label": "Coaching cadence", "value": "3×/wk" }
+    {
+      "label": "Prop payouts",
+      "value": "$250K+"
+    },
+    {
+      "label": "Videos analyzed",
+      "value": "15"
+    },
+    {
+      "label": "Payouts in 2 months",
+      "value": "$64K"
+    },
+    {
+      "label": "2026 milestone (July)",
+      "value": "$100K"
+    },
+    {
+      "label": "Free community",
+      "value": "2,200+"
+    },
+    {
+      "label": "Coaching cadence",
+      "value": "3×/wk"
+    }
   ],
   "highlights": [
     "WASL = Wide Ass Stop Loss — tight stops wicked you out of good trades before they ever play out; size the stop so the trade can breathe.",
@@ -27,9 +45,24 @@
     "Trade the PM Kill Zone live, 4 hours daily — no highlight reels, every decision and every WASL shown as it happens."
   ],
   "sections": [
-    { "id": "strategy", "title": "The WASL Approach", "file": "strategy", "lead": "The ICT x Volume Profile model, liquidity-sweep entries, the PM Kill Zone session focus, and how WASL stop sizing actually works." },
-    { "id": "rules", "title": "Trading Rules", "file": "rules", "lead": "Every documented rule: WASL stop philosophy, sweep-confirmation entries, base-hits payout tactics, two-payouts-per-account, and multi-firm diversification." },
-    { "id": "psychology", "title": "Psychology & Mindset", "file": "psychology", "lead": "Radical transparency, no holy grail, process over lottery tickets, and why the funded stage is a consistency problem." }
+    {
+      "id": "strategy",
+      "title": "The WASL Approach",
+      "file": "strategy",
+      "lead": "The ICT x Volume Profile model, liquidity-sweep entries, the PM Kill Zone session focus, and how WASL stop sizing actually works."
+    },
+    {
+      "id": "rules",
+      "title": "Trading Rules",
+      "file": "rules",
+      "lead": "Every documented rule: WASL stop philosophy, sweep-confirmation entries, base-hits payout tactics, two-payouts-per-account, and multi-firm diversification."
+    },
+    {
+      "id": "psychology",
+      "title": "Psychology & Mindset",
+      "file": "psychology",
+      "lead": "Radical transparency, no holy grail, process over lottery tickets, and why the funded stage is a consistency problem."
+    }
   ],
   "videos": [
     {
@@ -136,6 +169,90 @@
       "date": "2026-06-23",
       "type": "live",
       "takeaway": "Earlier PM Kill Zone live session — same prop-firm stack (Apex, Tradeify, Lucid, Top One) and Edgeful analytics from the start."
+    },
+    {
+      "title": "The Asia Scalping Model That Paid Me $34,000 Last Month",
+      "url": "https://www.youtube.com/watch?v=ta7o29n_UcM",
+      "date": "2026-04-07",
+      "type": "video",
+      "takeaway": "His Asia-session scalping model that produced $34,000 in payouts in a single month; the description names Edgeful as his preferred trading data tool."
+    },
+    {
+      "title": "How I Turned a Losing Month Into $11K in Prop Firm Payouts",
+      "url": "https://www.youtube.com/watch?v=Rewy8uRjprI",
+      "date": "2026-03-11",
+      "type": "video",
+      "takeaway": "Worked example of turning a losing month into an $11K prop payout — his drawdown-to-payout recovery process. Description is promo/links only."
+    },
+    {
+      "title": "My Secret Trading Setup Revealed That Made Me 60k payouts in 3 Months (Tradeify)",
+      "url": "https://www.youtube.com/watch?v=mgR7H-kL6BQ",
+      "date": "2025-10-29",
+      "type": "video",
+      "takeaway": "Reveals the setup behind $60K in payouts over 3 months on Tradeify instant-funding accounts; he invites viewers to request which stats or setups to break down next."
+    },
+    {
+      "title": "How This Negative RR Model Made Me $40K in Prop Firm Payouts",
+      "url": "https://www.youtube.com/watch?v=g5rFhejmUto",
+      "date": "2025-09-22",
+      "type": "video",
+      "takeaway": "Documents his Negative RR model — a counterintuitive risk/reward structure that produced $40K in prop payouts, promoted on instant-funded accounts (Lucid, Tradeify)."
+    },
+    {
+      "title": "I Used Negative RR to Make $42,000 in Prop Firm Payouts (Tradeify + Topstep)",
+      "url": "https://www.youtube.com/watch?v=ifmXjNASw4Q",
+      "date": "2025-09-13",
+      "type": "video",
+      "takeaway": "Per the description: he pulled $42K in less than 2 months from Tradeify & Topstep with his Negative RR model, which \"flips traditional risk/reward thinking\" for fast, consistent payouts."
+    },
+    {
+      "title": "I Got a $12,000 Payout from Tradeify Using Negative RR (Insane)",
+      "url": "https://www.youtube.com/watch?v=tV-fJMzzbek",
+      "date": "2025-08-06",
+      "type": "video",
+      "takeaway": "A single $12,000 Tradeify payout receipt earned with his Negative RR model. Description is a mentorship link only."
+    },
+    {
+      "title": "Are These The Best Volume Profile Settings for Trading?",
+      "url": "https://www.youtube.com/watch?v=IKvo8puhD28",
+      "date": "2025-07-13",
+      "type": "video",
+      "takeaway": "Per the description: reveals \"my exact Volume Profile settings\" — the ones he uses every single day in his futures trading."
+    },
+    {
+      "title": "What ICT Didn't Tell You About Market Structure",
+      "url": "https://www.youtube.com/watch?v=2duprLr0mtE",
+      "date": "2025-06-22",
+      "type": "video",
+      "takeaway": "His addition to ICT market-structure teaching — what the original framework misses and how he fills the gap in his own structure read."
+    },
+    {
+      "title": "The Only Setup I'll Ever Need | ICT x Volume Profile",
+      "url": "https://www.youtube.com/watch?v=EKSN-KXwBRw",
+      "date": "2025-06-10",
+      "type": "video",
+      "takeaway": "Per the description: breaks down his \"Forever Model\" — an A+ setup combining ICT concepts with Volume Profile precision, \"the exact setup I wait for every week.\""
+    },
+    {
+      "title": "Volume Profile Is My Secret Weapon",
+      "url": "https://www.youtube.com/watch?v=ZC1q9RZHIC0",
+      "date": "2025-06-02",
+      "type": "video",
+      "takeaway": "Per the description: how he combines ICT concepts with the Previous Day's POC from Volume Profile for smarter, cleaner trades — \"ICT x Volume Profile is my edge.\""
+    },
+    {
+      "title": "The Strategy That Finally Clicked: ICT Meets Volume Profile",
+      "url": "https://www.youtube.com/watch?v=juenIDRqWlY",
+      "date": "2025-05-20",
+      "type": "video",
+      "takeaway": "Per the description: the breakdown of how he combines ICT concepts with Volume Profile to build his strategy — \"this was the key for me.\""
+    },
+    {
+      "title": "The Truth About SMT Divergence – Most Traders Have It All Wrong!",
+      "url": "https://www.youtube.com/watch?v=RCQNP478eqA",
+      "date": "2025-04-01",
+      "type": "video",
+      "takeaway": "Breaks down SMT Divergence the way he actually reads it, arguing most traders get it wrong; \"a game-changer — once you see it, you can't unsee it.\""
     }
   ],
   "articles": [
@@ -165,10 +282,23 @@
     }
   ],
   "profile": {
-    "instruments": ["NQ", "Perps"],
+    "instruments": [
+      "NQ",
+      "Perps"
+    ],
     "style": "ICT × Volume Profile liquidity sweeps with wide stops (WASL)",
-    "sessions": ["PM Kill Zone 2–4 PM", "London/NY"],
-    "firms": ["Apex", "Tradeify", "Lucid", "Top One Futures", "Vest", "MyFundedPerps"],
+    "sessions": [
+      "PM Kill Zone 2–4 PM",
+      "London/NY"
+    ],
+    "firms": [
+      "Apex",
+      "Tradeify",
+      "Lucid",
+      "Top One Futures",
+      "Vest",
+      "MyFundedPerps"
+    ],
     "niche": "base-hits payout farming"
   },
   "links": {

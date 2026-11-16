@@ -11,10 +11,22 @@
   "keyQuote": "Your job is not to pick the top. Your job is to join the momentum in whatever direction the market decides to go.",
   "keyQuoteSource": "Why You Can't Pick The Top On Nasdaq Futures",
   "stats": [
-    { "label": "Articles read", "value": "35" },
-    { "label": "Videos analyzed", "value": "15" },
-    { "label": "Hard rules", "value": "50" },
-    { "label": "Experience", "value": "10+ years" }
+    {
+      "label": "Articles read",
+      "value": "35"
+    },
+    {
+      "label": "Videos analyzed",
+      "value": "15"
+    },
+    {
+      "label": "Hard rules",
+      "value": "50"
+    },
+    {
+      "label": "Experience",
+      "value": "10+ years"
+    }
   ],
   "highlights": [
     "Join momentum — never pick tops or bottoms on expansion moves",
@@ -25,9 +37,24 @@
     "Cut early when the trade stops acting right; in chop, take the 50 and walk"
   ],
   "sections": [
-    { "id": "strategy", "title": "Strategy Playbook", "file": "strategy", "lead": "EMA system, regime filters, and trade management." },
-    { "id": "rules", "title": "Trading Rules", "file": "rules", "lead": "His hard rules with quotes and sources." },
-    { "id": "psychology", "title": "Psychology & Mindset", "file": "psychology", "lead": "Ten years of lessons." }
+    {
+      "id": "strategy",
+      "title": "Strategy Playbook",
+      "file": "strategy",
+      "lead": "EMA system, regime filters, and trade management."
+    },
+    {
+      "id": "rules",
+      "title": "Trading Rules",
+      "file": "rules",
+      "lead": "His hard rules with quotes and sources."
+    },
+    {
+      "id": "psychology",
+      "title": "Psychology & Mindset",
+      "file": "psychology",
+      "lead": "Ten years of lessons."
+    }
   ],
   "videos": [
     {
@@ -108,6 +135,13 @@
       "takeaway": "The 14/50/200 EMAs defended: confluence, not signals — bearish cross at 9:20 AM, wide EMA spread = strong pressure, then the repeating drop-retracement-rejection short. They shine on trend days and underperform in chop."
     },
     {
+      "title": "DayTrading LIVE! DMONEY CASHLEY YURI TRIO STREAM!",
+      "url": "https://www.youtube.com/watch?v=_ep4uxZnEpw",
+      "date": "2026-10-20",
+      "type": "live",
+      "takeaway": "Three-way live stream from the BDH floor with D-Money, Cashley and Yuri trading NQ futures. Description is the channel's standard boilerplate (crew list, prop-firm rankings) — no per-video strategy notes documented."
+    },
+    {
       "title": "NQ Dropped 780 Points. Here's How I Traded It",
       "url": "https://www.youtube.com/watch?v=r2L8QdiQ2NM",
       "date": "2026-10-19",
@@ -141,6 +175,83 @@
       "date": "2026-09-30",
       "type": "video",
       "takeaway": "After a 1,300+ point rally with one bearish 4-hour candle, shorting the top bankrupts you before NQ reverses — you run out of steam first. Buy retracements and use left-side resistance (31,040) only as a target, not a short signal."
+    },
+    {
+      "title": "DAY TRADING LIVE! DMONEY & DENNY DOLLAS IN THE BDH!!",
+      "url": "https://www.youtube.com/watch?v=7_Uv5leh6pU",
+      "date": "2026-09-08",
+      "type": "live",
+      "takeaway": "Joint live session from the BDH floor: D-Money and Denny (\"Denny Dollas\") trade NQ futures live. Description is the channel's standard boilerplate (crew list, prop-firm deals) — no per-video strategy notes documented."
+    },
+    {
+      "title": "DMONEY SHOW! DayTrading LIVE! MARKET OPEN!!!!",
+      "url": "https://www.youtube.com/watch?v=6KkWt9rEbVE",
+      "date": "2026-08-11",
+      "type": "live",
+      "takeaway": "D-Money live from the market open on the BDH floor, calling NQ setups in real time. Description is the channel's standard boilerplate (course promo, prop-firm deals, giveaway links) — no per-video strategy notes documented."
+    },
+    {
+      "title": "DMONEY SHOW! DayTrading LIVE! MARKET OPEN!!!!",
+      "url": "https://www.youtube.com/watch?v=CNYkzxyGtBo",
+      "date": "2026-07-24",
+      "type": "live",
+      "takeaway": "D-Money live from the market open on the BDH floor, calling NQ setups in real time. Description is the channel's standard boilerplate (course promo, prop-firm deals, giveaway links) — no per-video strategy notes documented."
+    },
+    {
+      "title": "DMONEY SHOW! DayTrading LIVE! MARKET OPEN!!!!",
+      "url": "https://www.youtube.com/watch?v=y74P7P87IiQ",
+      "date": "2026-07-10",
+      "type": "live",
+      "takeaway": "D-Money live from the market open on the BDH floor, calling NQ setups in real time. Description is the channel's standard boilerplate (course promo, prop-firm deals, giveaway links) — no per-video strategy notes documented."
+    },
+    {
+      "title": "DMONEY SHOW! DayTrading LIVE! MARKET OPEN!!!!",
+      "url": "https://www.youtube.com/watch?v=iyKdsnfviak",
+      "date": "2026-07-09",
+      "type": "live",
+      "takeaway": "D-Money live from the market open on the BDH floor, calling NQ setups in real time. Description is the channel's standard boilerplate (course promo, prop-firm deals, giveaway links) — no per-video strategy notes documented."
+    },
+    {
+      "title": "DMONEY SHOW! DayTrading LIVE! POWER HOUR!!!!",
+      "url": "https://www.youtube.com/watch?v=2Sj5POhmjeA",
+      "date": "2026-07-06",
+      "type": "live",
+      "takeaway": "D-Money's live Power Hour session — the 2–4 PM window that is his specialty slot on the BDH floor. Description is the channel's standard boilerplate (course promo, prop-firm deals, giveaway links) — no per-video strategy notes documented."
+    },
+    {
+      "title": "DMONEY SHOW! DayTrading LIVE! POWER HOUR!!!!",
+      "url": "https://www.youtube.com/watch?v=Fw7oJ3L4nfo",
+      "date": "2026-06-11",
+      "type": "live",
+      "takeaway": "D-Money's live Power Hour session — the 2–4 PM window that is his specialty slot on the BDH floor. Description is the channel's standard boilerplate (course promo, prop-firm deals, giveaway links) — no per-video strategy notes documented."
+    },
+    {
+      "title": "Day Trading LIVE! BDH Network! Patrick Wieland and DMoney!",
+      "url": "https://www.youtube.com/watch?v=fh5OTinVwD4",
+      "date": "2026-04-16",
+      "type": "live",
+      "takeaway": "Live BDH Network stream hosted by Patrick Wieland with D-Money trading NQ futures live. Description is the channel's standard boilerplate (course promo, prop-firm deals) — no per-video strategy notes documented."
+    },
+    {
+      "title": "Day Trading LIVE! BDH Network! Patrick Wieland and D Money!",
+      "url": "https://www.youtube.com/watch?v=he6fPwAQFNs",
+      "date": "2026-04-02",
+      "type": "live",
+      "takeaway": "Live BDH Network stream hosted by Patrick Wieland with D-Money trading NQ futures live. Description is the channel's standard boilerplate (course promo, prop-firm deals) — no per-video strategy notes documented."
+    },
+    {
+      "title": "Day Trading LIVE! BDH Network! Patrick Wieland and D Money!",
+      "url": "https://www.youtube.com/watch?v=3l4LKqhaczE",
+      "date": "2026-03-31",
+      "type": "live",
+      "takeaway": "Live BDH Network stream hosted by Patrick Wieland with D-Money trading NQ futures live. Description is the channel's standard boilerplate (course promo, prop-firm deals) — no per-video strategy notes documented."
+    },
+    {
+      "title": "Day Trading LIVE! BDH Network! Patrick Wieland and D Money!",
+      "url": "https://www.youtube.com/watch?v=ay1hLfeLur4",
+      "date": "2026-03-30",
+      "type": "live",
+      "takeaway": "Live BDH Network stream hosted by Patrick Wieland with D-Money trading NQ futures live. Description is the channel's standard boilerplate (course promo, prop-firm deals) — no per-video strategy notes documented."
     }
   ],
   "articles": [
@@ -356,10 +467,22 @@
     }
   ],
   "profile": {
-    "instruments": ["NQ"],
+    "instruments": [
+      "NQ"
+    ],
     "style": "intraday momentum — 14/50/200 EMA retracements",
-    "sessions": ["US open 9:30 AM", "Power Hour 2–4 PM"],
-    "firms": ["Apex", "Tradeify", "Lucid", "MyFundedFutures", "IQ Capital", "Vest"],
+    "sessions": [
+      "US open 9:30 AM",
+      "Power Hour 2–4 PM"
+    ],
+    "firms": [
+      "Apex",
+      "Tradeify",
+      "Lucid",
+      "MyFundedFutures",
+      "IQ Capital",
+      "Vest"
+    ],
     "niche": "momentum continuation + Power Hour"
   },
   "links": {
@@ -367,5 +490,8 @@
     "site": "https://onlypropfirms.com/bdh/d-moneys-trading-faq",
     "siteLabel": "D-Money's Trading FAQ"
   },
-  "sources": { "category": "https://onlypropfirms.com/bdh/d-moneys-trading-faq", "notes": "35/35 articles crawled pages 1–4; 15 video descriptions extracted; researched 2026-11-16" }
+  "sources": {
+    "category": "https://onlypropfirms.com/bdh/d-moneys-trading-faq",
+    "notes": "35/35 articles crawled pages 1–4; 15 video descriptions extracted; researched 2026-11-16"
+  }
 }

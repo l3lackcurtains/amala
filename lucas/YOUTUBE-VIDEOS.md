@@ -115,3 +115,20 @@ Lucas Kennard ("Lucashhh"), BDH Trading floor trader, streams 5:45pm–9pm (Asia
 - Sizing = cage: size so the market can breathe between your stop and target ("NQ down 1,000 points in 24 hours").
 - Asia session: sniper entries in low volatility; no-man's-land (post-Globex-open lull before Asia open) is untradeable; expect 30–150 points of drawdown before delivery on valid flags.
 - Psychology: process over P&L; money is a lagging indicator; think in months, not days.
+
+## Key older / popular videos (added 2026-11-16)
+
+Found by searching the @BDHTrading channel and YouTube site-wide search for videos with "LUCA$H" in the title (Lucas's handle — channel description confirms: "Lucas Kennard A.K.A. Lucashhh"). These are his regular nightly Globex/overnight live streams (20K–30K views each, among the most-watched recurring content on the channel), i.e. exactly the Asia-session window his bull/bear-flag checklist trades. Watch-page descriptions are the channel's standard boilerplate with no per-video strategy notes; the titles document the recurring show.
+
+- `k3UqgLiVS6w` — **DayTrading LIVE! LUCA$H Globex** · 2026-10-26 · 30,181 views
+- `EbOUzr32-7A` — **DayTrading LIVE! LUCA$H Globex** · 2026-11-01 · 29,693 views
+- `LNDQHyVDUuA` — **DayTrading LIVE! LUCA$H Globex** · 2026-10-19 · 29,029 views
+- `_UmrgFDVrv0` — **DayTrading LIVE! LUCA$H Globex** · 2026-09-21 · 28,714 views
+- `RJc54wPJMK8` — **DayTrading LIVE! LUCA$H Globex** · 2026-10-05 · 28,065 views
+- `BLhwSJLzmdk` — **DayTrading LIVE! LUCA$H Globex** · 2026-11-04 · 27,955 views
+- `7DtCK3jXBSQ` — **DayTrading LIVE! LUCA$H Globex** · 2026-11-05 · 27,873 views
+- `vFza64IyftM` — **DayTrading LIVE! LUCA$H Globex** · 2026-11-15 · 27,762 views
+- `v7S9SDm0WLg` — **DayTrading LIVE! LUCA$H Globex** · 2026-11-02 · 27,399 views
+- `px4iYGpwwGY` — **DayTrading LIVE! LUCA$H Globex** · 2026-11-03 · 26,887 views
+- `Utl6owVA0eM` — **DayTrading LIVE! LUCA$H Globex** · 2026-10-21 · 26,821 views
+- `gFzKnDc0hpk` — **DayTrading LIVE! LUCA$H Globex** · 2026-11-08 · 26,287 views
