@@ -315,8 +315,9 @@ details.fold-sec > summary:hover { background: var(--accent-soft); }
 details.fold-sec .fold-body { padding: 2px 16px 16px; }
 details.fold-sec .fold-body > *:first-child { margin-top: 4px; }
 
-/* rules: numbered rule rows */
-.rules-md .fold-body ol, .rules-md > ol { padding-left: 0; list-style: none; counter-reset: rule; }
+/* rules: numbered rule rows — continuous numbering across the section */
+.rules-md { counter-reset: rule; }
+.rules-md .fold-body ol, .rules-md > ol { padding-left: 0; list-style: none; }
 .rules-md .fold-body ol > li, .rules-md > ol > li {
   counter-increment: rule; position: relative;
   background: var(--card-2); border: 1px solid var(--border);

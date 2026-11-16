@@ -1,3 +1,14 @@
+---
+title: Trading Rules
+trader: dmoney
+topics:
+  - risk
+  - entries
+  - exits
+  - sizing
+  - sessions
+---
+
 Rules as stated or clearly practiced across the 35 articles of D-Money's Trading FAQ. Short quotes are D-Money's words, with the source article noted.
 
 ## Trend-Day Rules

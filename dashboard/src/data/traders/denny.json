@@ -294,6 +294,13 @@
       "takeaway": "His signature setup, fully specified: two consecutive 5-min candles making new session extremes, then a trigger candle that sweeps another extreme and closes opposite-colored; enter next candle open, stop one tick beyond the trigger wick, strict 1:1 ($300–$400 on NQ). Trade Asia/London/NY; skip Globex 6–8 PM."
     }
   ],
+  "profile": {
+    "instruments": ["NQ"],
+    "style": "5-minute chop-box scalping and Globex first-candle reversals",
+    "sessions": ["Globex open 6:00 PM", "US mornings"],
+    "firms": ["Apex", "Tradeify", "Lucid", "BluSky", "Vest", "IQ Capital", "Take Profit Trader"],
+    "niche": "multi-account payout farming"
+  },
   "links": {
     "youtube": "https://www.youtube.com/@BDHTrading",
     "site": "https://onlypropfirms.com/bdh/dennys-trading-desk",

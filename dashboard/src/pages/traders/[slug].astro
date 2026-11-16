@@ -4,7 +4,7 @@ import path from 'node:path';
 import { marked } from 'marked';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import VideoCard from '../../components/VideoCard.astro';
-import { slugify } from '../../utils/text';
+import { slugify, toText, parseFrontmatter, injectRuleIds } from '../../lib/normalize';
 
 export async function getStaticPaths() {
   const mods = import.meta.glob('../../data/traders/*.json', { eager: true }) as Record<string, any>;
@@ -17,7 +17,8 @@ export async function getStaticPaths() {
 const { trader } = Astro.props as { trader: any };
 
 // Render a section's markdown, then split it into collapsible chunks at each "## " heading.
-function renderSection(file: string): { title: string; body: string }[] | null {
+// Frontmatter is stripped; rules sections get stable ids injected onto each rule item.
+function renderSection(file: string, rulePrefix?: string): { title: string; body: string }[] | null {
   const p = path.join(process.cwd(), 'src', 'markdown', 'traders', trader.slug, `${file}.md`);
   let raw: string;
   try {
@@ -25,7 +26,10 @@ function renderSection(file: string): { title: string; body: string }[] | null {
   } catch {
     return null;
   }
-  const html = marked.parse(raw, { gfm: true }) as string;
+  const fm = parseFrontmatter(raw);
+  let html = marked.parse(fm.body, { gfm: true }) as string;
+  if (rulePrefix) html = injectRuleIds(html, rulePrefix).html;
+
   const chunks: { title: string; body: string }[] = [];
   const re = /<h2[^>]*>([\s\S]*?)<\/h2>/;
   let rest = html;
@@ -121,7 +125,7 @@ const links = trader.links || {};
     </section>
 
     {(trader.sections || []).map((s: any) => {
-      const chunks = renderSection(s.file);
+      const chunks = renderSection(s.file, s.id === 'rules' ? `rules-r` : undefined);
       return (
         <section class="block" id={s.id}>
           <h2>{s.title}</h2>

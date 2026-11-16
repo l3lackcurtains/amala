@@ -204,6 +204,13 @@
       "takeaway": "From options YOLOs and maxed-out credit cards to installing docks on Michigan lakes while trading from his phone, his first $1,200 payout was the light at the end of the tunnel. A discipline overhaul (4 AM wake-ups, gym twice a day, one or two trades a day) built the consistency that got him to the BDH floor."
     }
   ],
+  "profile": {
+    "instruments": ["NQ"],
+    "style": "bull/bear flag sniping at 9/21 EMA + VWAP confluence",
+    "sessions": ["Asia/Globex 6:00 PM", "NY open 9:30 AM"],
+    "firms": ["Tradeify", "Lucid", "Vest"],
+    "niche": "overnight session sniping + structured DCA"
+  },
   "links": {
     "youtube": "https://www.youtube.com/@BDHTrading",
     "site": "https://onlypropfirms.com/bdh/lucas-trading-playbook",

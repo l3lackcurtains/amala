@@ -1,3 +1,14 @@
+---
+title: Psychology & Mindset
+trader: lucas
+topics:
+  - risk
+  - entries
+  - sizing
+  - sessions
+  - market-regime
+---
+
 ## Being Right ≠ Making Money
 
 *From being-right-doesnt-make-you-money:*

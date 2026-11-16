@@ -1,3 +1,14 @@
+---
+title: Trading Rules
+trader: denny
+topics:
+  - risk
+  - entries
+  - exits
+  - sizing
+  - sessions
+---
+
 ## The Golden Rule: One Trade Per Account Per Day
 
 1. **One trade per account, per day.** His self-described "ultimate rule," reinstated after blowing two Blue Sky accounts by chasing what everyone else at the desk was doing (one-trade-per-account-per-day-why-i-walk-away). With 20+ funded accounts that means maybe five total trades a day: focus on whichever accounts are closest to hitting a payout or passing an evaluation, take the one trade, and then physically walk away from the screens. *"If you are up for the day, take the money and walk away. If you took a loss, accept it and walk away."*

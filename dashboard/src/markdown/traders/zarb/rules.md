@@ -1,3 +1,14 @@
+---
+title: Trading Rules
+trader: zarb
+topics:
+  - risk
+  - entries
+  - sizing
+  - sessions
+  - market-regime
+---
+
 ## Risk & Stop Rules (WASL)
 
 1. **WASL: use a Wide Ass Stop Loss.** His signature rule — the acronym is chanted on stream and names his whole approach.

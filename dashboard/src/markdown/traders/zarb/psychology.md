@@ -1,3 +1,14 @@
+---
+title: Psychology & Mindset
+trader: zarb
+topics:
+  - risk
+  - market-regime
+  - payouts
+  - prop-firm
+  - psychology
+---
+
 ## Radical Transparency Is the System's Backbone
 
 His brand promise is that nothing is hidden — every payout was earned on a live stream, with losses included.

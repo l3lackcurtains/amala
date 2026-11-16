@@ -1,3 +1,14 @@
+---
+title: Strategy Playbook
+trader: denny
+topics:
+  - risk
+  - entries
+  - exits
+  - sizing
+  - sessions
+---
+
 ## Who / What He Trades
 
 - **Market:** Nasdaq futures (**NQ**) almost exclusively. One article notes he pivoted a silver strategy to NQ: *"I originally found this setup while trading silver back when it used to be highly volatile. Since silver died down, I moved the strategy over to the NASDAQ (NQ), and it has been working beautifully ever since"* (2-in-the-chamber). He briefly traded **Silver** again when NQ got choppy (we-were-down-400).

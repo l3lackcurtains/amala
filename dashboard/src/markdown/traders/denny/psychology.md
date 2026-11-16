@@ -1,3 +1,14 @@
+---
+title: Psychology & Mindset
+trader: denny
+topics:
+  - risk
+  - entries
+  - exits
+  - sizing
+  - sessions
+---
+
 ## Discipline Is a Daily Fight, Not a Trait
 
 - *"Honestly, discipline is something you have to actively fight for. If you aren't mentally prepared to go into a session and accept losing money, you aren't going to be disciplined. And if you aren't mentally prepared to sit in your chair for hours doing absolutely nothing while waiting for an A+ setup, you aren't going to make it."* (why-most-traders-fail-and-how-the-army-fixed-my-trading)

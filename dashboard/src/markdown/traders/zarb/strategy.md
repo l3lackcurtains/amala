@@ -1,3 +1,14 @@
+---
+title: Strategy Playbook
+trader: zarb
+topics:
+  - risk
+  - entries
+  - sizing
+  - sessions
+  - market-regime
+---
+
 ## The WASL Approach (meaning confirmed)
 
 His whole method is branded the "WASL approach." WASL stands for **Wide Ass Stop Loss** — documented verbatim on iamzarb.com:

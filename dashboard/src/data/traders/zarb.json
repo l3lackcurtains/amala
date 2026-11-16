@@ -164,6 +164,13 @@
       "takeaway": "Source of the 15-video census (9 shorts, 3 long-forms, 3 live VODs) with dates, views and descriptions; watch pages scraped for chapters and shortDescription fields."
     }
   ],
+  "profile": {
+    "instruments": ["NQ", "Perps"],
+    "style": "ICT × Volume Profile liquidity sweeps with wide stops (WASL)",
+    "sessions": ["PM Kill Zone 2–4 PM", "London/NY"],
+    "firms": ["Apex", "Tradeify", "Lucid", "Top One Futures", "Vest", "MyFundedPerps"],
+    "niche": "base-hits payout farming"
+  },
   "links": {
     "youtube": "https://www.youtube.com/@iamzarb",
     "site": "https://iamzarb.com/",

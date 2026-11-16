@@ -1,3 +1,14 @@
+---
+title: Strategy Playbook
+trader: dmoney
+topics:
+  - risk
+  - entries
+  - exits
+  - sizing
+  - sessions
+---
+
 ## Who D-Money Is
 
 D-Money is a **momentum day trader of NQ (Nasdaq-100 E-mini) futures**, trading primarily on prop-firm eval/funded accounts (Apex, Tradeify, Lucid, Tradovate execution). He trades the US session (often the 9:30 AM open and/or the 12:00–4:00 PM afternoon window) and describes himself as a trader of 10+ years (stocks, options, forex, futures). Core identity quote: *"I am a momentum trader"* — his job is *"not to pick the top. Your job is to join the momentum in whatever direction the market decides to go"* (why-you-cant-pick-the-top-on-nasdaq-futures).

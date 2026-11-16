@@ -1,10 +1,11 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { marked } from 'marked';
-import { slugify, toText } from '../utils/text';
+import { extractRules, slugify, toText, parseFrontmatter, tagTopics } from '../lib/normalize';
 
-// Build-time search index over every trader: overview, playbook subsections,
-// rules, videos, and articles. Consumed by the client-side global search.
+// Build-time search + query index over every trader:
+// profile, playbook subsections, individual tagged rules, videos, articles.
+// Consumed by the global search (Ctrl K) and the /ask page.
 export async function GET() {
   const mods = import.meta.glob('../data/traders/*.json', { eager: true }) as Record<string, any>;
   const traders = Object.values(mods)
@@ -19,23 +20,56 @@ export async function GET() {
       color: t.accent,
       slug: t.slug,
     };
+    const profile = t.profile || {};
 
-    // Overview
+    // Profile — answers "what does X trade?"
     docs.push({
       ...base,
-      section: 'overview',
-      title: `${t.name} — overview`,
-      text: [t.summary, t.oneLiner, t.keyQuote, ...(t.highlights || [])].filter(Boolean).join(' · '),
+      section: 'profile',
+      title: `${t.name} — profile`,
+      text: [
+        t.summary,
+        t.oneLiner,
+        profile.instruments ? `Instruments: ${profile.instruments.join(', ')}` : '',
+        profile.style ? `Style: ${profile.style}` : '',
+        profile.sessions ? `Sessions: ${profile.sessions.join(', ')}` : '',
+        profile.firms ? `Firms: ${profile.firms.join(', ')}` : '',
+        ...(t.highlights || []),
+      ].filter(Boolean).join(' · '),
+      topics: tagTopics([t.summary, t.oneLiner, (profile.instruments || []).join(' '), (profile.style || '')].join(' ')),
       url: `/traders/${t.slug}`,
       anchor: 'overview',
     });
 
-    // Playbook sections, one doc per "## " subsection (fold)
+    // Playbook sections + individual rules
     for (const s of t.sections || []) {
       try {
         const p = path.join(process.cwd(), 'src', 'markdown', 'traders', t.slug, `${s.file}.md`);
         const raw = fs.readFileSync(p, 'utf8');
-        const html = marked.parse(raw, { gfm: true }) as string;
+        const fm = parseFrontmatter(raw);
+        const html = marked.parse(fm.body, { gfm: true }) as string;
+        const fmTopics = Array.isArray(fm.data.topics) ? fm.data.topics : [];
+
+        // Individual rules as standalone docs
+        if (s.id === 'rules') {
+          const rules = extractRules(html);
+          for (const r of rules) {
+            docs.push({
+              ...base,
+              section: 'rule',
+              group: r.group,
+              ruleId: `${t.slug}-r${r.index}`,
+              title: `${t.name} rule: ${r.title}`,
+              text: r.text,
+              topics: r.topics,
+              url: `/traders/${t.slug}`,
+              anchor: `${s.id}-${r.anchor}`,
+            });
+          }
+          continue;
+        }
+
+        // Other sections: one doc per "## " subsection
         const re = /<h2[^>]*>([\s\S]*?)<\/h2>/g;
         const parts: { title: string; body: string }[] = [];
         let rest = html;
@@ -62,6 +96,7 @@ export async function GET() {
             section: s.id,
             title: part.title || `${t.name} — ${s.title}`,
             text: part.body,
+            topics: [...fmTopics, ...tagTopics(part.body)].slice(0, 6),
             url: `/traders/${t.slug}`,
             anchor: part.title ? `${s.id}-${slugify(part.title)}` : s.id,
           });
@@ -79,6 +114,7 @@ export async function GET() {
         section: 'video',
         title: v.title,
         text: v.takeaway || '',
+        topics: tagTopics(`${v.title} ${v.takeaway || ''}`),
         url: id ? `/watch?v=${id}` : v.url,
         anchor: '',
       });
@@ -91,6 +127,7 @@ export async function GET() {
         section: 'article',
         title: a.title,
         text: a.takeaway || '',
+        topics: tagTopics(`${a.title} ${a.takeaway || ''}`),
         url: `/traders/${t.slug}`,
         anchor: 'articles',
       });

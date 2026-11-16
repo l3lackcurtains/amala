@@ -355,6 +355,13 @@
       "takeaway": "Draw zones, not lines: 1H/4H rectangles from wick to candle body at historic turning points. Zones are take-profit targets, gap fills are reaction levels, and a consolidation break through a box flips resistance into support."
     }
   ],
+  "profile": {
+    "instruments": ["NQ"],
+    "style": "intraday momentum — 14/50/200 EMA retracements",
+    "sessions": ["US open 9:30 AM", "Power Hour 2–4 PM"],
+    "firms": ["Apex", "Tradeify", "Lucid", "MyFundedFutures", "IQ Capital", "Vest"],
+    "niche": "momentum continuation + Power Hour"
+  },
   "links": {
     "youtube": "https://www.youtube.com/@BDHTrading",
     "site": "https://onlypropfirms.com/bdh/d-moneys-trading-faq",

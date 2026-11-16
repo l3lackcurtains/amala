@@ -1,3 +1,14 @@
+---
+title: Strategy Playbook
+trader: lucas
+topics:
+  - risk
+  - entries
+  - exits
+  - sizing
+  - sessions
+---
+
 ## Who He Is & What He Trades
 
 - Lucas is a 21-year-old full-time futures day trader and streamer at the BDH (started trading ~2023 in high school, first prop payout $1,200 in August of his freshman summer, first $10K payout July 2025).

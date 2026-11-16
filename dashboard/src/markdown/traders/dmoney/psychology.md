@@ -1,3 +1,14 @@
+---
+title: Psychology & Mindset
+trader: dmoney
+topics:
+  - risk
+  - entries
+  - exits
+  - sizing
+  - sessions
+---
+
 ## The "10 Years In" Lessons (his four biggest)
 
 From `10-years-in-what-id-do-differently` (10 Nov 2026). Context: 10 years across stocks, options, forex, futures; accounts blown along the way; **two full years of losses before his first payout**.

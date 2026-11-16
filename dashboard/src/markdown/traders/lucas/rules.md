@@ -1,3 +1,14 @@
+---
+title: Trading Rules
+trader: lucas
+topics:
+  - risk
+  - entries
+  - exits
+  - sizing
+  - sessions
+---
+
 ## Entry Rules
 
 1. **Wait for the candle close.** Entering a bear flag early cost traders a 35–40 point wick against them before the move even went their way. *(being-right-doesnt-make-you-money)*
