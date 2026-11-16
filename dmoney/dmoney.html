@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>D-Money — BDH Trading Strategy &amp; Rules</title>
+<style>
+:root{--bg:#f4f6f8;--card:#fff;--text:#1b2430;--muted:#5b6572;--border:#e3e8ee;--accent:#1d4ed8;--accent-soft:#eaf1ff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.7 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+header.hero{background:linear-gradient(135deg,var(--accent),#111827);color:#fff;padding:48px 24px 40px}
+.hero-inner{max-width:960px;margin:0 auto}
+.hero .kicker{letter-spacing:.18em;text-transform:uppercase;font-size:12px;opacity:.85;margin:0 0 10px}
+.hero h1{margin:0 0 12px;font-size:clamp(28px,4vw,44px);line-height:1.15}
+.hero p.sub{margin:0 0 20px;opacity:.92;max-width:72ch}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:6px 14px;font-size:13px;font-weight:600}
+nav.toc{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--border)}
+nav.toc .inner{max-width:960px;margin:0 auto;display:flex;gap:4px;overflow-x:auto;padding:10px 16px}
+nav.toc a{flex:0 0 auto;color:var(--muted);text-decoration:none;font-weight:600;font-size:13.5px;padding:7px 14px;border-radius:999px}
+nav.toc a:hover{background:var(--accent-soft);color:var(--accent)}
+main{max-width:960px;margin:0 auto;padding:32px 20px 80px}
+section{margin:0 0 44px}
+h2{font-size:26px;margin:0 0 6px;padding-left:14px;border-left:5px solid var(--accent)}
+h3{font-size:19px;margin:26px 0 8px;color:var(--accent)}
+h4{font-size:16px;margin:20px 0 6px}
+p{margin:10px 0}
+ul,ol{margin:10px 0;padding-left:26px}
+li{margin:5px 0}
+blockquote{margin:16px 0;padding:12px 18px;background:var(--accent-soft);border-left:4px solid var(--accent);border-radius:0 10px 10px 0;font-style:italic}
+blockquote p{margin:6px 0}
+code{background:#eef1f5;border:1px solid var(--border);border-radius:6px;padding:1px 6px;font-family:ui-monospace,Consolas,monospace;font-size:.9em}
+.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:14px 0;box-shadow:0 1px 3px rgba(16,24,40,.05)}
+.rule{border-left:4px solid var(--accent)}
+.num{display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:30px;border-radius:8px;background:var(--accent);color:#fff;font-weight:700;font-size:14px;margin-right:10px}
+table{width:100%;border-collapse:collapse;background:var(--card);font-size:14.5px;margin:14px 0;border:1px solid var(--border);border-radius:12px;overflow:hidden}
+th{background:var(--accent-soft);color:var(--accent);text-align:left}
+th,td{padding:10px 12px;border-bottom:1px solid var(--border);vertical-align:top}
+tr:last-child td{border-bottom:none}
+details.fold{background:var(--card);border:1px solid var(--border);border-radius:14px;margin:14px 0}
+details.fold summary{cursor:pointer;padding:16px 20px;font-weight:700;color:var(--accent)}
+details.fold .body{padding:0 20px 18px}
+.meta{font-size:12.5px;color:var(--muted)}
+footer{max-width:960px;margin:0 auto;padding:0 20px 60px;color:var(--muted);font-size:13px}
+.top{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;text-decoration:none;border-radius:999px;padding:10px 16px;font-weight:700;font-size:13px;box-shadow:0 4px 14px rgba(0,0,0,.2)}
+@media print{nav.toc,.top{display:none}}
+</style>
+</head>
+<body class="dmoney">
+
+<header class="hero" id="top">
+  <div class="hero-inner">
+    <p class="kicker">BDH TRADING · D-MONEY'S TRADING FAQ</p>
+    <h1>D-Money — Strategy &amp; Rules</h1>
+    <p class="sub">A 10+ year momentum day trader of NQ (Nasdaq-100 E-mini) futures, trading prop-firm eval and funded accounts. His system: the 14/50/200 EMA stack on TradingView — trade the retracement, never the breakout — with 10–20 point stops against 50+ point targets, and a Power Hour specialist streaming 9am–12pm plus 2–4pm daily.</p>
+    <div class="chips">
+      <span class="chip">35 articles</span>
+      <span class="chip">15 videos</span>
+      <span class="chip">50 hard rules</span>
+      <span class="chip">Researched 2026-11-16</span>
+    </div>
+  </div>
+</header>
+
+<nav class="toc">
+  <div class="inner">
+    <a href="#overview">Overview</a>
+    <a href="#strategy">Strategy</a>
+    <a href="#rules">50 Rules</a>
+    <a href="#psychology">Psychology</a>
+    <a href="#videos">Videos</a>
+    <a href="#articles">Articles</a>
+    <a href="#sources">Sources</a>
+  </div>
+</nav>
+
+<main>
+
+<section id="overview">
+  <h2>Overview</h2>
+  <div class="card">
+    <p><strong>D-Money (Damareous Young)</strong> is a momentum day trader of NQ (Nasdaq-100 E-mini) futures with 10+ years of experience across stocks, options, forex, and futures, trading primarily on prop-firm eval/funded accounts (Apex, Tradeify, Lucid, Tradovate execution). He trades the US session — often the 9:30 AM open and the 12:00–4:00 PM afternoon window — and is a Power Hour specialist, streaming 9am–12pm plus Power Hour 2–4pm daily on the BDH Trading channel. His core system is the 14/50/200 EMA stack on TradingView, used for trend confluence rather than as a blind signal, with entries always taken on the retracement to the EMA — never the breakout — using 10–20 point stops to target 50+ point moves.</p>
+    <blockquote>"I am a momentum trader... Your job is not to pick the top. Your job is to join the momentum in whatever direction the market decides to go."</blockquote>
+    <p class="meta">Core identity quote, from why-you-cant-pick-the-top-on-nasdaq-futures</p>
+  </div>
+</section>
+
+<section id="strategy">
+  <h2>D-Money's NQ (Nasdaq Futures) Trading Strategy — Distilled Playbook</h2>
+  <p class="meta"><strong>Source:</strong> onlypropfirms.com/bdh — "D-Money's Trading FAQ" (BDH Trading channel)<br><strong>Date researched:</strong> 2026-11-16<br><strong>Articles analyzed:</strong> 35 (all articles in the category, pages 1–4)</p>
+
+  <p>D-Money is a <strong>momentum day trader of NQ (Nasdaq-100 E-mini) futures</strong>, trading primarily on prop-firm eval/funded accounts (Apex, Tradeify, Lucid, Tradovate execution). He trades the US session (often the 9:30 AM open and/or the 12:00–4:00 PM afternoon window) and describes himself as a trader of 10+ years (stocks, options, forex, futures). Core identity quote: <em>"I am a momentum trader"</em> — his job is <em>"not to pick the top. Your job is to join the momentum in whatever direction the market decides to go"</em> (why-you-cant-pick-the-top-on-nasdaq-futures).</p>
+
+  <h3>1. Chart Setup &amp; Tools (TradingView)</h3>
+  <p>From <code>my-tradingview-setup-emas-boxes-and-tools-explained</code>:</p>
+  <ul>
+    <li><strong>Indicators:</strong> the 14, 50, and 200 EMAs — "the backbone of this trading strategy."</li>
+    <li><strong>Pinned tools:</strong>
+      <ul>
+        <li><strong>Rectangle tool</strong> → support/resistance <em>zones</em> (transparent boxes so candles are visible inside).</li>
+        <li><strong>Horizontal line</strong> (colored strictly black) → exclusively for mapping ORB highs/lows.</li>
+        <li><strong>Price Range tool</strong> → measuring exact point drops / candle sizes (e.g. "710 points").</li>
+        <li><strong>Arrows</strong> → marking engulfing candles and rejection points.</li>
+      </ul>
+    </li>
+    <li>Execution happens directly on TradingView charts via broker connection (e.g., Tradovate).</li>
+  </ul>
+
+  <h3>2. The EMA System (14 / 50 / 200)</h3>
+  <p>From <code>everyone-says-emas-dont-work</code>, <code>how-i-use-the-14-50-and-200-ema-to-trade-nq-futures</code>, <code>how-i-find-a-entries-using-the-emas-nq-futures</code>, <code>how-to-identify-a-trend-day-before-it-happens</code>:</p>
+  <ul>
+    <li><strong>EMAs are trend indicators, not entry signals.</strong> "EMAs are not magic lines you trade blindly—they are pure trend indicators." They are <em>lagging</em> indicators used for <strong>confluence</strong> with price action, momentum, and higher-time-frame analysis.</li>
+    <li><strong>They work in trends, fail in chop:</strong> "The EMAs don't work in a choppy market, but on a trend day, they are the best tool in your arsenal."</li>
+    <li><strong>Setup:</strong> add Moving Average Exponential three times, lengths <strong>14, 50, 200</strong>.</li>
+    <li><strong>The 14 EMA is the momentum magnet.</strong> In a strong trend the repeating pattern is: <em>"Drop, retracement to the 14 EMA, rejection, and another drop. Every single time price pulled back to tap the 14 EMA on the 5-minute chart, it gave us a flawless entry for another short."</em> Same pattern long-side: push → retrace to 14 EMA → rejection wick → continuation.</li>
+    <li><strong>EMA crosses set the directional bias:</strong> wait for a <strong>bearish EMA cross</strong> (14 crossing below 50) before hunting shorts; bullish cross for longs. A clean cross e.g. "right at 9:20 AM" preceded his short sequence.</li>
+    <li><strong>EMA spread = momentum intensity.</strong> "Notice how far apart the EMAs spread after that cross? That massive gap tells you there is intense selling pressure in the market. You should not even be thinking about longs!"</li>
+    <li><strong>Higher time frame conviction:</strong> when price trades entirely <em>below</em> the 14/50/200 EMAs on the 1-hour chart (and there is a bearish cross on the 4-hour), longs are "financial suicide" except for quick scalp retracement bounces to the 14 EMA. Rule of thumb: if the 1-hour is bullish, look for bullish EMA crosses on entry time frames; if bearish, hunt bearish crosses.</li>
+    <li><strong>On a strong trend day, EMAs are a line in the sand:</strong> "On a strong bullish trend day, once the price pushes above all three EMAs in the morning, it will likely <em>never drop below them</em> for the rest of the session."</li>
+    <li><strong>EMAs = stop-loss anchor:</strong> "You want to enter a trade as close to the EMA as possible, allowing you to use the EMA as your stop-loss placement." Typical EMA-retracement stop is <strong>10–20 points</strong>.</li>
+  </ul>
+
+  <h3>3. Trend vs. Range/Chop Identification</h3>
+  <h4>The inside-range rule (his #1 pre-open tell)</h4>
+  <p>From <code>inside-yesterdays-range-means-chop-heres-why</code>, <code>i-knew-it-would-chop-before-the-open</code>, <code>the-nasdaq-ran-200-points-heres-how-i-traded-it</code>, <code>one-loss-all-day-on-nasdaq-futures</code>:</p>
+  <ul>
+    <li><strong>First action every morning:</strong> map yesterday's daily candle high and low on the daily chart.</li>
+    <li><strong>Rule:</strong> <em>"When we are stuck inside yesterday's range, we get consolidation and chop. When we break above yesterday's high, it is an expansion day."</em> Inside the prior day's range → expect "a choppy, consolidating, range-bound market." Outside/breaking it → "Look for higher highs, higher lows, and a trend day."</li>
+  </ul>
+  <h4>Trend-day clues</h4>
+  <p>From <code>how-to-identify-a-trend-day-before-it-happens</code>, <code>what-is-momentum-trading-my-full-breakdown</code>:</p>
+  <ul>
+    <li>Large momentum candles early (5-min candles of <strong>80–130 points</strong> right after the open; he "routinely" sees 100–130 point candles in the first hour).</li>
+    <li>Higher highs + higher lows (uptrend) or lower highs + lower lows (downtrend).</li>
+    <li>Price holds above (or below) all three EMAs for the session.</li>
+    <li>Bearish trend day additionally: bearish EMA cross + ORB breakout to the downside with big red candles.</li>
+    <li><strong>Trend shift warning:</strong> after a huge move (e.g. "a 500+ point drop"), watch for the HH/LL pattern to break — double/triple bottoms or new higher highs/higher lows = trend likely over; "the market will eventually exhaust itself."</li>
+    <li><strong>Lunchtime trap:</strong> momentum dies around lunch; candle bodies shrink; shift from momentum trading to range trading.</li>
+  </ul>
+  <h4>Range/chop trading</h4>
+  <p>From <code>how-i-trade-a-range-when-nq-is-stuck-in-chop</code>, <code>the-market-is-ranging-more-than-you-think</code>, <code>trading-psychology-why-i-stayed-flat-on-a-difficult-day</code>:</p>
+  <ul>
+    <li>Map the range with rectangle boxes: ceiling over top wicks, floor over bottom wicks. "A range can be as small as 30 points or as large as 85+ points depending on the time of day."</li>
+    <li><strong>Strategy:</strong> "Buy the absolute bottom of the range. Short the absolute top of the range."</li>
+    <li>Long entry at the floor: check that price bounced here last time ("look left"), wait for a bottom wick, enter as close to the bottom as possible; <strong>stop 10–15 points below the range floor</strong>; target the top.</li>
+    <li>Short at the ceiling: stall + top wicks, enter at the top line, stop just above, target the floor.</li>
+    <li>Expect fake-outs ("ping-pong"): price pokes a level and reverses — take base hits of <strong>10, 15, or 20 points tops</strong>.</li>
+    <li>"Every range eventually breaks." When volume returns and the box breaks, stop gets hit or you flip back to momentum-breakout trading on the retest.</li>
+    <li>After a big expansion (e.g. an 84-point W-pattern pop), price usually gets "stuck back inside a tight consolidation range."</li>
+  </ul>
+
+  <h3>4. Key Price Action Patterns</h3>
+  <h4>Wicks ("Embrace the wicks")</h4>
+  <p>From <code>what-a-90-point-bottom-wick-tells-you</code>, <code>the-secret-to-finding-reversals-wick-analysis-101</code>:</p>
+  <ul>
+    <li>Wicks "tell a story. They don't lie" — they show where price tried to go but couldn't hold.</li>
+    <li><strong>Support wick (bullish):</strong> long bottom wick = buyers stepped in aggressively. His flagship example: a 30-minute open candle with a <strong>90-point bottom wick that still closed green</strong> → "heavy buyers sitting lower down." Execution: buy the <em>next</em> candle as it digs back down into that wick zone (e.g. down to ~31,192), ride the reversal for 50 points. He admits "you never know exactly how deep the retracement is going to dig into that previous wick."</li>
+    <li><strong>Rejection wick (bearish):</strong> candle taps the 14 EMA, rejects, closes red with long top wick = bulls failed → short the continuation. Stop just beyond the 14 EMA ("usually a tight 20-point stop"); example yielded a "100+ point melt."</li>
+    <li><strong>"Swipe and Go":</strong> price flushes below a prior low (liquidity swipe) and immediately rejects back up, closing bullish → get long; stop strictly below the bottom of that rejection wick → "an incredibly tight stop and a massive risk-to-reward ratio."</li>
+    <li><strong>Reactionary levels:</strong> "looking left and finding where massive wicks previously printed" — a big wick from Oct 30 at 7:00 AM becomes the bounce zone when price returns Oct 31 at 11:00 AM. Works for tops too.</li>
+    <li><strong>Golden rule:</strong> "If you get a crazy rejection wick on a 1-hour chart, it is significantly stronger than a wick on a 1-minute chart." Higher time frame wicks carry more weight; a first-15-minute-candle long bottom wick = "institutional buyers are willing to step in and absorb the selling pressure."</li>
+  </ul>
+  <h4>Equal highs / equal lows</h4>
+  <p>From <code>how-i-spot-equal-highs-and-equal-lows-for-reversals</code>:</p>
+  <ul>
+    <li>Definition: two consecutive (or clustered) candles topping/bottoming out <strong>within one point</strong> of each other (e.g. highs 29,905.25 vs 29,905.50).</li>
+    <li>Equal High = bulls stalling → first clue of bearish reversal. Equal Low = hard floor → look for longs while it holds.</li>
+    <li>Entry confirmation for the long: "Wait for a candle to close bullish above your 14 EMA." Stop "just a few points below the Equal Low"; an Equal Low "is the launchpad for a massive 100+ point 'bazooka candle' to the upside."</li>
+    <li>Beware the swipe: often the next candle momentarily <em>sweeps</em> just below the equal low to trap breakout sellers before reversing.</li>
+    <li>Also from <code>why-most-traders-miss-the-reversal-and-how-i-spot-it</code>: an equal low after a <strong>300+ point drop</strong> with a stop a few points beneath gives tiny risk vs "70 to 100 points" of reward back to the EMAs.</li>
+  </ul>
+  <h4>Double bottoms / tops, W-patterns, pin bars</h4>
+  <p>From <code>the-double-bottom-was-the-low-all-day</code>, <code>the-market-is-ranging-more-than-you-think</code>, <code>why-most-traders-miss-the-reversal-and-how-i-spot-it</code>:</p>
+  <ul>
+    <li>Double bottom: price sets a low (e.g. ~31,144), pushes up, swipes the low once more, rejects heavily — "that level remained the absolute low for the <em>entire</em> rest of the day." After the double bottom, expect a "slow, grinding stair-step pattern: push up, retracement, push up."</li>
+    <li>W-pattern (drop, push, drop, push) on the 5-minute → completion ignites expansion (e.g. an <strong>84-point</strong> pop at 11:55 AM).</li>
+    <li>Double/triple top on the 1-hour with "selling pressure creeping in" = red flag before a down day.</li>
+    <li>Pin bar/hammer: "a massive 20-to-30 point bottom wick after a long downtrend... a very strong warning sign for bears that a bullish reversal is likely beginning." A daily bearish pin bar with a "400-point long bottom wick" showed "extreme reaction from the bulls."</li>
+    <li>Context rule: "A reversal pattern is only as strong as its context" — a bottom wick after only a 20-point drop means little; after a 370-point melt "the rubber band is stretched thin" and it's an A+ setup.</li>
+  </ul>
+  <h4>Momentum candles ("Bazooka Candles")</h4>
+  <p>From <code>what-is-momentum-trading-my-full-breakdown</code>:</p>
+  <ul>
+    <li>Consolidation = cluster of small candles with long wicks (indecision). Breakout = a "massive, solid candle bursts out of the range... If you see a 5-minute candle with an 80+ or 100+ point range that completely engulfs the previous candles, that is your signal. Institutional money has picked a direction."</li>
+    <li>Bearish engulfing: "If a red candle body is 2 to 3 times the size of the previous green candles, the bears are in full control."</li>
+    <li><strong>Never fight heavy momentum.</strong> Never buy the top of a huge green candle or short the bottom of a huge red candle — wait for the retracement.</li>
+  </ul>
+  <h4>Structure shifts</h4>
+  <p>From <code>one-loss-all-day-on-nasdaq-futures</code>, <code>why-most-traders-miss-the-reversal-and-how-i-spot-it</code>:</p>
+  <ul>
+    <li>"One bullish candle doesn't mean a reversal. What confirmed the reversal was what happened next: <strong>we started putting in higher lows.</strong>" "When the market stops making lower lows and starts stacking higher lows, the momentum is shifting."</li>
+    <li>Bullish reversal build: low → higher low → another higher low after a big drop ("the market was clearly building up pressure to go higher").</li>
+    <li>Bearish: series of "a high, a lower high, and another lower high" = short the 14 EMA rejections.</li>
+  </ul>
+
+  <h3>5. Support &amp; Resistance Mapping</h3>
+  <p>From <code>how-i-map-out-support-and-resistance-levels-nq-futures</code>, <code>how-i-frame-quality-setups-on-nasdaq-futures</code>:</p>
+  <ul>
+    <li><strong>Draw zones, not lines</strong>, on the <strong>1-hour and 4-hour charts</strong> ("The higher the time frame, the stronger the support or resistance level"). Rectangle from <strong>wick to candle body</strong> at historic turning points, extended right.</li>
+    <li>Look <strong>immediately to the left</strong>: where did price previously reject or bounce? Long-wick rejections mark the zones.</li>
+    <li>Price travels "zone to zone" — mapped zones are the logical <strong>take-profit targets</strong> (e.g. he pre-called the 30,794–30,813 box as the "ultimate bull target" and price rejected exactly there).</li>
+    <li><strong>Gap fills</strong> act as immediate S/R and often spark a reversal reaction.</li>
+    <li>At a zone: wait for the reaction — double/triple bottoms or bullish engulfing at support; wick-sweeps rejecting at resistance. <strong>Breakout rule:</strong> consolidation at a box + explosive candle through it = "that previous resistance now becomes support" → trade the continuation.</li>
+    <li><strong>Psychological round numbers</strong> matter as targets: e.g. 31,000 ("the 31,000 psychological level"), 31,400 (cracked "at 3:50 PM").</li>
+    <li>Previous daily high/low and old daily resistance blocks (e.g. "31,040") are primary targets on expansion days.</li>
+  </ul>
+
+  <h3>6. Entry Logic (The A+ Setup)</h3>
+  <p>From <code>how-i-find-a-entries-using-the-emas-nq-futures</code>, <code>how-i-trade-price-action-and-momentum-together</code>, <code>the-trend-is-your-friend-heres-what-it-means</code>, <code>dont-let-greed-kill-your-trade-cut-early</code>:</p>
+  <ol>
+    <li><strong>Establish the trend</strong> (macro: 1H/4H + EMAs + EMA cross). E.g. "Only look for short setups" when the 1-hour shows heavy red candles and price closes below the 50 EMA.</li>
+    <li><strong>Wait for the push</strong>, then <strong>the retracement</strong> — never chase breakouts: "Every time the market makes an explosive push higher, a retracement usually follows. If you buy right at the top of the breakout, you're going to sit through immediate drawdown."</li>
+    <li><strong>Confirmation at the level:</strong> price rejects the EMA/zone with an <strong>exhaustion wick</strong> or a double top against the EMA line.</li>
+    <li><strong>Entry</strong> as close to the level as possible, in the trend direction.</li>
+    <li><strong>Stop</strong> just beyond the level (other side of EMA / below the wick) — typically <strong>10–20 points</strong>.</li>
+    <li><strong>Target</strong> the prior push extreme (previous low/high), HTF zone, or psychological number — typically <strong>50+ points</strong>, sometimes 100+.</li>
+    <li><strong>The math he teaches:</strong> "You are risking ~10-20 points to make 50+ points. That is exceptional risk management." His worked example: "If you enter near a low with an <strong>11-point stop</strong> and target the top of the range for a <strong>55-point gain</strong>, you're setting up a massive 1:5 risk-to-reward ratio... clean trades with practically no drawdown!"</li>
+  </ol>
+  <ul>
+    <li><strong>Best entry = failed retracement, not breakout:</strong> "The safest trades are <em>never</em> breakouts at the bottom or top of a range. The safest trades are <strong>failed retracements.</strong>" Wait for green candles to push back up to the EMAs, fail (lower high with top wicks), then enter — stop only ~10 points from the wick.</li>
+    <li><strong>"Trade the wave":</strong> in a real trend this setup prints repeatedly — "Push, retracement to the EMA, rejection wick, continuation." He re-enters on every 14 EMA respect (e.g. he rode a "300+ point afternoon pump" with repeated EMA-retracement longs).</li>
+    <li>After a consolidation breakout: expect "a massive continuation move" when price breaks out of a tight range with momentum (consolidation → momentum is his cycle: "the market is consolidating right now. What usually comes after consolidation? Momentum.").</li>
+  </ul>
+
+  <h3>7. Exits &amp; Trade Management</h3>
+  <p>From <code>dont-let-greed-kill-your-trade-cut-early</code>, <code>the-nasdaq-ran-200-points-heres-how-i-traded-it</code>, <code>surviving-the-nq-chop-my-live-trading-breakdown</code>:</p>
+  <ul>
+    <li><strong>Cut a trade early</strong> (before the hard stop) when it stops acting right: "If a trade does not immediately begin acting the way your thesis predicted, there is zero shame in closing it for a 5-to-10 point loss." Having the right direction "with the wrong entry can still cost you a blown account."</li>
+    <li><strong>Exhaustion wick = exit trigger:</strong> up 30 points short and the candle closes with a 35-point bottom wick sweeping a prior low → "Cut the trade... NQ loves to swipe lows, trap breakout traders, and immediately reverse 100 points in the other direction."</li>
+    <li><strong>New macro-candle trap:</strong> "When a new 30-minute or 1-hour candle opens, it almost always pushes in the opposite direction first to create a wick before resuming the trend." Don't enter at the extreme as a new HTF candle opens; if caught, cut and re-enter at the top of the retracement.</li>
+    <li><strong>Momentum dies = exit:</strong> "always cut it if the momentum dies" (he chopped a +15-point long that wouldn't follow through, then took the real short).</li>
+    <li><strong>Take profits early in chop:</strong> 50-point pop in a range → "you take your profit off the table and wait for the next setup."</li>
+    <li><strong>Trailing drawdown awareness:</strong> on funded accounts, "If you are up $500 in an open trade, and you let it pull back to break-even, you did not just lose profit—you actually lost $500 of your trailing draw down limit."</li>
+    <li>In trends, let winners run to mapped targets (zone-to-zone); in ranges, exit at the opposite edge of the box.</li>
+  </ul>
+
+  <h3>8. Trading Big Moves (How He Rides Expansion Days)</h3>
+  <p>From <code>nq-dropped-780-points-heres-how-i-traded-it</code>, <code>the-nasdaq-ran-200-points-heres-how-i-traded-it</code>, <code>how-i-frame-quality-setups-on-nasdaq-futures</code>:</p>
+  <ul>
+    <li><strong>CPI 8:30 AM example (Oct 14, 2026):</strong> news printed a "245-point dump in a single candle"; equal highs at <strong>30,852.75</strong> swept. Open produced a 5-min doji with a 44-point top wick and ~50-point bottom wick (tug-of-war) — his first long continuation attempt got chopped; "you eat the chop, adapt, and move on." After ~an hour in a tight box, price broke lower and he rode repeated 14 EMA rejections through a <strong>~780-point drop</strong> (drop → retrace → continuation, over and over). After 2+ hours of failing to reclaim the 14 EMA, an aggressive candle <strong>closed above it</strong> around 3:00 PM → he flipped long, "riding a 60-point expansion to secure a clean <strong>50-point bag</strong>."</li>
+    <li><strong>200-point up day (Sep 22):</strong> 105-point opening 5-min range (low 30,763 / high 30,868); trading above yesterday's high = expansion brain. Longs off 14 EMA bounces targeting 31,000; one breakout attempt chopped for −10 ("Never sit and hope—cut it if it doesn't go!"); then a consolidation breakout above 30,995 ridden to the daily-chart resistance block at 31,040 (price tagged 31,048).</li>
+    <li><strong>300+ point afternoon rally:</strong> long taken at the 30-min chart bottom with stop "right below that previous 30-minute candle low at 30,502. If it takes that out, I'm out"; price dipped to 30,506.50 (4 points from the stop) before a "bazooka candle"; then re-longed every 14 EMA hold; exited at the 1-hour zone 30,794–30,813.</li>
+    <li><strong>Framework:</strong> momentum news/big range at open → wait out the first indecision → join the first clean EMA-respecting trend → re-enter on every EMA rejection → exit at the HTF zone or when price finally <em>closes</em> through the 14 EMA against you (reversal / "ending banger" long).</li>
+    <li><strong>Eval strategy:</strong> "The primary objective today was leveraging CPI momentum to knock out evaluation accounts... Once accounts are passed, <strong>lock them immediately</strong>."</li>
+  </ul>
+
+  <h3>9. Opening Range Breakout (ORB)</h3>
+  <p>From <code>how-i-trade-the-opening-range-breakout-orb-strategy</code>, <code>my-full-am-trading-routine-before-i-take-any-trade</code>:</p>
+  <ul>
+    <li>Map the high/low of the <strong>first 5-minute candle</strong> (9:30–9:35), wick to wick; if logging on late, map the <strong>15-minute ORB</strong> (9:30–9:45). Horizontal lines only.</li>
+    <li>Breakout entry: enter as price pushes through the ORB line — "especially if it breaks below your 14, 50, and 200 EMAs" for shorts.</li>
+    <li><strong>Early entry (advanced):</strong> if the first candle tags the EMAs, prints a long bottom wick and closes near the top, enter <em>before</em> the breakout line.</li>
+    <li><strong>Retracement entry (conservative):</strong> if price breaks out, retraces inside and chops — wait for a strong candle to push back through the ORB line using the EMAs as resistance, enter on the rejection.</li>
+    <li>Stop: just beyond the EMAs or below the breakout candle's low. Target: nearest support/resistance to the left.</li>
+    <li>"The higher the time frame you use for your ORB... the more conservative and reliable the signal tends to be, but it will require a slightly wider stop loss."</li>
+    <li>ORB in action: shorts on the ORB-low break at 31,215 (+35 pts); a 126-point drop off a morning downside ORB; ORB-low reclaim ("swiped the ORB low at 29,365 and aggressively pushed back up <em>inside</em> the Opening Range") flips him from short to long; a broken ORB top (29,119) then acted as new support for a re-long.</li>
+  </ul>
+
+  <h3>10. Timeframe Framework</h3>
+  <p>From <code>what-timeframes-i-actually-trade-and-why</code>, <code>what-a-90-point-bottom-wick-tells-you</code>, <code>10-years-in-what-id-do-differently</code>:</p>
+  <ul>
+    <li><strong>Analysis:</strong> 1-hour and 4-hour (plus daily) — macro trend, S/R zones, prior daily high/low. <strong>Execution:</strong> 5-minute and 15-minute charts (also 30-min for wick-based HTF confirmation).</li>
+    <li>Don't execute on HTF: a 1-hour-based stop can be "an 80+ point stop!... an unacceptable amount of risk for a day trader."</li>
+    <li><strong>The asymmetry he hunts:</strong> "a trade with a 15-point risk (based on the 5-minute chart) but targeting a massive 150-point profit (based on your 1-hour macro support zone)."</li>
+    <li><strong>Watch the clock:</strong> in the final ~10 minutes of a 1H/4H candle, "market makers will rapidly push price in the opposite direction to form a wick before the candle closes. If you enter right before the hourly close, you will frequently get stopped out."</li>
+    <li><strong>Rubber-band effect:</strong> if price is "extremely far away from the 1-hour EMAs, it acts like a stretched rubber band. Eventually, it will snap back violently toward the EMAs" — even if the 5-min looks perfectly aligned.</li>
+    <li>Learned the hard way (see PSYCHOLOGY.md): "If you are only staring at the 5-minute chart, you are going to get trapped... you might short the bottom of a candle... only to watch it rip 400 points straight back up because you didn't realize you were sitting right on a major 1-hour support level. <strong>You have to wait for the higher time frame candles to develop, form their wicks, and show you the true trend.</strong>"</li>
+  </ul>
+
+  <h3>11. Macro Calendar Context</h3>
+  <p>Recurring theme across recaps (<code>the-double-bottom-was-the-low-all-day</code>, <code>i-knew-it-would-chop-before-the-open</code>, <code>surviving-the-nq-chop-my-live-trading-breakdown</code>, <code>nq-dropped-780-points-heres-how-i-traded-it</code>):</p>
+  <ul>
+    <li>Track the calendar: <strong>CPI (8:30 AM), FOMC statement/minutes, NFP Friday, big tech earnings (e.g. Micron 4:00 PM), political speakers (Trump 1:00 PM), geopolitical news.</strong></li>
+    <li>"When there are heavy macro catalysts on the schedule, the market often chops around and waits for the dust to settle before choosing a true direction."</li>
+    <li>"The market often consolidates ahead of major jobs data."</li>
+    <li>News drops can instantly invalidate a setup (an unexpected 1:00 PM Trump appearance caused a sudden drop and two stop-outs on Aug 27) — adapt and pivot.</li>
+  </ul>
+
+  <p class="meta"><em>Everything above is drawn only from the published articles. Numbers quoted (EMA lengths, point targets, stop sizes, price levels) are as stated by D-Money in those articles.</em></p>
+</section>
+
+<section id="rules">
+  <h2>D-Money's Explicit Trading Rules</h2>
+  <p class="meta"><strong>Source:</strong> onlypropfirms.com/bdh — "D-Money's Trading FAQ" (BDH Trading channel)<br><strong>Date researched:</strong> 2026-11-16</p>
+  <p>Rules as stated or clearly practiced across the 35 articles. Short quotes are D-Money's words, with article noted.</p>
+
+  <h3>1. Trend-Day Rules</h3>
+  <div class="card rule">
+    <p><span class="num">1</span><strong>Trade what's in front of you — join momentum, don't predict.</strong></p>
+    <blockquote>"Your job is not to pick the top. Your job is to join the momentum in whatever direction the market decides to go" <span class="meta">(why-you-cant-pick-the-top-on-nasdaq-futures)</span>.</blockquote>
+  </div>
+  <div class="card rule">
+    <p><span class="num">2</span><strong>Never pick tops (or bottoms) on expansion moves.</strong></p>
+    <blockquote>"You only have so much money in your account to try and fight this thing with, and you are going to run out of steam way before NQ decides to actually reverse" <span class="meta">(why-you-cant-pick-the-top-on-nasdaq-futures)</span>.</blockquote>
+  </div>
+  <div class="card rule">
+    <p><span class="num">3</span><strong>Never fight heavy momentum.</strong> Large solid-bodied candles = institutional control; stick with them (how-i-trade-price-action-and-momentum-together).</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">4</span><strong>In an uptrend: buy the retracement near the last higher low; stop below that higher low; target the previous higher high</strong> (the-trend-is-your-friend-heres-what-it-means).</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">5</span><strong>Don't chase breakouts.</strong></p>
+    <blockquote>"Stop chasing the high. Look to <strong>buy cheaper</strong> inside the retracement near the previous higher low" <span class="meta">(the-trend-is-your-friend-heres-what-it-means)</span>.</blockquote>
+    <p>"Do not short the bottom of a red candle" — wait for the failed retracement <span class="meta">(dont-let-greed-kill-your-trade-cut-early)</span>.</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">6</span><strong>Inside yesterday's daily range ⇒ expect chop; break of yesterday's high/low ⇒ expansion day</strong> — set your brain accordingly before the open (inside-yesterdays-range-means-chop-heres-why; the-nasdaq-ran-200-points-heres-how-i-traded-it).</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">7</span><strong>Trend shift rule:</strong> after a massive move (500+ points), if lower-highs/lower-lows break and double/triple bottoms or higher highs print, the trend is over — stop pressing it (how-to-identify-a-trend-day-before-it-happens).</p>
+  </div>
+
+  <h3>2. Chop / Range Rules</h3>
+  <div class="card rule">
+    <p><span class="num">8</span><strong>Inside yesterday's range = base hits only.</strong></p>
+    <blockquote>"When the daily chart tells you it's an inside range day, leave your ego at the door and stack 15- to 25-point base hits" <span class="meta">(i-knew-it-would-chop-before-the-open)</span>.</blockquote>
+  </div>
+  <div class="card rule">
+    <p><span class="num">9</span><strong>Range targets: "10, 15, or maybe 20 points tops."</strong> Don't hold for home runs in a range (the-market-is-ranging-more-than-you-think).</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">10</span><strong>Range trading rule: "Buy the absolute bottom of the range. Short the absolute top of the range"</strong> — with stops 10–15 points beyond the box edge; if the box breaks, the range trade is dead (how-i-trade-a-range-when-nq-is-stuck-in-chop).</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">11</span><strong>In chop, when the market gives you 50 points, take them:</strong></p>
+    <blockquote>"In choppy market conditions, you cannot be greedy. When the market gives you 50 points, you take your profit off the table and wait for the next setup" <span class="meta">(surviving-the-nq-chop-my-live-trading-breakdown)</span>.</blockquote>
+  </div>
+  <div class="card rule">
+    <p><span class="num">12</span><strong>If the day is a "nothing burger" (range too choppy even to ping-pong), scale size down, force nothing, and accept flat</strong> — "Walking away flat on a day designed to chop you up is a win for your psychology" (trading-psychology-why-i-stayed-flat-on-a-difficult-day).</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">13</span><strong>No bias into the open.</strong></p>
+    <blockquote>"You cannot bring a bias into the morning session... Wait for the market to establish its range, look for the clues (like long bottom wicks), and join the momentum, whichever way it decides to go" <span class="meta">(stop-trading-your-bias-how-i-survived-this-choppy-open)</span>.</blockquote>
+    <blockquote>"Coming to the charts with a rigid bias is an appetite for destruction" <span class="meta">(my-full-am-trading-routine-before-i-take-any-trade)</span>.</blockquote>
+  </div>
+
+  <h3>3. Entry Rules</h3>
+  <div class="card rule">
+    <p><span class="num">14</span><strong>Only enter on EMA/zone rejections with confirmation.</strong> You need the push → retracement → <strong>rejection wick (exhaustion wick)</strong> at the 14/50 EMA before entering; never enter "just because the EMAs exist" (how-i-find-a-entries-using-the-emas-nq-futures).</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">15</span><strong>Enter as close to the EMA as possible</strong> so the EMA itself anchors the stop — "often only 10 to 20 points away" (how-i-find-a-entries-using-the-emas-nq-futures).</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">16</span><strong>Wait for EMA cross + location before directional trades:</strong> bearish cross and price below all three EMAs for shorts; bullish cross / hold above all three for longs; match entry-timeframe cross to the 1H/4H direction (how-i-use-the-14-50-and-200-ema-to-trade-nq-futures).</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">17</span><strong>Equal-low long rule:</strong> while the Equal Low holds, look long; enter when a candle closes bullish above the 14 EMA; stop a few points under the equal low (how-i-spot-equal-highs-and-equal-lows-for-reversals).</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">18</span><strong>Equal-high short rule:</strong> enter short on rejection away from the Equal High; stop a few points above it;</p>
+    <blockquote>"If the bulls magically find volume and break above the Equal High, your thesis is invalidated, and you take a tiny, controlled loss" <span class="meta">(how-i-spot-equal-highs-and-equal-lows-for-reversals)</span>.</blockquote>
+  </div>
+  <div class="card rule">
+    <p><span class="num">19</span><strong>Reversal needs structural confirmation:</strong> "One bullish candle doesn't mean a reversal" — require the shift to higher lows (one-loss-all-day-on-nasdaq-futures).</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">20</span><strong>Swipe-and-go entry:</strong> enter long after a liquidity swipe below the prior low rejects back up; stop strictly below the rejection wick (the-secret-to-finding-reversals-wick-analysis-101).</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">21</span><strong>Do not enter right as a new 30-min/1H candle opens at an extreme</strong> — HTF candles "almost always push in the opposite direction first to create a wick" (dont-let-greed-kill-your-trade-cut-early).</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">22</span><strong>Don't execute right before an hourly close</strong> (final-10-minute wick hunts) — watch the clock (what-timeframes-i-actually-trade-and-why).</p>
+  </div>
+
+  <h3>4. Stop-Loss Rules</h3>
+  <div class="card rule">
+    <p><span class="num">23</span><strong>Stop goes on the opposite side of the level you traded:</strong> opposite side of the EMA (10–20 pts); below the rejection/swipe wick; a few points beyond equal high/low; 10–15 pts beyond the range box edge.</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">24</span><strong>Structural invalidation stops:</strong> below the last higher low (longs) / above the last lower high (shorts); e.g.</p>
+    <blockquote>"My stop is going right below that previous 30-minute candle low at 30,502. If it takes that out, I'm out" <span class="meta">(how-i-frame-quality-setups-on-nasdaq-futures)</span>.</blockquote>
+  </div>
+  <div class="card rule">
+    <p><span class="num">25</span><strong>If price breaks fully through the EMA, you <em>want</em> to be stopped:</strong></p>
+    <blockquote>"If it does break above, you want to be stopped out anyway because the trend is broken!" <span class="meta">(how-i-find-a-entries-using-the-emas-nq-futures)</span>.</blockquote>
+  </div>
+  <div class="card rule">
+    <p><span class="num">26</span><strong>Keep controlled losses small:</strong> initial losses "strictly controlled (10-15 points max)" so capital survives to catch the real move (the-reality-of-trading-2-stops-then-a-massive-trade).</p>
+  </div>
+
+  <h3>5. Trade-Management Rules ("Chopping Trades")</h3>
+  <div class="card rule">
+    <p><span class="num">27</span><strong>Cut early when the trade stops acting right:</strong></p>
+    <blockquote>"If a trade does not immediately begin acting the way your thesis predicted, there is zero shame in closing it for a 5-to-10 point loss" <span class="meta">(dont-let-greed-kill-your-trade-cut-early)</span>.</blockquote>
+  </div>
+  <div class="card rule">
+    <p><span class="num">28</span><strong>Exhaustion wick against you = exit now.</strong> Especially an opposing wick that sweeps a prior low/high — "Do not hold through this hoping the trend will continue" (dont-let-greed-kill-your-trade-cut-early).</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">29</span><strong>Never sit and hope.</strong></p>
+    <blockquote>"We simply couldn't get up there. Price hesitated, the momentum stalled, and I chopped the trade... Never sit and hope—cut it if it doesn't go!" <span class="meta">(the-nasdaq-ran-200-points-heres-how-i-traded-it)</span></blockquote>
+    <p>Also: "always cut it if the momentum dies" <span class="meta">(the-double-bottom-was-the-low-all-day)</span>.</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">30</span><strong>Protect open profits on trailing-drawdown accounts:</strong> letting +$500 pull back to flat costs you $500 of drawdown room (dont-let-greed-kill-your-trade-cut-early).</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">31</span><strong>Lock accounts immediately once an eval is passed</strong> — "so you don't accidentally execute a trade on the wrong account and blow them up later" (nq-dropped-780-points-heres-how-i-traded-it).</p>
+  </div>
+
+  <h3>6. Position Sizing / Risk Rules</h3>
+  <div class="card rule">
+    <p><span class="num">32</span><strong>Default = ONE contract.</strong></p>
+    <blockquote>"I am almost exclusively trading <strong>one contract</strong>. You will very rarely see me trade two" <span class="meta">(how-many-contracts-should-you-actually-trade-position-sizing)</span>.</blockquote>
+  </div>
+  <div class="card rule">
+    <p><span class="num">33</span><strong>The drawdown math:</strong> $50K prop account ≈ $2,000 trailing drawdown; 1 NQ contract ($20/point) with a 20-point stop = <strong>$400 risk ≈ 5 consecutive losses</strong> of ammo. Two contracts halves your ammunition.</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">34</span><strong>Two contracts ONLY on an A+ entry with a ~10-point stop</strong> (entered right on an EMA rejection wick), keeping total dollar risk at the same ~$400 (how-many-contracts-should-you-actually-trade-position-sizing).</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">35</span><strong>Don't size up to force payouts:</strong></p>
+    <blockquote>"If your position sizing is too large because you are desperate to get to payouts, you are going to get destroyed—especially in a choppy, range-bound market" <span class="meta">(10-years-in-what-id-do-differently)</span>.</blockquote>
+  </div>
+  <div class="card rule">
+    <p><span class="num">36</span><strong>Size down when clarity is gone:</strong></p>
+    <blockquote>"If the directional clarity isn't there, reduce your contract size" <span class="meta">(my-first-trade-today-was-a-chop-trade-keeping-it-real)</span>.</blockquote>
+  </div>
+  <div class="card rule">
+    <p><span class="num">37</span><strong>NQ candle ranges justify small size:</strong> 5-min candles commonly run 60–80 points; one contract catching a 75-point move = $1,500 (how-many-contracts-should-you-actually-trade-position-sizing).</p>
+  </div>
+
+  <h3>7. Pre-Open Routine (hard sequence, every day)</h3>
+  <p>From <code>my-full-am-trading-routine-before-i-take-any-trade</code>:</p>
+  <div class="card rule">
+    <p><span class="num">38</span><strong>Step 1 — Daily chart:</strong> draw yesterday's candle absolute high and absolute low.</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">39</span><strong>Step 2 — ORB:</strong> at 9:30, let the first 5-minute candle close; map its high/low (use the 15-min ORB if you missed the open).</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">40</span><strong>Step 3 — Pre-market context:</strong> overnight trend? tight box against EMAs? scheduled 10:00 AM news?</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">41</span><strong>Step 4 — Wait:</strong> let price break the ORB, then wait for the retracement to the EMAs and the rejection before entering; if the trade fails, <strong>pivot instantly</strong> — "Accept the small loss, pivot, and look for long entries."</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">42</span><strong>Calendar check:</strong> know CPI/FOMC/NFP/earnings/speaker times before trading; expect consolidation ahead of big catalysts (i-knew-it-would-chop-before-the-open; the-double-bottom-was-the-low-all-day).</p>
+  </div>
+
+  <h3>8. Multi-Timeframe Rules</h3>
+  <div class="card rule">
+    <p><span class="num">43</span><strong>Analyze on 1H/4H/daily; execute on 5-min/15-min.</strong></p>
+    <blockquote>"The higher timeframe will always win. Use it to find your direction and targets, then use the lower timeframe to surgically enter with tight stops!" <span class="meta">(what-timeframes-i-actually-trade-and-why)</span>.</blockquote>
+  </div>
+  <div class="card rule">
+    <p><span class="num">44</span><strong>Respect the 1-hour rubber band:</strong> don't keep pressing a move that is far extended from the 1-hour EMAs — "it will snap back violently toward the EMAs" (what-timeframes-i-actually-trade-and-why).</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">45</span><strong>HTF wicks outrank LTF wicks</strong> for reactionary levels (the-secret-to-finding-reversals-wick-analysis-101).</p>
+  </div>
+
+  <h3>9. Behavioral Rules</h3>
+  <div class="card rule">
+    <p><span class="num">46</span><strong>Cut losers fast, follow momentum, let winners run</strong> — his stated sign-off formula (lost-my-first-trade-then-caught-the-biggest-move-of-the-day).</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">47</span><strong>Take breaks — don't trade every session.</strong></p>
+    <blockquote>"Sometimes you catch one or two good trades at the market open, you lock your accounts, and you walk away" <span class="meta">(10-years-in-what-id-do-differently)</span>.</blockquote>
+  </div>
+  <div class="card rule">
+    <p><span class="num">48</span><strong>Slow down to speed up:</strong> protect capital first; "buy the lows, short the highs of the range" when ranging (10-years-in-what-id-do-differently).</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">49</span><strong>Verbalize your analysis out loud</strong> before executing: consolidation? location vs ORB? invalidation?</p>
+    <blockquote>"Verbalizing the checklist slows your brain down, keeps you from clicking randomly" <span class="meta">(how-i-frame-quality-setups-on-nasdaq-futures)</span>.</blockquote>
+  </div>
+  <div class="card rule">
+    <p><span class="num">50</span><strong>Take what the market gives:</strong></p>
+    <blockquote>"you have to accept the market for what it was and take what you could get" <span class="meta">(i-knew-it-would-chop-before-the-open)</span>.</blockquote>
+  </div>
+
+  <p class="meta"><em>Compiled only from statements in the published articles; each rule cites its source article.</em></p>
+</section>
+
+<section id="psychology">
+  <h2>D-Money's Mindset &amp; Psychology Lessons</h2>
+  <p class="meta"><strong>Source:</strong> onlypropfirms.com/bdh — "D-Money's Trading FAQ" (BDH Trading channel)<br><strong>Date researched:</strong> 2026-11-16</p>
+  <p>Distilled from the 35 articles — principally <code>10-years-in-what-id-do-differently</code>, <code>trading-psychology-why-i-stayed-flat-on-a-difficult-day</code>, <code>my-first-trade-today-was-a-chop-trade-keeping-it-real</code>, <code>dont-let-greed-kill-your-trade-cut-early</code>, and the daily recaps.</p>
+
+  <h3>1. The "10 Years In" Lessons (his four biggest)</h3>
+  <p>From <code>10-years-in-what-id-do-differently</code> (10 Nov 2026). Context: 10 years across stocks, options, forex, futures; accounts blown along the way; <strong>two full years of losses before his first payout</strong>.</p>
+  <ol>
+    <li><strong>Slow down to speed up.</strong> Sizing up to force payouts doesn't shorten the curve: "you are trying to go a million miles an hour... you think that simply <strong>sizing up and going full port</strong> is going to speed up your process... that is not the case." Protect capital in chop: "be smart, buy the lows, short the highs of the range."</li>
+    <li><strong>Stop comparing yourself to others.</strong> Seeing others' $300K payouts when yours is $2,000 creates "this sudden urge to speed up, size aggressively, and force trades. <strong>Do not do this.</strong> ... Aggressive sizing might work in a perfectly trending market... but in a choppy market, you will get absolutely chopped to pieces. Focus on your own race."</li>
+    <li><strong>Brush off yesterday's baggage — blank slate daily.</strong> "You are going to experience a million emotions: self-doubt, frustration, and self-criticism... you have to learn how to <strong>brush that off and start every new trading day with a blank slate.</strong>" Also: <strong>take breaks</strong> — he used to think trading London/US/Asia sessions meant more payouts: "We all know that is a lie. Sometimes you catch one or two good trades at the market open, you lock your accounts, and you walk away."</li>
+    <li><strong>Incorporate the higher time frames — learned by losing.</strong> "How did I finally figure out that I needed to watch the 1-hour, 4-hour, and daily charts? Full transparency: by losing accounts, losing money, and getting incredibly frustrated." Staring only at the 5-minute gets you trapped shorting "right on a major 1-hour support level" before a 400-point rip.</li>
+  </ol>
+  <p>Closing message of that article:</p>
+  <blockquote>"it took me two full years of taking losses and walking through the fire to get my very first payout. If you are struggling right now, feeling defeated, and dealing with outside noise telling you to quit—you have to keep going. Your self-confidence has to come from within."</blockquote>
+
+  <h3>2. Handling Chop Weeks (the frustration antidote)</h3>
+  <p>From <code>my-first-trade-today-was-a-chop-trade-keeping-it-real</code>:</p>
+  <ul>
+    <li>He admits his own failures publicly: "I take chop trades too. My very first trade today was a chop trade right at the 9:30 AM open... and it immediately failed." Transparency normalizes losses.</li>
+    <li>"You might have had a rough day... a rough week... even be feeling like quitting... you aren't alone." <strong>Don't beat yourself up.</strong></li>
+    <li>Key realization: "<strong>the market is not trending 100% of the time.</strong> In fact, the market spends the vast majority of its time consolidating and ranging."</li>
+    <li>Adjustment playbook: (1) take profits early and stack base hits; (2) size down; (3) "There is nothing wrong with taking a break, closing the laptop, and stepping away to clear your head."</li>
+  </ul>
+
+  <h3>3. The Flat-Day Win</h3>
+  <p>From <code>trading-psychology-why-i-stayed-flat-on-a-difficult-day</code> ("nothing burger" session):</p>
+  <ul>
+    <li>After a 300-point rip and a 350-point dump in the morning, the afternoon market is "completely gassed" — even range-trading the box "was sketchy."</li>
+    <li>His conclusion: "the smartest thing you can do as a trader is <strong>scale your size down and call it what it is.</strong> Do not force trades when the volume isn't there. Do not let boredom trick you into taking a terrible setup. Walking away flat on a day designed to chop you up is a win for your psychology." And: "Monday is a new day, and the setup will be there."</li>
+  </ul>
+
+  <h3>4. Killing the Need to Be Right (chopping trades early)</h3>
+  <p>From <code>dont-let-greed-kill-your-trade-cut-early</code>:</p>
+  <ul>
+    <li>"One of the hardest psychological barriers in trading is the need to 'be right.' You might have correctly predicted that the market is going to sell off, but if your entry is off by 30 points, the natural retracements in the market will shake you out."</li>
+    <li>Reframe: cutting early "is a tool, not a failure" — "It is always easier to exit a trade for a tiny, controlled loss and re-enter when the price gives you your desired behavior."</li>
+    <li>Being right directionally with a wrong entry "can still cost you a blown account."</li>
+  </ul>
+
+  <h3>5. No Bias, No Ego</h3>
+  <p>From <code>stop-trading-your-bias-how-i-survived-this-choppy-open</code>:</p>
+  <ul>
+    <li>"I used to log on and say, 'The macro timeframe is bearish, so I am only looking for shorts today.' But the reality is that if you are a momentum day trader, the market makers will often push the price massively higher to hunt liquidity <em>before</em> they roll it over and go lower. If you stick stubbornly to a bias, you will get crushed."</li>
+    <li>Same lesson in <code>my-full-am-trading-routine-before-i-take-any-trade</code>: "you don't trade what you <em>think</em> should happen; you trade what is right in front of you."</li>
+  </ul>
+
+  <h3>6. Emotional Resilience in Live Trading</h3>
+  <p>From the recaps:</p>
+  <ul>
+    <li><strong>Two stops then a 150-point win</strong> (<code>the-reality-of-trading-2-stops-then-a-massive-trade</code>): "Trading isn't always a straightforward, one-directional move. Sometimes, you have to take a few controlled losses, read the market structure, and pivot to catch the real move of the day." The key enabler: losses kept to 10–15 points so capital and composure survived to catch the reversal.</li>
+    <li><strong>Loss first, banger second</strong> (<code>lost-my-first-trade-then-caught-the-biggest-move-of-the-day</code>): "When the setup fails, you don't hold and hope—you cut the trade. We took the loss and waited for the real move." Sign-off: "Cut your losers quickly, follow the momentum, and let the winners run!"</li>
+    <li><strong>First chop trade of the day, then the best trade of the day</strong> (<code>the-double-bottom-was-the-low-all-day</code>): "In a market like this, you have to scrap and take what you can get." He still ended green (+ passed an eval at $3,235 and +$1,830 elsewhere).</li>
+    <li><strong>Eating chop and adapting</strong> (<code>nq-dropped-780-points-heres-how-i-traded-it</code>): "our first long continuation attempt got chopped up during the open indecision. But in trading, you eat the chop, adapt, and move on!"</li>
+    <li><strong>Resisting the short-the-top urge</strong> (<code>why-you-cant-pick-the-top-on-nasdaq-futures</code>): "the market is going to do whatever it wants... Trade what is in front of you, not what you think should happen." He notes traders who shorted a 500+ point reversal "paid the price."</li>
+  </ul>
+
+  <h3>7. Process Tools for Staying Disciplined</h3>
+  <ul>
+    <li><strong>Talk through the chart out loud</strong> (<code>how-i-frame-quality-setups-on-nasdaq-futures</code>): "Verbalizing the checklist slows your brain down, keeps you from clicking buttons randomly, and helps you frame high-probability setups with real conviction." Sample self-talk: "Okay, the market is consolidating right now. What usually comes after consolidation? Momentum." / "Where is my invalidation? Right below the 30-minute wick low."</li>
+    <li><strong>Slow down to spot reversals live</strong> (<code>how-i-spot-equal-highs-and-equal-lows-for-reversals</code>): "you have to actively train yourself to <strong>slow down</strong>. Do not just blindly hit buy or sell based on emotion. Look closely at the exact price points of the wicks."</li>
+    <li><strong>Accept the market's character</strong> (<code>i-knew-it-would-chop-before-the-open</code>): "accept the market for what it was and take what you could get."</li>
+    <li><strong>Patience as the edge</strong> (<code>what-is-momentum-trading-my-full-breakdown</code>): "Momentum trading is about patience. Wait for the big bazooka candle, wait for the perfect EMA retracement, and let the institutions do the heavy lifting!"</li>
+  </ul>
+
+  <h3>8. Expectations &amp; Realism</h3>
+  <ul>
+    <li>"You are going to have ups and downs, rough stretches, and hot streaks where you feel like you can't miss. You can study, backtest, and memorize your A+ setup all day long, but none of it matters if you can't piece the puzzle together when the live market is actually moving" (<code>how-i-frame-quality-setups-on-nasdaq-futures</code>).</li>
+    <li>"the market is rarely ever in a true one-directional trend—you are going to deal with consolidation far more often than clean expansions" (<code>the-market-is-ranging-more-than-you-think</code>).</li>
+    <li>Green-is-green mentality: small positive days ($370, $585, $1,580) are celebrated as wins ("a green day is a green day!").</li>
+    <li>Not every wick/pattern works: "you will get faked out sometimes. But when you combine wick analysis with EMA crossovers and pure momentum, you develop a serious edge" (<code>the-secret-to-finding-reversals-wick-analysis-101</code>).</li>
+  </ul>
+
+  <p class="meta"><em>All content drawn only from the published articles; quotes are D-Money's words from the cited article.</em></p>
+</section>
+
+<section id="videos">
+  <h2>D-Money — YouTube Videos: Full Strategy and Rules Extraction</h2>
+  <p class="meta">Source: BDH Trading YouTube channel (UCWngZTnuJGdrf3SVQycKZww) + linked videos, researched 2026-11-16</p>
+  <p>D-Money (Damareous Young), BDH Trading floor trader, streams 9am–12pm plus Power Hour 2–4pm daily. Category blog: <a href="https://onlypropfirms.com/bdh/d-moneys-trading-faq" target="_blank" rel="noopener">onlypropfirms.com/bdh/d-moneys-trading-faq</a>. Older video IDs recovered from embedded players in the blog articles; full descriptions read from the YouTube watch pages.</p>
+
+  <h3>Key rules and strategy from videos</h3>
+
+  <h4>1. EMA system — 14 / 50 / 200 (from "Everyone Says EMAs Don't Work")</h4>
+  <ul>
+    <li>His EMA settings are 14, 50 and 200.</li>
+    <li>THE RULE THAT MAKES THEM WORK: "You are not trading EMAs alone. You can't. They're confluence, not a signal. You stack them with everything else to tip the odds toward your direction."</li>
+    <li>Example day: 15-minute opening range high 30,045 / low 29,853.75. Consolidation, back-and-forth, then a solid rejection and a break lower. After the rejection off the 14, "it melted."</li>
+    <li>THE PATTERN: drop → retracement to the EMA → drop → retracement → drop. Each retracement is an entry. Printed in pre-market and again at the market open — both times price got right back below the 14 EMA.</li>
+    <li>BEARISH EMA CROSS formed around 9:20. Then look at the SPACING: "well-separated EMAs mean strong pressure in that direction. When they're spread and pointing down, you're looking for shorts, not longs."</li>
+    <li>HIGHER-TIMEFRAME CONFLUENCE: on the 1-hour, price was below the 14, 50 AND 200 — all three. On the 4-hour, another bearish cross. "That's a lot of selling pressure, and it tells you which side to take."</li>
+    <li>EMAs ARE ALSO TAKE-PROFIT LEVELS: "On stream you'll hear D-Money say his TP is at the 14 EMA on the 5-minute, the 15-minute, the 30-minute — depending on what's in front of him."</li>
+    <li>HONEST CAVEAT: "on a trend day the EMAs are very well respected. In a choppy market they don't perform as well. That's the real answer to 'EMAs don't work.'"</li>
+  </ul>
+
+  <h4>2. The 14 EMA trend day (from "NQ Dropped 780 Points. Here's How I Traded It" — Oct 14 CPI day)</h4>
+  <ul>
+    <li>The setup before the print: EQUAL HIGHS. The 8:25 candle topped at 30,852.75 and the news candle topped at 30,852.75 — exactly the same. Then the 8:30 bearish candle covered 245 points in a single bar.</li>
+    <li>WHY THE OPEN WAS A TRAP: the 5-minute opening range candle was a doji — 44-point top wick, ~50-point bottom wick, almost no body. "Bulls and bears fighting, not a direction." His rule: after heavy pre-market news movement, the 9:30 open usually gives you indecision before price settles. He took a long for continuation and got chopped on the first trade — stated in full transparency. Then a breakout above the ORB high, capitalized; then a rejection straight back down; the market sat in a mapped range for about an hour from 10:00.</li>
+    <li>THE ALL-DAY SETUP, repeated over and over once the consolidation range broke down: Drop → retracement to the 14 EMA → rejection → continuation lower. Rejection off the 14 for an entry, again, again — "it printed all day. Multiple 45-point winning trades came out of it."</li>
+    <li>STRUCTURE RULE: in a downtrend you get lower highs and lower lows. "Price went over two hours without reclaiming the 14 EMA on the 5-minute."</li>
+    <li>THE ONE CANDLE THAT FLIPPED IT: one candle came in aggressive and CLOSED back above the 14 EMA. He told chat in real time he was taking a long. The move ran ~60 points and he caught roughly 50 — a little after 3:00, ending the stream.</li>
+    <li>DAILY CONTEXT: yesterday's daily candle high 30,909 / low 30,591.25. "Coming in below yesterday's daily low often gives you expansion for more downside" — and every mapped level got hit: 30,350 tagged, bottom of the box at 30,120 hit. Almost 780 points to the lows.</li>
+    <li>EMA SPREAD = TREND STRENGTH: "Look at how far apart the EMAs are. Wide separation means a strong trend. Then you take the rejections off them and ride it."</li>
+    <li>EVAL ACCOUNT RULE (the tip nobody teaches): on a CPI day his goal isn't a dollar figure — it's passing evaluations, because news days give you momentum in either direction. He got several passed. And: the four accounts with a zero next to them were already passed, so he LOCKED them — "clicked the wrong button, traded an account that was already green, lost it" before. Lock a passed eval so you can't touch it by accident.</li>
+  </ul>
+
+  <h4>3. Trend trading: buy the retracement, not the breakout (from "The Trend Is Your Friend")</h4>
+  <ul>
+    <li>Definition: uptrend = higher highs and higher lows. The part people skip: "if you can anticipate the next higher low, you get a better entry than the person chasing the move."</li>
+    <li>Session structure walked live: significant drop off the opening range (Trump speaking); then a low, higher low, another higher low (consolidation); breakout up; high put in at 10:30; retracement back inside the mapped range; another breakout and a higher high. "Consolidation → breakout → retracement → breakout. That sequence is the setup."</li>
+    <li>THE TRADE FRAME: instead of buying the breakout, buy the retracement toward the last higher low. Long at 31,036.75, stop below the last higher low at 31,025 — an 11-point stop. Target the previous higher high, roughly 55 points away. "Risking 11 to make 55. Not exciting, just asymmetric."</li>
+    <li>WHY BREAKOUT BUYING KEPT FAILING: every single breakout in this session got retraced before going higher. Long at 31,123 dropped back to 31,097; the 31,144 breakout played then came right back — each was a stop-out for a breakout buyer and an entry for someone waiting on the higher low.</li>
+    <li>LIVE EXECUTION: back at 2:00, looked left, saw higher lows being put in, got long; rode toward the 31,124 wick and got stopped out IN PROFIT; retracement, long again to a higher high; back down, long again — "three trades, essentially no drawdown."</li>
+    <li>When every push up gets retraced: "spotting the trend doesn't mean trading it as a breakout. It means playing the range: buy cheaper, ride it back toward the top."</li>
+    <li>Note: Yuri and Lucas covered the midday range before the 2 PM block — "the structure was mapped out long before the trade."</li>
+  </ul>
+
+  <h4>4. Double bottoms and the ORB (from "The Double Bottom Was The Low All Day" — Wed Oct 7)</h4>
+  <ul>
+    <li>Overnight: hard downtrend from ~2:00 AM on news, selling pressure building from ~31,500; pre-market down roughly 300 points into the open.</li>
+    <li>Levels going in: previous daily high 31,616 / previous daily low 31,309. Honest read: "after that much selling pressure, you don't know what you're getting until 9:30. And a lot of the time the market pushes higher before it goes lower" — which is what it did.</li>
+    <li>OPEN: 5-minute ORB candle looked bullish (nice pop off the highs) then pushed straight back down; next candle extremely bearish and broke the ORB low.</li>
+    <li>Trade 1: chopped — long, ~15 points, wanted more, no follow-through, cut it.</li>
+    <li>Trade 2: SHORT on the ORB breakdown — 35 points, rode the momentum down.</li>
+    <li>THE DOUBLE BOTTOM: a swipe of the low around 31,144, then a push back up — looking left, a clean double bottom, called live. "That was the low of the entire day."</li>
+    <li>After: push up, retracement, push up, retracement — caught a couple; also got chopped a few times (several trades reached 10–15 points then taken out).</li>
+    <li>BEST TRADE OF THE DAY: off a 30-minute candle that closed bullish with a LONG BOTTOM WICK — long on the next candle for about 50 points (the wick setup — see section 6).</li>
+    <li>Around 2:00 PM: 20-point trade on a breakout — high, retracement, higher high. Then a few 10-pointers.</li>
+    <li>Psychological level: price finally cleared 31,400 ("the psychological level everyone had been eyeing") around 3:50. FOMC statement day + Trump at 1:00 PM explains the slow grind.</li>
+    <li>Accounts: green on the day including an eval passed; one account finished $3,235, another $1,830. "Took what the market gave."</li>
+  </ul>
+
+  <h4>5. Don't pick tops on expansion moves (from "Why You Can't Pick The Top")</h4>
+  <ul>
+    <li>The rule: "trade what's in front of you, not what you think is going to happen."</li>
+    <li>Session detail: 5-minute opening range mapped 30,763–30,868. Then breakout, continuation, retracement, continuation, retracement, consolidation, then pumping again. The 9 AM one-hour candle alone was 194 points. The 10 o'clock hour: small bodies, long wicks top and bottom — classic indecision; once price took off at noon, "off to the races."</li>
+    <li>Mapped 31,040 live on stream as daily resistance; price hit it in the 2–4 PM session. "Will it reject from there? Nobody knows. You let Globex open tonight and you find out."</li>
+    <li>Context: yesterday's reversal was over 500 points to the upside and "every single time it looked like it was going to drop, the market said no." On the 4-hour: exactly ONE bearish candle since the 18th.</li>
+    <li>THE MATH: "You only have so much money in the account, and you're going to run out of steam before the Nasdaq decides to reverse." A news headline could flip it tomorrow — real — "but you don't position for that, you position for the trend that's actually printing."</li>
+    <li>EXECUTION: higher high → retracement → higher high → retracement. "Your job is to buy the retracements and ride the direction. Take your A+ setups over and over, disassociate from the money, and let your win rate do the work."</li>
+  </ul>
+
+  <h4>6. Bottom wicks = reactionary levels ("Embrace the wicks" — from "What A 90 Point Bottom Wick Tells You")</h4>
+  <ul>
+    <li>The day was a grind: consolidation since 7:00 AM, FOMC minutes in the afternoon, Trump at 1:00 PM.</li>
+    <li>THE SIGNAL: the 9:30 candle, closing at 10:00 on the 30-minute, finished with a long bottom wick — roughly 90 points from the low back to the body. "Ninety points of wick means buyers were willing to step in and lift it all the way back." Looking left, no other candle inside the range had dropped that low. Price pushed up, back down, back up, closed green.</li>
+    <li>THE TRADE: the next candle — also a bottom wick, about 47 points, digging back into the previous wick down to ~31,192 — was the entry, called live to chat. A 50-point winner; it eventually broke out above the opening range at 31,275.</li>
+    <li>HONEST PART ABOUT ENTRIES: "you don't know how deep the retracement goes until it reaches into that previous bottom wick. That's the thing worth practising — not the read, the entry."</li>
+    <li>SAME SETUP, HIGHER TIMEFRAME = MORE WEIGHT: the 1-hour 9:00–10:00 candle closure digging into a long bottom wick, pushing up, closing green — sets up the frame for the 11:00 candle.</li>
+    <li>"REACTIONARY LEVEL" DEFINED: map where price bounced the last time it was down there. Support printed on the 30th at 7:00 AM and got retested on the 31st at 11:00 AM. Marking them makes framing far easier.</li>
+    <li>BEARISH VERSION: rejection wicks. A rejection on October 2nd at 9:00 AM — map it, draw it across — becomes resistance; price came back to it on the 4th and rejected again.</li>
+    <li>"Always look left. Look at how price reacted the last time it was at a level, and you'll see how often you get that reaction."</li>
+  </ul>
+
+  <h4>7. Liquidity logic (from RSS short "A 70 Point Candle In One Minute", <a href="https://www.youtube.com/watch?v=dvAMJUom3Hw" target="_blank" rel="noopener">dvAMJUom3Hw</a>)</h4>
+  <ul>
+    <li>"It hunted one side, didn't get it, and turned for the other." When a move fails to take the obvious liquidity (London low), the other side (London high) usually becomes the target. 15 → 20 points, through 28,300; 25 points, took it; +$535.</li>
+  </ul>
+
+  <h4>8. Two in the chamber / runner management (from RSS shorts)</h4>
+  <ul>
+    <li>"Two in the chamber" = take most of the position, keep two contracts running (<a href="https://www.youtube.com/watch?v=8ELfEFCFpjI" target="_blank" rel="noopener">8ELfEFCFpjI</a>). Hold the runner for at least a 1:1 R ("I'm gonna hold the two in the chamber for at least a one-for-one"). +$855 after a 50-point move; PW in chat: "I wanna see us get above the 21 EMA here."</li>
+    <li>Partial/TP discipline: TP parked at a logical level, everything else on a 1-for-1 (<a href="https://www.youtube.com/watch?v=ru6-_aOM-GQ" target="_blank" rel="noopener">ru6-_aOM-GQ</a>). "I don't blame you for taking profit and getting out. I'd like to take profit now — but I'm gonna hold." $1,680 on the card.</li>
+    <li>Exit skill distinction (<a href="https://www.youtube.com/watch?v=SOzA7jSyco4" target="_blank" rel="noopener">SOzA7jSyco4</a>): "Exiting because you've hit a number is one skill. Exiting because you think the move is done is a different one, and it's the one that keeps the day green." Took $1,335 off a $1,620 peak on a W pattern.</li>
+    <li>Don't round-trip a winner (<a href="https://www.youtube.com/watch?v=2tmjN4CplgY" target="_blank" rel="noopener">2tmjN4CplgY</a>): shorted the retrace, called 28,200, ran to 30+ points, stopped eight points short of the flush target, took it — +$1,340 off a $2,160 peak. "Waiting for the last eight points is how a winner becomes a round trip. He called it, didn't get it, and took the rest."</li>
+    <li>Saying the temptation out loud is the control: "Saying out loud what you're tempted to do is most of how you avoid doing it."</li>
+    <li>When a re-entry fails: "Kind of felt like there was more in the tank, but clearly right now there is not." Counter showed −$3,620 at that moment; then 20+ points on a banger, $1,100 on the card (<a href="https://www.youtube.com/watch?v=P5c4mKYaSd8" target="_blank" rel="noopener">P5c4mKYaSd8</a>). "Being wrong about how much was left in a move isn't the problem. Closing the position because of how it felt is."</li>
+    <li>Breakout-release trade (<a href="https://www.youtube.com/watch?v=AWXb3QYIpik" target="_blank" rel="noopener">AWXb3QYIpik</a>): "Looking for 500 level breakout trade release… 485, I mean — look at the push." 15 points right away, 20, continuation, 25 points "on a banger" — $970 on the card on TWO CONTRACTS. "Marking the level is the whole trade."</li>
+  </ul>
+
+  <h4>9. Power Hour NQ plan (from RSS video <a href="https://www.youtube.com/watch?v=a5FafEPZCEw" target="_blank" rel="noopener">a5FafEPZCEw</a>, 2026-11-14)</h4>
+  <ul>
+    <li>Power Hour = 3–4 PM ("A lot of the time you get volatility heading into that window — but it isn't guaranteed… Two to three is the setup for it.") Streams Power Hour 2–4 every day.</li>
+    <li>THE LEVELS: two ranges marked — 27,863 above, 27,637 below — "then the one that matters — the 50 EMA on the one hour at 27,704. Price was pushing right into it." Plan: see if the level holds or "do we get some kind of rejection off that 50 EMA for a rollover back to the downside."</li>
+    <li>THE METHOD: "You let price basically come to you. You let the one hour candle open up and you're trying to join the momentum in the direction of the move." Not predicting, not positioning early.</li>
+    <li>5-MIN READ OF THE DAY: the whole day repeated — drop, retracement back to the EMAs, continuation lower; lower highs, lower lows, price rejected off the 14 EMA over and over: "Look how many times that's actually printed."</li>
+    <li>POWER HOUR QUESTION: on the one hour — lower high or higher low? Then join the party in whichever direction they take it.</li>
+    <li>THE 3:50 CANDLE: "At 3:50 you get MOC — market on close. A lot of the time that's a momentum candle on its own." Chopping into Power Hour? You may get follow-through at 3:50. "Every day is a little bit different." CPI day context: "You have to come into this thing with an open mind."</li>
+    <li>CORE: "Power Hour isn't a setup. It's a window where volatility shows up more often than not — and the prep is knowing your levels before it opens so you're reacting, not deciding."</li>
+    <li>Schedule: "We rock out Sundays from 5:45 for Globex open, all week long, and Power Hour two to four."</li>
+  </ul>
+
+  <h4>10. Bank-holiday / low-volume playbook (from RSS video <a href="https://www.youtube.com/watch?v=WcHol3sU1EE" target="_blank" rel="noopener">WcHol3sU1EE</a>)</h4>
+  <ul>
+    <li>THE TELL: prior 1-hour candles ~400 points; the current one ~95 points. "It almost feels like a one minute chart… That's just what happens when there's low volume."</li>
+    <li>APPROACH: "Can you really go into this thing with high expectations? I don't think so." Low expectations. SIZE DOWN. Don't go in willy-nilly on a session where you don't know what the market's going to bring.</li>
+    <li>LEVELS: 28,465 possible resistance (1H + 4H); 28,695 the cleaner reversal area; daily 14 EMA ~28,500, price reached 28,406. Question: was the November 5 crash candle the drop, and is this the retracement before continuation lower?</li>
+    <li>HOLIDAY SESSIONS: "Sometimes on the holidays it is just a grind. It's a grind in one direction." Bank holiday often a 1:00 PM close. "Your job as a trader is to join the party in either direction."</li>
+    <li>15-MIN: above the 14, 50 and 200 EMA; pattern: higher high, retracement, repeat.</li>
+    <li>CORE: "Compare today's candle size to last week's before you decide what size to trade. The chart tells you what kind of day it is before the open does."</li>
+  </ul>
+
+  <h3>Video-by-video index (older videos, recovered from blog articles)</h3>
+
+  <h4>VIDEO DM1 — Everyone Says EMAs Don't Work</h4>
+  <ul>
+    <li>ID: <a href="https://www.youtube.com/watch?v=j8EI1XCFN0g" target="_blank" rel="noopener">j8EI1XCFN0g</a> | <a href="https://www.youtube.com/watch?v=j8EI1XCFN0g" target="_blank" rel="noopener">https://www.youtube.com/watch?v=j8EI1XCFN0g</a> | Published (blog): 2026-10-23</li>
+    <li>Blog article: <a href="https://onlypropfirms.com/bdh/everyone-says-emas-dont-work" target="_blank" rel="noopener">onlypropfirms.com/bdh/everyone-says-emas-dont-work</a></li>
+    <li>Content: section 1. Chapters: 0:17 The settings: 14, 50, 200 / 1:10 The 15-minute opening range / 1:40 Rejection off the 14, then the melt / 2:08 The bearish EMA cross at 9:20 / 2:28 What EMA spacing tells you / 3:24 Using the 14 as a target / 3:57 Trend days vs chop / 5:28 Higher timeframe confluence.</li>
+  </ul>
+
+  <h4>VIDEO DM2 — NQ Dropped 780 Points. Here's How I Traded It</h4>
+  <ul>
+    <li>ID: <a href="https://www.youtube.com/watch?v=r2L8QdiQ2NM" target="_blank" rel="noopener">r2L8QdiQ2NM</a> | <a href="https://www.youtube.com/watch?v=r2L8QdiQ2NM" target="_blank" rel="noopener">https://www.youtube.com/watch?v=r2L8QdiQ2NM</a> | Published (blog): 2026-10-19 (CPI day Oct 14 recap)</li>
+    <li>Blog article: <a href="https://onlypropfirms.com/bdh/nq-dropped-780-points-heres-how-i-traded-it" target="_blank" rel="noopener">onlypropfirms.com/bdh/nq-dropped-780-points-heres-how-i-traded-it</a></li>
+    <li>Content: section 2. Chapters: 0:22 Equal highs at 30,852.75 / 0:43 A 245-point bearish candle / 1:04 Reading the opening range doji / 1:38 Getting chopped on the first trade / 1:50 The ORB high breakout / 2:29 The game plan: pass evals on a momentum day / 2:58 45-point trades and a 50-point banger / 3:14 Three rejections off the 14 EMA / 3:43 The candle that closed back above the 14 / 4:21 60-point move, 50 points captured / 4:52 Below yesterday's low means expansion / 5:38 Why EMA spread signals trend strength / 5:58 Passing evals and locking the passed ones.</li>
+  </ul>
+
+  <h4>VIDEO DM3 — The Trend Is Your Friend. Here's What It Means</h4>
+  <ul>
+    <li>ID: <a href="https://www.youtube.com/watch?v=CoO5V0d9mNQ" target="_blank" rel="noopener">CoO5V0d9mNQ</a> | <a href="https://www.youtube.com/watch?v=CoO5V0d9mNQ" target="_blank" rel="noopener">https://www.youtube.com/watch?v=CoO5V0d9mNQ</a> | Published (blog): 2026-10-14</li>
+    <li>Blog article: <a href="https://onlypropfirms.com/bdh/the-trend-is-your-friend-heres-what-it-means" target="_blank" rel="noopener">onlypropfirms.com/bdh/the-trend-is-your-friend-heres-what-it-means</a></li>
+    <li>Content: section 3. Key numbers: entry 31,036.75, stop 31,025 (11 pts), target ~55 pts; breakouts 31,123 / 31,144; 2 PM re-entry longs.</li>
+  </ul>
+
+  <h4>VIDEO DM4 — The Double Bottom Was The Low All Day</h4>
+  <ul>
+    <li>ID: <a href="https://www.youtube.com/watch?v=CoRVhjwkqJY" target="_blank" rel="noopener">CoRVhjwkqJY</a> | <a href="https://www.youtube.com/watch?v=CoRVhjwkqJY" target="_blank" rel="noopener">https://www.youtube.com/watch?v=CoRVhjwkqJY</a> | Published (blog): 2026-10-09 (Oct 7 session)</li>
+    <li>Blog article: <a href="https://onlypropfirms.com/bdh/the-double-bottom-was-the-low-all-day" target="_blank" rel="noopener">onlypropfirms.com/bdh/the-double-bottom-was-the-low-all-day</a></li>
+    <li>Content: section 4. Key numbers: prev daily 31,616 / 31,309; double bottom ~31,144; ORB breakdown short 35 pts; 50-pt wick trade; 2 PM breakout 20 pts; 31,400 cleared ~3:50; accounts $3,235 / $1,830.</li>
+  </ul>
+
+  <h4>VIDEO DM5 — Why You Can't Pick The Top On Nasdaq Futures</h4>
+  <ul>
+    <li>ID: <a href="https://www.youtube.com/watch?v=TRMEFV6KeEE" target="_blank" rel="noopener">TRMEFV6KeEE</a> | <a href="https://www.youtube.com/watch?v=TRMEFV6KeEE" target="_blank" rel="noopener">https://www.youtube.com/watch?v=TRMEFV6KeEE</a> | Published (blog): 2026-09-30</li>
+    <li>Blog article: <a href="https://onlypropfirms.com/bdh/why-you-cant-pick-the-top-on-nasdaq-futures" target="_blank" rel="noopener">onlypropfirms.com/bdh/why-you-cant-pick-the-top-on-nasdaq-futures</a></li>
+    <li>Content: section 5. Key numbers: OR 30,763–30,868; 9 AM hourly candle 194 pts; 31,040 daily resistance; 500+ pt prior reversal; one bearish 4H candle since the 18th.</li>
+  </ul>
+
+  <h4>VIDEO DM6 — What A 90 Point Bottom Wick Tells You</h4>
+  <ul>
+    <li>ID: <a href="https://www.youtube.com/watch?v=46asbCG1S8s" target="_blank" rel="noopener">46asbCG1S8s</a> | <a href="https://www.youtube.com/watch?v=46asbCG1S8s" target="_blank" rel="noopener">https://www.youtube.com/watch?v=46asbCG1S8s</a> | Published (blog): 2026-10-11</li>
+    <li>Blog article: <a href="https://onlypropfirms.com/bdh/what-a-90-point-bottom-wick-tells-you" target="_blank" rel="noopener">onlypropfirms.com/bdh/what-a-90-point-bottom-wick-tells-you</a></li>
+    <li>Content: section 6. Key numbers: 90-pt bottom wick on the 30-min; entry candle 47-pt wick to ~31,192; 50-pt winner; OR breakout 31,275; reactionary level Oct 30 7AM / Oct 31 11AM; bearish: Oct 2 9AM rejection, retested Oct 4.</li>
+  </ul>
+
+  <h4>From the RSS (already in bdh-rss-latest.xml)</h4>
+  <ul>
+    <li><a href="https://www.youtube.com/watch?v=a5FafEPZCEw" target="_blank" rel="noopener">a5FafEPZCEw</a> — My Power Hour NQ Plan That Pays Before the Close (2026-11-14) — section 9.</li>
+    <li><a href="https://www.youtube.com/watch?v=WcHol3sU1EE" target="_blank" rel="noopener">WcHol3sU1EE</a> — The 1 Hour Candles Look Like 1 Minute Candles (2026-11-13) — bank-holiday playbook, section 10.</li>
+    <li><a href="https://www.youtube.com/watch?v=dvAMJUom3Hw" target="_blank" rel="noopener">dvAMJUom3Hw</a> — A 70 Point Candle In One Minute (short) — liquidity: London low hunted, London high became target.</li>
+    <li><a href="https://www.youtube.com/watch?v=SOzA7jSyco4" target="_blank" rel="noopener">SOzA7jSyco4</a> — I Took It Before It Could Retrace (short) — W pattern, 28,225+, exit skill.</li>
+    <li><a href="https://www.youtube.com/watch?v=AWXb3QYIpik" target="_blank" rel="noopener">AWXb3QYIpik</a> — I Waited For 28,500 To Break (short) — breakout trade release, 2 contracts, $970.</li>
+    <li><a href="https://www.youtube.com/watch?v=ru6-_aOM-GQ" target="_blank" rel="noopener">ru6-_aOM-GQ</a> — I Don't Blame You For Taking Profit (short) — TP at 366, rest on 1-for-1, $1,680.</li>
+    <li><a href="https://www.youtube.com/watch?v=P5c4mKYaSd8" target="_blank" rel="noopener">P5c4mKYaSd8</a> — I Thought There Was More In The Tank (short) — re-entry discipline, $1,100.</li>
+    <li><a href="https://www.youtube.com/watch?v=2tmjN4CplgY" target="_blank" rel="noopener">2tmjN4CplgY</a> — If You Took This Trade You Got Paid (short) — taking the winner 8 points short of the flush, $1,340.</li>
+    <li><a href="https://www.youtube.com/watch?v=8ELfEFCFpjI" target="_blank" rel="noopener">8ELfEFCFpjI</a> — I'm Not Chickening Out Of This One (short) — two in the chamber held for 1:1, 21 EMA watch, +$855.</li>
+  </ul>
+
+  <h3>Recurring D-Money mechanics (cross-video)</h3>
+  <ul>
+    <li>EMA stack: 14 / 50 / 200 on all timeframes (5m/15m/30m/1H/4H/daily); confluence only, never a standalone signal; EMA spacing = trend strength; EMAs double as TP levels.</li>
+    <li>Core entry pattern on trend days: drop → retracement to the 14 EMA → rejection → continuation; reversal tell = a candle CLOSING back above the 14 EMA after hours of holding below it.</li>
+    <li>5-minute ORB read at 9:30; doji OR candle = wait for indecision to settle; ORB low/high breaks traded for momentum.</li>
+    <li>Equal highs/lows as liquidity setups; London high/low hunts; "if it fails to take one side, the other side is the target."</li>
+    <li>Wicks: bottom wicks = buyers lifting; entry = when retracement digs into the previous wick; rejection wicks = resistance when retested. "Always look left."</li>
+    <li>Trend definition into a frame: buy the retracement toward the last higher low, stop just below it, target the previous higher high (e.g., 11-point risk for ~55 points).</li>
+    <li>Never pick tops on expansion; trade what's in front of you; buy retracements repeatedly and let the win rate work.</li>
+    <li>Range/double-bottom days: ORB breakdown shorts, double bottoms called live, 30-minute bullish wick-candle entries.</li>
+    <li>Power Hour 3–4 (setup 2–3): let the 1-hour candle open and join the momentum; 50 EMA on the 1H as the decision level; 3:50 MOC momentum candle.</li>
+    <li>Low-volume days: compare candle size to last week, size down, expect a one-direction grind.</li>
+    <li>Eval discipline on news days: goal = pass evals, not dollar targets; LOCK passed accounts.</li>
+  </ul>
+</section>
+
+<section id="articles">
+  <h2>D-Money's Trading FAQ — Complete Article Index</h2>
+  <details class="fold">
+    <summary>📖 All 35 Articles</summary>
+    <div class="body">
+      <p class="meta"><strong>Source:</strong> onlypropfirms.com/bdh — "D-Money's Trading FAQ" category (BDH Trading channel)<br><strong>Date researched:</strong> 2026-11-16<br><strong>Total articles found &amp; read:</strong> 35 (4 listing pages; page 5 returned 404)</p>
+      <p>Listed newest-first, as published. Each entry: URL, date, and the key trading takeaway.</p>
+      <table>
+        <thead>
+          <tr><th>#</th><th>Pg</th><th>Article</th><th>Date</th><th>Key takeaway</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>1</td><td><a href="https://onlypropfirms.com/bdh/10-years-in-what-id-do-differently" target="_blank" rel="noopener">10 Years In: What I'd Do Differently</a></td><td>10 Nov 2026</td><td>Four lessons from 10 years of trading: slow down to speed up (oversized positions in chop destroy accounts), stop comparing yourself to others' payouts, start each day with a blank slate and take breaks, and incorporate the 1-hour/4-hour/daily charts (learned "by losing accounts"). It took him two full years of losses before his first payout.</td></tr>
+          <tr><td>2</td><td>1</td><td><a href="https://onlypropfirms.com/bdh/everyone-says-emas-dont-work" target="_blank" rel="noopener">Everyone Says EMAs Don't Work</a></td><td>23 Oct 2026</td><td>Defense of the 14/50/200 EMAs as pure trend indicators used for confluence, not blind signals. Core playbook: bearish EMA cross (e.g. 9:20 AM), wide EMA spread = intense pressure, then the repeating "drop, retracement to the 14 EMA, rejection, another drop" short pattern on the 5- and 15-minute charts. When price sits below all three EMAs on the 1-hour (and 4-hour cross is bearish), longs are "financial suicide" except quick 14 EMA scalp bounces.</td></tr>
+          <tr><td>3</td><td>1</td><td><a href="https://onlypropfirms.com/bdh/nq-dropped-780-points-heres-how-i-traded-it" target="_blank" rel="noopener">NQ Dropped 780 Points. Here's How I Traded It</a></td><td>19 Oct 2026</td><td>CPI-day anatomy: a 245-point 8:30 AM candle, equal highs swept at 30,852.75, a wick-heavy opening doji that chopped his first long. After an hour in a box, price broke lower and he rode repeated 14 EMA rejections through a ~780-point drop, then caught a 50-point "ending banger" long when a candle finally closed above the 14 EMA around 3:00 PM. Rule: lock evaluation accounts immediately once passed.</td></tr>
+          <tr><td>4</td><td>1</td><td><a href="https://onlypropfirms.com/bdh/inside-yesterdays-range-means-chop-heres-why" target="_blank" rel="noopener">Inside Yesterday's Range Means Chop. Here's Why</a></td><td>18 Oct 2026</td><td>The inside-range rule: trading within the prior daily candle (high 31,466 / low 30,792) means chop is coming, so map levels and wait to join momentum either way. He took the 5-min ORB downside break for +25–30 and +50 points, rode a 100-point momentum candle, then scalped three longs (+15–20 each) off higher lows after the 30,028 bottom. Passed a $300k Apex eval making $15,000 at the open.</td></tr>
+          <tr><td>5</td><td>1</td><td><a href="https://onlypropfirms.com/bdh/the-trend-is-your-friend-heres-what-it-means" target="_blank" rel="noopener">The Trend Is Your Friend. Here's What It Means</a></td><td>14 Oct 2026</td><td>Don't buy breakout tops — buy retracements near the previous higher low with the stop below it and the target at the previous higher high. His worked example: an 11-point stop against a 55-point target = 1:5 R:R "with practically no drawdown." Market cycle to memorize: push up, pull back, expansion higher.</td></tr>
+          <tr><td>6</td><td>1</td><td><a href="https://onlypropfirms.com/bdh/what-a-90-point-bottom-wick-tells-you" target="_blank" rel="noopener">What A 90 Point Bottom Wick Tells You</a></td><td>11 Oct 2026</td><td>Zoom to the 30-minute chart in chop: a 90-point bottom wick on a green-open candle = heavy buyers below. Buy the next candle as it digs into that wick zone (~31,192) and ride the reversal (he took +50 points, then the break above the morning range at 31,275). "Reactionary levels" = looking left for old massive wicks, which work even better on the 1-hour.</td></tr>
+          <tr><td>7</td><td>1</td><td><a href="https://onlypropfirms.com/bdh/the-double-bottom-was-the-low-all-day" target="_blank" rel="noopener">The Double Bottom Was The Low All Day</a></td><td>9 Oct 2026</td><td>After a 300-point overnight melt, the open popped and trapped longs, then broke the ORB low at 31,215 for a +35-point short; his early long was chopped ("always cut it if the momentum dies"). A double bottom at ~31,144 held as the day's absolute low, launching a stair-step grind with a +50-point 30-minute-wick trade and a +20-point run at 31,400. Heavy macro calendar (FOMC statement, Trump 1 PM) explains the slow chop.</td></tr>
+          <tr><td>8</td><td>1</td><td><a href="https://onlypropfirms.com/bdh/i-knew-it-would-chop-before-the-open" target="_blank" rel="noopener">I Knew It Would Chop Before The Open</a></td><td>1 Oct 2026</td><td>Trading fully inside yesterday's daily candle (30,920.75 / 30,356.75) = chop forecast confirmed. The morning downside ORB paid a 126-point drop; after that he hunted only "base hits" — +25, +25, +15+ around the 30,557/30,534 area and a 2 PM W-pattern during FOMC speakers. Lesson: leave your ego at the door in inside-range conditions; expect consolidation ahead of NFP and earnings.</td></tr>
+          <tr><td>9</td><td>1</td><td><a href="https://onlypropfirms.com/bdh/why-you-cant-pick-the-top-on-nasdaq-futures" target="_blank" rel="noopener">Why You Can't Pick The Top On Nasdaq Futures</a></td><td>30 Sep 2026</td><td>After a 1,300+ point 4-hour rally with one bearish candle, shorting the top will bankrupt you before NQ reverses: "you are going to run out of steam way before NQ decides to actually reverse." A 194-point 1-hour bazooka candle and every dip being bought = join the trend, buy retracements, and use left-side 1-hour resistance (31,040) only as a target/stall zone, not a short signal.</td></tr>
+          <tr><td>10</td><td>1</td><td><a href="https://onlypropfirms.com/bdh/the-market-is-ranging-more-than-you-think" target="_blank" rel="noopener">The Market Is Ranging More Than You Think</a></td><td>29 Sep 2026</td><td>After a morning W-pattern completed with an 84-point pop (following a daily bearish pin bar with a 400-point bottom wick), the afternoon became a 70-point ping-pong box (ceiling ~30,903/30,930). Range play: buy 14 EMA dips at 30,860–30,870 back to the top, targets "10, 15, or maybe 20 points tops," plus a +20-point MOC pop to 30,933. Takeaway: the market is rarely in true one-directional trend — consolidation dominates.</td></tr>
+          <tr><td>11</td><td>2</td><td><a href="https://onlypropfirms.com/bdh/how-i-frame-quality-setups-on-nasdaq-futures" target="_blank" rel="noopener">How I Frame Quality Setups On Nasdaq Futures</a></td><td>28 Sep 2026</td><td>Full real-time assembly of a 300+ point rally: (1) look left — consolidation inside the 15-min ORB (30,606.50/30,493.25) with 30,502.50 defended; (2) frame the long on the 30-min chart with the stop below the prior 30-min candle low ("If it takes that out, I'm out"); (3) ride the trend via repeated 14 EMA holds; (4) exit at the 1-hour target zone 30,794–30,813. Pro tip: talk yourself through the chart out loud to slow your brain down.</td></tr>
+          <tr><td>12</td><td>2</td><td><a href="https://onlypropfirms.com/bdh/one-loss-all-day-on-nasdaq-futures" target="_blank" rel="noopener">One Loss All Day On Nasdaq Futures</a></td><td>26 Sep 2026</td><td>Bearish open (first 5-min candle closing below all three EMAs) preceded a 370-point melt — all inside yesterday's range (31,065/30,670), warning of a big consolidation block. He shorted 14 EMA rejections (e.g. 30,755), took one forced-loss stop-out, then pivoted long when higher lows confirmed the reversal at 1:15 PM, riding three longs in a 65-point range. One loss all day, +$1,655.</td></tr>
+          <tr><td>13</td><td>2</td><td><a href="https://onlypropfirms.com/bdh/the-nasdaq-ran-200-points-heres-how-i-traded-it" target="_blank" rel="noopener">The Nasdaq Ran 200 Points — Here's How I Traded It</a></td><td>24 Sep 2026</td><td>Context first: a 105-point first 5-min candle (30,763/30,868) and price above yesterday's high = expansion brain ("Look for higher highs, higher lows, and a trend day"). Longs off 14 EMA bounces toward the 31,000 psychological level; a breakout attempt chopped for −10 ("Never sit and hope—cut it if it doesn't go!"); then a consolidation breakout above 30,995 ridden into the daily-chart resistance block at 31,040 (tagged 31,048).</td></tr>
+          <tr><td>14</td><td>2</td><td><a href="https://onlypropfirms.com/bdh/my-first-trade-today-was-a-chop-trade-keeping-it-real" target="_blank" rel="noopener">My First Trade Today Was A Chop Trade. Keeping It Real</a></td><td>14 Sep 2026</td><td>Honest recap of a ~165-point no-follow-through range: bears got slammed back up 150+ points, bulls got faked on the ORB breakout — even his own first trade was a chop failure. Market truth: "the market is not trending 100% of the time... the vast majority of its time consolidating." Adaptation: take profits early, size down, and take breaks; don't beat yourself up in chop weeks.</td></tr>
+          <tr><td>15</td><td>2</td><td><a href="https://onlypropfirms.com/bdh/the-secret-to-finding-reversals-wick-analysis-101" target="_blank" rel="noopener">The Secret to Finding Reversals: Wick Analysis 101</a></td><td>11 Sep 2026</td><td>Wicks "tell a story. They don't lie." Bullish "Swipe and Go": flush below the prior low, instant rejection, bullish close → long with the stop strictly below the rejection wick (tight stop, huge R:R). Bearish: a candle that taps the 14 EMA, rejects, and closes red with a long top wick → short continuation (tight ~20-point stop, 100+ point melts). Golden rule: higher-time-frame wicks carry far more power.</td></tr>
+          <tr><td>16</td><td>2</td><td><a href="https://onlypropfirms.com/bdh/lost-my-first-trade-then-caught-the-biggest-move-of-the-day" target="_blank" rel="noopener">Lost My First Trade, Then Caught The Biggest Move Of The Day</a></td><td>10 Sep 2026</td><td>Inside yesterday's range (29,743.50/29,468) + a bullish pre-market fake-out: his opening long was chopped and cut immediately, then he flipped short at 29,589 targeting 29,476 — the market dropped 120+ points and he banked 50+. Next: a "swipe and go" long off the 15-min ORB low (29,469) back to the 14 EMA, and a consolidation-breakout long at 29,532 for 30+. Formula: "Cut your losers quickly, follow the momentum, and let the winners run!"</td></tr>
+          <tr><td>17</td><td>2</td><td><a href="https://onlypropfirms.com/bdh/stop-trading-your-bias-how-i-survived-this-choppy-open" target="_blank" rel="noopener">Stop Trading Your Bias: How I Survived This Choppy Open</a></td><td>2 Sep 2026</td><td>Inside yesterday's range (29,571.25/29,002) = "wicky-wicky" open. The clue was the first 15-minute candle's massive bottom wick (institutions absorbing selling); when the ORB low at 29,365 was swiped and price reclaimed the range, shorts were done — he caught multiple +20-point longs, then re-bought the ORB top (29,119) as new support. Lesson: never bring a directional bias into the morning; liquidity hunts come before the real drop.</td></tr>
+          <tr><td>18</td><td>2</td><td><a href="https://onlypropfirms.com/bdh/trading-psychology-why-i-stayed-flat-on-a-difficult-day" target="_blank" rel="noopener">Trading Psychology: Why I Stayed Flat On A Difficult Day</a></td><td>2 Sep 2026</td><td>After a morning 300-point rip and 350-point dump, the afternoon was a suffocating 29,436–29,532 "barcode" that wouldn't even retest its extremes. He forced a few trades, caught a few points, gave them back, and finished flat — and called that a win. Rule: when the momentum already played out, scale size down, force nothing, and don't let boredom pick your trades.</td></tr>
+          <tr><td>19</td><td>2</td><td><a href="https://onlypropfirms.com/bdh/surviving-the-nq-chop-my-live-trading-breakdown" target="_blank" rel="noopener">Surviving The NQ Chop: My Live Trading Breakdown</a></td><td>1 Sep 2026</td><td>Bearish Friday-lows thesis failed, so he mapped the 5-min ORB and took a +50-point long above 29,440 — then applied the chop rule: "When the market gives you 50 points, you take your profit off the table." Price closed back inside the morning range (below 29,513); best trade was a short 29,456 → 29,389. NFP, political speakers and geopolitics keep institutions sidelined: "your goal is to take what you can get... and survive the chop."</td></tr>
+          <tr><td>20</td><td>2</td><td><a href="https://onlypropfirms.com/bdh/the-reality-of-trading-2-stops-then-a-massive-trade" target="_blank" rel="noopener">The Reality of Trading: 2 Stops, Then a Massive Trade</a></td><td>28 Aug 2026</td><td>Bullish macro bias met a "wonky" range and an unexpected 1:00 PM news drop — two controlled long stop-outs (10–15 points max each). He flipped short off EMA rejections below the 200 EMA, then spotted the 9:45 AM higher-low structure (~29,425–29,555) and scaled long for a 150+ point reversal ride back to the 29,680 target. Lesson: risk management is everything — small controlled losses let you pivot into the real move.</td></tr>
+          <tr><td>21</td><td>3</td><td><a href="https://onlypropfirms.com/bdh/dont-let-greed-kill-your-trade-cut-early" target="_blank" rel="noopener">Don't Let Greed Kill Your Trade: Cut Early</a></td><td>28 Aug 2026</td><td>"Chopping" a trade early is a tool, not failure: right direction + wrong entry still blows accounts, so exit for a 5–10 point loss and re-enter when price behaves. Two exit triggers: an exhaustion wick against you (NQ "loves to swipe lows... and immediately reverse 100 points"), and entering at the open of a new 30-min/1H candle (they retrace first). Safest entries are failed retracements at the EMAs, and on trailing-drawdown accounts open profits must be protected.</td></tr>
+          <tr><td>22</td><td>3</td><td><a href="https://onlypropfirms.com/bdh/how-i-find-a-entries-using-the-emas-nq-futures" target="_blank" rel="noopener">How I Find A+ Entries Using the EMAs (NQ Futures)</a></td><td>27 Aug 2026</td><td>The A+ entry definition: enter as close to the EMA as possible after a push → retracement → exhaustion-wick rejection, with the stop just beyond the EMA/wick (10–20 points) and the target at the prior push extreme (50+ points). "If it does break above, you want to be stopped out anyway because the trend is broken!" Trends move in waves — miss the push, wait for the wave to recede to the EMAs.</td></tr>
+          <tr><td>23</td><td>3</td><td><a href="https://onlypropfirms.com/bdh/how-many-contracts-should-you-actually-trade-position-sizing" target="_blank" rel="noopener">How Many Contracts Should You Actually Trade? (Position Sizing)</a></td><td>26 Aug 2026</td><td>He trades one NQ contract almost exclusively: on a $50K account with a $2,000 trailing drawdown, a 20-point stop = $400 risk = ~5 losing trades of ammunition (two contracts halves that). NQ's 60–80 point 5-min candles mean one contract catching 75 points = $1,500. Two contracts only for an A+ EMA-wick entry with a 10-point stop, keeping dollar risk identical.</td></tr>
+          <tr><td>24</td><td>3</td><td><a href="https://onlypropfirms.com/bdh/why-most-traders-miss-the-reversal-and-how-i-spot-it" target="_blank" rel="noopener">Why Most Traders Miss the Reversal (And How I Spot It)</a></td><td>25 Aug 2026</td><td>Three reversal clues: (1) pin bars/hammers — a 20–30 point bottom wick after a long downtrend warns of reversal; (2) equal lows/highs — often swiped once to trap breakout traders before reversing; long there with a stop under the lows vs 70–100 points of reward; (3) structural shifts — higher lows after a big drop = bottom forming. Context is everything: patterns only count after severe extension ("the rubber band is stretched thin").</td></tr>
+          <tr><td>25</td><td>3</td><td><a href="https://onlypropfirms.com/bdh/my-full-am-trading-routine-before-i-take-any-trade" target="_blank" rel="noopener">My Full AM Trading Routine (Before I Take Any Trade)</a></td><td>24 Aug 2026</td><td>The daily sequence: (1) daily chart — mark yesterday's absolute high/low; (2) at 9:30 map the first 5-min candle's high/low as the ORB (15-min ORB if you're late); (3) read pre-market context — overnight pressure, boxes at the EMAs, scheduled news; (4) wait for the ORB break, then the EMA retracement rejection before entering — and if it fails, "Accept the small loss, pivot, and look for long entries." Rigid bias is "an appetite for destruction."</td></tr>
+          <tr><td>26</td><td>3</td><td><a href="https://onlypropfirms.com/bdh/how-i-trade-price-action-and-momentum-together" target="_blank" rel="noopener">How I Trade Price Action and Momentum Together</a></td><td>21 Aug 2026</td><td>Price action = what price has done at levels (control, double tops, equal lows, psychological numbers); momentum = candle body size (large bodies = institutions; "Never fight heavy momentum"). The A+ assembly: 1-hour macro sets short-only bias, left-side bounce levels become targets, then on the 5-min wait for the sharp drop → 14/50 EMA retest → top wicks/double-top rejection → short with the stop above the wicks. Consolidation after equal-low wipes = sit on your hands.</td></tr>
+          <tr><td>27</td><td>3</td><td><a href="https://onlypropfirms.com/bdh/how-i-spot-equal-highs-and-equal-lows-for-reversals" target="_blank" rel="noopener">How I Spot Equal Highs and Equal Lows for Reversals</a></td><td>21 Aug 2026</td><td>Definition: two clustered candles topping/bottoming within one point (e.g. 29,905.25 vs 29,905.50). Equal High = bulls stalling → bearish reversal signal; Equal Low = hard floor → look long while it holds, entering when a candle closes bullish above the 14 EMA with the stop a few points beyond — often the launchpad of a 100+ point bazooka candle. In live markets you must train yourself to slow down and check the exact wick prices.</td></tr>
+          <tr><td>28</td><td>3</td><td><a href="https://onlypropfirms.com/bdh/what-is-momentum-trading-my-full-breakdown" target="_blank" rel="noopener">What Is Momentum Trading? My Full Breakdown</a></td><td>20 Aug 2026</td><td>Momentum = "Who is in control — bulls or bears?" — spotted via candle size: an 80–130 point 5-min "Bazooka Candle" out of consolidation means institutions picked a side. Trade it by waiting for the retracement and entering near the EMAs with the stop on the opposite side; red engulfing bodies 2–3x prior greens = bears in control. Timing: the first hour produces 100–130 point candles; lunch kills momentum — switch to range trading or don't trade.</td></tr>
+          <tr><td>29</td><td>3</td><td><a href="https://onlypropfirms.com/bdh/how-i-trade-a-range-when-nq-is-stuck-in-chop" target="_blank" rel="noopener">How I Trade a Range When NQ Is Stuck in Chop</a></td><td>20 Aug 2026</td><td>When NQ ping-pongs (common for 3–4 afternoon hours), map the box with rectangles over the top and bottom wicks — ranges run 30 to 85+ points. Buy the absolute bottom (with a bottom wick), short the absolute top (with top wicks); stops 10–15 points beyond the box; targets the opposite edge. Every range eventually breaks — when it does, flip back to momentum trading on the retest.</td></tr>
+          <tr><td>30</td><td>3</td><td><a href="https://onlypropfirms.com/bdh/what-timeframes-i-actually-trade-and-why" target="_blank" rel="noopener">What Timeframes I Actually Trade (and Why)</a></td><td>19 Aug 2026</td><td>Analysis on 1H/4H (trend, S/R, prior daily high/low), execution on 5-min/15-min because 1-hour stops would be 80+ points. The model: bearish EMA cross on the macro, then enter the 5-min 14 EMA pullback short with a 10–20 point stop targeting 1-hour support — "15-point risk... targeting a massive 150-point profit." Watch the clock (final 10 minutes of HTF candles wick against you) and the 1-hour rubber band (overextension snaps back violently).</td></tr>
+          <tr><td>31</td><td>4</td><td><a href="https://onlypropfirms.com/bdh/how-i-trade-the-opening-range-breakout-orb-strategy" target="_blank" rel="noopener">How I Trade the Opening Range Breakout (ORB) Strategy</a></td><td>19 Aug 2026</td><td>Map the first 5-min candle (9:30–9:35) high/low wick-to-wick — or the first 15-min candle for the more reliable, slightly wider-stop version. Enter on the break of the line (especially with all three EMAs behind the move), take the advanced early entry if candle one tags the EMAs and closes with a big rejection wick, or wait for the conservative break-and-retest entry. Stop beyond the EMAs/breakout candle low; target the nearest left-side support/resistance.</td></tr>
+          <tr><td>32</td><td>4</td><td><a href="https://onlypropfirms.com/bdh/how-to-identify-a-trend-day-before-it-happens" target="_blank" rel="noopener">How to Identify a Trend Day Before It Happens</a></td><td>18 Aug 2026</td><td>Trend-day tells: huge solid candles in the opening 5–30 minutes, price holding above (or below) all three EMAs all session, and clean HH/HL (or LH/LL) structure. Entry is always the retracement-to-EMA rejection, never the candle extreme. Trend-shift warning: after 500+ point moves, double/triple bottoms or new higher highs mean the trend is exhausted.</td></tr>
+          <tr><td>33</td><td>4</td><td><a href="https://onlypropfirms.com/bdh/my-tradingview-setup-emas-boxes-and-tools-explained" target="_blank" rel="noopener">My TradingView Setup: EMAs, Boxes, and Tools Explained</a></td><td>18 Aug 2026</td><td>Exact chart config: three EMAs set to lengths 14, 50, 200; a pinned favorites toolbar with the rectangle tool (transparent S/R boxes), horizontal lines (strictly black, used only for ORB), the price-range tool (exact point measurements), and arrows for engulfing/rejection callouts. He even executes through TradingView's broker integration (Tradovate). Advice: "You cannot break the platform" — customize and save your routine.</td></tr>
+          <tr><td>34</td><td>4</td><td><a href="https://onlypropfirms.com/bdh/how-i-use-the-14-50-and-200-ema-to-trade-nq-futures" target="_blank" rel="noopener">How I use the 14, 50 and 200 EMA to Trade NQ Futuress</a></td><td>17 Aug 2026</td><td>Foundational EMA guide: EMAs are lagging tools for confluence, best on 1H/4H/daily where they act as major S/R; match entry-timeframe EMA crosses to the higher-time-frame direction. Shorts need the bearish cross and price below all three EMAs, entered on the retracement rejection with exhaustion wicks; longs need price holding above all three. Stops go on the opposite side of the EMA — tight by construction, and a break through the EMA invalidates the trade anyway. EMAs are for trending markets only.</td></tr>
+          <tr><td>35</td><td>4</td><td><a href="https://onlypropfirms.com/bdh/how-i-map-out-support-and-resistance-levels-nq-futures" target="_blank" rel="noopener">How I Map Out Support and Resistance Levels (NQ Futures)</a></td><td>17 Aug 2026</td><td>Draw zones, not lines: on 1H/4H charts, rectangle from wick to candle body at historic turning points (long-wick rejections), extended right — higher time frames carry more weight. Uses: take-profit targets ("zone to zone"), gap fills as reaction levels, reversal confirmation inside boxes (double bottoms, engulfing, wick sweeps), and breakout rule — consolidation then an explosive candle through a box flips resistance into support for continuation longs.</td></tr>
+        </tbody>
+      </table>
+      <h4>Thematic buckets (for quick reference)</h4>
+      <ul>
+        <li><strong>EMA system:</strong> #2, #22, #26, #30, #31, #32, #34</li>
+        <li><strong>Trend vs range/chop:</strong> #4, #8, #10, #13, #14, #18, #19, #29, #32</li>
+        <li><strong>Wicks/reversal patterns:</strong> #6, #7, #15, #16, #17, #24, #27</li>
+        <li><strong>Entries/management/risk:</strong> #5, #9, #12, #21, #23, #25, #28, #30</li>
+        <li><strong>Psychology/experience:</strong> #1, #14, #18, #19, #20, #21</li>
+        <li><strong>Tooling/levels/framework:</strong> #11, #31, #33, #34, #35</li>
+      </ul>
+    </div>
+  </details>
+</section>
+
+<section id="sources">
+  <h2>Sources — D-Money's Trading FAQ Crawl Log</h2>
+  <details class="fold">
+    <summary>🔗 Sources</summary>
+    <div class="body">
+      <p class="meta"><strong>Source site:</strong> onlypropfirms.com/bdh (BDH Trading channel, "D-Money's Trading FAQ")<br><strong>Date researched:</strong> 2026-11-16<br><strong>Method:</strong> webfetch (markdown) on the category listing pages, then on every article URL found.</p>
+
+      <h4>Listing pages crawled</h4>
+      <table>
+        <thead>
+          <tr><th>Page</th><th>URL</th><th>Result</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td><a href="https://onlypropfirms.com/bdh/d-moneys-trading-faq" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/d-moneys-trading-faq</a></td><td>OK — 10 articles</td></tr>
+          <tr><td>2</td><td><a href="https://onlypropfirms.com/bdh/d-moneys-trading-faq/page/2" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/d-moneys-trading-faq/page/2</a></td><td>OK — 9 articles</td></tr>
+          <tr><td>3</td><td><a href="https://onlypropfirms.com/bdh/d-moneys-trading-faq/page/3" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/d-moneys-trading-faq/page/3</a></td><td>OK — 9 articles</td></tr>
+          <tr><td>4</td><td><a href="https://onlypropfirms.com/bdh/d-moneys-trading-faq/page/4" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/d-moneys-trading-faq/page/4</a></td><td>OK — 5 articles (last page; "Older posts" link absent)</td></tr>
+          <tr><td>5</td><td><a href="https://onlypropfirms.com/bdh/d-moneys-trading-faq/page/5" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/d-moneys-trading-faq/page/5</a></td><td><strong>404 — crawl boundary confirmed</strong></td></tr>
+        </tbody>
+      </table>
+      <p><strong>Total articles: 35. All 35 article pages fetched successfully on first attempt — no retries needed, no failures.</strong></p>
+
+      <h4>Articles fetched (all HTTP 200)</h4>
+      <table>
+        <thead>
+          <tr><th>#</th><th>Date</th><th>URL</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>2026-11-10</td><td><a href="https://onlypropfirms.com/bdh/10-years-in-what-id-do-differently" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/10-years-in-what-id-do-differently</a></td></tr>
+          <tr><td>2</td><td>2026-10-23</td><td><a href="https://onlypropfirms.com/bdh/everyone-says-emas-dont-work" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/everyone-says-emas-dont-work</a></td></tr>
+          <tr><td>3</td><td>2026-10-19</td><td><a href="https://onlypropfirms.com/bdh/nq-dropped-780-points-heres-how-i-traded-it" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/nq-dropped-780-points-heres-how-i-traded-it</a></td></tr>
+          <tr><td>4</td><td>2026-10-18</td><td><a href="https://onlypropfirms.com/bdh/inside-yesterdays-range-means-chop-heres-why" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/inside-yesterdays-range-means-chop-heres-why</a></td></tr>
+          <tr><td>5</td><td>2026-10-14</td><td><a href="https://onlypropfirms.com/bdh/the-trend-is-your-friend-heres-what-it-means" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/the-trend-is-your-friend-heres-what-it-means</a></td></tr>
+          <tr><td>6</td><td>2026-10-11</td><td><a href="https://onlypropfirms.com/bdh/what-a-90-point-bottom-wick-tells-you" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/what-a-90-point-bottom-wick-tells-you</a></td></tr>
+          <tr><td>7</td><td>2026-10-09</td><td><a href="https://onlypropfirms.com/bdh/the-double-bottom-was-the-low-all-day" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/the-double-bottom-was-the-low-all-day</a></td></tr>
+          <tr><td>8</td><td>2026-10-01</td><td><a href="https://onlypropfirms.com/bdh/i-knew-it-would-chop-before-the-open" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/i-knew-it-would-chop-before-the-open</a></td></tr>
+          <tr><td>9</td><td>2026-09-30</td><td><a href="https://onlypropfirms.com/bdh/why-you-cant-pick-the-top-on-nasdaq-futures" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/why-you-cant-pick-the-top-on-nasdaq-futures</a></td></tr>
+          <tr><td>10</td><td>2026-09-29</td><td><a href="https://onlypropfirms.com/bdh/the-market-is-ranging-more-than-you-think" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/the-market-is-ranging-more-than-you-think</a></td></tr>
+          <tr><td>11</td><td>2026-09-28</td><td><a href="https://onlypropfirms.com/bdh/how-i-frame-quality-setups-on-nasdaq-futures" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/how-i-frame-quality-setups-on-nasdaq-futures</a></td></tr>
+          <tr><td>12</td><td>2026-09-26</td><td><a href="https://onlypropfirms.com/bdh/one-loss-all-day-on-nasdaq-futures" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/one-loss-all-day-on-nasdaq-futures</a></td></tr>
+          <tr><td>13</td><td>2026-09-24</td><td><a href="https://onlypropfirms.com/bdh/the-nasdaq-ran-200-points-heres-how-i-traded-it" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/the-nasdaq-ran-200-points-heres-how-i-traded-it</a></td></tr>
+          <tr><td>14</td><td>2026-09-14</td><td><a href="https://onlypropfirms.com/bdh/my-first-trade-today-was-a-chop-trade-keeping-it-real" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/my-first-trade-today-was-a-chop-trade-keeping-it-real</a></td></tr>
+          <tr><td>15</td><td>2026-09-11</td><td><a href="https://onlypropfirms.com/bdh/the-secret-to-finding-reversals-wick-analysis-101" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/the-secret-to-finding-reversals-wick-analysis-101</a></td></tr>
+          <tr><td>16</td><td>2026-09-10</td><td><a href="https://onlypropfirms.com/bdh/lost-my-first-trade-then-caught-the-biggest-move-of-the-day" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/lost-my-first-trade-then-caught-the-biggest-move-of-the-day</a></td></tr>
+          <tr><td>17</td><td>2026-09-02</td><td><a href="https://onlypropfirms.com/bdh/stop-trading-your-bias-how-i-survived-this-choppy-open" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/stop-trading-your-bias-how-i-survived-this-choppy-open</a></td></tr>
+          <tr><td>18</td><td>2026-09-02</td><td><a href="https://onlypropfirms.com/bdh/trading-psychology-why-i-stayed-flat-on-a-difficult-day" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/trading-psychology-why-i-stayed-flat-on-a-difficult-day</a></td></tr>
+          <tr><td>19</td><td>2026-09-01</td><td><a href="https://onlypropfirms.com/bdh/surviving-the-nq-chop-my-live-trading-breakdown" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/surviving-the-nq-chop-my-live-trading-breakdown</a></td></tr>
+          <tr><td>20</td><td>2026-08-28</td><td><a href="https://onlypropfirms.com/bdh/the-reality-of-trading-2-stops-then-a-massive-trade" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/the-reality-of-trading-2-stops-then-a-massive-trade</a></td></tr>
+          <tr><td>21</td><td>2026-08-28</td><td><a href="https://onlypropfirms.com/bdh/dont-let-greed-kill-your-trade-cut-early" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/dont-let-greed-kill-your-trade-cut-early</a></td></tr>
+          <tr><td>22</td><td>2026-08-27</td><td><a href="https://onlypropfirms.com/bdh/how-i-find-a-entries-using-the-emas-nq-futures" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/how-i-find-a-entries-using-the-emas-nq-futures</a></td></tr>
+          <tr><td>23</td><td>2026-08-26</td><td><a href="https://onlypropfirms.com/bdh/how-many-contracts-should-you-actually-trade-position-sizing" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/how-many-contracts-should-you-actually-trade-position-sizing</a></td></tr>
+          <tr><td>24</td><td>2026-08-25</td><td><a href="https://onlypropfirms.com/bdh/why-most-traders-miss-the-reversal-and-how-i-spot-it" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/why-most-traders-miss-the-reversal-and-how-i-spot-it</a></td></tr>
+          <tr><td>25</td><td>2026-08-24</td><td><a href="https://onlypropfirms.com/bdh/my-full-am-trading-routine-before-i-take-any-trade" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/my-full-am-trading-routine-before-i-take-any-trade</a></td></tr>
+          <tr><td>26</td><td>2026-08-21</td><td><a href="https://onlypropfirms.com/bdh/how-i-trade-price-action-and-momentum-together" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/how-i-trade-price-action-and-momentum-together</a></td></tr>
+          <tr><td>27</td><td>2026-08-21</td><td><a href="https://onlypropfirms.com/bdh/how-i-spot-equal-highs-and-equal-lows-for-reversals" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/how-i-spot-equal-highs-and-equal-lows-for-reversals</a></td></tr>
+          <tr><td>28</td><td>2026-08-20</td><td><a href="https://onlypropfirms.com/bdh/what-is-momentum-trading-my-full-breakdown" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/what-is-momentum-trading-my-full-breakdown</a></td></tr>
+          <tr><td>29</td><td>2026-08-20</td><td><a href="https://onlypropfirms.com/bdh/how-i-trade-a-range-when-nq-is-stuck-in-chop" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/how-i-trade-a-range-when-nq-is-stuck-in-chop</a></td></tr>
+          <tr><td>30</td><td>2026-08-19</td><td><a href="https://onlypropfirms.com/bdh/what-timeframes-i-actually-trade-and-why" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/what-timeframes-i-actually-trade-and-why</a></td></tr>
+          <tr><td>31</td><td>2026-08-19</td><td><a href="https://onlypropfirms.com/bdh/how-i-trade-the-opening-range-breakout-orb-strategy" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/how-i-trade-the-opening-range-breakout-orb-strategy</a></td></tr>
+          <tr><td>32</td><td>2026-08-18</td><td><a href="https://onlypropfirms.com/bdh/how-to-identify-a-trend-day-before-it-happens" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/how-to-identify-a-trend-day-before-it-happens</a></td></tr>
+          <tr><td>33</td><td>2026-08-18</td><td><a href="https://onlypropfirms.com/bdh/my-tradingview-setup-emas-boxes-and-tools-explained" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/my-tradingview-setup-emas-boxes-and-tools-explained</a></td></tr>
+          <tr><td>34</td><td>2026-08-17</td><td><a href="https://onlypropfirms.com/bdh/how-i-use-the-14-50-and-200-ema-to-trade-nq-futures" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/how-i-use-the-14-50-and-200-ema-to-trade-nq-futures</a></td></tr>
+          <tr><td>35</td><td>2026-08-17</td><td><a href="https://onlypropfirms.com/bdh/how-i-map-out-support-and-resistance-levels-nq-futures" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/how-i-map-out-support-and-resistance-levels-nq-futures</a></td></tr>
+        </tbody>
+      </table>
+
+      <h4>Notes</h4>
+      <ul>
+        <li>Article dates are as displayed on onlypropfirms.com (publication dates of the FAQ recaps, which summarize live-stream sessions; the sessions themselves are dated inside the articles, e.g. the CPI recap covers "Wednesday, October 14th").</li>
+        <li>Site navigation, promo banners, cookie-consent boilerplate, and stream-schedule footers were ignored; only article body content was extracted.</li>
+        <li>Output files derived from this crawl: <code>STRATEGY.md</code>, <code>RULES.md</code>, <code>PSYCHOLOGY.md</code>, <code>ARTICLES.md</code> (all in <code>C:\Users\oled\Desktop\faltu\trading\dmoney\</code>).</li>
+      </ul>
+    </div>
+  </details>
+</section>
+
+</main>
+
+<footer>Compiled from onlypropfirms.com/bdh (D-Money's Trading FAQ) and the BDH Trading YouTube channel · Researched 2026-11-16 · For educational study only — not financial advice.</footer>
+
+<a class="top" href="#top">↑ Top</a>
+
+</body>
+</html>

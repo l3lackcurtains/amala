@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lucas — BDH Trading Strategy &amp; Rules</title>
+<style>
+:root{--bg:#f4f6f8;--card:#fff;--text:#1b2430;--muted:#5b6572;--border:#e3e8ee;--accent:#047857;--accent-soft:#e8f7f0}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.7 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+header.hero{background:linear-gradient(135deg,var(--accent),#111827);color:#fff;padding:48px 24px 40px}
+.hero-inner{max-width:960px;margin:0 auto}
+.hero .kicker{letter-spacing:.18em;text-transform:uppercase;font-size:12px;opacity:.85;margin:0 0 10px}
+.hero h1{margin:0 0 12px;font-size:clamp(28px,4vw,44px);line-height:1.15}
+.hero p.sub{margin:0 0 20px;opacity:.92;max-width:72ch}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:6px 14px;font-size:13px;font-weight:600}
+nav.toc{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--border)}
+nav.toc .inner{max-width:960px;margin:0 auto;display:flex;gap:4px;overflow-x:auto;padding:10px 16px}
+nav.toc a{flex:0 0 auto;color:var(--muted);text-decoration:none;font-weight:600;font-size:13.5px;padding:7px 14px;border-radius:999px}
+nav.toc a:hover{background:var(--accent-soft);color:var(--accent)}
+main{max-width:960px;margin:0 auto;padding:32px 20px 80px}
+section{margin:0 0 44px}
+h2{font-size:26px;margin:0 0 6px;padding-left:14px;border-left:5px solid var(--accent)}
+h3{font-size:19px;margin:26px 0 8px;color:var(--accent)}
+h4{font-size:16px;margin:20px 0 6px}
+p{margin:10px 0}
+ul,ol{margin:10px 0;padding-left:26px}
+li{margin:5px 0}
+blockquote{margin:16px 0;padding:12px 18px;background:var(--accent-soft);border-left:4px solid var(--accent);border-radius:0 10px 10px 0;font-style:italic}
+blockquote p{margin:6px 0}
+code{background:#eef1f5;border:1px solid var(--border);border-radius:6px;padding:1px 6px;font-family:ui-monospace,Consolas,monospace;font-size:.9em}
+.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:14px 0;box-shadow:0 1px 3px rgba(16,24,40,.05)}
+.rule{border-left:4px solid var(--accent)}
+.num{display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:30px;border-radius:8px;background:var(--accent);color:#fff;font-weight:700;font-size:14px;margin-right:10px}
+table{width:100%;border-collapse:collapse;background:var(--card);font-size:14.5px;margin:14px 0;border:1px solid var(--border);border-radius:12px;overflow:hidden}
+th{background:var(--accent-soft);color:var(--accent);text-align:left}
+th,td{padding:10px 12px;border-bottom:1px solid var(--border);vertical-align:top}
+tr:last-child td{border-bottom:none}
+details.fold{background:var(--card);border:1px solid var(--border);border-radius:14px;margin:14px 0}
+details.fold summary{cursor:pointer;padding:16px 20px;font-weight:700;color:var(--accent)}
+details.fold .body{padding:0 20px 18px}
+.meta{font-size:12.5px;color:var(--muted)}
+footer{max-width:960px;margin:0 auto;padding:0 20px 60px;color:var(--muted);font-size:13px}
+.top{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;text-decoration:none;border-radius:999px;padding:10px 16px;font-weight:700;font-size:13px;box-shadow:0 4px 14px rgba(0,0,0,.2)}
+@media print{nav.toc,.top{display:none}}
+</style>
+</head>
+<body class="lucas">
+
+<header class="hero" id="top">
+  <div class="hero-inner">
+    <p class="kicker">BDH TRADING · LUCAS'S TRADING PLAYBOOK</p>
+    <h1>Lucas — Strategy &amp; Rules</h1>
+    <p class="sub">A young funded trader: Asia/Globex session sniper plus the New York open. A 9/21 EMA + VWAP + Kill Zones system — flag setups only, structured DCA in drawdown, and a $24,000 payout week.</p>
+    <div class="chips">
+      <span class="chip">20 articles</span>
+      <span class="chip">7 videos</span>
+      <span class="chip">Researched 2026-11-16</span>
+      <span class="chip">Source: onlypropfirms.com/bdh</span>
+    </div>
+  </div>
+</header>
+
+<nav class="toc">
+  <div class="inner">
+    <a href="#overview">Overview</a>
+    <a href="#strategy">Strategy</a>
+    <a href="#rules">Rules</a>
+    <a href="#psychology">Psychology</a>
+    <a href="#videos">Videos</a>
+    <a href="#articles">Articles</a>
+    <a href="#sources">Sources</a>
+  </div>
+</nav>
+
+<main>
+
+<!-- ============ OVERVIEW ============ -->
+<section id="overview">
+  <h2>Overview</h2>
+  <div class="card">
+    <p>Lucas Kennard ("Lucashhh") is a 21-year-old full-time futures day trader and streamer on the BDH desk — he started trading in 2023 while still in high school, took his first $1,200 prop payout the summer of his freshman year, and now runs a portfolio of funded accounts simultaneously through a <strong>copy trader</strong>. His system is deliberately simple: NQ scalping via <strong>15-minute bull and bear flags</strong> at the <strong>9 EMA / 21 EMA / VWAP</strong> confluence, traded only in two windows — the <strong>Asia/Globex overnight session</strong> and the <strong>New York open</strong> — with pre-mapped wick highs/lows and Kill Zones session levels as targets. Risk stays small (1 contract per account, scaling laterally by adding accounts, not size), drawdowns are managed with a structured DCA plan that only ever adds <em>with</em> the trend, and every entry is gated by a strict checklist:</p>
+    <blockquote><p>"You must have a strict checklist. It doesn't matter if your checklist is different than mine; what matters is that you refuse to enter a trade until <em>every single box</em> is checked."</p></blockquote>
+    <p>Underneath it all is his core philosophy — <strong>"Money is a lagging indicator of your success"</strong> — obsess over the plan, the setups and risk management, not the daily number. The results speak for the process: a $24,000 payout week and $50,000 taken out in two and a half weeks at age 21.</p>
+  </div>
+</section>
+
+<!-- ============ STRATEGY ============ -->
+<section id="strategy">
+  <h2>Lucas's Trading Strategy — Distilled Playbook</h2>
+  <blockquote>
+    <p><strong>Source:</strong> onlypropfirms.com/bdh — "Lucas's Trading Playbook" category (Lucas, BDH Trading streamer)</p>
+    <p><strong>Date researched:</strong> 2026-11-16</p>
+    <p><strong>Basis:</strong> All 20 articles in the category (see ARTICLES.md and SOURCES.md). Quotes are Lucas's words from the articles; short quotes with article URLs noted.</p>
+  </blockquote>
+  <hr>
+
+  <h3>1. Who He Is &amp; What He Trades</h3>
+  <ul>
+    <li>Lucas is a 21-year-old full-time futures day trader and streamer at the BDH (started trading ~2023 in high school, first prop payout $1,200 in August of his freshman summer, first $10K payout July 2025).</li>
+    <li><strong>Primary instrument: NQ (Nasdaq futures).</strong> He recommends beginners start on <strong>ES</strong> (S&amp;P 500 futures — "moves a little bit slower, the price action is cleaner") and graduate to NQ after 6–12 months of consistency. (if-i-had-to-start-trading-over)</li>
+    <li><strong>Accounts:</strong> Runs a portfolio of funded prop accounts simultaneously via a <strong>copy trader</strong> — named accounts include <strong>Lucid Trading</strong>, <strong>Tradeify</strong>, <strong>Vest Markets (10K Bespoke)</strong>, and <strong>WarBux (25K Instant Light crypto account)</strong>.</li>
+    <li><strong>Style:</strong> Scalping momentum via bull flags and bear flags. "I keep it simple: I trade 15-minute bull flags and bear flags around the 9 EMA, 21 EMA, and VWAP." (the-5-trades-that-paid-me-24000-this-week)</li>
+  </ul>
+
+  <h3>2. Sessions He Trades</h3>
+  <p>Lucas trades two windows:</p>
+  <h4>a) The Asia / Globex Session (overnight)</h4>
+  <ul>
+    <li>Globex opens <strong>6:00 PM EST</strong>. The real Asia volatility begins ~50 minutes later.</li>
+    <li><strong>"No Man's Land" rule:</strong> the 50-minute window between the Globex open and the Asia market open is untouchable — "I do not touch the market during this time... the spread gets weird, orders don't get filled cleanly, and the market can aggressively gap up or down and blow past your stops." (what-i-look-for-in-the-asia-session)</li>
+  </ul>
+  <h4>b) The New York Open (9:30 AM EST)</h4>
+  <ul>
+    <li>Pre-market prep at ~9:25 AM (see routine below), execution from the 9:30 bell for roughly the next 30–45 minutes.</li>
+  </ul>
+  <p>He also streams/trades through the London session when an Asia trade needs time to develop (his DCA trade was held "from 11:00 PM all the way deep into the London session").</p>
+
+  <h3>3. Indicators &amp; Chart Setup</h3>
+  <p>Kept deliberately minimal (he warns against overconsuming indicators):</p>
+  <table>
+    <thead>
+      <tr><th>Tool</th><th>Color</th><th>Use</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>9 EMA</strong></td><td>purple</td><td>fast momentum line; flag entries/rejections</td></tr>
+      <tr><td><strong>21 EMA</strong></td><td>green</td><td>slower momentum line; confluence with 9 EMA</td></tr>
+      <tr><td><strong>VWAP</strong></td><td>blue</td><td>intraday fair-value ceiling/floor; rejection/reclaim signals</td></tr>
+      <tr><td><strong>Kill Zones &amp; Pivots</strong> (indicator)</td><td>—</td><td>auto-maps session highs/lows: PM High, AM High, Asia High/Low, London High</td></tr>
+    </tbody>
+  </table>
+  <h4>Timeframes:</h4>
+  <ul>
+    <li><strong>5-minute</strong> — the main bias/entry chart (levels, flags, session prep).</li>
+    <li><strong>15-minute</strong> — his "bread and butter" flag trades ($24K week was 15-min flags).</li>
+    <li><strong>1-minute</strong> — precision entries: trend-day retracements, V-shape reversals, consolidation breakouts.</li>
+    <li><strong>Daily</strong> — macro key levels (e.g., the 29,600 daily low he mapped for a sweep-and-reverse thesis).</li>
+    <li>15-minute wick lows are also used to find internal scale-out targets on breakout trades.</li>
+  </ul>
+
+  <h3>4. The Level-Mapping System (Core to Everything)</h3>
+  <p>Before any trade, Lucas marks "the most obvious, prominent wick highs and wick lows on both sides of current price action" (my-pre-market-routine-for-the-new-york-open):</p>
+  <ul>
+    <li><strong>Upside targets:</strong> nearest prominent wick highs, then session highs (London High, PM High, Asia High).</li>
+    <li><strong>Downside targets:</strong> nearest wick lows, support zones, session lows (PM Low, AM Low, Asia Low).</li>
+    <li><strong>Psychological levels</strong> (e.g., 30,500) are the target when price is in "open air" with no nearby wicks: "When you are in open air like that, you target the nearest major psychological level." (the-5-trades-that-paid-me-24000-this-week)</li>
+  </ul>
+  <p>These pre-marked wicks double as <strong>take-profit scaling zones</strong> once in a multi-contract trade.</p>
+
+  <h3>5. Core Setups</h3>
+  <h4>Setup A — The Bull/Bear Flag (bread and butter)</h4>
+  <p>Works on 5-min, 15-min, and 1-min charts in any session:</p>
+  <ol>
+    <li>Establish macro bias from trend and levels.</li>
+    <li>Flag pulls back into the <strong>9 EMA / 21 EMA</strong> with VWAP as added confluence.</li>
+    <li><strong>Trigger:</strong> the flag candle closes in trend direction / price breaks the flag structure and makes a new high (long) or new low (short). "Do not jump the gun. Wait for the actual candle close." (being-right-doesnt-make-you-money)</li>
+    <li><strong>Stop:</strong> below the wick low of the flag entry (long) or at/above the top wick of the flag structure (short).</li>
+    <li><strong>Targets:</strong> nearest wick high/low, then session highs/lows, then psychological levels.</li>
+  </ol>
+  <p>Confluence requirements: "I trade bull and bear flags using the 9 EMA, 21 EMA, and VWAP as confluence. If price doesn't perfectly respect those indicators and my key daily levels (like AM High, PM High, or Asia Low), I do not take the trade." (being-right-doesnt-make-you-money)</p>
+
+  <h4>Setup B — The A+ Asia Session Setup</h4>
+  <p>From what-i-look-for-in-the-asia-session:</p>
+  <ol>
+    <li><strong>At Globex open (6 PM):</strong> immediately mark any prominent highs/lows that print (e.g., a doji with a massive bottom wick → mark the wick low; mark nearby highs too).</li>
+    <li><strong>Wait for the flag:</strong> a clean 5-minute bull/bear flag (e.g., pullback with a ~30-point bottom wick making a new candle high).</li>
+    <li><strong>Retracement confluence:</strong> clean pullback to <strong>VWAP</strong>, holding above the <strong>9 EMA and 21 EMA</strong>.</li>
+    <li><strong>Entry:</strong> "right around the midpoint of that pullback candle."</li>
+    <li><strong>Stop:</strong> "hard stop-loss directly below the wick low of the flag entry."</li>
+    <li><strong>Targets:</strong> nearest session highs; with multiple contracts scale out at <strong>nearest wick high → PM High → next major psychological level</strong>.</li>
+    <li>Expectancy: "On a volatile day, holding this specific setup could net you a 350+ point ripper. On a normal day, targeting the standard levels still gives you a beautiful 2.5 Risk-to-Reward (RR) ratio trade."</li>
+    <li><strong>Pro tip:</strong> take profit slightly BEFORE the pivot level: "Sometimes the market will get incredibly close to your pivot target but not quite touch it. Do not be greedy!... Take profit slightly before the absolute level to ensure you get filled."</li>
+  </ol>
+
+  <h4>Setup C — NY Open Routine (9:25 → 9:30 → 45 min after)</h4>
+  <p>From my-pre-market-routine-for-the-new-york-open:</p>
+  <ol>
+    <li><strong>Indicators on:</strong> 9 EMA, 21 EMA, VWAP, Kill Zones &amp; Pivots (e.g., London High at 31,095 auto-marked).</li>
+    <li><strong>9:25 AM — mark both sides:</strong> obvious 5-min wick highs leading to the session high (31,040 / 31,052 / 31,062 / 31,081) and obvious wick lows below (pre-open wicks, 880s support, 30,748, 30,667).</li>
+    <li><strong>Avoid the 9:25 trap:</strong> a pre-market push above the EMAs "wants to trick you" — check VWAP position (ceiling overhead?) and untapped deep wick lows below.</li>
+    <li><strong>9:30 decision rule:</strong> "If price delivers and holds above the VWAP at the open, we target the London Highs. If it rejects the VWAP, we look to short into those deep lows below."</li>
+    <li><strong>Execution example:</strong> price tapped a pre-market wick high + VWAP at the same spot, rejected, formed an A+ bear flag, broke below the 9/21 EMAs (~30,950) → short.</li>
+    <li><strong>Scale out on the pre-marked wicks:</strong> Contract 1 TP at 30,880 (~70 pts), Contract 2 TP at 30,744 (~200 pts), Contract 3 runner at 30,667. Result: a ~300-point flush within ~45 minutes.</li>
+  </ol>
+
+  <h4>Setup D — V-Shape Reversals with Liquidity Sweeps (100–200 point moves)</h4>
+  <p>From how-i-catch-100-200-point-v-shapes-on-nq-bull-bear-flags (1-minute chart):</p>
+  <ol>
+    <li><strong>Find the prominent high/low (liquidity).</strong> Example: price swept a prominent wick high left by the 8:30 AM news candle; a failed break of the Asia low earlier had flipped short-term momentum bullish/bearish accordingly.</li>
+    <li><strong>Wait for exhaustion</strong> at the sweep: "an indecisive, reversal-looking candle. The buyers were exhausted."</li>
+    <li><strong>Wait for the flag at the EMAs:</strong> after the first flush (~40 pts), price retraces to the EMAs — it "bounced perfectly off the 21 EMA but completely failed to close above the 9 EMA," forming a bear flag.</li>
+    <li><strong>Entry on the confirming candle close.</strong> Example short at 29,669.</li>
+    <li><strong>Confluences checked:</strong> swept major high + bear flag at EMAs + VWAP below + untapped lows at the bottom.</li>
+    <li><strong>Scale out on internal wick lows</strong> (5 contracts → targets 609 / 578 / 555), final TP at the untouched Asia session low (494/495). Result: 200-point drop in ~70 minutes.</li>
+    <li>Mirror logic for longs: sweep a prominent low → bull flag at EMAs → target untapped highs.</li>
+  </ol>
+
+  <h4>Setup E — Consolidation Breakout</h4>
+  <p>From the-setup-i-use-for-every-nq-breakout:</p>
+  <ol>
+    <li>In heavy chop, <strong>do not trade inside the range</strong> — wait for structure.</li>
+    <li>Drop to the 1-minute chart; watch for a flag forming at the edge of the consolidation.</li>
+    <li><strong>Trigger = the break:</strong> "A flag forming isn't enough; you have to wait for the actual break... price finally broke out of that flag structure and created a brand new low."</li>
+    <li><strong>Targets = "draws on liquidity":</strong> previous session lows/highs are "the biggest magnets for price" (ultimate TP at the AM low ~29,138); internal scale-outs at obvious 15-minute wick lows (29,197).</li>
+    <li><strong>Trust the target over quick cash:</strong> with the position up $1,300 he held instead of closing — "if your technical analysis points to a lower level, you have to trust the setup."</li>
+  </ol>
+
+  <h4>Setup F — Trend Days ("The Money Glitch")</h4>
+  <p>From passed-the-eval-and-took-3000-out-on-vest-live:</p>
+  <ul>
+    <li>When NQ goes into a one-way expansion (his example: a historic <strong>732-point</strong> flush), farm the 1-minute <strong>9 EMA / 21 EMA retracements</strong>: "Every single time the 1-minute candle pulled back and tapped the 9 EMA or the 21 EMA, it bounced right off and created another 'kill candle' to the downside."</li>
+    <li>"Days like this do not happen often, but when they do, you <em>have</em> to press your advantage" — repeat entries payout after payout.</li>
+    <li>He also passed the <strong>Vest 10K Bespoke eval in 9 minutes</strong> on such a day (short from the 30,450s on long top wicks respecting EMAs, $1,000 target), got instantly funded, and pulled $3,000+ live.</li>
+  </ul>
+
+  <h3>6. Adding To A Trade In Drawdown — His Exact DCA Strategy</h3>
+  <p>From adding-to-a-trade-when-your-in-drawdown-my-exact-strategy. Preconditions before ANY add:</p>
+  <ol>
+    <li><strong>Clear macro bias</strong> from the previous trend (example: "a clear, undeniable uptrend... The bias is strictly bullish").</li>
+    <li><strong>An obvious target above</strong> (example: Asia High at 30,411).</li>
+    <li><strong>A hard stop-loss below</strong> (example: Asia Low at 30,311). Initial entry: long ~midpoint of a 5-min bull flag at 30,358 with 2 contracts — "a solid 1-to-1 risk-to-reward setup."</li>
+  </ol>
+  <p><strong>Add Spot #1 — the lower-low fake-out:</strong> price pushes above VWAP, then rolls over, closes below all EMAs, and makes a lower low. Newer traders panic here; he checks the macro trend and that the hard stop has NOT been hit, then: "When it rolls over and makes that new low, <strong>that is where I add to my size.</strong>"</p>
+  <ul>
+    <li><strong>The math:</strong> "If I originally entered with 2 contracts in the 50s, I will add at least 2 more contracts down in the 30s. This pulls my average entry price right down into the 40s." Adding equal-or-greater size at the better price relieves pressure ("averaging down 10+ points").</li>
+  </ul>
+  <p><strong>Add Spot #2 — the retest:</strong> price pushes up slightly, rolls over again to the new entry zone.</p>
+  <ul>
+    <li><strong>Golden rule:</strong> "You can add more contracts here at your entry point <strong>as long as the candle does not close below the previous low you already established.</strong> As long as that floor holds, you are safe to hold for your original target."</li>
+  </ul>
+  <p><strong>Wick confirmation:</strong> "When I see multiple long bottom wicks printing in a row at a support zone, it tells me that buyers are stepping in and price is about to drive higher. It is a massive bullish confluence."</p>
+  <p><strong>Result:</strong> holding 4–6 contracts from an averaged-down entry, confirmed by wicks holding support; trade may take hours (his ran 11 PM → London session) but hit the Asia High target.</p>
+  <p><strong>Warning:</strong> "Dollar Cost Averaging is incredibly powerful, but you cannot just blindly buy dips when the market is crashing against you. You must have a clear bias based on the previous trend, an obvious target above you, and a hard stop-loss." (same article)</p>
+
+  <h3>7. Scaling In / Out &amp; Trade Management</h3>
+  <ul>
+    <li><strong>Scale OUT, not up (profit side):</strong> with multiple contracts, take partials at each pre-marked level: first internal wick low/high → next major wick level → runner to the deepest session level. (NY open example: 3 contracts → 30,880 / 30,744 / 30,667.)</li>
+    <li><strong>Move stop to break-even</strong> once the first target hits: "Once price drops and hits your first target level, immediately move your stop loss to break-even (or slightly into profit)." (my-a-bear-flag-checklist)</li>
+    <li><strong>Lock profits early on extended moves:</strong> "It ended up flushing all night long, though we locked in our profits early — better safe than sorry." (the-5-trades)</li>
+    <li><strong>TP slightly before major pivot levels</strong> to guarantee fills. (Asia session article)</li>
+    <li><strong>Stops placement:</strong> below the flag's wick low (longs) / at the flag's top wick (shorts) / "at the nearest wick low or candle body, depending on the momentum" (1-min V-shape trades).</li>
+    <li><strong>Zero-drawdown goal:</strong> a perfectly timed flag-break entry means "price never went against us" — his 140-point example had "absolutely zero drawdown the entire time."</li>
+    <li><strong>Expect trades to need patience:</strong> Asia trades routinely take 30–90+ minutes to play out (his 200-point V-shape took ~70 minutes; the DCA trade ran from 11 PM into London).</li>
+  </ul>
+
+  <h3>8. Risk-to-Reward &amp; Sizing Approach</h3>
+  <ul>
+    <li>Typical structure: stop at the flag wick, target the next session level → ~1:1 to 2.5:+ RR depending on setup (DCA trade was 1:1 by design; Asia setup ~2.5 RR on normal days).</li>
+    <li><strong>Sizing rule of thumb:</strong> "You have to give the market enough space to fluctuate between drawdown and profit. If your size is so heavy that a standard 20-point wick blows your account, you are trading too big." (being-right-doesnt-make-you-money) — his math: 5 contracts on a bad early entry + a 40-point wick = "$2,500 and blown before the trade even goes your way."</li>
+    <li><strong>Risk example he cites:</strong> entering a funded account "risking 15 points to lose $150." (the-brutal-reality-of-trading-when-youre-broke)</li>
+    <li><strong>Scale laterally, not vertically:</strong> keep per-account risk small (e.g., 1 contract), then add more funded accounts on a copy trader rather than multiplying contract size. (what-getting-consistent-payouts-actually-taught-me)</li>
+    <li>His consistency math: "If you are disciplined and catch just 30 to 50 points a day" across 5 copy-traded accounts at 1 contract each ≈ $1,000/day ≈ $5,000/week, "even if you have one or two losing days and give back $10,000, you are still walking away with $15,000 a week... <strong>$60,000 a month in potential payouts</strong>, simply by trading one contract safely and consistently."</li>
+  </ul>
+
+  <h3>9. When NOT To Trade</h3>
+  <p>From the-days-you-shouldnt-trade-nq-at-all-how-i-spot-them — "Knowing when to sit on your hands and protect your capital is the ultimate cheat code":</p>
+  <ol>
+    <li><strong>After a huge overnight trend:</strong> "If we just had a massive, prominent trend overnight, the likelihood of the market giving us another massive, prominent move right at the AM open is significantly lower" (his example: 200-point London session). The market needs to digest.</li>
+    <li><strong>Indecisive opening candle:</strong> small 9:30 candle, wicks both sides, no volume/direction → expect chop.</li>
+    <li><strong>"Barcoding" on the EMAs:</strong> price ranging endlessly on top of the 9 EMA / 21 EMA / VWAP — "do not trade."</li>
+    <li><strong>No clear targets:</strong> tight range, no obvious liquidity draws above or below.</li>
+    <li><strong>Wicks everywhere:</strong> long wicks both directions = indecision.</li>
+    <li><strong>Fake flags:</strong> two red candles + tiny pullback baiting a bear flag; after 2–3 fakes in a range, skip the 4th attempt.</li>
+    <li><strong>No Man's Land</strong> (first ~50 minutes after the Globex open, before the true Asia open).</li>
+    <li><strong>Chop/consolidation on funded accounts generally:</strong> "If the market is ranging, chopping, or consolidating, I simply do not take a trade on my funded accounts. Some days I won't trade them at all." (what-getting-consistent-payouts-actually-taught-me)</li>
+  </ol>
+  <p>His dramatic summary: on those days "you walk over to your computer, press the power button, unplug the power supply, and literally hide the cable from yourself."</p>
+</section>
+
+<!-- ============ RULES ============ -->
+<section id="rules">
+  <h2>Lucas's Trading Rules — Explicit Rules &amp; Habits</h2>
+  <blockquote>
+    <p><strong>Source:</strong> onlypropfirms.com/bdh — "Lucas's Trading Playbook" category (Lucas, BDH Trading streamer)</p>
+    <p><strong>Date researched:</strong> 2026-11-16</p>
+    <p><strong>Basis:</strong> All 20 articles in the category. Short quotes are Lucas's own words, with source article noted.</p>
+  </blockquote>
+  <hr>
+
+  <h3>1. Entry Rules</h3>
+  <div class="card rule">
+    <p><span class="num">1</span><strong>Wait for the candle close.</strong></p>
+    <blockquote>"Do not jump the gun. Wait for the actual candle close." (being-right-doesnt-make-you-money)</blockquote>
+    <p>— entering a bear flag early cost traders a 35–40 point wick against them before the move went their way.</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">2</span><strong>Strict checklist — no entry until every box is checked.</strong></p>
+    <blockquote>"You must have a strict checklist. It doesn't matter if your checklist is different than mine; what matters is that you refuse to enter a trade until <em>every single box</em> is checked." (being-right-doesnt-make-you-money)</blockquote>
+  </div>
+  <div class="card rule">
+    <p><span class="num">3</span><strong>His confluence checklist (V-shape/flag entries):</strong> (are-you-skipping-this-step-my-nq-trading-checklist)</p>
+    <ul>
+      <li>Sweep of a prominent low/high (liquidity taken out),</li>
+      <li>Stagnant/exhausted price action after the sweep,</li>
+      <li>V-shape recovery (or rollover) + clear bull/bear flag,</li>
+      <li>Flag candle closes above (or below) the EMAs,</li>
+      <li>Only then: entry.</li>
+    </ul>
+  </div>
+  <div class="card rule">
+    <p><span class="num">4</span><strong>A+ bear-flag checklist</strong> (my-a-bear-flag-checklist-for-140-point-nq-setups): bias from failed retest of internal high → price staying below VWAP and no 5-min closes above EMAs → targets mapped (internal wick lows + session lows) → clear flag → entry on flag break to a new low → stop at the flag's top wick.</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">5</span><strong>No blind buying:</strong></p>
+    <blockquote>"If the market spiked up, I'd just blindly hit the 'buy' button out of FOMO. That isn't a setup; that is just gambling." (what-getting-consistent-payouts-actually-taught-me)</blockquote>
+  </div>
+  <div class="card rule">
+    <p><span class="num">6</span><strong>9:25 AM NY-open decision rule:</strong> hold above VWAP at the bell → target London Highs; reject VWAP → short the deep pre-market lows. (my-pre-market-routine-for-the-new-york-open)</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">7</span><strong>No trading in "No Man's Land"</strong> — the ~50 minutes between the Globex open (6 PM EST) and the true Asia open. Liquidity is too thin, stops get blown through. (what-i-look-for-in-the-asia-session)</p>
+  </div>
+
+  <h3>2. Sizing Rules</h3>
+  <div class="card rule">
+    <p><span class="num">1</span><strong>Size so a normal wick can't kill you:</strong></p>
+    <blockquote>"If your size is so heavy that a standard 20-point wick blows your account, you are trading too big." (being-right-doesnt-make-you-money)</blockquote>
+  </div>
+  <div class="card rule">
+    <p><span class="num">2</span><strong>Size down after losses:</strong></p>
+    <blockquote>"When you take a massive loss, you have zero conviction left in yourself. The only way to rebuild that confidence is by stacking up micro-wins."</blockquote>
+    <p>— he sized "all the way down" to rebuild. (trading-full-time-heres-why-you-need-a-second-income)</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">3</span><strong>Recalibrate size after every payout:</strong> "When your drawdown buffer shrinks after a withdrawal, you <em>have</em> to recalibrate your contract sizing and risk parameters." After his $25K payout he tried to full-port for $7–8K/day — "Spoiler alert: it did not work out for me." (why-you-forget-how-to-trade-after-a-payout)</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">4</span><strong>Scale laterally, not vertically:</strong> keep 1 contract per account, add more funded accounts on a copy trader instead of bigger size. "Do not randomly start trading 10 contracts." (what-getting-consistent-payouts-actually-taught-me)</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">5</span><strong>Beginner sizing:</strong> "your position sizing should be much smaller than you think it should be" while testing a strategy on an eval. (if-i-had-to-start-trading-over)</p>
+  </div>
+
+  <h3>3. Adding / Averaging Rules (DCA)</h3>
+  <p>From adding-to-a-trade-when-your-in-drawdown-my-exact-strategy:</p>
+  <div class="card rule">
+    <p><span class="num">1</span><strong>Only average into a trend, never against it</strong> — clear prior trend (bias), an obvious target beyond, and a hard stop-loss are prerequisites. No blind dip-buying.</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">2</span><strong>Add when price makes a new lower low (fake-out) but the macro trend and hard stop are intact</strong> — add at least the original contract count (2 → +2) to pull the average 10+ points.</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">3</span><strong>Add again on retest ONLY if the candle does not close below the previous established low.</strong></p>
+    <blockquote>"As long as that floor holds, you are safe to hold for your original target."</blockquote>
+  </div>
+  <div class="card rule">
+    <p><span class="num">4</span><strong>Bottom wicks in a row at support = bullish confluence</strong> that justifies holding the averaged position.</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">5</span>The hard stop is sacred — if it runs, the DCA thesis is dead.</p>
+  </div>
+
+  <h3>4. Drawdown / Stop Rules</h3>
+  <div class="card rule">
+    <p><span class="num">1</span><strong>Hard stops at structure:</strong> below the flag wick low (long) / top wick of flag (short) / nearest wick low or candle body (scalps). Never arbitrary.</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">2</span><strong>Give the market room:</strong></p>
+    <blockquote>"You have to give the market enough space to fluctuate between drawdown and profit." (being-right-doesnt-make-you-money)</blockquote>
+  </div>
+  <div class="card rule">
+    <p><span class="num">3</span><strong>Stop to break-even after the first target:</strong> "immediately move your stop loss to break-even (or slightly into profit)." (my-a-bear-flag-checklist)</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">4</span><strong>Cutting stops early is a symptom of over-leverage need:</strong></p>
+    <blockquote>"If you are cutting your stop early, that money means more to you than it should." (the-brutal-reality-of-trading-when-youre-broke)</blockquote>
+  </div>
+  <div class="card rule">
+    <p><span class="num">5</span><strong>Moving your stop out of fear "works" sometimes — that's the trap:</strong> it's how "your P&amp;L reinforces terrible habits and lies to you." (why-your-pl-is-lying-to-you)</p>
+  </div>
+
+  <h3>5. Take-Profit / Payout Rules &amp; Habits</h3>
+  <div class="card rule">
+    <p><span class="num">1</span><strong>Targets are pre-marked wick lows/highs and session levels</strong> — never guessed. In open air, target the nearest major psychological level (e.g., 30,500).</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">2</span><strong>Scale out in tranches:</strong> contract 1 at the first internal wick level, contract 2 at the next major level, contract 3 held as a runner for the deepest level.</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">3</span><strong>Take profit slightly BEFORE pivot targets</strong> to guarantee fills:</p>
+    <blockquote>"Do not be greedy! What's a few missed points if you secure a massive win?" (what-i-look-for-in-the-asia-session)</blockquote>
+  </div>
+  <div class="card rule">
+    <p><span class="num">4</span><strong>Lock in early on extended moves:</strong> "we locked in our profits early — better safe than sorry." (the-5-trades)</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">5</span><strong>Trust the final target over quick profit:</strong> even flashing +$1,300 doesn't override the mapped target if TA points lower. (the-setup-i-use-for-every-nq-breakout)</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">6</span><strong>Withdraw consistently and small:</strong> his $24,000 week was built from many small payouts — Tradeify: $1,400 + $1,200 + $2,500 + $700 + $700 + $700 + $691 (~$8,000); Lucid: $8,000 + four ~$2,400 payout requests (~$9,600). He runs payouts across many accounts rather than letting balances pile up.</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">7</span><strong>After any payout: recalibrate size down, drop to A+ setups only, rebuild rhythm with small wins.</strong> (why-you-forget-how-to-trade-after-a-payout)</p>
+  </div>
+
+  <h3>6. Eval / Account Rules</h3>
+  <div class="card rule">
+    <p><span class="num">1</span><strong>Set a strict monthly budget for eval purchases:</strong></p>
+    <blockquote>"Set a strict monthly budget for how many evaluation accounts you are allowed to buy. Keep everything in moderation and track what you are spending."</blockquote>
+    <p>Only scale up after definitively proving the process repeats. (if-i-had-to-start-trading-over)</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">2</span><strong>Never brute-force accounts:</strong></p>
+    <blockquote>"When I was blowing accounts, I didn't set a limit. I just bought as many as possible and tried to brute-force my way into profitability. Do not do this!" (same article)</blockquote>
+  </div>
+  <div class="card rule">
+    <p><span class="num">3</span><strong>Never fund evals with debt:</strong></p>
+    <blockquote>"I opened credit cards and maxed them out buying trading accounts with no job and no way to pay the money back. <em>(Do not do this. It is the dumbest thing you can possibly do.)</em>" (how-i-became-a-full-time-trader)</blockquote>
+  </div>
+  <div class="card rule">
+    <p><span class="num">4</span><strong>Skin in the game matters:</strong> move from sim to funded/micros once the strategy proves out — "$160 buying an evaluation account, that is 8 hours of your real life you just spent. You will trade that account much more cautiously."</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">5</span><strong>Use real risk to pass evals the same way you trade funded:</strong> his Vest 10K eval was passed in 9 minutes by trading his normal short setup on a trend day (target $1,000), not by gambling.</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">6</span><strong>Prefer firms/rules that don't constrain his style:</strong> he highlights WarBux's no payout caps, no news restrictions, and no forced move to live — freedom rules matter to his multi-account approach. (this-crypto-prop-firm-that-lets-you-keep-100)</p>
+  </div>
+
+  <h3>7. "When To Stop" Rules</h3>
+  <div class="card rule">
+    <p><span class="num">1</span><strong>Don't trade the chop days at all:</strong> big overnight move + indecisive open candle + barcoding on EMAs + wicks everywhere + no clear targets = no trading that day ("hide the power cable"). (the-days-you-shouldnt-trade-nq-at-all)</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">2</span><strong>Some funded-account days get zero trades:</strong> "Some days I won't trade them at all. I wait for my specific setup." (what-getting-consistent-payouts-actually-taught-me)</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">3</span><strong>After 2–3 fake-outs in a range, stop taking the 4th:</strong> "Stop trying to force a setup in a dead market!" (the-days-you-shouldnt-trade-nq-at-all)</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">4</span><strong>Don't force trades to buy things:</strong> the $18K loss happened because he forced trades "to squeeze just a little bit more out of the market to pay for" a purchase he wanted. (i-lost-18000-in-a-single-day)</p>
+  </div>
+
+  <h3>8. Daily Routine (framed as rules)</h3>
+  <div class="card rule">
+    <p><span class="num">1</span><strong>Same pre-market ritual every day:</strong> indicators on (9 EMA / 21 EMA / VWAP / Kill Zones &amp; Pivots), mark obvious wick highs and lows on BOTH sides of price ~9:25 AM, define the VWAP-based if/then plan before 9:30.</p>
+    <blockquote>"This is the exact routine I do every single day before the New York open and before hopping on stream for the Asia session." (my-pre-market-routine-for-the-new-york-open)</blockquote>
+  </div>
+  <div class="card rule">
+    <p><span class="num">2</span><strong>Asia routine:</strong> at 6 PM Globex open, mark the initial prominent highs/lows immediately; wait out No Man's Land; trade only flags with VWAP + EMA confluence after the Asia open.</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">3</span><strong>Discipline routine that fixed his consistency:</strong></p>
+    <blockquote>"I started waking up at 4:00 AM, doing push-ups on my balcony, tracking all my calories, going to the gym twice a day, and strictly limiting myself to just <strong>one or two trades a day</strong>." (how-i-became-a-full-time-trader)</blockquote>
+  </div>
+  <div class="card rule">
+    <p><span class="num">4</span><strong>One setup, repeated:</strong> after a payout or a win, "reverse engineer your success" — write down the exact setups, trade count, and mindset, "and do nothing but repeat it." (what-getting-consistent-payouts-actually-taught-me)</p>
+  </div>
+
+  <h3>9. Money / Lifestyle Rules</h3>
+  <div class="card rule">
+    <p><span class="num">1</span><strong>Always keep a second income:</strong> "You should always have a separate, guaranteed income outside of trading." His benchmark: a valet job at $25/hr → "$150 guaranteed per six-hour shift... $700–$800 a week" covers living costs so trading is pressure-free. (the-brutal-reality-of-trading-when-youre-broke; trading-full-time-heres-why-you-need-a-second-income)</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">2</span><strong>Budget lifestyle off your BASELINE month, not your best month:</strong> he "started basing my entire lifestyle and spending habits off my absolute <em>best</em> trading months, instead of my baseline, consistent monthly average" — and calls it a core mistake. (i-lost-18000-in-a-single-day)</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">3</span><strong>Don't convert P&amp;L into price tags:</strong> stop mentally pricing purchases in trading "points."</p>
+  </div>
+  <div class="card rule">
+    <p><span class="num">4</span><strong>Start on ES, then NQ; one ticker only:</strong> "Pick one ticker and master how it moves." (if-i-had-to-start-trading-over)</p>
+  </div>
+
+  <h3>The 10 Rules In Short (his operating system)</h3>
+  <div class="card rule"><p><span class="num">1</span>Mark obvious wick highs/lows + session levels before every session; both sides of price.</p></div>
+  <div class="card rule"><p><span class="num">2</span>Trade only bull/bear flags at 9 EMA / 21 EMA / VWAP confluence — after the candle close.</p></div>
+  <div class="card rule"><p><span class="num">3</span>Never trade No Man's Land, chop days, or after a big overnight trend.</p></div>
+  <div class="card rule"><p><span class="num">4</span>Hard stops at flag structure; risk sized so a 20-point wick can't matter.</p></div>
+  <div class="card rule"><p><span class="num">5</span>Scale out at pre-marked levels; BE stop after target 1; TP just before pivots.</p></div>
+  <div class="card rule"><p><span class="num">6</span>DCA only with trend + target + hard stop; add on new lows, never if a candle closes below the prior low.</p></div>
+  <div class="card rule"><p><span class="num">7</span>1 contract per account; scale by adding accounts, not size.</p></div>
+  <div class="card rule"><p><span class="num">8</span>Monthly eval budget; never debt; recalibrate size after every payout.</p></div>
+  <div class="card rule"><p><span class="num">9</span>One or two trades a day; reverse-engineer winning days and repeat them exactly.</p></div>
+  <div class="card rule"><p><span class="num">10</span>Keep a second income; live off your baseline month, never your best month.</p></div>
+</section>
+
+<!-- ============ PSYCHOLOGY ============ -->
+<section id="psychology">
+  <h2>Lucas's Trading Psychology — Mindset Lessons</h2>
+  <blockquote>
+    <p><strong>Source:</strong> onlypropfirms.com/bdh — "Lucas's Trading Playbook" category (Lucas, BDH Trading streamer)</p>
+    <p><strong>Date researched:</strong> 2026-11-16</p>
+    <p><strong>Basis:</strong> All 20 articles in the category. Short quotes are Lucas's own words, with source article noted.</p>
+  </blockquote>
+  <hr>
+
+  <h3>1. Being Right ≠ Making Money</h3>
+  <p>From being-right-doesnt-make-you-money:</p>
+  <ul>
+    <li>You can call the market's direction perfectly and still blow your account if entry timing and sizing are wrong: "Your market thesis can be 100% right, but if your entry timing and sizing are wrong, you are dunzo!"</li>
+    <li>The separation is <strong>macro thesis vs. micro execution</strong>: being right about a daily level (his example: a mapped daily low at 29,600) means nothing until a clean 5-minute bull flag confirms the bounce — "You were right about the macro direction, but you waited for the micro entry."</li>
+    <li>The <strong>"cage mentality"</strong> metaphor: entering early with heavy size is "like putting a massive dog in a cage that is way too small. Eventually, that dog is going to break out and destroy the cage. Your account is the cage, and the market volatility is the dog!"</li>
+    <li>Ask the right question: "Everyone asks, 'How much money can I make today?' instead of asking, 'How do I survive to make money this month?' That short-term greed is exactly where people get burned."</li>
+  </ul>
+
+  <h3>2. Your P&amp;L Is Lying To You</h3>
+  <p>From why-your-pl-is-lying-to-you:</p>
+  <ul>
+    <li>The core hard truth: "You can trade like an absolute idiot, break every single rule, and make $5,000 in a day. Conversely, you can trade perfectly, execute your strategy flawlessly, manage your risk, and only walk away with $1,000 — or even take a loss."</li>
+    <li><strong>"Losing money does not mean you traded poorly, and winning money does not mean you are a good trader."</strong> Sometimes the NASDAQ "just didn't want to play along."</li>
+    <li>Bad habits get rewarded until they don't: "You can oversize, get lucky, and go on a winning streak for two months... But eventually, the luck runs out... and it swallows every single dollar right back into the black hole."</li>
+    <li>The reversal fake-out trap: moving your stop out of fear, holding a loser, and getting bailed out by a reversal "is exactly how your P&amp;L reinforces terrible habits."</li>
+    <li><strong>Trader A vs. Trader B:</strong> Trader A makes $5,000 breaking his rules; Trader B follows his process and loses. "If Trader B repeats their process continually and sticks to their proven strategy, their long-term outcome will be massively greener than Trader A."</li>
+    <li><strong>"Money is a lagging indicator of your success."</strong> Obsess over the plan, the setups, and risk management — not the daily number.</li>
+    <li>His proof: he "lost consistently for over a year straight" before winning weeks; as of October 15, 2026, he had taken out <strong>$50,000 in two and a half weeks</strong> at age 21 — "The money was lagging, but it finally caught up to the process."</li>
+  </ul>
+
+  <h3>3. The $18,000 Day and the Money-Distortion Spiral</h3>
+  <p>From i-lost-18000-in-a-single-day-heres-what-it-did-to-me:</p>
+  <ul>
+    <li>At ~20 years old he averaged <strong>$20,000/month</strong> ($2,000–$3,000/day), and "when you trade, the money stops feeling real... Trading started to feel like a video game." Risk management "completely disappeared" — a $3,000–$5,000 loss got brushed off "like it was nothing."</li>
+    <li><strong>The "point system" tell:</strong> looking at real-world price tags and thinking <em>"How many points is this?"</em></li>
+    <li><strong>Lifestyle creep + false baseline:</strong> buying overpriced stuff because "I can just make this back tomorrow," and budgeting off his best months instead of his average.</li>
+    <li><strong>The blowup:</strong> ran a live account to <strong>+$11,000</strong> in one day, then got greedy over a specific purchase, forced trades, lost the $11,000, tilted, and finished down <strong>$18,000–$20,000 in a single day</strong>. "I literally flushed someone's entire monthly salary down the drain because I lost respect for the value of a dollar."</li>
+    <li>The aftermath: "Losing money started to feel normal." It took "two to three months tilting" and three months of heavy daily losses to relearn respect for a dollar.</li>
+    <li>Lesson: "If your income multiplies quickly, you have to make absolutely sure your mindset and discipline tag along with it."</li>
+  </ul>
+
+  <h3>4. Recovery Protocol After A Big Loss</h3>
+  <p>From trading-full-time-heres-why-you-need-a-second-income (the three months after the $18K day):</p>
+  <ul>
+    <li><strong>The scarcity mindset trap:</strong> "Trying to revenge-trade to make back hypothetical money that was never even in your bank account to begin with."</li>
+    <li><strong>How tilt compounds:</strong> he bought a stack of evals and "would just full-port them at the market open... I would buy or sell based purely on a 'feeling.'" Result: "$5,000 to $6,000 of actual payouts that I had grinded weeks to secure" bled out; "In a month and a half, I had completely reset myself back to square one." ("Bedrotted in a dark room for three or four days" the morning after.)</li>
+    <li><strong>The fix — three steps:</strong>
+      <ol>
+        <li>"I picked one proven strategy and stuck to it."</li>
+        <li>"I sized all the way down" — rebuild confidence through micro-wins.</li>
+        <li>"I started the snowball in reverse" — a snowball of tiny consistent wins instead of a snowball of tilt.</li>
+      </ol>
+    </li>
+    <li><strong>The eagle's-eye check:</strong> step outside yourself and ask, "Is this sustainable? Is gambling the market open every day going to work for the long term?"</li>
+  </ul>
+
+  <h3>5. Post-Payout Amnesia</h3>
+  <p>From why-you-forget-how-to-trade-after-a-payout — a trap he's hit "three or four times":</p>
+  <ul>
+    <li><strong>The mental reference shift:</strong> withdraw $10,000 from a $20,000 account and your brain "subconsciously feels like you <em>need</em> to get the balance right back up to $20,000 immediately." Solid $500–$1,000 days suddenly feel "tiny." "You forget that trading is a marathon and start treating it like a sprint."</li>
+    <li><strong>Refusing to recalibrate:</strong> after a $25,000 payout he tried to full-port the smaller remaining balance for $7,000–$8,000/day. "Spoiler alert: it did not work out for me." The buffer is halved — the size must be too.</li>
+    <li><strong>Outcome-focus replacing setup-focus:</strong> "if a candle simply ticked up green, I would blindly mash the buy button." One forced red day on a smaller buffer = tilt spiral = blown account.</li>
+    <li><strong>The three fixes:</strong> (1) view yourself in third person, like a video game camera above your head; (2) scale down and rebuild rhythm with small wins; (3) "Stick strictly to A+ setups" — the flags that got you paid in the first place.</li>
+  </ul>
+
+  <h3>6. Trading While Broke / The Second-Income Philosophy</h3>
+  <p>From the-brutal-reality-of-trading-when-youre-broke + trading-full-time-heres-why-you-need-a-second-income:</p>
+  <ul>
+    <li>"Your strategy might not be the problem. You might just need the money too badly."</li>
+    <li>Symptoms of trading with survival money: <strong>cutting losses before the stop</strong> ("If you are cutting your stop early, that money means more to you than it should") and <strong>cutting winners short</strong> ("What is the point of setting a risk-to-reward ratio if you aren't going to respect it?"). "You aren't actually trading your strategy. You are trading your emotions."</li>
+    <li>His near-miss: with only a couple thousand to his name and a <strong>$20,000 payout</strong> in sight, desperation made him force non-qualifying setups — "I ended up blowing the entire balance and losing the payout."</li>
+    <li><strong>The psychological shield:</strong> "Having another income on the side keeps the worry away." His own solution in college was valet parking at $25/hr ($150 per six-hour shift, $700–$800/week guaranteed): "the <em>stress</em> completely disappears because your basic living expenses are covered by your job."</li>
+    <li>"Relying strictly on trading to pay your bills and survive puts an unbelievable amount of pressure on your shoulders. When you <em>need</em> to make money to eat, you force trades, you hold losers, and you break your rules."</li>
+    <li>Treat trading "like a side hustle that you are passionate about, and the growth will come naturally."</li>
+  </ul>
+
+  <h3>7. The First Payout Trap &amp; Consistency Math</h3>
+  <p>From what-getting-consistent-payouts-actually-taught-me:</p>
+  <ul>
+    <li>"Getting a payout does not mean you have figured out trading. Getting them <em>consistently</em> does." His first payout (~$1,200) "really means nothing in the grand scheme of things; it is simply the <em>start</em> of the payouts."</li>
+    <li><strong>Dopamine chasing:</strong> after payout #1 he traded for the feeling, not the setup — forcing trades, FOMO-buying spikes, "I ended up losing more and more money because I lost sight of the process."</li>
+    <li><strong>Sizing up too quickly on confidence:</strong> "Eventually, the market humbled me. Because my size was too big, one or two bad trades would wipe out my progress." — "You are not going to speed up the process by sizing bigger or forcing trades."</li>
+    <li><strong>The boring path:</strong> 1 contract × 5 copy-traded accounts × 30–50 points/day ≈ $1,000/day ≈ $60,000/month in potential payouts — from small size and repetition, not heroics.</li>
+    <li><strong>Reverse-engineer every payout:</strong> write down the setups, the daily trade count, and the mindset — then repeat exactly that.</li>
+    <li><strong>Scale laterally, not vertically:</strong> "It's like a pyramid that expands safely from the bottom."</li>
+  </ul>
+
+  <h3>8. The Beginner Lessons (learned the hard way)</h3>
+  <p>From if-i-had-to-start-trading-over + how-i-became-a-full-time-trader-the-real-story:</p>
+  <ul>
+    <li><strong>Overconsumption is overwhelm:</strong> he watched "every single piece of content" on strategies and indicators — "All it did was overwhelm me. The simpler your trading is, the better. Period."</li>
+    <li><strong>One ticker:</strong> start on ES (slower, cleaner), graduate to NQ after 6–12 months of consistency.</li>
+    <li><strong>Sim → small real risk:</strong> paper trading "removes all emotional attachment"; real (small) risk builds "the mental strength required to be a professional trader."</li>
+    <li><strong>His origin story as a cautionary tale:</strong> YOLO'd options in high school and lost everything; maxed out credit cards buying evals as a college freshman ("officially broke and sitting in debt"); installed docks on Michigan lakes to pay it down while trading from his phone "standing in the middle of a lake." First $1,200 payout (August, freshman summer) was "the light at the end of the tunnel."</li>
+    <li><strong>Discipline infrastructure made him consistent:</strong> the 4 AM wake-ups, gym twice a day, and one-or-two-trades-a-day cap turned "a couple of thousand dollars a week" into a $10K payout (July 2025), a $20K month, then a <strong>$40K month</strong> — followed by a winter where "the market humbled me worse than I had ever been humbled before" and he lost the whole prior month's gains, which "completely stripped me of my ego" and forced him to rebuild his psychology from the ground up.</li>
+    <li><strong>Third-person perspective as a general tool:</strong> "as soon as you start getting payouts, you have to look at yourself from a third-person perspective." (i-lost-18000-in-a-single-day)</li>
+  </ul>
+
+  <h3>9. Summary of His Psychological Principles</h3>
+  <ol>
+    <li>Judge yourself on process quality, not daily P&amp;L — money is a lagging indicator.</li>
+    <li>Never revenge-trade "hypothetical money" that was never in your bank account.</li>
+    <li>After big wins AND big losses: size down, one proven strategy, micro-wins, rebuild the snowball in reverse.</li>
+    <li>A payout changes your reference point — consciously reset expectations and recalibrate size.</li>
+    <li>Desperation is detectable: early stop-outs and cut winners mean the money means too much — get a second income.</li>
+    <li>Wealth comes from lateral scaling and repetition, not bigger size or more trades.</li>
+    <li>Keep lifestyle spending tied to your baseline month, not your best month.</li>
+    <li>View yourself from above (third person) whenever greed, tilt, or urgency appears.</li>
+  </ol>
+</section>
+
+<!-- ============ VIDEOS ============ -->
+<section id="videos">
+  <h2>Lucas — YouTube Videos: Full Strategy and Rules Extraction</h2>
+  <p class="meta">Source: BDH Trading YouTube channel (UCWngZTnuJGdrf3SVQycKZww) + linked videos, researched 2026-11-16</p>
+  <p>Lucas Kennard ("Lucashhh"), BDH Trading floor trader, streams 5:45pm–9pm (Asia/Globex). Category blog: onlypropfirms.com/bdh/lucas-trading-playbook. Older video IDs recovered from embedded players in the blog articles; full descriptions read from the YouTube watch pages.</p>
+  <hr>
+
+  <h3>Key rules and strategy from videos</h3>
+
+  <h4>1. Adding to a trade in drawdown — the exact DCA strategy (from "Adding To A Trade (When Your In Drawdown)")</h4>
+  <ul>
+    <li>Working timeframe: the 5-minute chart on Nasdaq futures.</li>
+    <li>THE SETUP: a bull flag forms. Long around the midpoint of the candle at ~31,358; stop at the Asia low ~31,311; target the Asia high 31,411 — about a one-to-one. Price pushes above VWAP (good sign), then rolls over, closes below everything, and makes a lower low.</li>
+    <li>"This is the moment most people panic. Lucas adds."</li>
+    <li>ADD POINT 1 — THE NEW LOW: if the broader trend is clearly up and there's an obvious high above you, the new low is where you add. In two contracts, add at least two more. Entry in the 50s plus an add in the 30s brings the average to the 40s — roughly 10 points better, "usually enough to save the trade."</li>
+    <li>ADD POINT 2 — RETEST OF YOUR ORIGINAL ENTRY: price rolls over again but doesn't make a new low, just comes back to where you entered — add and get heavier.</li>
+    <li>THE GOVERNING CONDITION: "as long as you don't get a candle close below the low you already have in place, the trade is still intact." That's what tells him he's safe to add and hold for the target. Lose that level and the premise is gone.</li>
+    <li>CONFIRMATION: bottom wicks. Repeated clean bottom wicks "tell a story" and usually mean price is being driven higher — confluence on a trade already in.</li>
+    <li>By the end of the example he's in FOUR TO SIX CONTRACTS, all added at retests, bottom wicks and the new low; a long hold through the London session that worked.</li>
+    <li>WHAT MAKES IT WORK, NOT RECKLESS: "go in with a clear bias, a clear take profit and a clear stop. As long as neither of those two gets run, you're fine." VWAP and the EMAs work as guides for add-in spots too.</li>
+  </ul>
+
+  <h4>2. Pre-market routine for the New York open (from "My Pre-Market Routine For The New York Open")</h4>
+  <ul>
+    <li>What he looks at in the five minutes before 9:30 and the thirty minutes after; the same process runs before Asia session.</li>
+    <li>THE CHART: 9 EMA = purple, 21 EMA = green, VWAP = blue, plus the kill zones and pivots indicator marking prior-session highs and lows. "Those session levels are the ones you should always be hunting when you map your levels."</li>
+    <li>MARKING THE HIGHS: London high at 31,095; then the obvious 5-minute wick highs below — 31,040, 31,052, the clear wick at 31,062, arguably 31,081.</li>
+    <li>MARKING THE LOWS: pre-open wick lows, then the area of resistance below, then the deeper wicks at 30,748 and 30,667.</li>
+    <li>THE PART MOST PEOPLE MISS: five minutes before the open price is pushing up. "It wants to trick you. It wants you believing it's running to those highs." But VWAP was above and there's a stack of deep lows underneath that can get retraced the moment the push runs out of fuel. "You hold both sides in your head before the bell, not one."</li>
+    <li>THE 9:30 REACTION: price tapped an obvious wick perfectly and rejected — right where VWAP was. That's the A+ bear flag setup: pop, rejection, bear flag down, short taken as it loses the EMAs around 30,950.</li>
+    <li>SCALING OUT AT THE MARKED LEVELS: three contracts — first off at 30,880, next at 30,744, last at 30,667. "Those aren't invented targets — they're the wicks you marked before the open."</li>
+    <li>THE VWAP CHECK AT 9:25 IS THE TIEBREAKER: if price delivers above VWAP, you're looking at the London high and the stacked highs (longs); it didn't, so the short was on. First target alone was 100 points; the deep low was 300 points in roughly 45 minutes.</li>
+    <li>PROCESS: "Mark both sides. Watch the reaction. Then go."</li>
+  </ul>
+
+  <h4>3. The whole playbook is flags (from "The 5 Trades That Paid Me $24,000 This Week")</h4>
+  <ul>
+    <li>$24,000 in payouts that week across Lucid and Tradeify — roughly $8,000 Tradeify, $8,000 Lucid, $10,000 more requested.</li>
+    <li>"Bull flags and bear flags, nothing else." Same structure every time: "bull flag or bear flag, enter at the midpoint or the EMA loss, target the nearest wick."</li>
+    <li>TRADE 1 — Sunday night long: 15-minute bull flag, rejection off the 9 EMA (~29,920). Long in the 29,960s as soon as price hit the candle midpoint; target the nearest wick high at 29,990. ~30 points, almost no drawdown. "Above the EMAs and VWAP, you could have held it longer."</li>
+    <li>TRADE 2 — Monday 9:30 long: rejection off the 21 AND the 9 EMA into a clean bull flag. Price closed above 30,244; with no highs nearby the target became the nearest psychological level — 30,500. 250 points, taken on both Tradeify and Lucid accounts; "it delivered well past it."</li>
+    <li>TRADE 3 — Asia session short: 15-minute bear flag (push up, reject, fake out, roll over). Short as price dropped below VWAP ~31,040; target the nearest wick low 30,991. ~50 points in 30–45 minutes.</li>
+    <li>TRADE 4 — bear flag short: rejection down, short ~30,785, target wick low 30,710, PM low and AM low at 30,641 below. "Kept delivering overnight — better safe than sorry on the exit."</li>
+    <li>TRADE 5 — last night's long: bull flag, long once price closed above the 30,711 midpoint, targeting wick highs at 30,764 and the PM high at 30,791; live on Lucid and Tradeify.</li>
+  </ul>
+
+  <h4>4. Entry timing and sizing are everything (from "Being Right Doesn't Make You Money")</h4>
+  <ul>
+    <li>You can be completely right about direction and still blow the account — entry timing and position sizing.</li>
+    <li>THE RIGHT VERSION: daily levels marked days in advance; idea = short down into them, then long once swept. On the 5-minute there's far more noise, so the entry comes off the higher-timeframe level — a bull flag bouncing off 29,600. "That's an A+ setup, and one he'll ride all day."</li>
+    <li>THE WRONG VERSION: Oct 14, a bear flag on the 15-minute into the 30,270 level — jump the gun and enter on the WICK instead of the CLOSE. That wick is 35–40 points. Five contracts with $2,500 of drawdown, and a retrace into the 9 EMA on the 15-minute blows the account. Same read, same direction, dead.</li>
+    <li>Had he waited for the proper close on the bear flag: zero drawdown, and the trade printed beautifully to the downside anyway.</li>
+    <li>THE CAGE (sizing rule): "It's like putting a dog in a cage that is way too small. If it's a big dog, he's gonna break the cage." The cage = your account and your sizing. Give the market room to fluctuate between drawdown and profit — "because anything is possible on the Nasdaq. NQ was down 1,000 points in 24 hours that week."</li>
+    <li>WHAT LUCAS TRADES: bear flags and bull flags off the 9 EMA, with the 21 EMA and VWAP as confluence, plus session levels — AM high, PM high, Asia low, AM low.</li>
+    <li>The deeper mistake: "thinking about today instead of this month, or the next three. Short-term thinking is where people get burned."</li>
+  </ul>
+
+  <h4>5. Process over P&amp;L (from "Why Your P&amp;L Is Lying To You")</h4>
+  <ul>
+    <li>Trader A: +$5,000 on the day, didn't follow rules, poor risk management. Trader B: −$800, followed every rule, excellent decisions. "Repeat the process a hundred times and Trader B ends up further ahead. The daily number told you the opposite."</li>
+    <li>"You can make $5,000 in a day trading like an idiot. You can make $1,000 executing your strategy perfectly."</li>
+    <li>Two months of oversizing and luck can feel like being a god trader; "then things flatten out, the luck stops, and the market takes all of it back."</li>
+    <li>"Losing money doesn't mean you traded badly." Nobody has a 100% win rate.</li>
+    <li>OBSESS OVER THE PLAN, NOT THE NUMBER: Did the setup fit what you trade? Did you size correctly? Were you trading emotionally? "Money is a lagging indicator of your success — in trading and in business."</li>
+    <li>Lucas's timeline: lost for over a year straight, then a couple of winning weeks, then a little money, then more; a year after that, his first $10,000 month. As of October 15, 2026: $50,000 taken in the last two and a half weeks of trading.</li>
+    <li>"You shouldn't lose hope just because you're losing." And: "If you don't have money right now, get a job."</li>
+  </ul>
+
+  <h4>6. Being right and still getting wiped out (from RSS video <a href="https://www.youtube.com/watch?v=M0wACkBim_A" target="_blank" rel="noopener">M0wACkBim_A</a>, 2026-11-15)</h4>
+  <ul>
+    <li>Having the correct direction is only half the battle; failing to account for market volatility can stop you out even on a sound idea.</li>
+    <li>CHAPTERS: 0:00 Why Your Trade Ideas Get Stopped Out / 0:40 Navigating NASDAQ Wick Stopouts / 3:47 Mastering EMA Entries for Better Trades / 5:27 Avoiding Common Pitfalls in Bearish Markets.</li>
+  </ul>
+
+  <h4>7. Asia session system (from RSS video <a href="https://www.youtube.com/watch?v=2qMuQZfB0co" target="_blank" rel="noopener">2qMuQZfB0co</a>, 2026-11-12 — complete writeup in bdh-rss-latest.xml)</h4>
+  <ul>
+    <li>Before the open: find the Globex open on the 5-minute (the green doji candle), mark prominent wick lows below and nearby highs. "This is how I find my levels… react to what's in front of me at the open."</li>
+    <li>Trades the open right at 6:00; smaller-timeframe bull/bear flags taken to the marked levels.</li>
+    <li>THE A+ SETUP: 5-minute bull flag — pullback, a 30-point bottom wick, new high in the candle, retracement back to VWAP with the 9 EMA and 21 EMA holding. Entry around the candle midpoint; target session highs in sequence (nearest wick high first, then next, then next — scaling out a contract at each); stop at the wick low of the entry. Even conservative targeting = a 2.5R trade.</li>
+    <li>SECOND EXAMPLE: multiple bull flags, nothing closed below the EMAs, then a break — long the 960s, 9 EMA holds, ride to the PM high off the kill zones and pivots indicator.</li>
+    <li>Both examples sat in drawdown first — 30 points on one, 150 on the other — before delivering.</li>
+    <li>NO MAN'S LAND: the gap between the first ten minutes of Globex and the Asia open — he does NOT trade it. Volatility dies, spread widens, aggressive gaps. Wait for the Asia open.</li>
+    <li>CORE: low-volatility sessions require sniper entries. "Bull flags and bear flags, that's the whole thing."</li>
+  </ul>
+  <hr>
+
+  <h3>Video-by-video index (older videos, recovered from blog articles)</h3>
+
+  <h4>VIDEO L1 — Adding To A Trade (When Your In Drawdown) | My Exact Strategy</h4>
+  <ul>
+    <li>ID: PjvckyPQQ4I | <a href="https://www.youtube.com/watch?v=PjvckyPQQ4I" target="_blank" rel="noopener">https://www.youtube.com/watch?v=PjvckyPQQ4I</a> | Published (blog): 2026-10-08</li>
+    <li>Blog article: <a href="https://onlypropfirms.com/bdh/adding-to-a-trade-when-your-in-drawdown-my-exact-strategy" target="_blank" rel="noopener">onlypropfirms.com/bdh/adding-to-a-trade-when-your-in-drawdown-my-exact-strategy</a></li>
+    <li>Content: section 1. Key numbers: entry ~31,358 (candle midpoint), stop Asia low ~31,311, target Asia high 31,411; ends 4–6 contracts.</li>
+  </ul>
+
+  <h4>VIDEO L2 — My Pre-Market Routine For The New York Open</h4>
+  <ul>
+    <li>ID: 2PvQjWRNRsU | <a href="https://www.youtube.com/watch?v=2PvQjWRNRsU" target="_blank" rel="noopener">https://www.youtube.com/watch?v=2PvQjWRNRsU</a> | Published (blog): 2026-10-02</li>
+    <li>Blog article: <a href="https://onlypropfirms.com/bdh/my-pre-market-routine-for-the-new-york-open" target="_blank" rel="noopener">onlypropfirms.com/bdh/my-pre-market-routine-for-the-new-york-open</a></li>
+    <li>Content: section 2. Key numbers: London high 31,095; wick highs 31,040 / 31,052 / 31,062 / 31,081; deep lows 30,748 / 30,667; short ~30,950 on EMA loss; scale-outs 30,880 / 30,744 / 30,667; 100 pts to first target, 300 pts in ~45 min.</li>
+  </ul>
+
+  <h4>VIDEO L3 — The 5 Trades That Paid Me $24,000 This Week</h4>
+  <ul>
+    <li>ID: kAd0WPd9kt0 | <a href="https://www.youtube.com/watch?v=kAd0WPd9kt0" target="_blank" rel="noopener">https://www.youtube.com/watch?v=kAd0WPd9kt0</a> | Published (blog): 2026-09-29</li>
+    <li>Blog article: <a href="https://onlypropfirms.com/bdh/the-5-trades-that-paid-me-24000-this-week" target="_blank" rel="noopener">onlypropfirms.com/bdh/the-5-trades-that-paid-me-24000-this-week</a></li>
+    <li>Content: section 3. All five trades with entries/targets as listed. Payouts: ~$8K Tradeify + ~$8K Lucid + $10K requested ≈ $24K.</li>
+  </ul>
+
+  <h4>VIDEO L4 — Being Right Doesn't Make You Money</h4>
+  <ul>
+    <li>ID: gE1Z_07_LqM | <a href="https://www.youtube.com/watch?v=gE1Z_07_LqM" target="_blank" rel="noopener">https://www.youtube.com/watch?v=gE1Z_07_LqM</a> | Published (blog): 2026-10-25</li>
+    <li>Blog article: <a href="https://onlypropfirms.com/bdh/being-right-doesnt-make-you-money" target="_blank" rel="noopener">onlypropfirms.com/bdh/being-right-doesnt-make-you-money</a></li>
+    <li>Content: section 4. Key numbers: bear flag 15-min into 30,270; wick entry = 35–40 extra points; 5 contracts = $2,500 drawdown; A+ bull flag off 29,600.</li>
+  </ul>
+
+  <h4>VIDEO L5 — Why Your P&amp;L Is Lying To You</h4>
+  <ul>
+    <li>ID: EJuIWBD475w | <a href="https://www.youtube.com/watch?v=EJuIWBD475w" target="_blank" rel="noopener">https://www.youtube.com/watch?v=EJuIWBD475w</a> | Published (blog): 2026-10-22</li>
+    <li>Blog article: <a href="https://onlypropfirms.com/bdh/why-your-pl-is-lying-to-you" target="_blank" rel="noopener">onlypropfirms.com/bdh/why-your-pl-is-lying-to-you</a></li>
+    <li>Content: section 5. Key numbers: +$5,000 rule-breaker vs −$800 rule-follower; $10K first monthly; $50,000 in 2.5 weeks (Oct 15, 2026).</li>
+  </ul>
+
+  <h4>From the RSS (already in bdh-rss-latest.xml)</h4>
+  <ul>
+    <li><a href="https://www.youtube.com/watch?v=2qMuQZfB0co" target="_blank" rel="noopener">2qMuQZfB0co</a> — What I Look For In The Asia Session (2026-11-12) — complete Asia/Globex system, section 7.</li>
+    <li><a href="https://www.youtube.com/watch?v=M0wACkBim_A" target="_blank" rel="noopener">M0wACkBim_A</a> — I Was Right on These Trades and Still Got Wiped Out (2026-11-15) — volatility/stop placement, section 6.</li>
+  </ul>
+  <hr>
+
+  <h3>Recurring Lucas mechanics (cross-video)</h3>
+  <ul>
+    <li>Setup vocabulary: bull flags and bear flags ONLY. Enter at the candle midpoint or the EMA loss; target the nearest wick (session levels in sequence).</li>
+    <li>Indicators: 9 EMA (purple), 21 EMA (green), VWAP (blue), kill zones and pivots indicator (prior-session highs/lows: AM high, PM high, Asia low, AM low, London high).</li>
+    <li>Pre-open ritual: mark both sides (stacked highs AND deep lows), VWAP check at 9:25 as direction tiebreaker, watch the 9:30 reaction at a marked wick + VWAP.</li>
+    <li>Scale-outs at pre-marked wick levels, never invented targets; stop at the structural wick low of the entry.</li>
+    <li>DCA-in-drawdown adds at the new low and the original-entry retest — only while no candle CLOSES below the protected low; 4–6 contracts by design, not panic.</li>
+    <li>Entry rule vs "being right": wait for the flag CANDLE CLOSE, never the wick (a 35–40 point wick entry with 5 contracts is account-killer sizing).</li>
+    <li>Sizing = cage: size so the market can breathe between your stop and target ("NQ down 1,000 points in 24 hours").</li>
+    <li>Asia session: sniper entries in low volatility; no-man's-land (post-Globex-open lull before Asia open) is untradeable; expect 30–150 points of drawdown before delivery on valid flags.</li>
+    <li>Psychology: process over P&amp;L; money is a lagging indicator; think in months, not days.</li>
+  </ul>
+</section>
+
+<!-- ============ ARTICLES ============ -->
+<section id="articles">
+  <h2>Articles — Lucas's Trading Playbook (Complete List)</h2>
+  <details class="fold">
+    <summary>📖 All 20 Articles</summary>
+    <div class="body">
+      <blockquote>
+        <p><strong>Source:</strong> onlypropfirms.com/bdh — "Lucas's Trading Playbook" category</p>
+        <p><strong>Date researched:</strong> 2026-11-16</p>
+        <p><strong>Coverage:</strong> All 20 articles found across pages 1–2 (page 3 confirmed 404). Listed newest first, matching the category order.</p>
+      </blockquote>
+
+      <h4>Page 1</h4>
+      <table>
+        <thead>
+          <tr><th>#</th><th>Title</th><th>Date</th><th>Takeaway</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><a href="https://onlypropfirms.com/bdh/what-i-look-for-in-the-asia-session" target="_blank" rel="noopener">What I Look For In The Asia Session</a></td>
+            <td>12 November 2026</td>
+            <td>Lucas's full overnight playbook: at the 6:00 PM Globex open he immediately marks prominent highs/lows (e.g., a doji's wick low), then waits out the 50-minute "No Man's Land" before the true Asia open. The A+ setup is a 5-minute bull/bear flag pulling back to VWAP while holding the 9/21 EMAs, entered at the pullback candle's midpoint with a hard stop under the flag wick, targeting session highs and scaling out at wick high → PM High → psychological level (normal-day result ~2.5 RR; volatile day 350+ points). He also warns to take profit slightly before pivot levels to guarantee fills.</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><a href="https://onlypropfirms.com/bdh/trading-full-time-heres-why-you-need-a-second-income" target="_blank" rel="noopener">Trading Full Time? Here's Why You Need A Second Income</a></td>
+            <td>11 November 2026</td>
+            <td>The three months after his $18,000 loss day: bedrotting, a scarcity mindset, and tilt that full-ported a pile of eval accounts on "feelings," burning $5,000–$6,000 of real payouts in six weeks. His fix was picking one proven strategy, sizing all the way down to stack micro-wins, and reversing the snowball. Golden rule: a second income "keeps the worry away" — needing trading money to survive forces trades, held losers, and broken rules.</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><a href="https://onlypropfirms.com/bdh/being-right-doesnt-make-you-money" target="_blank" rel="noopener">Being Right Doesn't Make You Money</a></td>
+            <td>25 October 2026</td>
+            <td>A correct macro thesis (e.g., a daily-low sweep-and-reverse at 29,600) only pays when paired with micro execution — waiting for the 5-minute bull flag off the level instead of jumping in early. Entering a bear flag before the candle close with 5 contracts cost an example trader a 35–40 point wick and a blown account ("the cage mentality": the account is the cage, volatility is the dog). Fixes: sniper entries at the close, sizing that survives a standard 20-point wick, and refusing to trade until every checklist box is checked.</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td><a href="https://onlypropfirms.com/bdh/why-your-pl-is-lying-to-you" target="_blank" rel="noopener">Why Your P&amp;L Is Lying To You</a></td>
+            <td>22 October 2026</td>
+            <td>A rule-breaking $5,000 day is a worse day than a rule-following $1,000 day — P&amp;L is the most deceptive metric because it rewards oversizing, fear-moved stops, and held losers when the market bails you out. Via his Trader A vs. Trader B comparison, the process-follower wins long-term; "money is a lagging indicator of your success." He lost consistently for over a year before winning weeks, then pulled $50,000 in two and a half weeks (as of Oct 15, 2026) once the process caught up.</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td><a href="https://onlypropfirms.com/bdh/passed-the-eval-and-took-3000-out-on-vest-live" target="_blank" rel="noopener">Passed The Eval And Took $3,000+ Out On Vest LIVE</a></td>
+            <td>17 October 2026</td>
+            <td>Live breakdown of passing a Vest Markets 10K Bespoke eval in 9 minutes — shorting the NQ dump toward the 30,450s on long top wicks respecting the EMAs for the $1,000 target, with instant funding on pass. The session then became a historic 732-point expansion day ("the money glitch") which he farmed by entering on every 1-minute pullback into the 9/21 EMAs that produced fresh "kill candles" lower. Lesson: trend days are rare but you "have to press your advantage" when they appear.</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td><a href="https://onlypropfirms.com/bdh/adding-to-a-trade-when-your-in-drawdown-my-exact-strategy" target="_blank" rel="noopener">Adding To A Trade (When Your In Drawdown) | My Exact Strategy</a></td>
+            <td>8 October 2026</td>
+            <td>His exact DCA method: only average down with a clear prior trend, an obvious target (Asia High 30,411), and a hard stop (Asia Low 30,311). Add spot #1 is the lower-low fake-out after a VWAP push rolls back over — he added 2+ contracts in the 30s to his 2-contract entry in the 50s, pulling his average into the 40s. Add spot #2 is allowed on a retest only "as long as the candle does not close below the previous low," with strings of bottom wicks at support as bullish confirmation; the 4–6 contract position eventually hit the target after a grind from 11 PM into London.</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td><a href="https://onlypropfirms.com/bdh/my-pre-market-routine-for-the-new-york-open" target="_blank" rel="noopener">My Pre-Market Routine For The New York Open</a></td>
+            <td>2 October 2026</td>
+            <td>His daily 9:25 AM ritual: with 9 EMA / 21 EMA / VWAP / Kill Zones &amp; Pivots active on the 5-minute chart, mark every obvious wick high toward the London High (31,095: 31,040 / 31,052 / 31,062 / 31,081) and every wick low below (880s, 30,748, 30,667). Beware the 9:25 trap — pre-market pushes above the EMAs into overhead VWAP are bait. Rule at the bell: hold above VWAP → target London Highs; reject VWAP → short the deep lows; his example short at ~30,950 scaled out at 30,880 / 30,744 / 30,667 across three contracts for a ~300-point flush.</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td><a href="https://onlypropfirms.com/bdh/why-you-forget-how-to-trade-after-a-payout" target="_blank" rel="noopener">Why You Forget How To Trade After A Payout</a></td>
+            <td>1 October 2026</td>
+            <td>After a withdrawal your mental reference point shifts — with $10,000 left of a $20,000 account your brain demands an instant climb back to $20K, making normal $500–$1,000 days feel "tiny." He describes full-porting after a $25K payout trying to make $7–8K/day ("it did not work out") and becoming outcome-focused, mashing buy buttons on green ticks. Fixes: third-person self-view, scale size down to the smaller buffer, and stick strictly to the A+ flag setups that earned the payout.</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td><a href="https://onlypropfirms.com/bdh/the-5-trades-that-paid-me-24000-this-week" target="_blank" rel="noopener">The 5 Trades That Paid Me $24,000 This Week</a></td>
+            <td>29 September 2026</td>
+            <td>Five live 15-minute flag trades across Lucid and Tradeify accounts: a Sunday-night Globex bull flag (+30 pts at the 9 EMA), a Monday 9:30 bull flag into open air targeting the 30,500 psychological level (+250 pts), an Asia-session VWAP breakdown short at 31,040 to 30,991 (+50 pts), an EMA-roll-over short at 30,785 targeting 30,710 and the PM/AM lows (+75–140 pts), and a late-night midpoint-reclaim long to 30,764/30,791 (+50–80 pts). Payout receipts: ~$8,000 from Tradeify withdrawals plus ~$17,600 from Lucid ($8,000 banked + 4×$2,400 requests) ≈ $24,000 for the week.</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td><a href="https://onlypropfirms.com/bdh/i-lost-18000-in-a-single-day-heres-what-it-did-to-me" target="_blank" rel="noopener">I Lost $18,000 In A Single Day — Here's What It Did To Me</a></td>
+            <td>25 September 2026</td>
+            <td>Making $20K/month at 20 made money feel like a video game — he brushed off $3–5K losses, priced purchases in "points," and budgeted off his best months. He ran a live account to +$11,000, forced trades to pay for a purchase he wanted, lost it all, tilted, and finished down $18,000–$20,000 in one day. The spiral normalized losing for two to three months; his lesson is that mindset must scale with income and lifestyle must be based on your baseline month, not your best one.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h4>Page 2</h4>
+      <table>
+        <thead>
+          <tr><th>#</th><th>Title</th><th>Date</th><th>Takeaway</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>11</td>
+            <td><a href="https://onlypropfirms.com/bdh/the-brutal-reality-of-trading-when-youre-broke" target="_blank" rel="noopener">The Brutal Reality Of Trading When You're Broke</a></td>
+            <td>22 September 2026</td>
+            <td>"Your strategy might not be the problem. You might just need the money too badly." Trading with survival money produces cutting stops early and cutting winners early — "You are trading your emotions," not the strategy. He recalls blowing a near-$20,000 payout through desperation, and prescribes a guaranteed outside income (his college valet job: $150 per six-hour shift, $700–800/week) as a psychological shield that makes prop evals a pressure-free side hustle.</td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td><a href="https://onlypropfirms.com/bdh/this-crypto-prop-firm-that-lets-you-keep-100" target="_blank" rel="noopener">This Crypto Prop Firm That Lets You Keep 100%</a></td>
+            <td>16 September 2026</td>
+            <td>A firm review (WarBux) rather than a strategy piece: he covers equities 1-step accounts from $36 ($5K–$200K) and crypto accounts including the Instant Light with a 100% profit split ($1,500 daily / $3,000 max loss, 20% consistency rule on a 100K example). He highlights add-ons (instant payout, paid drawdown increase, relaxed 4% target, payout protector) and rule freedoms — no payout caps, no news restrictions, no forced move to live, NASDAQ and single-stock tickers included. He discloses he is currently down on his own 25K Instant Light account.</td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td><a href="https://onlypropfirms.com/bdh/the-days-you-shouldnt-trade-nq-at-all-how-i-spot-them" target="_blank" rel="noopener">The Days You Shouldn't Trade NQ At All (How I Spot Them)</a></td>
+            <td>10 September 2026</td>
+            <td>The anti-setup checklist: after a 200-point overnight London trend, the AM session usually needs to digest and rarely trends again; an indecisive, wick-filled 9:30 opening candle confirms it. His "do not trade" tells: no clear liquidity targets, wicks in both directions, and price "barcoding" endlessly on the 9/21 EMAs and VWAP, plus fake flags that stop you out two or three times. On those days he jokes you should unplug the computer and hide the power cable.</td>
+          </tr>
+          <tr>
+            <td>14</td>
+            <td><a href="https://onlypropfirms.com/bdh/how-i-catch-100-200-point-v-shapes-on-nq-bull-bear-flags" target="_blank" rel="noopener">How I Catch 100-200 Point V-Shapes on NQ (Bull &amp; Bear Flags)</a></td>
+            <td>8 September 2026</td>
+            <td>On the 1-minute chart he hunts liquidity sweeps: price taps a prominent high (e.g., the 8:30 news-candle wick at 690) and prints an indecisive exhaustion candle. He then waits for the flush-and-retest that fails to close above the 9 EMA (bear flag at the 21 EMA), enters at 29,669, and scales 5 contracts through internal wick lows at 609 / 578 / 555 with the final TP at the untouched Asia low (494/495) — a 200-point drop in ~70 minutes. The mirror-image long uses a swept low plus a bull flag at the EMAs targeting untapped highs.</td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td><a href="https://onlypropfirms.com/bdh/what-getting-consistent-payouts-actually-taught-me" target="_blank" rel="noopener">What Getting Consistent Payouts Actually Taught Me</a></td>
+            <td>2 September 2026</td>
+            <td>"Getting a payout does not mean you have figured out trading. Getting them consistently does." His first ~$1,200 payout triggered dopamine-chasing, forced trades, and confidence-based size-ups that blew accounts; the cure was the boring math — one contract across 5 copy-traded accounts catching 30–50 points/day ≈ $60,000/month in potential payouts. His rules now: never trade funded accounts in chop, reverse-engineer each payout's exact setups/trade count/mindset, and scale laterally (more accounts) instead of vertically (bigger size).</td>
+          </tr>
+          <tr>
+            <td>16</td>
+            <td><a href="https://onlypropfirms.com/bdh/if-i-had-to-start-trading-over-heres-what-id-do" target="_blank" rel="noopener">If I Had To Start Trading Over, Here's What I'd Do</a></td>
+            <td>1 September 2026</td>
+            <td>His beginner blueprint: stop overconsuming content and keep charts simple; pick one ticker (ES first for its slower, cleaner price action, then NQ after 6–12 months of consistency); move from sim to small real risk (funded evals or micros) because skin in the game builds trading psychology. He also warns against brute-forcing eval purchases — set a strict monthly budget — and against starting with anything but small size.</td>
+          </tr>
+          <tr>
+            <td>17</td>
+            <td><a href="https://onlypropfirms.com/bdh/my-a-bear-flag-checklist-for-140-point-nq-setups" target="_blank" rel="noopener">My A+ Bear Flag Checklist For 140-Point NQ Setups</a></td>
+            <td>29 August 2026</td>
+            <td>His four-step A+ checklist, shown on a live Asia-session short: (1) bias — price failed to retest the internal high at 29,315 (buyer weakness); (2) price stayed below VWAP and no 5-minute candle closed above the EMAs; (3) targets mapped from internal wick lows (29,270 / 29,232 / 29,211) and session lows (29,202 / 29,138); (4) entry on the flag break to a new low at 29,274 with the stop at the flag's top wick (29,312). One contract came off at the first internal low with the stop moved to break-even, and the trade ran 140 points with zero drawdown in ~90 minutes.</td>
+          </tr>
+          <tr>
+            <td>18</td>
+            <td><a href="https://onlypropfirms.com/bdh/are-you-skipping-this-step-my-nq-trading-checklist" target="_blank" rel="noopener">Are You Skipping This Step? My NQ Trading Checklist</a></td>
+            <td>28 August 2026</td>
+            <td>Recorded mid-trade to show his entry confluence sequence on the 1-minute chart: sweep of a prominent low (below the previous session low), stagnant exhausted price action, a V-shape recovery into a bull flag, and a flag candle closing above the EMAs — only then does he buy the new internal high break. Targets are untapped draws on liquidity (first TP ~79 area, ultimate ~90 area) with the stop tucked under the nearest wick low (~29,010); first TP hit within the video for +$1,000 and change.</td>
+          </tr>
+          <tr>
+            <td>19</td>
+            <td><a href="https://onlypropfirms.com/bdh/the-setup-i-use-for-every-nq-breakout" target="_blank" rel="noopener">The Setup I Use For Every NQ Breakout</a></td>
+            <td>27 August 2026</td>
+            <td>In a heavy-chop consolidation day, he refuses to trade inside the range and instead watches the 1-minute chart for a flag forming at the zone's edge; the trigger is the flag break to a brand-new low (short from ~29,212–29,215). Targets come from "draws on liquidity": an obvious 15-minute internal wick low (29,197) for scale-outs and the prior AM session low (~29,138) as the ultimate TP. Even at +$1,300 flashing on screen he held for the mapped target — trust the setup over quick cash.</td>
+          </tr>
+          <tr>
+            <td>20</td>
+            <td><a href="https://onlypropfirms.com/bdh/how-i-became-a-full-time-trader-the-real-story" target="_blank" rel="noopener">How I Became a Full-Time Trader: The Real Story</a></td>
+            <td>26 August 2026</td>
+            <td>His origin story: 2023 options YOLOs in high school lost everything; as a college freshman he maxed out credit cards buying evals ("Do not do this"), went broke, and installed docks on Michigan lakes to pay down debt while trading from his phone in a lake. The first $1,200 payout proved it possible; a discipline overhaul (4 AM wake-ups, gym twice daily, one or two trades a day) produced consistency, a $10K payout in July 2025, a $20K month, then a $40K month — before winter stripped it all back and forced a psychology rebuild. That arc led to trialing at the BDH and streaming from the West Coast studio three and a half years after starting with -$5,000 to his name.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </details>
+</section>
+
+<!-- ============ SOURCES ============ -->
+<section id="sources">
+  <h2>Sources — All URLs Crawled</h2>
+  <details class="fold">
+    <summary>🔗 Sources</summary>
+    <div class="body">
+      <blockquote>
+        <p><strong>Research date:</strong> 2026-11-16</p>
+        <p><strong>Source site:</strong> onlypropfirms.com — The BDH / "Lucas's Trading Playbook" category</p>
+        <p><strong>Crawl method:</strong> webfetch (markdown format), listing pages then every article page.</p>
+      </blockquote>
+
+      <h4>Listing Pages</h4>
+      <table>
+        <thead>
+          <tr><th>Page</th><th>URL</th><th>Result</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td><a href="https://onlypropfirms.com/bdh/lucas-trading-playbook" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/lucas-trading-playbook</a></td><td>OK — 10 articles</td></tr>
+          <tr><td>2</td><td><a href="https://onlypropfirms.com/bdh/lucas-trading-playbook/page/2" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/lucas-trading-playbook/page/2</a></td><td>OK — 10 articles (pagination ends here: "1 2")</td></tr>
+          <tr><td>3</td><td><a href="https://onlypropfirms.com/bdh/lucas-trading-playbook/page/3" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/lucas-trading-playbook/page/3</a></td><td><strong>404 — no page 3. Confirmed complete category.</strong></td></tr>
+        </tbody>
+      </table>
+      <p><strong>Total articles found: 20 · Total articles successfully read: 20 · Failed fetches: 0</strong></p>
+
+      <h4>Articles (20/20 read successfully)</h4>
+      <table>
+        <thead>
+          <tr><th>#</th><th>Date</th><th>Title</th><th>URL</th><th>Status</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>2026-11-12</td><td>What I Look For In The Asia Session</td><td><a href="https://onlypropfirms.com/bdh/what-i-look-for-in-the-asia-session" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/what-i-look-for-in-the-asia-session</a></td><td>OK</td></tr>
+          <tr><td>2</td><td>2026-11-11</td><td>Trading Full Time? Here's Why You Need A Second Income</td><td><a href="https://onlypropfirms.com/bdh/trading-full-time-heres-why-you-need-a-second-income" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/trading-full-time-heres-why-you-need-a-second-income</a></td><td>OK</td></tr>
+          <tr><td>3</td><td>2026-10-25</td><td>Being Right Doesn't Make You Money</td><td><a href="https://onlypropfirms.com/bdh/being-right-doesnt-make-you-money" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/being-right-doesnt-make-you-money</a></td><td>OK</td></tr>
+          <tr><td>4</td><td>2026-10-22</td><td>Why Your P&amp;L Is Lying To You</td><td><a href="https://onlypropfirms.com/bdh/why-your-pl-is-lying-to-you" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/why-your-pl-is-lying-to-you</a></td><td>OK (first fetch truncated; remainder read from saved tool output)</td></tr>
+          <tr><td>5</td><td>2026-10-17</td><td>Passed The Eval And Took $3,000+ Out On Vest LIVE</td><td><a href="https://onlypropfirms.com/bdh/passed-the-eval-and-took-3000-out-on-vest-live" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/passed-the-eval-and-took-3000-out-on-vest-live</a></td><td>OK (first fetch truncated; core content captured in preview)</td></tr>
+          <tr><td>6</td><td>2026-10-08</td><td>Adding To A Trade (When Your In Drawdown) | My Exact Strategy</td><td><a href="https://onlypropfirms.com/bdh/adding-to-a-trade-when-your-in-drawdown-my-exact-strategy" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/adding-to-a-trade-when-your-in-drawdown-my-exact-strategy</a></td><td>OK</td></tr>
+          <tr><td>7</td><td>2026-10-02</td><td>My Pre-Market Routine For The New York Open</td><td><a href="https://onlypropfirms.com/bdh/my-pre-market-routine-for-the-new-york-open" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/my-pre-market-routine-for-the-new-york-open</a></td><td>OK</td></tr>
+          <tr><td>8</td><td>2026-10-01</td><td>Why You Forget How To Trade After A Payout</td><td><a href="https://onlypropfirms.com/bdh/why-you-forget-how-to-trade-after-a-payout" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/why-you-forget-how-to-trade-after-a-payout</a></td><td>OK</td></tr>
+          <tr><td>9</td><td>2026-09-29</td><td>The 5 Trades That Paid Me $24,000 This Week</td><td><a href="https://onlypropfirms.com/bdh/the-5-trades-that-paid-me-24000-this-week" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/the-5-trades-that-paid-me-24000-this-week</a></td><td>OK</td></tr>
+          <tr><td>10</td><td>2026-09-25</td><td>I Lost $18,000 In A Single Day — Here's What It Did To Me</td><td><a href="https://onlypropfirms.com/bdh/i-lost-18000-in-a-single-day-heres-what-it-did-to-me" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/i-lost-18000-in-a-single-day-heres-what-it-did-to-me</a></td><td>OK</td></tr>
+          <tr><td>11</td><td>2026-09-22</td><td>The Brutal Reality Of Trading When You're Broke</td><td><a href="https://onlypropfirms.com/bdh/the-brutal-reality-of-trading-when-youre-broke" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/the-brutal-reality-of-trading-when-youre-broke</a></td><td>OK</td></tr>
+          <tr><td>12</td><td>2026-09-16</td><td>This Crypto Prop Firm That Lets You Keep 100%</td><td><a href="https://onlypropfirms.com/bdh/this-crypto-prop-firm-that-lets-you-keep-100" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/this-crypto-prop-firm-that-lets-you-keep-100</a></td><td>OK</td></tr>
+          <tr><td>13</td><td>2026-09-10</td><td>The Days You Shouldn't Trade NQ At All (How I Spot Them)</td><td><a href="https://onlypropfirms.com/bdh/the-days-you-shouldnt-trade-nq-at-all-how-i-spot-them" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/the-days-you-shouldnt-trade-nq-at-all-how-i-spot-them</a></td><td>OK</td></tr>
+          <tr><td>14</td><td>2026-09-08</td><td>How I Catch 100-200 Point V-Shapes on NQ (Bull &amp; Bear Flags)</td><td><a href="https://onlypropfirms.com/bdh/how-i-catch-100-200-point-v-shapes-on-nq-bull-bear-flags" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/how-i-catch-100-200-point-v-shapes-on-nq-bull-bear-flags</a></td><td>OK</td></tr>
+          <tr><td>15</td><td>2026-09-02</td><td>What Getting Consistent Payouts Actually Taught Me</td><td><a href="https://onlypropfirms.com/bdh/what-getting-consistent-payouts-actually-taught-me" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/what-getting-consistent-payouts-actually-taught-me</a></td><td>OK</td></tr>
+          <tr><td>16</td><td>2026-09-01</td><td>If I Had To Start Trading Over, Here's What I'd Do</td><td><a href="https://onlypropfirms.com/bdh/if-i-had-to-start-trading-over-heres-what-id-do" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/if-i-had-to-start-trading-over-heres-what-id-do</a></td><td>OK</td></tr>
+          <tr><td>17</td><td>2026-08-29</td><td>My A+ Bear Flag Checklist For 140-Point NQ Setups</td><td><a href="https://onlypropfirms.com/bdh/my-a-bear-flag-checklist-for-140-point-nq-setups" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/my-a-bear-flag-checklist-for-140-point-nq-setups</a></td><td>OK</td></tr>
+          <tr><td>18</td><td>2026-08-28</td><td>Are You Skipping This Step? My NQ Trading Checklist</td><td><a href="https://onlypropfirms.com/bdh/are-you-skipping-this-step-my-nq-trading-checklist" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/are-you-skipping-this-step-my-nq-trading-checklist</a></td><td>OK</td></tr>
+          <tr><td>19</td><td>2026-08-27</td><td>The Setup I Use For Every NQ Breakout</td><td><a href="https://onlypropfirms.com/bdh/the-setup-i-use-for-every-nq-breakout" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/the-setup-i-use-for-every-nq-breakout</a></td><td>OK</td></tr>
+          <tr><td>20</td><td>2026-08-26</td><td>How I Became a Full-Time Trader: The Real Story</td><td><a href="https://onlypropfirms.com/bdh/how-i-became-a-full-time-trader-the-real-story" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/how-i-became-a-full-time-trader-the-real-story</a></td><td>OK</td></tr>
+        </tbody>
+      </table>
+
+      <h4>Notes</h4>
+      <ul>
+        <li>Article pages carry heavy site boilerplate (promo banners, nav menus, cookie consent, footer). Only the article body content (headings and body text from "# title" to "## Post navigation") was used for distillation.</li>
+        <li>Two article fetches (#4, #5) returned truncated previews because YouTube-timestamp link noise made the pages very long; article #4's remaining body was recovered from the saved full output file, and article #5's preview contained its full strategy-relevant body (setup, execution, funding, trend-day farming list beginning). No content was invented to fill gaps.</li>
+        <li>Output files derived from this crawl: STRATEGY.md, RULES.md, PSYCHOLOGY.md, ARTICLES.md (all in C:\Users\oled\Desktop\faltu\trading\lucas\).</li>
+      </ul>
+    </div>
+  </details>
+</section>
+
+</main>
+
+<footer>Compiled from onlypropfirms.com/bdh (Lucas's Trading Playbook) and the BDH Trading YouTube channel · Researched 2026-11-16 · For educational study only — not financial advice.</footer>
+
+<a class="top" href="#top">↑ Top</a>
+
+</body>
+</html>

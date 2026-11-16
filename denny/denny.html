@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Denny — BDH Trading Strategy &amp; Rules</title>
+<style>
+:root{--bg:#f4f6f8;--card:#fff;--text:#1b2430;--muted:#5b6572;--border:#e3e8ee;--accent:#b45309;--accent-soft:#fdf3e3}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.7 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+header.hero{background:linear-gradient(135deg,var(--accent),#111827);color:#fff;padding:48px 24px 40px}
+.hero-inner{max-width:960px;margin:0 auto}
+.hero .kicker{letter-spacing:.18em;text-transform:uppercase;font-size:12px;opacity:.85;margin:0 0 10px}
+.hero h1{margin:0 0 12px;font-size:clamp(28px,4vw,44px);line-height:1.15}
+.hero p.sub{margin:0 0 20px;opacity:.92;max-width:72ch}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:6px 14px;font-size:13px;font-weight:600}
+nav.toc{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--border)}
+nav.toc .inner{max-width:960px;margin:0 auto;display:flex;gap:4px;overflow-x:auto;padding:10px 16px}
+nav.toc a{flex:0 0 auto;color:var(--muted);text-decoration:none;font-weight:600;font-size:13.5px;padding:7px 14px;border-radius:999px}
+nav.toc a:hover{background:var(--accent-soft);color:var(--accent)}
+main{max-width:960px;margin:0 auto;padding:32px 20px 80px}
+section{margin:0 0 44px}
+h2{font-size:26px;margin:0 0 6px;padding-left:14px;border-left:5px solid var(--accent)}
+h3{font-size:19px;margin:26px 0 8px;color:var(--accent)}
+h4{font-size:16px;margin:20px 0 6px}
+p{margin:10px 0}
+ul,ol{margin:10px 0;padding-left:26px}
+li{margin:5px 0}
+blockquote{margin:16px 0;padding:12px 18px;background:var(--accent-soft);border-left:4px solid var(--accent);border-radius:0 10px 10px 0;font-style:italic}
+blockquote p{margin:6px 0}
+code{background:#eef1f5;border:1px solid var(--border);border-radius:6px;padding:1px 6px;font-family:ui-monospace,Consolas,monospace;font-size:.9em}
+.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:14px 0;box-shadow:0 1px 3px rgba(16,24,40,.05)}
+.rule{border-left:4px solid var(--accent)}
+.num{display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:30px;border-radius:8px;background:var(--accent);color:#fff;font-weight:700;font-size:14px;margin-right:10px}
+table{width:100%;border-collapse:collapse;background:var(--card);font-size:14.5px;margin:14px 0;border:1px solid var(--border);border-radius:12px;overflow:hidden}
+th{background:var(--accent-soft);color:var(--accent);text-align:left}
+th,td{padding:10px 12px;border-bottom:1px solid var(--border);vertical-align:top}
+tr:last-child td{border-bottom:none}
+details.fold{background:var(--card);border:1px solid var(--border);border-radius:14px;margin:14px 0}
+details.fold summary{cursor:pointer;padding:16px 20px;font-weight:700;color:var(--accent)}
+details.fold .body{padding:0 20px 18px}
+.meta{font-size:12.5px;color:var(--muted)}
+footer{max-width:960px;margin:0 auto;padding:0 20px 60px;color:var(--muted);font-size:13px}
+.top{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;text-decoration:none;border-radius:999px;padding:10px 16px;font-weight:700;font-size:13px;box-shadow:0 4px 14px rgba(0,0,0,.2)}
+@media print{nav.toc,.top{display:none}}
+</style>
+</head>
+<body class="denny">
+
+<header class="hero" id="top">
+  <div class="hero-inner">
+    <p class="kicker">BDH TRADING · DENNY'S TRADING DESK</p>
+    <h1>Denny — Strategy &amp; Rules</h1>
+    <p class="sub">NQ futures scalper running a strict one-trade-per-account-per-day system across 20+ prop-firm accounts — <em>"small wins, lots of accounts, and compounding"</em> — a model that turned ~$4,992 of evaluation fees into $67,468 of payouts in a single quarter.</p>
+    <div class="chips">
+      <span class="chip">34 articles</span>
+      <span class="chip">8 videos</span>
+      <span class="chip">Researched 2026-11-16</span>
+      <span class="chip">Source: onlypropfirms.com/bdh</span>
+    </div>
+  </div>
+</header>
+
+<nav class="toc">
+  <div class="inner">
+    <a href="#overview">Overview</a>
+    <a href="#strategy">Strategy</a>
+    <a href="#rules">Rules</a>
+    <a href="#psychology">Psychology</a>
+    <a href="#videos">Videos</a>
+    <a href="#articles">Articles</a>
+    <a href="#sources">Sources</a>
+  </div>
+</nav>
+
+<main>
+
+<section id="overview">
+  <h2>Overview — Who Is Denny?</h2>
+  <div class="card">
+    <p>Denny ("Denny Dollas") is a BDH Trading floor trader and U.S. Army veteran who scalps <strong>Nasdaq futures (NQ)</strong> almost exclusively, trading prop-firm futures accounts (Apex, Tradeify, Lucid, My Funded Futures, IQ Capital, Blue Sky, Vest and more) — often 20+ funded 50K accounts at a time, cycled one at a time or multiplied with a trade copier. His system is deliberately small-ball: ranges marked on the 5-minute chart and executed on the 1-minute, strict 10-point "base hits" and 1:1 reversal targets, a stop loss on every trade, and his self-described "ultimate rule" of <strong>one trade per account per day</strong> — win or lose, the account is locked for 24 hours. Rather than hunting home runs, he compounds many small wins across many accounts, which he sums up in his own words as <em>"small wins, lots of accounts, and compounding."</em> In the July–September 2026 quarter he documented spending $4,992 on evaluations and taking $67,468 in payouts ($62,476 net) — all published transparently, including the blown accounts.</p>
+    <blockquote><p>"One trade per account, per day. If the trade is a win? I am done with that account for the day. If the trade is a loss? I am done with that account for the day. No revenge trading. No looking for 'just one more setup' to make the money back. Once an account has taken a trade, it is locked for the next 24 hours."</p></blockquote>
+  </div>
+</section>
+
+<section id="strategy">
+  <h2>Denny's Trading Strategy — Distilled Playbook</h2>
+  <p class="meta"><strong>Source:</strong> onlypropfirms.com/bdh — "Denny's Trading Desk" category (BDH trading channel)<br><strong>Researched:</strong> 2026-11-16<br><strong>Method:</strong> All 34 articles in the category were fetched and read; every strategy point below is drawn directly from them. Article URLs noted inline.</p>
+
+  <div class="card">
+    <h3>1. Who / What He Trades</h3>
+    <ul>
+      <li><strong>Market:</strong> Nasdaq futures (<strong>NQ</strong>) almost exclusively. One article notes he pivoted a silver strategy to NQ: <em>"I originally found this setup while trading silver back when it used to be highly volatile. Since silver died down, I moved the strategy over to the NASDAQ (NQ), and it has been working beautifully ever since"</em> (2-in-the-chamber). He briefly traded <strong>Silver</strong> again when NQ got choppy (we-were-down-400).</li>
+      <li><strong>Vehicle:</strong> Prop firm futures accounts (Apex, Tradeify, Lucid, My Funded Futures, IQ Capital, Blue Sky, Vest, etc.), mostly 50K accounts, copied across many accounts with a <strong>trade copier</strong> — or traded <strong>one account at a time</strong> (see §9).</li>
+      <li><strong>Contract sizing seen in recaps:</strong> 1–5 contracts typical; 5 contracts on a 150K Tradeify for a high-conviction trade; 6 contracts when conviction was very high (lost-900 article: <em>"Probably a bit too much size"</em>); 2 contracts per account across 5 Apex accounts via copier; 3 minis for a PDH/PWH run. A 10-point NQ scalp on 1 contract = ~$200.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>2. Timeframes</h3>
+    <ul>
+      <li><strong>5-minute chart</strong> = the main decision timeframe: ranges/chop boxes, bull/bear flags, "Two in the Chamber," Globex first-candle, EMA trend reads.</li>
+      <li><strong>1-minute chart</strong> = execution/micro-entry only: <em>"dropping down to the 1-minute time frame is the absolute best way to see the micro-touches and actually execute the scalps"</em> (dont-start-scalping).</li>
+      <li><strong>4-hour chart</strong> = macro context (e.g., spotting an overnight channel before the NY open, one-long-turned-my-worst-morning-green).</li>
+      <li>Explicit rule: ranges are drawn on the <strong>5-minute only</strong> — <em>"I map out my ranges on the 5-minute time frame, and the 5-minute only. I do not mark my ranges on the 1-minute chart"</em> (dont-start-scalping).</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>3. Indicators &amp; Chart Setup</h3>
+    <p>From this-is-exactly-how-i-set-up-my-tradingview-chart and i-made-2000-trading-the-asia-open:</p>
+    <ul>
+      <li><strong>9 EMA</strong> (red line) — short-term momentum / pullback retest level.</li>
+      <li><strong>21 EMA</strong> (blue line) — secondary trend filter. Key read: <strong>9 EMA crossing below/above 21 EMA = trend shift</strong>.</li>
+      <li><strong>VWAP</strong> (purple line) — magnet/target and bias filter ("price refused to close above the VWAP" = downtrend intact).</li>
+      <li><strong>Kill Zones &amp; Pivots by Trade for OP</strong> (TradingView) — draws session boxes (Asia, London, NY AM, NY PM — only these four enabled) and auto-plots <strong>Asia High/Low, London High/Low, NY AM High/Low, PDH/PDL, PWH/PWL, midlines</strong> with statistical <strong>hit-rate percentages</strong> (how-to-trade-kill-zones).</li>
+      <li><strong>Round/psychological numbers</strong> — e.g., the "500 level" (29,500): <em>"Big, round numbers like 500 are massive psychological levels"</em> (i-made-2000-trading-the-asia-open).</li>
+      <li><strong>Tools:</strong> Long/Short Position overlay for exact SL/TP mapping (e.g., "risking 21 points… drag target to see where 1-to-1 sits"), on-chart text notes ("Risking $500 to make $500 (1:1)"), rectangles for consolidation boxes, horizontal lines, trendlines/channels.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>4. Sessions &amp; Timing Habits</h3>
+    <ul>
+      <li>Trades multiple sessions live on stream: <strong>Asia/Globex open (~5:45–10:00 PM ET), London (6:00–9:00 AM ET), NY open (9:30 AM ET)</strong> — and often only trades ~1–2 hours a day: <em>"Before coming to the BDH, I traded maybe one to two hours a day, max, and then I was completely done"</em> (one-trade-per-account-per-day).</li>
+      <li>Kill Zones indicator limited to the four main sessions; those are "the only sessions I look for trades in."</li>
+      <li><strong>Avoid Globex 6:00–8:00 PM for the reversal setup:</strong> <em>"Do not trade this strategy during Globex… it's notoriously choppy… I avoid it entirely"</em> (2-in-the-chamber).</li>
+      <li>London chop zones (6–9 AM) repeatedly caused losses; he marks session highs/lows as targets when trending (learning-bear-flags, i-lost-accounts).</li>
+      <li>Known no-trade windows: <strong>news releases (CPI 8:30 AM)</strong> and <strong>election/major-event nights</strong> — see RULES.md.</li>
+    </ul>
+  </div>
+
+  <h3>5. Core Setups</h3>
+
+  <div class="card">
+    <h4>A. "Two in the Chamber" (2ITC) — signature reversal setup (2-in-the-chamber)</h4>
+    <p>The setup he says he "actually trades":</p>
+    <ol>
+      <li><strong>Long:</strong> two consecutive 5-min candles each making a <strong>new session low</strong> (more = higher probability). The next candle sweeps yet another new session low but <strong>flips and closes green</strong> → enter long at the open of the next candle.</li>
+      <li><strong>Short:</strong> mirror image — consecutive new session highs, trigger candle makes a new high but <strong>closes red</strong> → short.</li>
+      <li><strong>Stop:</strong> exactly <strong>one tick below/above the trigger candle's wick</strong>. <em>"Sometimes the next candle will wick down and miss your stop by a single tick before ripping upward."</em></li>
+      <li><strong>Target:</strong> strict <strong>1:1 risk-to-reward</strong> — <em>"on NQ, a 1:1 trade is often already a $300 to $400 profit. Going for more than that is just getting greedy."</em></li>
+      <li>Difference vs a plain 3-bar reversal: the trigger candle <strong>MUST sweep</strong> the session extreme before reversing — <em>"That sweep is the secret sauce."</em></li>
+      <li>Context examples: risked $885 → +$3,000 on election night; +$770 (missed a $2,385 run by respecting the 1:1 — "I stuck to my rules"); +$800; used on Silver too.</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h4>B. Bull / Bear Flags (trend continuation) (learning-bear-flags-live, every-trade-i-took-on-a-bearish-nq-night, i-tried-to-trade-the-news)</h4>
+    <ul>
+      <li>Establish macro trend first ("the macro trend was clearly moving down").</li>
+      <li>Flag forms after an impulse; <strong>confirmation = price fails to take out the prior high/low</strong>, then <strong>breaks and closes outside the flag structure</strong>.</li>
+      <li>Enter on the break or on a pullback; ride <strong>10–20 points</strong> ("base hits"); drop to 1-min for flags and use a <strong>VWAP break as confirmation</strong>.</li>
+      <li>Bigger consolidation inside the flag = bigger breakout expected.</li>
+      <li>In strong trends (price entirely below 9 EMA + 21 EMA + VWAP): <em>"your job is simply to trade the flags and let the momentum work for you"</em> (every-trade-i-took).</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h4>C. Chop Box / Range Scalping (dont-start-scalping-until-you-watch-this, how-i-trade-chop)</h4>
+    <ol>
+      <li><strong>Identify the range on the 5-min chart:</strong> multiple touches required (example: 3 distinct taps at the lows, 5 touches at the top) — "when price touches the top of a range five times and refuses to break out… it is going to keep consolidating."</li>
+      <li><strong>Execute on the 1-min chart:</strong> buy the bottom line, sell the top line.</li>
+      <li><strong>Strict 10-point target</strong> (~$200/contract) on every scalp; example run: 5 scalps = <strong>$1,000 in an hour</strong>.</li>
+      <li><strong>Stop:</strong> right outside the wick/boundary; if price breaks and closes outside the box, take the -10pt loss and stop — example: 5 wins + 1 loss still <strong>+$800 for the day</strong>.</li>
+      <li>Repeat until the range fails. In chop he'd rather not trade at all: <em>"The absolute easiest way to trade chop is to not touch a button"</em> (how-i-trade-chop).</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h4>D. The Globex Strategy (first candle of the Globex session) (i-lost-accounts-for-the-first-time-in-months, i-broke-every-rule-i-have-today)</h4>
+    <ul>
+      <li>Watch the <strong>very first 5-minute candle of the Globex session</strong>: closes <strong>red → short</strong>, closes <strong>green → long</strong>; <em>"That is the only confluence you need for this specific setup"</em> (learned from a mentor).</li>
+      <li><strong>Hard stop on the other side of that initial candle</strong> (examples: risk ~$350 targeting $700; risk ~$1,600).</li>
+      <li><strong>Trailing rule:</strong> <em>"trail your take-profit by two units of risk"</em> — i.e., trail the stop in increments of 2R; in expansion markets this produced a potential <strong>$13,000 runner</strong> (he banked $1,000 early to secure a payout).</li>
+      <li>If held through the NY open during a trend day, risk $350 → "$10,000" (i-broke-every-rule).</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h4>E. EMA-Retest Trend Entries (i-trade-one-account-at-a-time, one-long-turned-my-worst-morning-green, every-trade-i-took)</h4>
+    <ul>
+      <li>In a trend, <strong>wait for the pullback to the 9 EMA</strong> and enter on the rejection with a target at the next liquidity level (Asia Low, London High, PDH/PWH, VWAP).</li>
+      <li>Bias flip rule: don't reverse on a single poke — <em>"You want to see the candle close securely above the 21 EMA and the VWAP to confirm the trend is real"</em>; entering between the EMAs is "trickery." A 5-min candle <strong>closing</strong> above both EMAs followed by the 9/21 cross = momentum flipped to bulls.</li>
+      <li>Targets set at mapped levels (29,563 low, 29,600 flat, London High, PDH/PWH "liquidity pool").</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h4>F. Level / Liquidity Trading (how-to-trade-kill-zones-like-a-pro)</h4>
+    <ul>
+      <li>Session highs/lows and previous day/week highs/lows act as <strong>"draws on liquidity"</strong> — used as <strong>take-profit magnets</strong> (long into NY AM High, London High, PDH/PWH) and <strong>stop hiders</strong> (<em>"place my stop loss just below a previously tagged level… if price drops back below that level, the setup is dead"</em>).</li>
+      <li>A level that gets tagged is "dead" — stop watching it. Untagged levels keep extending until hit. He uses the indicator's hit-rate stats (e.g., "Asia Low has a 78% hit rate over the last 41 sessions").</li>
+      <li>Example sequence: short after Asia Low tag (sellers exhausted) → long to NY AM High → long (bull flag) to London High → long to PDH/PWH.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h4>G. Three-Bar Reversal (news/panic bottoms) (why-i-shouldnt-have-traded-election-night)</h4>
+    <ul>
+      <li>At the absolute bottom of a violent dump, the three-bar reversal printed: "risking about $1,000 on your stop loss… if you held that long all the way to the London high… you could have made $20,000."</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h4>H. MOC (Market-on-Close) Trade (how-i-caught-these-3-futures-setups)</h4>
+    <ul>
+      <li>Unconventional: reads the <strong>3:50 PM candle</strong> and mirrors the direction of the <strong>9:30 AM opening candle</strong> into the close; example short at 29,123 → out 29,093 (+30 pts, $600).</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>6. Exits, Profit Taking &amp; Trailing</h3>
+    <ul>
+      <li><strong>Base hits:</strong> 10–20 points is the standard scalp/flag target ("locked in 10 points ($200)"; "rode this one up for 20 points ($415)").</li>
+      <li><strong>1:1 RR</strong> on reversal setups (2ITC); <strong>2:1</strong> on the Globex setup ($350 risk → $700 target).</li>
+      <li><strong>Trail by two units of risk</strong> in trending/expansion markets; he had tightened trails during a choppy summer and switched back when expansion returned (i-lost-accounts).</li>
+      <li><strong>"Take the money and walk away"</strong> when momentum stalls: <em>"if you see momentum stalling and price starting to come back against you, take the money and walk away… Never let a solid green trade turn red out of greed"</em> (why-most-traders-fail).</li>
+      <li>Manual cut-downs are acceptable risk management: cut a 20-point stop early to save capital (-$200 instead of -$400) (lost-900); bailed manually when a runner started pulling back instead of "letting hope take over" (i-made-2000-trading-the-asia-open).</li>
+      <li>Secure-payout exits: took $1,000 off a potential $13,000 runner because the IQ Capital payout mattered more that day (i-lost-accounts).</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>7. How He Handles Chop vs Trend Days</h3>
+    <ul>
+      <li><strong>Chop/range:</strong> (1) best option — don't trade, wait for breakout; (2) if trading, play only the extreme boundaries for 10–20 pt base hits. Consolidation = "building energy for a breakout"; the eventual break direction is the signal: a downtrend that consolidates then <strong>breaks up = reversal</strong>, an uptrend that consolidates then <strong>breaks down = reversal</strong> (how-i-trade-chop). Wicks through a level that <strong>don't close</strong> beyond it = still valid support (wicked below support "but did not close below it").</li>
+      <li><strong>Trend/expansion days:</strong> trade flags with the trend all session, use 2R trailing, let runners develop (every-trade-i-took-on-a-bearish-nq-night; i-lost-accounts).</li>
+      <li>His honest self-assessment: <em>"I hate playing the chop! I know everybody says 'the range is your friend,' but the range is not my friend"</em> (i-broke-my-own-rules-and-it-worked).</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>8. Scaling &amp; The Multi-Account Business Model</h3>
+    <ul>
+      <li><strong>Trade copier</strong> across 20+ funded accounts multiplies every setup: one 50-pt NY-open long produced ~$19,000 gross across firms (Apex: 2 contracts × 5 accounts = $10,000; Lucid, Legends, IQ, Tradeify additions) (one-long-turned-my-worst-morning-green).</li>
+      <li><strong>One account at a time</strong> (his default discipline): <em>"I trade one account at a time. I don't always blast the trade copier across all my accounts at once. I cycle through them to manage risk and keep my focus sharp"</em> (i-trade-one-account-at-a-time). Copier used selectively (e.g., only for the highest-conviction opening short).</li>
+      <li>With many accounts and the one-trade-per-account rule, he aims for about <strong>five total trades a day</strong>, prioritizing accounts closest to a payout or eval pass (one-trade-per-account-per-day).</li>
+      <li>Known scale plan: pass evals (often in 1 day where rules allow), build buffer, request payouts, repeat — "Small wins, lots of accounts, and compounding" turned ~$4,992 of eval fees into $67,468 of payouts in one quarter (what-i-spent-on-prop-firms).</li>
+      <li>Risk isolation: when he wanted to gamble a news release, he <strong>bought a separate single account</strong> instead of copying it, so the main portfolio stayed green (i-tried-to-trade-the-news).</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>9. Session Playbook (as observed across recaps)</h3>
+    <table>
+      <thead>
+        <tr><th>Session</th><th>What he does</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Globex open 6:00 PM</td><td>First 5-min candle directional trade; hard stop beyond that candle; trail 2R in trends. Skip 6–8 PM chop for 2ITC.</td></tr>
+        <tr><td>Asia session</td><td>2ITC reversals, EMA/VWAP + round-number shorts/longs, Asia High/Low as targets; his best quick wins (10-second scalp, Asia-open +$1,000 in 30 min).</td></tr>
+        <tr><td>London 6–9 AM</td><td>Bull/bear flags with VWAP confirmation; often choppy — known loss zone; London High/Low as targets.</td></tr>
+        <tr><td>NY open 9:30 AM</td><td>Biggest single trades (50-pt long); VWAP-rejection shorts; avoid trading right before 8:30 news.</td></tr>
+        <tr><td>3:50 PM</td><td>MOC mirror-trade of the 9:30 candle.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>10. Honest Limitations Noted in the Articles</h3>
+    <p>The articles are written video breakdowns (recaps, not a formal course). Exact contract counts/stop distances vary by account size and day, dollar targets shift with volatility, and some numbers are given as shorthand (e.g., election-night levels like "512" and "400" reference larger NQ prices). Everything above is only what the articles explicitly state or show in examples; nothing has been invented.</p>
+  </div>
+</section>
+<section id="rules">
+  <h2>Denny's Trading Rules — Explicit &amp; Implied</h2>
+  <p class="meta"><strong>Source:</strong> onlypropfirms.com/bdh — "Denny's Trading Desk" category (BDH trading channel)<br><strong>Researched:</strong> 2026-11-16<br>Compiled from all 34 articles in the category. Quotes are his actual words, with source URL noted.</p>
+
+  <div class="card rule">
+    <h3><span class="num">1</span>The Golden Rule: One Trade Per Account Per Day</h3>
+    <p>His self-described "ultimate rule," reinstated after blowing two Blue Sky accounts (one-trade-per-account-per-day-why-i-walk-away):</p>
+    <blockquote><p>"<strong>One trade per account, per day.</strong> If the trade is a win? I am done with that account for the day. If the trade is a loss? I am done with that account for the day. No revenge trading. No looking for 'just one more setup' to make the money back. Once an account has taken a trade, it is locked for the next 24 hours."</p></blockquote>
+    <ul>
+      <li>With 20+ funded accounts: "maybe look for five total trades a day. Focus on whichever accounts are closest to hitting a payout or passing an evaluation, take your one trade, and then physically walk away from the screens."</li>
+      <li><em>"If you are up for the day, take the money and walk away. If you took a loss, accept it and walk away."</em></li>
+    </ul>
+  </div>
+
+  <div class="card rule">
+    <h3><span class="num">2</span>Risk Management Rules</h3>
+    <ul>
+      <li><strong>Always use a stop loss.</strong> The one time he skipped it cost him a live account plus $3,000 of his own money: <em>"I broke the absolute number one rule of trading: I did not put a freaking stop loss"</em> (i-lost-my-live-account-and-my-own-3000).</li>
+      <li><strong>Define risk before entry:</strong> stops at structural points — one tick beyond the trigger-candle wick (2ITC), other side of the Globex first candle, below the round-number level, just below a previously tagged session level. Uses TradingView's Long/Short Position tool to map SL/TP before entry (this-is-exactly-how-i-set-up-my-tradingview-chart).</li>
+      <li><strong>Risk-to-reward discipline:</strong> "Build a risk-to-reward profile that actually works for your personality and account size, and respect the stops" (why-most-traders-fail). Standard profiles he uses: strict 1:1 on reversals, 2:1 on the Globex setup (risk ~$350 → target $700).</li>
+      <li><strong>Cut losses early:</strong> manually cut a 20-point stop to save capital (lost-900); <em>"held onto losing trades instead of cutting them early"</em> is listed as a rule break (i-broke-every-rule-i-have-today).</li>
+      <li><strong>Never add to losers:</strong> adding to a losing news trade pushed him into the $1,000 daily loss limit (i-tried-to-trade-the-news).</li>
+      <li><strong>Never size up out of emotion:</strong> after a -$200 loss he loaded 5 contracts on a 300K Apex account for a revenge win — <em>"Real talk: I am apologizing in advance for that. You should not trade like that… you should always stick to your sizing rules!"</em> (i-broke-my-own-rules-and-it-worked).</li>
+      <li><strong>Scale down on small live accounts:</strong> with a $2,000-drawdown live account or a personal account under $10,000, "you have to scale way down. <strong>Stick to 5 micros maximum. Do not load up the minis.</strong>" (i-lost-my-live-account-and-my-own-3000).</li>
+    </ul>
+  </div>
+
+  <div class="card rule">
+    <h3><span class="num">3</span>Walking-Away Rules</h3>
+    <ul>
+      <li><em>"Knowing exactly when to walk away from the charts"</em> is his core concept; overtrading → blowing accounts → tilt → destroyed mental state (one-trade-per-account-per-day).</li>
+      <li><em>"If the market is chopping around and you don't feel like staring at the screen anymore, close the laptop and walk away. The market will always be there tomorrow"</em> (why-most-traders-fail).</li>
+      <li>Stop trading after securing the day: took the $2,000 comeback trade and "That was my cue to stop trading and lock in the profits for the night" (every-trade-i-took-on-a-bearish-nq-night).</li>
+      <li>Pre-BDH habit he's returning to: <em>"I traded maybe one to two hours a day, max, and then I was completely done"</em> (one-trade-per-account-per-day).</li>
+    </ul>
+  </div>
+
+  <div class="card rule">
+    <h3><span class="num">4</span>When NOT to Trade (his explicit no-trade conditions)</h3>
+    <ol>
+      <li><strong>News releases.</strong> "Normally, I don't trade the news whatsoever. Waiting for the news release to settle is always the smarter move." A news-candle gamble hit his $1,000 daily loss limit; a news candle long cost -$4,000 and blew two Apex accounts: "it's a textbook example of why you don't play around with news candles. You will lose your money fast" (i-tried-to-trade-the-news; i-broke-every-rule-i-have-today).</li>
+      <li><strong>Election / major-event nights.</strong> "I shouldn't have been trading on election night, plain and simple" — the open whip-sawed his long out for an instant -$700 (why-i-shouldnt-have-traded-election-night).</li>
+      <li><strong>Chop you can't play.</strong> "If you don't know how to play the range, don't force it. Just don't trade it at all" (how-i-trade-chop); sat out 6:40–7:45 AM in a messy range rather than force trades (i-tried-to-trade-the-news).</li>
+      <li><strong>Globex 6–8 PM</strong> for the 2ITC strategy — "notoriously choppy… I avoid it entirely" (2-in-the-chamber).</li>
+      <li><strong>When no A+ setup exists.</strong> "Where I excel is refusing to click buttons when my setup isn't there… Forcing a trade just for action is piss-poor management and piss-poor discipline" (why-most-traders-fail).</li>
+      <li><strong>After breaking the daily loss limit</strong> — soft-breach accounts freeze for the day; he respects the freeze ("paused until tomorrow").</li>
+    </ol>
+  </div>
+
+  <div class="card rule">
+    <h3><span class="num">5</span>Prop Firm Drawdown Management (his educational framework)</h3>
+    <p>From dont-buy-a-prop-account-until-you-watch-this:</p>
+    <ul>
+      <li>"The 'Account Size' is basically just a marketing label. <strong>The drawdown is your real account size.</strong>" Real loss budgets: 25K = $1,000; 50K = $2,000; 100K = $3,000; 150K = $4,500.</li>
+      <li><strong>Static drawdown:</strong> floor never moves up — profits increase real room.</li>
+      <li><strong>EOD trailing:</strong> floor recalculates at end of day; you never gain extra room.</li>
+      <li><strong>Trailing (on unrealized gains):</strong> <em>"Take your profits when trading a trailing drawdown!"</em> — an open +$500 peak that closes at break-even still consumes $500 of drawdown.</li>
+      <li>Intraday vs EOD trail choice matters: EOD is "much safer" but costs double (apex-changed-every-rule).</li>
+      <li><strong>Build a buffer even when the firm doesn't require one:</strong> "If you take out all your profit and your drawdown trailing floor has moved up, you could instantly blow your account… Always build a buffer first to protect your account, even if the firm doesn't strictly require it!" (iq-capital-review).</li>
+      <li>Respect <strong>consistency rules</strong>: he stopped trading an IQ Capital account at +$988 (target was passable) "to respect their consistency rule" (one-long-turned-my-worst-morning-green). He avoids plans with brutal consistency (Tradeify Lightning's 20%: "I absolutely hate that rule, which is why I don't personally trade this account").</li>
+      <li>Know <strong>soft vs hard</strong> breaches: soft daily loss limit = account frozen for the day; hard = terminated (vest-markets, ftmo-futures-review). This determines which firms he'll trade news-adjacent days on.</li>
+    </ul>
+  </div>
+
+  <div class="card rule">
+    <h3><span class="num">6</span>Eval &amp; Payout Strategy</h3>
+    <ul>
+      <li>Easiest evals ranking (the-easiest-prop-firm-evals-to-pass): Tradeify 50K Growth (no consistency rule, soft $1,250 DLL, news allowed, <strong>never hedge</strong>), MFFU Builder (choose $1.5K/$2K DD, soft $1,000 DLL), Lucid Flex 50K (50% consistency → minimum 2 days), Take Profit Trader 50K (no DLL — "If you don't have the discipline to take a loss and walk away, having no daily loss limit means you will blow the entire account in one day").</li>
+      <li>"<strong>Do NOT hedge</strong>" on Tradeify: "If you hedge, your account is banned and it's game over."</li>
+      <li>Payout-first mentality: took $1,000 off a $13,000 runner to lock an IQ Capital payout (i-lost-accounts); requested payouts immediately after winning sessions ($700+$700+$1,000 Tradeify in one night).</li>
+      <li><strong>Request payouts before you blow</strong>: on Vest he took 4 payouts in one day, lost one account afterward, and the already-requested payouts still cleared — "Because I requested the payouts before blowing the account, the payouts are still going to clear" (i-took-4-payouts-in-one-day).</li>
+      <li>Budget rule for eval buying: <em>"I usually try to keep a strict rule of only spending $1,000 max on evaluations per month"</em> (what-i-spent-on-prop-firms-vs-what-i-made) — a rule he broke in August and acknowledged.</li>
+      <li>Scaling plan: pass evals (1-day where rules allow), 3 profitable days for payout eligibility, stack buffers, request payouts; goal to hold up to 20 funded Apex accounts (how-i-caught-these-3-futures-setups).</li>
+    </ul>
+  </div>
+
+  <div class="card rule">
+    <h3><span class="num">7</span>Discipline Rules He States After Breaking Them</h3>
+    <p>Each "rule restatement" comes from a day he broke it:</p>
+    <table>
+      <thead>
+        <tr><th>Broken behavior (article)</th><th>Rule he restates</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Revenge-size 5 contracts after a loss (i-broke-my-own-rules-and-it-worked)</td><td>"You should always stick to your sizing rules."</td></tr>
+        <tr><td>No stop loss on FOMO trade (i-lost-my-live-account-and-my-own-3000)</td><td>Always place the stop; "respect my risk."</td></tr>
+        <tr><td>Didn't trail/took no profit on a 10–15 pt winner (i-broke-every-rule-i-have-today)</td><td>Take profits / trail stops; "I didn't take profits when I had them."</td></tr>
+        <tr><td>Shorted on an anticipated (unclosed) candle (every-trade-i-took)</td><td>"Don't anticipate the candle; wait for it to close!"</td></tr>
+        <tr><td>Bought the top on FOMO, twice (-$1,000, -$500) (i-broke-every-rule-i-have-today)</td><td>Don't chase; wait for the retest/pullback entry.</td></tr>
+        <tr><td>Longed a news candle because "it bounced off the EMAs" (i-broke-every-rule-i-have-today)</td><td>Don't trade news candles.</td></tr>
+        <tr><td>Arbitrary position reversal after a win (learning-bear-flags-live)</td><td>"It was not a real setup — I was just guessing… wait for my actual strategy to form."</td></tr>
+        <tr><td>Traded a pullback long in a no-retrace flush (i-lost-accounts)</td><td>Accept the market type; "the market wasn't giving any re-entries. It just wanted to flush."</td></tr>
+        <tr><td>Continued after telling himself "I'm done" while up $1,000 (i-lost-my-live-account-and-my-own-3000)</td><td>When you say done, be done — protect the profit.</td></tr>
+        <tr><td>Comparison-driven aggression vs coworker (one-trade-per-account-per-day)</td><td>"What works for someone else at the BDH is not always going to work for me."</td></tr>
+      </tbody>
+    </table>
+    <p>Master summary from i-broke-every-rule-i-have-today: <strong>"If you don't follow your risk management plan, the market will make you pay."</strong></p>
+  </div>
+
+  <div class="card rule">
+    <h3><span class="num">8</span>Psychology-Adjacent Rules (operative in his workflow)</h3>
+    <ul>
+      <li>Mentally accept losing money before every session; be able to "sit in your chair for hours doing absolutely nothing while waiting for an A+ setup" (why-most-traders-fail).</li>
+      <li>Master ONE strategy — "Stop strategy-hopping… only execute when your exact criteria show up."</li>
+      <li>When in a winner and momentum stalls: "take the money and walk away… Never let a solid green trade turn red out of greed — another setup will always come around the corner."</li>
+      <li>Isolate high-risk experiments (news gambling) to a sacrificial single account, never the copied portfolio (i-tried-to-trade-the-news).</li>
+      <li>Keep firm-specific rules in mind: no hedging (Tradeify), no trading bots (Take Profit Trader), position-size caps (e.g., Tradeify 50K Growth: 4 minis / 40 micros), daily minimum profit days for payout eligibility (Apex: $200/day intraday, $250/day EOD).</li>
+    </ul>
+  </div>
+
+  <div class="card rule">
+    <h3><span class="num">9</span>Numbers Ledger (facts the articles state)</h3>
+    <ul>
+      <li>20+ funded accounts held at once; Apex allows up to 20 funded accounts.</li>
+      <li>Typical single-account risk per trade: $200–$1,900; typical target: $200–$3,000 per account; outliers: $13,000 trailed runner (potential), $19,000 gross copier day.</li>
+      <li>His own 90-day business: <strong>$4,992 spent / $67,468 paid out / $62,476 net</strong> (July–Sept 2026), monthly spends $1,172–$1,357 against $16,052–$25,986 payouts (what-i-spent-on-prop-firms).</li>
+      <li>Blown/lost accounts documented: 2 Blue Sky (comparison trap), 2 Apex (rule-breaking day, -$4,000 news candle), several Vest + 1 MFFU Studio (trend-flush day), Lucid Live + $3,000 personal (tilt/no stop loss), 1 Tradeify Daily account after making $5,000 on it.</li>
+    </ul>
+    <p><strong>Caveat:</strong> Denny states rules in casual video-recap prose; several rules were articulated <em>after</em> he broke them, and exact numbers vary by account size and volatility. Everything above is sourced from the articles only.</p>
+  </div>
+</section>
+
+<section id="psychology">
+  <h2>Denny's Trading Psychology — Mindset Lessons</h2>
+  <p class="meta"><strong>Source:</strong> onlypropfirms.com/bdh — "Denny's Trading Desk" category (BDH trading channel)<br><strong>Researched:</strong> 2026-11-16<br>Distilled from all 34 articles. Quotes are his actual words with source URLs.</p>
+
+  <div class="card">
+    <h3>1. Discipline Is a Daily Fight, Not a Trait</h3>
+    <ul>
+      <li><em>"Honestly, discipline is something you have to actively fight for. If you aren't mentally prepared to go into a session and accept losing money, you aren't going to be disciplined. And if you aren't mentally prepared to sit in your chair for hours doing absolutely nothing while waiting for an A+ setup, you aren't going to make it."</em> (why-most-traders-fail-and-how-the-army-fixed-my-trading)</li>
+      <li>He is explicit that he is not perfect: <em>"Am I 100% perfect at discipline? No. I have blown accounts, and I have even passed evaluations and blown the funded account on the exact same day. It happens to everybody."</em></li>
+      <li><strong>His 3 Pillars of Trading Discipline:</strong>
+        <ol>
+          <li><strong>Dial in your risk-to-reward</strong> — a profile that fits your personality and account size; respect the stops.</li>
+          <li><strong>Master ONE strategy</strong> — "Stop strategy-hopping. Stick to a setup you have been practicing for months or years… only execute when your exact criteria show up."</li>
+          <li><strong>Time management &amp; waiting</strong> — "Waiting is the hardest — and most profitable — part of the job. Rushing into a setup out of boredom is the fastest way to blow your account."</li>
+        </ol>
+      </li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>2. The Army's "Hurry Up and Wait"</h3>
+    <ul>
+      <li>His self-described "unfair advantage": military training made sitting still easy. <em>"In the military, the daily motto is literally 'hurry up and wait'… Because I was trained to stand still for hours without losing my mind, sitting at a desk waiting for a clean setup on NQ is easy for me."</em> (why-most-traders-fail). Patience is his stated edge over most traders.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>3. Tilt: The Blowups He Owns Publicly</h3>
+    <ul>
+      <li><strong>The live-account disaster (Nov 2026):</strong> blew his Lucid Live account within two days of getting it, plus a personal brokerage account holding $3,000 of his own prop payouts. <em>"I went into full tilt mode… I started overtrading, overtrading, and overtrading. I took a hit, and then I kept trying to force trades just to make the money back."</em> He was actually <strong>up $1,000</strong>, told himself he was done, took a FOMO re-entry in a trending market without a stop loss, and lost everything (i-lost-my-live-account-and-my-own-3000).</li>
+      <li><strong>Key insight — live money feels different:</strong> <em>"the 50K evaluation accounts you trade only have a $2,000 drawdown, what's the difference? The difference is entirely in your mindset… the psychology changes when real cash is on the line."</em></li>
+      <li><strong>The comparison trap:</strong> watching coworker "Lucas absolutely killing it" made him push multiple contracts and rush entries — blowing two Blue Sky accounts: <em>"what works for someone else at the BDH is not always going to work for me. Because I abandoned my strict discipline, I ended up blowing two Blue Sky accounts"</em> (one-trade-per-account-per-day).</li>
+      <li><strong>The rule-breaking day:</strong> one session of "greed trap," "breakdown trap," and a news-candle long cost -$4,000 and two Apex accounts: <em>"I broke my rules, ignored my discipline, had terrible risk management, and I paid the price."</em> His closing lesson: <strong>"If you don't follow your risk management plan, the market will make you pay."</strong> (i-broke-every-rule-i-have-today)</li>
+      <li><strong>The revenge trade that worked (and why he still condemns it):</strong> after a -$200 loss he sized up to 5 contracts out of frustration, won $1,000 — <em>"You should not trade like that. I shouldn't have sized up out of emotion just to get my money back. It played out this time… but you should always stick to your sizing rules!"</em> (i-broke-my-own-rules-and-it-worked). His point: a working revenge trade is still a rule violation, and luck isn't a strategy.</li>
+      <li><strong>Buying the top on FOMO:</strong> twice chased a ripping market, twice eaten by 50-point candles (-$1,000, -$500): <em>"These are $1,000 mistakes every single time those 50-point candles drop."</em> (i-broke-every-rule-i-have-today)</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>4. Handling Loss Days</h3>
+    <ul>
+      <li><strong>Full transparency as a policy:</strong> <em>"I am making this daily recap because I want to be 100% transparent when things go wrong"</em> (i-broke-every-rule-i-have-today). He publishes losses, exact P&amp;L, and blown accounts on stream.</li>
+      <li><strong>Emotion control while losing:</strong> after losing multiple accounts in a 700-point flush: <em>"you have to control your emotions on stream and accept that the market wasn't giving any re-entries. It just wanted to flush. … Take your losses on the chin, control your emotions"</em> (i-lost-accounts-for-the-first-time-in-months).</li>
+      <li><strong>The break-even heartbreak:</strong> cut a consolidating trade at break-even, market instantly ripped 60 points — <em>"Are you kidding me?! I was furious."</em> Instead of tilting, he waited for the volume and took one clean 50-point NY-open long that flipped a <strong>-$5,600 morning into +$12,251 net</strong> (one-long-turned-my-worst-morning-green). Lesson he draws: manage risk on early losers, stay alive, and the A+ setup pays for everything.</li>
+      <li><strong>The comeback pattern:</strong> down ~$900 in London chop → "I took a deep breath," waited for a high-conviction wick-rejection + tight consolidation, sized up deliberately, and made $2,000 to finish +$986 (lost-900-then-this-happened). Same story with Silver after two chopped shorts: down $400 → disciplined 1:1 win → +$600 night (we-were-down-400). His formula: <em>"You take the hits, stick to your rules, and wait for your setups to print."</em></li>
+      <li><strong>On losing accounts after months of wins:</strong> <em>"This is the first time in a couple of months that I have actually lost accounts… I absolutely hate losing accounts"</em> — but he refuses to let it spiral (i-lost-accounts).</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>5. Patience &amp; Boredom as the Core Skill</h3>
+    <ul>
+      <li>"Stop expecting instant action… you cannot sit down at the open — or tune into a live stream — and expect an immediate entry right then and there." (why-most-traders-fail)</li>
+      <li>Demonstrated repeatedly: sitting out chop for over an hour (i-tried-to-trade-the-news), waiting 15 minutes between setups (i-made-2000-trading-the-asia-open), 25 minutes for a flag to reach the London High (i-trade-one-account-at-a-time).</li>
+      <li>He also names the failure mode: "If you keep FOMOing into candles or revenge trading after a loss, you might as well kiss your accounts goodbye."</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>6. Protecting Profits &amp; The Mind</h3>
+    <ul>
+      <li><em>"Never let a solid green trade turn red out of greed — another setup will always come around the corner"</em> (why-most-traders-fail). He applies it literally: locking $621 early because "I had some stuff to do" and watching the gap fill later without regret; refusing to re-enter after payout-worthy days.</li>
+      <li><em>"Stop rushing it. You do not need to rush to pass an evaluation, and you do not need to rush to get a payout today. The market is still going to be here tomorrow, next week, next month, and ten years from now."</em> (one-trade-per-account-per-day)</li>
+      <li><em>"Protect your mind, protect your capital, and know when to shut it down."</em> — the mental-state bleed is his stated reason: a tilt night damages the next day's trading.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>7. The Economics Mindset That Keeps Him Sane</h3>
+    <ul>
+      <li><strong>Small wins compound:</strong> <em>"Small payouts. You do not need to hit massive 100-point home runs to make a lot of money in this industry… The strategy is simple: Small wins, lots of accounts, and compounding."</em> His quarter: $4,992 spent → $67,468 paid out → <strong>$62,476 net</strong> (what-i-spent-on-prop-firms-vs-what-i-made).</li>
+      <li><strong>Base hits over home runs:</strong> 10-point scalps and 1:1 targets are treated as legitimate profits ($200-$400 stacks across accounts); greed is flagged as the enemy even when a trade could have run ("if I had held, it ended up going for a massive $2,385 run — but I stuck to my rules" — how-i-caught-these-3-futures-setups).</li>
+      <li><strong>Prop firm realism:</strong> he teaches that a prop firm "does not fix a bad trading strategy" and that re-buying blown evals is "just gambling… feeding the firm's business model"; <em>"The account size is never the hard part. The discipline is."</em> (what-is-a-prop-firm)</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>8. Accountability &amp; Recovery</h3>
+    <ul>
+      <li>Apologizes on the record: <em>"I apologize for that. You guys watch the streams to learn, not to watch us gamble and take stupid risks. I promise that tomorrow I am going back to being disciplined."</em> (i-broke-every-rule-i-have-today)</li>
+      <li>Bounce-back framing after the live-account blow: <em>"I am just going to come back stronger… get in the trenches, absolutely kill it, and get moved back to live status."</em> Year goal unchanged: get to Live on all prop firms and build capital for next year (i-lost-my-live-account-and-my-own-3000).</li>
+      <li>On his own mistakes in chop: <em>"even I mess this up sometimes… I bought at the very top of the range because we had just made a higher low"</em> (how-i-trade-chop). He treats each logged mistake as a lesson for the audience and himself.</li>
+      <li>Chat/community as an external check: he credits chat for calling his bad entries ("chat… you were right, and I was wrong") and cites their warnings in recaps.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>9. Summary of His Psychology in His Own Words</h3>
+    <ol>
+      <li>"Discipline is something you have to actively fight for."</li>
+      <li>"Refusing to click buttons when my setup isn't there" is where he excels.</li>
+      <li>"Take the money and walk away" — both daily profit and stalled winners.</li>
+      <li>"If you don't follow your risk management plan, the market will make you pay."</li>
+      <li>"Small wins, lots of accounts, and compounding."</li>
+      <li>"Protect your mind, protect your capital, and know when to shut it down."</li>
+    </ol>
+    <p><strong>Caveat:</strong> These are lessons as he presents them in video-recap articles — practical and anecdotal rather than a formal psychological program. All content above is directly sourced from the 34 articles; nothing invented.</p>
+  </div>
+</section>
+<section id="videos">
+  <h2>Denny — YouTube Videos: Full Strategy and Rules Extraction</h2>
+  <p class="meta">Source: BDH Trading YouTube channel (UCWngZTnuJGdrf3SVQycKZww) + linked videos, researched 2026-11-16</p>
+  <p>Denny Jones ("Denny Dollas"), BDH Trading floor trader, streams 6–9am. Category blog: <a href="https://onlypropfirms.com/bdh/dennys-trading-desk" target="_blank" rel="noopener">onlypropfirms.com/bdh/dennys-trading-desk</a>. Older video IDs recovered from embedded players in the blog articles; full descriptions read from the YouTube watch pages.</p>
+
+  <div class="card">
+    <h3>Key rules and strategy from videos</h3>
+
+    <h4>1. The chop-box / range scalping system (his signature scalping strategy)</h4>
+    <ul>
+      <li>Everyone on YouTube posts scalping strategies; the one Denny actually runs on NQ: find a chop box on the 5-minute, buy the lows, sell the highs, take 10 points each time. Five of those is $1,000 off a single range.</li>
+      <li>He acknowledges the spectrum of scalping ("two points for $40, micro scalping, 10 or 20 point scalps") but his preference is: find a range, work it until it breaks.</li>
+      <li>IDENTIFYING THE RANGE: multiple taps at the high, multiple taps at the low. Nov 2 example: three taps at the lows, five at the top — "five touches at the top is the tell" that it isn't ready to break out and will keep consolidating. That's your window.</li>
+      <li>Mark the box from the top of the wick to the bottom of the wick, on the 5-minute chart.</li>
+      <li>TIMEFRAMES: marks ranges on the 5 minute and ONLY the 5 minute ("the best timeframe to find them and keep them clean"). Suggests doing both — mark the range on the 5 minute, then drop to the 1 minute to watch behavior at the touches and time entries.</li>
+      <li>EXECUTION (Nov 1 example, counted live on the 1-minute): Sell 83 → 73 = $200. Buy 59 → 69 = $400. Sell 81 → 71 = $600. Buy 60 → 70 = $800. Sell 81 → 71 = $1,000. The sixth one fails — price breaks out and closes outside the box. That's the signal to stop. Even eating the 10-point loss on the last scalp, the day finishes +$800.</li>
+      <li>THE END: every range breaks eventually. You can try to buy the bottom with a stop under the wick, but on a break like this you get taken out. "The edge isn't in catching the breakout — it's in working the range while it's working, and stopping on the first candle that closes outside the box."</li>
+      <li>CORE INSIGHT: "Scalping a range isn't one great trade. It's the same ordinary trade, taken five times, until the range tells you it's over."</li>
+    </ul>
+
+    <h4>2. The Globex strategy (learned from a mentor)</h4>
+    <ul>
+      <li>Entry rule: the FIRST five-minute candle of the session. Closes red → go short. Closes green → go long. "That's the only confluence it needs."</li>
+      <li>Stop at the top of the candle; risk a little over $350, target $700.</li>
+      <li>Result Oct 15: hit — $500 on one account, $700 on the one paying out. "If you'd held it through New York this morning, it never stopped going down."</li>
+    </ul>
+
+    <h4>3. One trade per account per day — walk away win or lose</h4>
+    <ul>
+      <li>After blowing two BluSky accounts in one night (started copy trading, taking multiple contracts, chasing what everyone else at the desk was doing): "One trade per account, per day. Win or lose, that account is done."</li>
+      <li>He trades one account at a time and waits for his setup. He has 20+ accounts — if running several: maybe five trades a day, one per account, and work whichever account is closest to a payout or a pass. Then close everything.</li>
+      <li>Before BDH, Denny traded one or two hours a day and that was it.</li>
+      <li>WHY: "Overtrading is gonna lead to losing the account, and losing the account is gonna lead to being in a bad mental state." A bad mental state the next day can cost the rest of the accounts.</li>
+      <li>CORE: "Up, walk away. Down, walk away. Come back tomorrow." "The market will still be here tomorrow."</li>
+    </ul>
+
+    <h4>4. Never trade without a stop loss (what losing two accounts taught him)</h4>
+    <ul>
+      <li>Lost his Lucid LIVE account (inside two days) and a personal $3,000 live account (his own payout money) about two weeks prior — "full tilt mode."</li>
+      <li>He was up $1,000 on Lucid live, said out loud he was done for the day, then took one more trade in a perfectly trending market — and it went straight down. "And you know what I didn't do, which is the number one rule? Put a stop loss. I did not put a stop loss, and it cost me a lot."</li>
+      <li>Cost: the Lucid account, the personal account, and two weeks unable to trade Lucid at all.</li>
+      <li>On $2,000-drawdown live accounts: the number is the same as a 50K eval, but "the mindset isn't." Take it slow — micros only, five micros max.</li>
+      <li>CORE INSIGHT: "Saying you're done is not the same as being done. The stop loss is what enforces it when you're not strong enough to."</li>
+    </ul>
+
+    <h4>5. Trading chop: the two options</h4>
+    <ul>
+      <li>Chop = range = consolidation, one condition. You're waiting for the breakout either way.</li>
+      <li>A wick through the level is NOT a break; a CLOSE through it is. (Asia/Globex example wicked below the level and never closed below it for three straight hours.)</li>
+      <li>Option one: don't trade. "There's no obligation to be in the market while it's ranging." Denny says it twice and means it.</li>
+      <li>Option two: buy low, sell high — every time price returns to the level and doesn't break it, ride it back. Go for 10 to 20 points, take the scalp, get out every time.</li>
+      <li>Works on short ranges too: a ~15-minute London consolidation pre-open where every 5-minute candle was a buy or a sell — the only way to lose was to buy the top and sell the bottom, which is exactly what happens without the box drawn.</li>
+      <li>He shows his own mistake: bought the top of the range on a "new low = continuation higher" read, chopped for almost an hour. "If you know how to play the range, you're fine. If you don't, just don't trade. Both are correct answers."</li>
+    </ul>
+
+    <h4>6. Election night (news-event trading) — the honest ledger</h4>
+    <ul>
+      <li>NQ shot to 28,512 on the first results and dropped straight back down inside the same 1-minute candle. Denny was long with his stop at the bottom of the 5-minute candle — stopped out for $700 in the first minute. "I shouldn't have been trading on election night."</li>
+      <li>Got it back immediately on a two-in-the-chamber setup: +$705.</li>
+      <li>The move: 28,512 → 28,305 (200+ points in ~15 minutes), then a textbook bear flag from 28,392 down to exactly 28,000 (400 points in ~35 minutes): pullback, short, back down — repeating with every batch of new numbers. Total: almost 1,000 points in four hours, bottoming at 27,617. Then a full retrace — clean W pattern — 1,000+ points off the low back into the 28,700s, above the open.</li>
+      <li>Setups that paid: three-bar reversal risking ~$1,000 for ~1,000 points of move; held to the London high = $20,000. Two-in-the-chamber ran twice (one loss; second risked $885, could have made $3,000). A later three-bar reversal gave ~300 points ≈ $6,000.</li>
+      <li>Honest ledger: lost a couple of accounts, made money on a lot of them, another IQ Capital payout expected the same day. "Both things were true on the same night."</li>
+    </ul>
+
+    <h4>7. Vest Markets (perpetual prop firm) mechanics — 4 payouts in one day</h4>
+    <ul>
+      <li>Perps, not CME futures: equities/indices/crypto/commodities/FX from one cross-margin account, up to 50x leverage; profits claimed to a Primary Account then withdrawn as USDC.</li>
+      <li>Evaluation tiers (static 6% max drawdown, non-trailing): Silver $5K — 3% daily = $150, DD $300, target 10% = $500. Gold $10K — daily $300, DD $600, target $1,000. Platinum $25K — daily $750, DD $1,500, target $2,500.</li>
+      <li>Bespoke 1-step: pick profit target (10%/20%), daily loss limit (3%/4%/none), split (80%/90%), tier ($5K/$10K/$25K). Denny's own setup: no daily loss limit, 10% target, 90% split — the only thing that can close the account is the $1,500 max drawdown.</li>
+      <li>Instant accounts: 95% flat split; payment = max drawdown exactly ($500→$10 DD 2%; $5K/$10K/$25K → $200/$400/$1,000 DD at 4%).</li>
+      <li>KEY MECHANIC: claims are removed from the account instantly and are irrevocable — once claimed, the money is no longer at risk even if the account later breaches (he lost one account after already taking payouts; payouts still went through). Unlimited claims per day — he took four.</li>
+      <li>Warnings: daily-loss floor resets 20:00 ET on balance including reserved collateral, excluding unrealized PnL — but current equity including unrealized PnL is what's checked, so an open loser can breach you. Breach is permanent, no grace. Max 10 funded / 100 eval accounts.</li>
+    </ul>
+
+    <h4>8. Account-rotation style (from the RSS "One Trade Per Account Per Day" and blog context)</h4>
+    <ul>
+      <li>He rotates 20+ BluSky/Lucid/Tradeify/IQ Capital/Vest accounts; works the one closest to payout/pass first; stops when the day's plan is done.</li>
+    </ul>
+  </div>
+
+  <h3>Video-by-video index (older videos, recovered from blog articles)</h3>
+
+  <div class="card">
+    <h4>VIDEO D1 — Don't Start Scalping Until You Watch This!</h4>
+    <p>ID: <code>0qf0GCSgbx8</code> | <a href="https://www.youtube.com/watch?v=0qf0GCSgbx8" target="_blank" rel="noopener">https://www.youtube.com/watch?v=0qf0GCSgbx8</a> | Published (blog): 2026-11-04</p>
+    <p>Blog article: <a href="https://onlypropfirms.com/bdh/dont-start-scalping-until-you-watch-this" target="_blank" rel="noopener">onlypropfirms.com/bdh/dont-start-scalping-until-you-watch-this</a></p>
+    <p>Full strategy content: the chop-box system above (section 1). Chapters: 0:00 Why everyone's talking about scalping / 0:44 Why ranges and chop boxes / 1:11 Nov 2 chop box / 1:59 Five touches at the top / 2:26 Why the 5-minute only / 2:54 Working the range until it fails / 3:33 Dropping to the 1 minute / 4:27 Finding a second range live / 5:05 Counting scalps on the 1 minute / 5:58 $200–$1,000 / 6:48 When the scalp fails and you stop.</p>
+  </div>
+
+  <div class="card">
+    <h4>VIDEO D2 — I Broke Every Rule I Have Today</h4>
+    <p>ID: <code>CTIsmXZhHhs</code> | <a href="https://www.youtube.com/watch?v=CTIsmXZhHhs" target="_blank" rel="noopener">https://www.youtube.com/watch?v=CTIsmXZhHhs</a> | Published (blog): 2026-10-23 (trades from Oct 15)</p>
+    <p>Blog article: <a href="https://onlypropfirms.com/bdh/i-broke-every-rule-i-have-today" target="_blank" rel="noopener">onlypropfirms.com/bdh/i-broke-every-rule-i-have-today</a></p>
+    <p>Content: the Globex strategy that worked (section 2), then the failure sequence: candles blowing straight through the EMAs; chop zone 30,789–30,863 he didn't see until too late; long on a candle that took the London low expecting a sweep toward daily levels at 30,620 — cut instantly, −$500; long after a 9 EMA retest, 10–15 points up, wanted VWAP, no trail/no TP — tanked; long into the news candle — instant −$4,000 across two accounts, both blown; one good trade — short off VWAP retest, +$1,000 on IQ Capital; then the 11-to-12 session: longed the top −$1,000, another long −$500.</p>
+    <p>Quoted: "I didn't follow my strategies. Didn't follow my discipline. Didn't follow my risk management plan. And I ended up blowing a couple Apex accounts." Tomorrow: take the smaller drawdown before it becomes the bigger one.</p>
+  </div>
+
+  <div class="card">
+    <h4>VIDEO D3 — How I Trade Chop (And When I Just Don't)</h4>
+    <p>ID: <code>D_jk9FsMb-8</code> | <a href="https://www.youtube.com/watch?v=D_jk9FsMb-8" target="_blank" rel="noopener">https://www.youtube.com/watch?v=D_jk9FsMb-8</a> | Published (blog): 2026-10-20</p>
+    <p>Blog article: <a href="https://onlypropfirms.com/bdh/how-i-trade-chop-and-when-i-just-dont" target="_blank" rel="noopener">onlypropfirms.com/bdh/how-i-trade-chop-and-when-i-just-dont</a></p>
+    <p>Full content: section 5 (the two options). Additional: "If price has been dumping all day and then breaks to the upside, that's not just a move — that can be a reversal." Consolidation is where the market decides. London ~8:00 example: 15-minute consolidation, every 5-min candle a buy or a sell.</p>
+  </div>
+
+  <div class="card">
+    <h4>VIDEO D4 — I Lost My Live Account And My Own $3,000</h4>
+    <p>ID: <code>8ZFcYwbknZo</code> | <a href="https://www.youtube.com/watch?v=8ZFcYwbknZo" target="_blank" rel="noopener">https://www.youtube.com/watch?v=8ZFcYwbknZo</a> | Published (blog): 2026-11-07</p>
+    <p>Blog article: <a href="https://onlypropfirms.com/bdh/i-lost-my-live-account-and-my-own-3000" target="_blank" rel="noopener">onlypropfirms.com/bdh/i-lost-my-live-account-and-my-own-3000</a></p>
+    <p>Full content: section 4 (no stop loss). Chapters include 0:56 Why a $2,000 drawdown live account is different / 1:33 Up $1,000 and said I was done / 1:57 The trade with no stop loss / 2:40 What I'd tell you to do instead (micros only, 5 max).</p>
+  </div>
+
+  <div class="card">
+    <h4>VIDEO D5 — Why I Shouldn't Have Traded Election Night</h4>
+    <p>ID: <code>3rImsvS8mgA</code> | <a href="https://www.youtube.com/watch?v=3rImsvS8mgA" target="_blank" rel="noopener">https://www.youtube.com/watch?v=3rImsvS8mgA</a> | Published (blog): 2026-11-09</p>
+    <p>Blog article: <a href="https://onlypropfirms.com/bdh/why-i-shouldnt-have-traded-election-night" target="_blank" rel="noopener">onlypropfirms.com/bdh/why-i-shouldnt-have-traded-election-night</a></p>
+    <p>Full content: section 6. Chapters: 1:33 Stopped out for $700 / 2:08 Getting it back on two in the chamber / 2:15 The textbook bear flag 400 points in 35 minutes / 3:29 The full retrace and the W pattern / 4:14 The three bar reversal that paid $20,000 / 5:01 Two in the chamber: one lost, one won / 5:34 300 points for $6,000.</p>
+  </div>
+
+  <div class="card">
+    <h4>VIDEO D6 — I Took 4 Payouts In One Day On Vest Markets</h4>
+    <p>ID: <code>tR10ta35ILc</code> | <a href="https://www.youtube.com/watch?v=tR10ta35ILc" target="_blank" rel="noopener">https://www.youtube.com/watch?v=tR10ta35ILc</a> | Published (blog): 2026-10-16</p>
+    <p>Blog article: <a href="https://onlypropfirms.com/bdh/i-took-4-payouts-in-one-day-on-vest-markets" target="_blank" rel="noopener">onlypropfirms.com/bdh/i-took-4-payouts-in-one-day-on-vest-markets</a></p>
+    <p>Full content: section 7 (Vest account mechanics + the instant-claim payout mechanic). Leverage detail: at 10% leverage you need a little over 100 points to make $500; at 100% you need about 10 — higher leverage, smaller cushion. Bought two accounts, took four payouts, lost one, still got paid.</p>
+  </div>
+
+  <div class="card">
+    <h4>From the RSS (already in bdh-rss-latest.xml)</h4>
+    <ul>
+      <li><a href="https://www.youtube.com/watch?v=5LlZers0z4M" target="_blank" rel="noopener">5LlZers0z4M</a> — One Trade Per Account Per Day: Why I Walk Away (2026-11-13) — the full account-rotation rulebook (section 3).</li>
+      <li><a href="https://www.youtube.com/watch?v=kNfumxa_JWs" target="_blank" rel="noopener">kNfumxa_JWs</a> — I Lost My Lucid And Tradeify Live Accounts (2026-11-14) — no strategy detail in description (blog article covers it).</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Recurring Denny mechanics (cross-video)</h3>
+    <ul>
+      <li>5-minute chop boxes; wick-to-wick marking; multiple taps as the tell; 1-minute execution.</li>
+      <li>10-point scalps compounded $200 at a time; "take it and get out every time."</li>
+      <li>First 5-minute candle of Globex session = directional bias; stop at candle extreme.</li>
+      <li>One trade per account per day; rotate 20+ accounts; walk away win or lose.</li>
+      <li>Always a stop loss — the non-negotiable after losing live accounts.</li>
+      <li>"Two in the chamber" and "three bar reversal" appear as named setups he trades (also used by D-Money).</li>
+      <li>News events (elections, CPI): acknowledge you shouldn't trade them; if you do, the bear flag on new numbers is the vehicle.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="articles">
+  <h2>Denny's Trading Desk — Complete Article List</h2>
+  <p class="meta"><strong>Source:</strong> onlypropfirms.com/bdh/dennys-trading-desk (BDH trading channel)<br><strong>Researched:</strong> 2026-11-16<br><strong>Total articles found and read:</strong> 34 (category pages 1–4; page 5 = 404). Dates are as shown on the site (all 2026). Summaries focus on the key trading takeaway of each article.</p>
+
+  <details class="fold">
+    <summary>📖 All 34 Articles</summary>
+    <div class="body">
+
+      <h4>Page 1 (newest)</h4>
+      <table>
+        <thead><tr><th>#</th><th>Title</th><th>Date</th><th>Key takeaway</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td><a href="https://onlypropfirms.com/bdh/one-trade-per-account-per-day-why-i-walk-away" target="_blank" rel="noopener">One Trade Per Account Per Day: Why I Walk Away</a></td><td>2026-11-12</td><td>His golden anti-overtrading rule: after one trade on an account — win or loss — that account is locked for 24 hours. Blew two Blue Sky accounts by abandoning it (comparison trap / rushing setups); with 20+ accounts he targets ~5 trades/day on the accounts closest to payout/pass, then physically walks away.</td></tr>
+          <tr><td>2</td><td><a href="https://onlypropfirms.com/bdh/why-i-shouldnt-have-traded-election-night" target="_blank" rel="noopener">Why I Shouldn't Have Traded Election Night</a></td><td>2026-11-09</td><td>Election-night volatility whip-sawed his long (stop below prior 5-min candle) for an instant -$700; "I shouldn't have been trading on election night." Charts: ~1,000-point dump in 4 hours (bear flag at 400, flush to 28,000) then a 1,000+ point "W" reversal — the mechanical setups (three-bar reversal risking ~$1,000 → potential $20,000; Two in the Chamber risking $885 → $3,000) paid those who followed them.</td></tr>
+          <tr><td>3</td><td><a href="https://onlypropfirms.com/bdh/i-lost-my-live-account-and-my-own-3000" target="_blank" rel="noopener">I Lost My Live Account And My Own $3,000</a></td><td>2026-11-07</td><td>Full tilt post-mortem: blew the Lucid Live account in two days and his personal $3,000 brokerage account — he was up $1,000, took a FOMO re-entry, and had no stop loss. Key lessons: live-money psychology differs from evals even with the same $2,000 drawdown; on small live accounts "stick to 5 micros maximum. Do not load up the minis."</td></tr>
+          <tr><td>4</td><td><a href="https://onlypropfirms.com/bdh/dont-start-scalping-until-you-watch-this" target="_blank" rel="noopener">Don't Start Scalping Until You Watch This!</a></td><td>2026-11-04</td><td>His "Chop Box" scalping system: draw the range on the 5-minute only (needs multiple touches — e.g., 3 taps low, 5 taps top), execute on the 1-minute, buy the lows/sell the highs for strict 10-point ($200) scalps. Worked example: five scalps = $1,000/hour; when the box finally breaks, the one -10pt stop still leaves the day +$800.</td></tr>
+          <tr><td>5</td><td><a href="https://onlypropfirms.com/bdh/i-lost-accounts-for-the-first-time-in-months" target="_blank" rel="noopener">I Lost Accounts For The First Time In Months</a></td><td>2026-10-24</td><td>700-point NQ flush day. The Globex Strategy (first 5-min candle direction, stop beyond that candle) made $1,000 (a properly trailed version risked $1,600 for ~$13,000) — rule: trail the take-profit by two units of risk in expansion markets. He lost Vest and MFFU Studio accounts fighting pullback longs in a no-retrace flush and stresses emotional control after losses.</td></tr>
+          <tr><td>6</td><td><a href="https://onlypropfirms.com/bdh/i-broke-every-rule-i-have-today" target="_blank" rel="noopener">I Broke Every Rule I Have Today</a></td><td>2026-10-23</td><td>The Globex Strat (risk ~$350 → $700) was his only win (+$700 Lucid, +$500 other); then he broke every rule: -$500 chasing lower levels, greed (no trail/no profit on a 10–15 pt EMA long), a news-candle long for -$4,000 blowing two Apex accounts, and buying the top on FOMO twice (-$1,000, -$500). Salvaged +$1,000 on a VWAP-rejection short. Closing lesson: "If you don't follow your risk management plan, the market will make you pay."</td></tr>
+          <tr><td>7</td><td><a href="https://onlypropfirms.com/bdh/how-i-trade-chop-and-when-i-just-dont" target="_blank" rel="noopener">How I Trade Chop (And When I Just Don't)</a></td><td>2026-10-20</td><td>Chop = consolidation building energy for a breakout; the break direction after a trend is a reversal signal. Only two ways to trade it: (1) don't trade at all — "the absolute easiest way to trade chop is to not touch a button," or (2) play only the extreme boundaries for quick 10–20 point base hits. Admits his own mistake buying the top of a range on a "higher low" hope.</td></tr>
+          <tr><td>8</td><td><a href="https://onlypropfirms.com/bdh/i-took-4-payouts-in-one-day-on-vest-markets" target="_blank" rel="noopener">I Took 4 Payouts In One Day On Vest Markets</a></td><td>2026-10-16</td><td>Vest Markets breakdown: Silver 5K ($38, tight drawdown, 10%/$500 target, instant payouts), Gold 10K ($76, $600 DD, $300 daily loss limit, $1,000 target), Platinum 25K ($200, $1,500 DD, $750 DLL, $2,500 target); Bespoke accounts let you remove the DLL (hard breach otherwise) and boost to 90% split (~$427). Instant accounts (e.g., $10K for $380 with $400 DD, 95% split) and a 10x–50x leverage slider. He requested payouts before blowing one account — they still cleared.</td></tr>
+          <tr><td>9</td><td><a href="https://onlypropfirms.com/bdh/what-i-spent-on-prop-firms-vs-what-i-made" target="_blank" rel="noopener">What I Spent On Prop Firms vs What I Made</a></td><td>2026-10-15</td><td>90-day ledger transparency: July $1,357 spent → $25,430 payouts; August (broke his $1,000/month eval-budget rule on Blue Sky buffer resets) → $25,986 (Apex, MFFU, Lucid, Tradeify payouts itemized); September $1,172 → $16,052. Quarter totals: <strong>$4,992 spent, $67,468 paid, $62,476 net</strong> — "Small wins, lots of accounts, and compounding."</td></tr>
+          <tr><td>10</td><td><a href="https://onlypropfirms.com/bdh/the-easiest-prop-firm-evals-to-pass" target="_blank" rel="noopener">The Easiest Prop Firm Evals To Pass</a></td><td>2026-10-12</td><td>Eval-easiness ranking: #1 Tradeify 50K Growth ($102, no consistency rule, $1,250 soft DLL, news allowed, never hedge — hedging bans the account), #2 MFFU Builder (choose $1.5K/$2K DD, soft $1,000 DLL, no activation fee), #3 Lucid Flex 50K ($90.20 with DLL / $105.20 without; 50% consistency = min 2 days), #4 Take Profit Trader 50K (~$111, no DLL — "if you don't have the discipline to take a loss and walk away… you will blow the entire account in one day").</td></tr>
+        </tbody>
+      </table>
+
+      <h4>Page 2</h4>
+      <table>
+        <thead><tr><th>#</th><th>Title</th><th>Date</th><th>Key takeaway</th></tr></thead>
+        <tbody>
+          <tr><td>11</td><td><a href="https://onlypropfirms.com/bdh/i-broke-my-own-rules-and-it-worked" target="_blank" rel="noopener">I Broke My Own Rules And It Worked</a></td><td>2026-10-08</td><td>Gap-down long +$621 (he normally avoids no-wick gaps because they fill — it did). Then the confession: after a -$200 stop he "loaded the boat" with 5 contracts on a 300K Apex out of frustration, scalped +$1,000, and publicly condemns emotion-sizing. Also: 9/21 EMA breakdown short (+10 pts), Two in the Chamber short +$800, three Tradeify payouts ($2,400), and -$400 in chop ("the range is not my friend").</td></tr>
+          <tr><td>12</td><td><a href="https://onlypropfirms.com/bdh/why-most-traders-fail-and-how-the-army-fixed-my-trading" target="_blank" rel="noopener">Why Most Traders Fail (And How The Army Fixed My Trading)</a></td><td>2026-10-02</td><td>Discipline framework: accept losing before the session; sit and wait for A+ setups; army "hurry up and wait" gave him the patience edge. Three pillars: risk-to-reward fit to personality, mastering ONE strategy (no strategy-hopping), and time management/waiting. When momentum stalls in a winner: "take the money and walk away… never let a solid green trade turn red out of greed."</td></tr>
+          <tr><td>13</td><td><a href="https://onlypropfirms.com/bdh/i-tried-to-trade-the-news-and-got-cooked" target="_blank" rel="noopener">I Tried To Trade The News And Got Cooked</a></td><td>2026-09-30</td><td>London-session recap: bull flags +$200 and +$415; deliberately sat out chop 6:40–7:45 AM; shorted the 30,450 ceiling after a 9/21 EMA bearish cross (+$300 across four accounts). Then gambled a fresh eval account on a news drop, added to the loser, hit the $1,000 daily loss limit (soft breach), and lost -$500 on a post-news short. Key process: the news gamble was isolated to a single account so the copied portfolio stayed green; "don't play with news candles."</td></tr>
+          <tr><td>14</td><td><a href="https://onlypropfirms.com/bdh/this-is-exactly-how-i-set-up-my-tradingview-chart-to-day-trade" target="_blank" rel="noopener">This Is Exactly How I Set Up My TradingView Chart To Day Trade</a></td><td>2026-09-28</td><td>Chart setup tutorial: purple/gray candles with white wicks for long screen hours; indicators = Killzones (session boxes/pivots), EMAs/SMAs, VWAP (standard or auto-anchored); uses the Long/Short Position tool to pre-map exact SL/TP (e.g., 21-point risk, drag to 1:1), text-tool on-chart journaling ("Risking $500 to make $500 (1:1)"), and a favorites toolbar of horizontal lines, trendlines/channels, position calculators, rectangles, brush.</td></tr>
+          <tr><td>15</td><td><a href="https://onlypropfirms.com/bdh/one-long-turned-my-worst-morning-green" target="_blank" rel="noopener">One Long Turned My Worst Morning Green</a></td><td>2026-09-25</td><td>Down $5,600 by mid-morning (channel-top short -$300; a break-even cut followed by an instant 60-point rip; a pre-CPI long -$400; chop-out -$800). One 50-point NY-open long via the trade copier across the portfolio produced ~$19,000 gross (Apex 2 contracts × 5 accounts = $10,000; Lucid/Legends/IQ/Tradeify wins) → <strong>+$12,251 net</strong>. Also stopped an IQ account at +$988 "to respect their consistency rule."</td></tr>
+          <tr><td>16</td><td><a href="https://onlypropfirms.com/bdh/iq-capital-everything-you-need-to-know-before-you-buy" target="_blank" rel="noopener">IQ Capital: Everything You Need To Know Before You Buy</a></td><td>2026-09-24</td><td>Firm review: Standard 50K $49 ($3,000 target, $2,000 EOD DD, $1,000 soft DLL, no eval consistency rule, $19 extensions, $129 activation, 90/10, 30% consistency funded, rare $299 funded-phase resets); Rapid ($135) with Classic (3-day payouts, no DLL, 40% consistency) vs Daily (daily payouts, no consistency, $1,000 DLL) funded options; Instant $349. Notable advice: no buffer is required, but "always build a buffer first to protect your account" because trailing DD floors move up.</td></tr>
+          <tr><td>17</td><td><a href="https://onlypropfirms.com/bdh/ftmo-futures-review-lose-as-much-as-you-make" target="_blank" rel="noopener">FTMO Futures Review: Lose As Much As You Make</a></td><td>2026-09-22</td><td>FTMO futures review: Growth 50K $119 ($3,000 target/$2,000 DD, 5 minis/50 micros max, $1,000 DLL, 40% consistency, 4-day payouts capped $2,500, 90/10, 50% buffer rule) vs Pro 50K $139 (the "1-to-1" account: $3,000 DD to match the $3,000 target, but a <strong>hard</strong> $1,000 daily loss that terminates the account — his only dislike; 50% consistency; payouts every 5 days capped $5,000).</td></tr>
+          <tr><td>18</td><td><a href="https://onlypropfirms.com/bdh/i-trade-one-account-at-a-time-heres-why" target="_blank" rel="noopener">I Trade One Account At A Time. Here's Why</a></td><td>2026-09-15</td><td>His account-management style: cycle accounts one at a time "to manage risk and keep my focus sharp," using the copier only for the highest-conviction trade (opening 9/21-EMA short across 4–5 Apex accounts, +$4,000). Other trades: Asia-Low target short +$550, momentum-flip long (5-min close above both EMAs + 9/21 cross) with 5 contracts +$2,000, 9-EMA retest long +$600, 1-min bull flag into PDH/PWH liquidity +$900.</td></tr>
+          <tr><td>19</td><td><a href="https://onlypropfirms.com/bdh/how-to-trade-kill-zones-like-a-pro" target="_blank" rel="noopener">How to Trade Kill Zones Like a Pro</a></td><td>2026-09-13</td><td>His core indicator: "Kill Zones and Pivots by Trade for OP" — Asia/London/NY AM/NY PM session boxes plus auto-plotted Asia H/L, London H/L, NY AM H/L, PDH/PDL, PWH/PWL, midlines, each with statistical hit rates (e.g., Asia Low 78% over 41 sessions). Levels are his take-profit magnets (tag NY AM High → London High → PDH/PWH) and stop hiders ("if price drops back below that level, the setup is dead"); a tagged level is dead liquidity.</td></tr>
+          <tr><td>20</td><td><a href="https://onlypropfirms.com/bdh/lost-900-then-this-happened-a-profitable-comeback" target="_blank" rel="noopener">Lost $900, Then This Happened: A Profitable Comeback</a></td><td>2026-09-12</td><td>London chop grind: -$200 (manually cut a 20-pt stop early to save capital), +$585 (1-min bear flag, 3 contracts), -$200, +$360 (London High target), then a -$435 "terrible mistake" long. Deep breath, then a high-conviction wick-rejection + tight-consolidation long at 6 contracts → +$2,000, ending the session <strong>+$986</strong>. Shows sizing up only after conviction, not after tilt.</td></tr>
+        </tbody>
+      </table>
+
+      <h4>Page 3</h4>
+      <table>
+        <thead><tr><th>#</th><th>Title</th><th>Date</th><th>Key takeaway</th></tr></thead>
+        <tbody>
+          <tr><td>21</td><td><a href="https://onlypropfirms.com/bdh/apex-changed-every-rule-is-it-still-worth-it-in-2026" target="_blank" rel="noopener">Apex Changed Every Rule. Is It Still Worth It in 2026?</a></td><td>2026-09-08</td><td>Apex's March 2026 revamp: no MAE rule, no 5:1 risk-to-reward rule, no payout denials, built-in scaling, 50% consistency rule, up to <strong>20 funded accounts</strong>, 1-day eval passes possible. Choose Intraday vs EOD trailing drawdown (EOD safer but ~2x price) and Standard vs No-Activation-Fee plans; 50K Intraday payouts need 5 days/$200 per day, balance &gt;$52,600, six capped payouts ($1,500→$3,000). The new $1,000 DLL "actually saves you from blowing the entire account on tilt."</td></tr>
+          <tr><td>22</td><td><a href="https://onlypropfirms.com/bdh/learning-bear-flags-live-my-full-london-session-recap" target="_blank" rel="noopener">Learning Bear Flags Live: My Full London Session Recap</a></td><td>2026-09-07</td><td>Seven live trades while practicing his flag strategy: bear-flag short at 29,596 (+$200) after price failed the 29,634 prior high; a FOMO arbitrary reversal (-$200, "I was just guessing"); a bigger-consolidation bear flag held 20 pts (+$400); 1-min VWAP-break short with stop trailed to lock +10 ($200); a 1-min breakout long through 10 pts of drawdown ($200); a fake-out (-$200); final VWAP-break short (+$200). Core mechanics: trend first, prior-high rejection as confirmation, break-and-close entry.</td></tr>
+          <tr><td>23</td><td><a href="https://onlypropfirms.com/bdh/how-i-caught-these-3-futures-setups-daily-trade-recap" target="_blank" rel="noopener">How I Caught These 3 Futures Setups: Daily Trade Recap</a></td><td>2026-09-05</td><td>Three setups: Two in the Chamber long (trigger candle swept the low, closed green) taken 1:1 for +$770 — "if I had held, the move ended up going for a massive $2,385 run, but I stuck to my rules"; bear-flag breakdown scalp +$200; unconventional 3:50 PM MOC short mirroring the 9:30 candle +$600. Also announced his month challenge: 20 Apex accounts passed, funded, and maxed for payouts via copy trading.</td></tr>
+          <tr><td>24</td><td><a href="https://onlypropfirms.com/bdh/my-funded-futures-review-why-most-traders-pick-the-wrong-plan" target="_blank" rel="noopener">My Funded Futures Review: Why Most Traders Pick the Wrong Plan</a></td><td>2026-09-04</td><td>MFFU plans: Builder ($63, choose $1.5K/$2K EOD DD, 50% consistency, 48-hour payouts, 80/20); Rapid ($105, funded switches to intraday trail — build a $2,100 buffer first; then daily payouts, 90/10, $10K/day cap); Rapid EOD (25% consistency, EOD trail throughout); Pro ($133, his favorite — 50% consistency, EOD trail, funded = no consistency rules and no payout caps, but 14-day payouts and 80/20). Live-account triggers: $20K buffer, 3 consecutive payouts, or $100K lifetime payouts; live = static drawdown.</td></tr>
+          <tr><td>25</td><td><a href="https://onlypropfirms.com/bdh/lucid-trading-review-pro-vs-flex-vs-daily-vs-direct" target="_blank" rel="noopener">Lucid Trading Review: Pro vs Flex vs Daily vs Direct</a></td><td>2026-09-03</td><td>Lucid's customizable 50Ks: Daily ($76 with DLL on; Intraday trail; daily payouts to $8,000), Flex ($90 DLL on / $105 off; EOD trail; funded scaling rule 2→3→4 minis by profit tier; 5 days/$150 per day for payouts; 50% of balance up to $2,000), Pro ($115/$140; pass in one day but 40% consistency funded, $2,100 payout buffer, DLL scales to 60% of EOD balance, $2,000 every 3 days). Eval common: $3,000 target, $2,000 max loss.</td></tr>
+          <tr><td>26</td><td><a href="https://onlypropfirms.com/bdh/tradeify-just-changed-their-payout-caps-sept-1st" target="_blank" rel="noopener">Tradeify Just Changed Their Payout Caps (Sept 1st)</a></td><td>2026-09-02</td><td>Sept 1 Tradeify changes: Flex payout cap cut $3,000 → $2,500 per 5 days; Daily account cap raised $1,000 → $1,250/day ("a massive W… like we do [trade]"); 90/10 split unchanged; new add-ons let you pay for a 2-day pass with a 50% consistency rule (eval $103 vs $82.50 standard).</td></tr>
+          <tr><td>27</td><td><a href="https://onlypropfirms.com/bdh/every-trade-i-took-on-a-bearish-nq-night" target="_blank" rel="noopener">Every Trade I Took On A Bearish NQ Night</a></td><td>2026-08-31</td><td>Eight trades in a heavy downtrend (price below 9 EMA, 21 EMA, VWAP all night): +$2,000 (2 contracts, 29,505 short), +$800 (bear flag ride to PDL on Blue Sky, price "refused to close above the VWAP"), -$200 (wick stop-out), +$400 (20-pt TP below 9 EMA), +$400, -$200 (early, unconfirmed entry), -$200 ("Don't anticipate the candle; wait for it to close!"), +$300 — then stopped. Lesson: in a clean trend, trade the flags with size and let momentum work.</td></tr>
+          <tr><td>28</td><td><a href="https://onlypropfirms.com/bdh/blusky-trading-why-you-should-care-about-this-firm" target="_blank" rel="noopener">BluSky Trading: Why You Should Care About This Firm</a></td><td>2026-08-28</td><td>BluSky plans: Launch 200K static-DD ($79 + $179 buffer phase, 50% consistency, daily payouts to $2,500/week); Propel 50K ($112, $2,000 EOD trail, 3-day eval + $3,000 buffer); Orbit 50K ($3,000 target, 1-day pass, no buffer phase, 40% consistency, $500 payouts every 3 days, $2,000/week cap); Instant ($5,000 start, $2,000 trail, $1,000 DLL, 21% consistency, 80/20). Founded on removing payout wait barriers.</td></tr>
+          <tr><td>29</td><td><a href="https://onlypropfirms.com/bdh/tradeify-prop-firm-breakdown-costs-rules-payouts-explained" target="_blank" rel="noopener">Tradeify Prop Firm Breakdown: Costs, Rules &amp; Payouts Explained!</a></td><td>2026-08-26</td><td>Tradeify 50K plans: Growth ($87, 1-day pass, no consistency in eval, $1,250 DLL, funded 35% consistency — restrictive); <strong>Select ($99, his favorite — no DLL in eval, 40% consistency; funded choice: Daily = $1,000 payout every day, no consistency, $1,000 DLL and $2,100 buffer; or Flex = $3,000 per period, 50% of profits withdrawable)</strong>; Lightning instant ($1,250 DLL, 20% consistency — "I absolutely hate that rule"). He made $5,000 on one Daily account before blowing it.</td></tr>
+          <tr><td>30</td><td><a href="https://onlypropfirms.com/bdh/we-were-down-400-then-made-it-all-back-trade-recap" target="_blank" rel="noopener">We Were Down $400… Then Made It All Back (Trade Recap)</a></td><td>2026-08-24</td><td>Two chopped-out shorts below the EMAs (bearish bias toward 30,055) and a break-even long bailout = -$400. Pivoted to <strong>Silver</strong> for a Two in the Chamber 1:1 winner, then returned to NQ for a final short at 30,012 targeting the round 30,000 (+$240). Ended +$600. Themes: cut risk early, switch markets when NQ chops, strict 1:1 ("a 1:1 win is a win").</td></tr>
+        </tbody>
+      </table>
+
+      <h4>Page 4 (oldest)</h4>
+      <table>
+        <thead><tr><th>#</th><th>Title</th><th>Date</th><th>Key takeaway</th></tr></thead>
+        <tbody>
+          <tr><td>31</td><td><a href="https://onlypropfirms.com/bdh/i-made-2000-trading-the-asia-open-full-recap" target="_blank" rel="noopener">I Made $2,000 Trading The Asia Open (Full Recap)</a></td><td>2026-08-23</td><td>Asia-open playbook: 9 EMA + 21 EMA + VWAP aligned bearish with the round "500 level" below as a magnet. 10-second scalp short (+$400); second short where he got greedy without a hard TP but manually exited (+$255); sat 15 minutes through "trickery" between the EMAs until a candle closed above 21 EMA/VWAP, then long (+$405) — ~$1,000 on one account in 30 minutes, +$2,000 across accounts.</td></tr>
+          <tr><td>32</td><td><a href="https://onlypropfirms.com/bdh/dont-buy-a-prop-account-until-you-watch-this" target="_blank" rel="noopener">Don't Buy a Prop Account Until You Watch This</a></td><td>2026-08-22</td><td>Educational keystone: account size labels are marketing — <strong>the drawdown is your real account size</strong> (25K=$1,000, 50K=$2,000, 100K=$3,000, 150K=$4,500). Explains static vs EOD vs trailing (unrealized-gain) drawdowns; the trailing-DD lesson: "Take your profits when trading a trailing drawdown!"</td></tr>
+          <tr><td>33</td><td><a href="https://onlypropfirms.com/bdh/what-is-a-prop-firm-heres-how-it-actually-works" target="_blank" rel="noopener">What Is a Prop Firm? Here's How It Actually Works</a></td><td>2026-08-21</td><td>Prop-firm primer: the three phases (evaluation → sim-funded → live), fees of $50–$150, and the honesty check — re-buying blown evals "is just gambling… feeding the firm's business model"; "the account size is never the hard part. The discipline is."</td></tr>
+          <tr><td>34</td><td><a href="https://onlypropfirms.com/bdh/2-in-the-chamber-the-nq-reversal-setup-i-actually-trade" target="_blank" rel="noopener">2 in the Chamber: The NQ Reversal Setup I Actually Trade</a></td><td>2026-08-20</td><td>His signature setup, fully specified: two consecutive 5-min candles making new session lows/highs, then a trigger candle that sweeps another new extreme and closes opposite-colored; enter next candle open; stop one tick beyond the trigger wick; strict 1:1 target ($300–$400 on NQ — "going for more than that is just getting greedy"). Not a 3-bar reversal because the sweep is mandatory. Trade Asia/London/NY sessions; skip Globex 6–8 PM.</td></tr>
+        </tbody>
+      </table>
+
+      <p class="meta"><strong>Note on dates:</strong> All articles are dated 2026 on the site (Aug 20 – Nov 12, 2026). One article (i-lost-my-live-account-and-my-own-3000, dated Nov 7) references the tilt event as happening "two weeks ago," and the site's year display may differ from the underlying video dates; the site dates are reproduced as-is.</p>
+    </div>
+  </details>
+</section>
+
+<section id="sources">
+  <h2>Sources — URLs Crawled</h2>
+  <p class="meta"><strong>Source site:</strong> onlypropfirms.com/bdh — "Denny's Trading Desk" category (BDH trading channel)<br><strong>Date researched:</strong> 2026-11-16<br><strong>Method:</strong> webfetch (markdown format). Category listing crawled through page 4; page 5 returned HTTP 404 (no more articles). All 34 article pages were fetched successfully on first attempt — no retries needed, no failures.</p>
+
+  <details class="fold">
+    <summary>🔗 Sources</summary>
+    <div class="body">
+
+      <h4>Category Listing Pages (4 crawled, 5th = 404)</h4>
+      <table>
+        <thead><tr><th>#</th><th>URL</th><th>Status</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>L1</td><td><a href="https://onlypropfirms.com/bdh/dennys-trading-desk" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/dennys-trading-desk</a></td><td>200 OK</td><td>Page 1 — 10 articles</td></tr>
+          <tr><td>L2</td><td><a href="https://onlypropfirms.com/bdh/dennys-trading-desk/page/2" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/dennys-trading-desk/page/2</a></td><td>200 OK</td><td>Page 2 — 10 articles</td></tr>
+          <tr><td>L3</td><td><a href="https://onlypropfirms.com/bdh/dennys-trading-desk/page/3" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/dennys-trading-desk/page/3</a></td><td>200 OK</td><td>Page 3 — 10 articles</td></tr>
+          <tr><td>L4</td><td><a href="https://onlypropfirms.com/bdh/dennys-trading-desk/page/4" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/dennys-trading-desk/page/4</a></td><td>200 OK</td><td>Page 4 — 4 articles (last page)</td></tr>
+          <tr><td>L5</td><td><a href="https://onlypropfirms.com/bdh/dennys-trading-desk/page/5" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/dennys-trading-desk/page/5</a></td><td>404</td><td>Not crawled further; end of category</td></tr>
+        </tbody>
+      </table>
+
+      <h4>Article Pages (34 fetched, all read in full)</h4>
+      <table>
+        <thead><tr><th>#</th><th>Date</th><th>URL</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>2026-11-12</td><td><a href="https://onlypropfirms.com/bdh/one-trade-per-account-per-day-why-i-walk-away" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/one-trade-per-account-per-day-why-i-walk-away</a></td><td>200 OK</td></tr>
+          <tr><td>2</td><td>2026-11-09</td><td><a href="https://onlypropfirms.com/bdh/why-i-shouldnt-have-traded-election-night" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/why-i-shouldnt-have-traded-election-night</a></td><td>200 OK</td></tr>
+          <tr><td>3</td><td>2026-11-07</td><td><a href="https://onlypropfirms.com/bdh/i-lost-my-live-account-and-my-own-3000" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/i-lost-my-live-account-and-my-own-3000</a></td><td>200 OK</td></tr>
+          <tr><td>4</td><td>2026-11-04</td><td><a href="https://onlypropfirms.com/bdh/dont-start-scalping-until-you-watch-this" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/dont-start-scalping-until-you-watch-this</a></td><td>200 OK</td></tr>
+          <tr><td>5</td><td>2026-10-24</td><td><a href="https://onlypropfirms.com/bdh/i-lost-accounts-for-the-first-time-in-months" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/i-lost-accounts-for-the-first-time-in-months</a></td><td>200 OK</td></tr>
+          <tr><td>6</td><td>2026-10-23</td><td><a href="https://onlypropfirms.com/bdh/i-broke-every-rule-i-have-today" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/i-broke-every-rule-i-have-today</a></td><td>200 OK</td></tr>
+          <tr><td>7</td><td>2026-10-20</td><td><a href="https://onlypropfirms.com/bdh/how-i-trade-chop-and-when-i-just-dont" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/how-i-trade-chop-and-when-i-just-dont</a></td><td>200 OK</td></tr>
+          <tr><td>8</td><td>2026-10-16</td><td><a href="https://onlypropfirms.com/bdh/i-took-4-payouts-in-one-day-on-vest-markets" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/i-took-4-payouts-in-one-day-on-vest-markets</a></td><td>200 OK</td></tr>
+          <tr><td>9</td><td>2026-10-15</td><td><a href="https://onlypropfirms.com/bdh/what-i-spent-on-prop-firms-vs-what-i-made" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/what-i-spent-on-prop-firms-vs-what-i-made</a></td><td>200 OK</td></tr>
+          <tr><td>10</td><td>2026-10-12</td><td><a href="https://onlypropfirms.com/bdh/the-easiest-prop-firm-evals-to-pass" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/the-easiest-prop-firm-evals-to-pass</a></td><td>200 OK</td></tr>
+          <tr><td>11</td><td>2026-10-08</td><td><a href="https://onlypropfirms.com/bdh/i-broke-my-own-rules-and-it-worked" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/i-broke-my-own-rules-and-it-worked</a></td><td>200 OK</td></tr>
+          <tr><td>12</td><td>2026-10-02</td><td><a href="https://onlypropfirms.com/bdh/why-most-traders-fail-and-how-the-army-fixed-my-trading" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/why-most-traders-fail-and-how-the-army-fixed-my-trading</a></td><td>200 OK</td></tr>
+          <tr><td>13</td><td>2026-09-30</td><td><a href="https://onlypropfirms.com/bdh/i-tried-to-trade-the-news-and-got-cooked" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/i-tried-to-trade-the-news-and-got-cooked</a></td><td>200 OK</td></tr>
+          <tr><td>14</td><td>2026-09-28</td><td><a href="https://onlypropfirms.com/bdh/this-is-exactly-how-i-set-up-my-tradingview-chart-to-day-trade" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/this-is-exactly-how-i-set-up-my-tradingview-chart-to-day-trade</a></td><td>200 OK</td></tr>
+          <tr><td>15</td><td>2026-09-25</td><td><a href="https://onlypropfirms.com/bdh/one-long-turned-my-worst-morning-green" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/one-long-turned-my-worst-morning-green</a></td><td>200 OK</td></tr>
+          <tr><td>16</td><td>2026-09-24</td><td><a href="https://onlypropfirms.com/bdh/iq-capital-everything-you-need-to-know-before-you-buy" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/iq-capital-everything-you-need-to-know-before-you-buy</a></td><td>200 OK</td></tr>
+          <tr><td>17</td><td>2026-09-22</td><td><a href="https://onlypropfirms.com/bdh/ftmo-futures-review-lose-as-much-as-you-make" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/ftmo-futures-review-lose-as-much-as-you-make</a></td><td>200 OK</td></tr>
+          <tr><td>18</td><td>2026-09-15</td><td><a href="https://onlypropfirms.com/bdh/i-trade-one-account-at-a-time-heres-why" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/i-trade-one-account-at-a-time-heres-why</a></td><td>200 OK</td></tr>
+          <tr><td>19</td><td>2026-09-13</td><td><a href="https://onlypropfirms.com/bdh/how-to-trade-kill-zones-like-a-pro" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/how-to-trade-kill-zones-like-a-pro</a></td><td>200 OK</td></tr>
+          <tr><td>20</td><td>2026-09-12</td><td><a href="https://onlypropfirms.com/bdh/lost-900-then-this-happened-a-profitable-comeback" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/lost-900-then-this-happened-a-profitable-comeback</a></td><td>200 OK</td></tr>
+          <tr><td>21</td><td>2026-09-08</td><td><a href="https://onlypropfirms.com/bdh/apex-changed-every-rule-is-it-still-worth-it-in-2026" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/apex-changed-every-rule-is-it-still-worth-it-in-2026</a></td><td>200 OK</td></tr>
+          <tr><td>22</td><td>2026-09-07</td><td><a href="https://onlypropfirms.com/bdh/learning-bear-flags-live-my-full-london-session-recap" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/learning-bear-flags-live-my-full-london-session-recap</a></td><td>200 OK</td></tr>
+          <tr><td>23</td><td>2026-09-05</td><td><a href="https://onlypropfirms.com/bdh/how-i-caught-these-3-futures-setups-daily-trade-recap" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/how-i-caught-these-3-futures-setups-daily-trade-recap</a></td><td>200 OK</td></tr>
+          <tr><td>24</td><td>2026-09-04</td><td><a href="https://onlypropfirms.com/bdh/my-funded-futures-review-why-most-traders-pick-the-wrong-plan" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/my-funded-futures-review-why-most-traders-pick-the-wrong-plan</a></td><td>200 OK</td></tr>
+          <tr><td>25</td><td>2026-09-03</td><td><a href="https://onlypropfirms.com/bdh/lucid-trading-review-pro-vs-flex-vs-daily-vs-direct" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/lucid-trading-review-pro-vs-flex-vs-daily-vs-direct</a></td><td>200 OK</td></tr>
+          <tr><td>26</td><td>2026-09-02</td><td><a href="https://onlypropfirms.com/bdh/tradeify-just-changed-their-payout-caps-sept-1st" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/tradeify-just-changed-their-payout-caps-sept-1st</a></td><td>200 OK</td></tr>
+          <tr><td>27</td><td>2026-08-31</td><td><a href="https://onlypropfirms.com/bdh/every-trade-i-took-on-a-bearish-nq-night" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/every-trade-i-took-on-a-bearish-nq-night</a></td><td>200 OK</td></tr>
+          <tr><td>28</td><td>2026-08-28</td><td><a href="https://onlypropfirms.com/bdh/blusky-trading-why-you-should-care-about-this-firm" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/blusky-trading-why-you-should-care-about-this-firm</a></td><td>200 OK</td></tr>
+          <tr><td>29</td><td>2026-08-26</td><td><a href="https://onlypropfirms.com/bdh/tradeify-prop-firm-breakdown-costs-rules-payouts-explained" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/tradeify-prop-firm-breakdown-costs-rules-payouts-explained</a></td><td>200 OK</td></tr>
+          <tr><td>30</td><td>2026-08-24</td><td><a href="https://onlypropfirms.com/bdh/we-were-down-400-then-made-it-all-back-trade-recap" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/we-were-down-400-then-made-it-all-back-trade-recap</a></td><td>200 OK</td></tr>
+          <tr><td>31</td><td>2026-08-23</td><td><a href="https://onlypropfirms.com/bdh/i-made-2000-trading-the-asia-open-full-recap" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/i-made-2000-trading-the-asia-open-full-recap</a></td><td>200 OK</td></tr>
+          <tr><td>32</td><td>2026-08-22</td><td><a href="https://onlypropfirms.com/bdh/dont-buy-a-prop-account-until-you-watch-this" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/dont-buy-a-prop-account-until-you-watch-this</a></td><td>200 OK</td></tr>
+          <tr><td>33</td><td>2026-08-21</td><td><a href="https://onlypropfirms.com/bdh/what-is-a-prop-firm-heres-how-it-actually-works" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/what-is-a-prop-firm-heres-how-it-actually-works</a></td><td>200 OK</td></tr>
+          <tr><td>34</td><td>2026-08-20</td><td><a href="https://onlypropfirms.com/bdh/2-in-the-chamber-the-nq-reversal-setup-i-actually-trade" target="_blank" rel="noopener">https://onlypropfirms.com/bdh/2-in-the-chamber-the-nq-reversal-setup-i-actually-trade</a></td><td>200 OK</td></tr>
+        </tbody>
+      </table>
+
+      <h4>Fetch Notes</h4>
+      <ul>
+        <li>Three article responses (how-i-trade-chop, i-took-4-payouts-in-one-day, what-i-spent-on-prop-firms) exceeded the inline output limit; the complete contents were saved automatically to tool-output files and read in full before writing the distilled notes. No content was missed.</li>
+        <li>Site navigation banners, cookie-consent text, promo tickers, and YouTube-timestamp artifacts in the article bodies were ignored; only article body content was extracted.</li>
+        <li>No pages failed after retry criteria; nothing to list as failed.</li>
+      </ul>
+
+      <h4>Output Files Produced</h4>
+      <ul>
+        <li>STRATEGY.md — distilled trading playbook</li>
+        <li>RULES.md — explicit &amp; implied rules</li>
+        <li>PSYCHOLOGY.md — mindset lessons</li>
+        <li>ARTICLES.md — all 34 articles with dates and summaries</li>
+        <li>SOURCES.md — this file</li>
+      </ul>
+    </div>
+  </details>
+</section>
+
+</main>
+
+<footer>Compiled from onlypropfirms.com/bdh (Denny's Trading Desk) and the BDH Trading YouTube channel · Researched 2026-11-16 · For educational study only — not financial advice.</footer>
+
+<a class="top" href="#top">↑ Top</a>
+
+</body>
+</html>

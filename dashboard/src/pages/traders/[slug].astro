@@ -1,0 +1,198 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+import { marked } from 'marked';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import VideoCard from '../../components/VideoCard.astro';
+import { slugify } from '../../utils/text';
+
+export async function getStaticPaths() {
+  const mods = import.meta.glob('../../data/traders/*.json', { eager: true }) as Record<string, any>;
+  return Object.values(mods).map((m) => {
+    const trader = m.default ?? m;
+    return { params: { slug: trader.slug }, props: { trader } };
+  });
+}
+
+const { trader } = Astro.props as { trader: any };
+
+// Render a section's markdown, then split it into collapsible chunks at each "## " heading.
+function renderSection(file: string): { title: string; body: string }[] | null {
+  const p = path.join(process.cwd(), 'src', 'markdown', 'traders', trader.slug, `${file}.md`);
+  let raw: string;
+  try {
+    raw = fs.readFileSync(p, 'utf8');
+  } catch {
+    return null;
+  }
+  const html = marked.parse(raw, { gfm: true }) as string;
+  const chunks: { title: string; body: string }[] = [];
+  const re = /<h2[^>]*>([\s\S]*?)<\/h2>/;
+  let rest = html;
+
+  const first = rest.match(re);
+  if (first && first.index && first.index > 0) {
+    const intro = rest.slice(0, first.index).trim();
+    if (intro) chunks.push({ title: '', body: intro });
+    rest = rest.slice(first.index);
+  }
+  while (rest.trim()) {
+    const m = rest.match(re);
+    if (!m || m.index === undefined) {
+      chunks.push({ title: '', body: rest });
+      break;
+    }
+    const afterHeader = rest.slice(m.index + m[0].length);
+    const next = afterHeader.match(re);
+    const end = next && next.index !== undefined ? m.index + m[0].length + next.index : rest.length;
+    chunks.push({ title: m[1], body: rest.slice(m.index + m[0].length, end) });
+    rest = rest.slice(end);
+  }
+  return chunks.length ? chunks : [{ title: '', body: html }];
+}
+
+const videos = trader.videos || [];
+const articles = trader.articles || [];
+const links = trader.links || {};
+---
+
+<BaseLayout
+  title={`${trader.name} — ${trader.show} | Gurans`}
+  description={trader.summary}
+  accent={trader.accent}
+  accentSoft={trader.accentSoft}
+  activePath={`/traders/${trader.slug}`}
+  crumb={`Library / <b>${trader.name}</b>`}
+>
+  <section class="hero">
+    <div class="wrap">
+      <p class="kicker"><span class="tdot" style={`background:${trader.accent};width:9px;height:9px;border-radius:50%;display:inline-block;margin-right:7px`}></span>{trader.show}</p>
+      <h1>{trader.name} — Strategy &amp; Rules</h1>
+      <p class="sub">{trader.tagline}</p>
+      <div class="stats-grid">
+        {(trader.stats || []).map((s: any) => (
+          <div class="stat-card"><div class="st-label">{s.label}</div><div class="st-value">{s.value}</div></div>
+        ))}
+      </div>
+      <div class="chips" style="margin-top:4px">
+        <span class="chip">🕛 {trader.streamSlot}</span>
+        {links.youtube && <a class="chip" href={links.youtube} target="_blank" rel="noopener">▶ YouTube ↗</a>}
+        {links.site && <a class="chip" href={links.site} target="_blank" rel="noopener">🔗 {links.siteLabel || 'Website'} ↗</a>}
+        <a class="chip" href="#videos"><b>{videos.length}</b>&nbsp;videos — watch in-site</a>
+        <a class="chip" href="#articles"><b>{articles.length}</b>&nbsp;source articles</a>
+        <span class="chip">📅 Researched 2026-11-16</span>
+      </div>
+    </div>
+  </section>
+
+  <nav class="toc">
+    <div class="wrap">
+      <a href="#overview">Overview</a>
+      {(trader.sections || []).map((s: any) => (
+        <a href={`#${s.id}`}>{s.title}</a>
+      ))}
+      <a href="#videos">Videos ({videos.length})</a>
+      <a href="#articles">Articles ({articles.length})</a>
+      <a href="#sources">Sources</a>
+    </div>
+  </nav>
+
+  <main class="content wrap">
+    <section class="block" id="overview">
+      <h2>Overview</h2>
+      <p class="lead">Who {trader.name} is and the core idea of the system.</p>
+      <div class="card accent-top">
+        <p style="margin-top:0">{trader.summary}</p>
+        {trader.oneLiner && <p><b>System in one line:</b> {trader.oneLiner}</p>}
+        {trader.keyQuote && (
+          <div class="callout">
+            <div class="q">“{trader.keyQuote}”</div>
+            {trader.keyQuoteSource && <div class="src">— {trader.keyQuoteSource}</div>}
+          </div>
+        )}
+      </div>
+      {(trader.highlights || []).length > 0 && (
+        <div class="grid">
+          {(trader.highlights || []).map((h: string) => (
+            <div class="card"><span class="badge">Key rule</span><p style="margin:10px 0 0">{h}</p></div>
+          ))}
+        </div>
+      )}
+    </section>
+
+    {(trader.sections || []).map((s: any) => {
+      const chunks = renderSection(s.file);
+      return (
+        <section class="block" id={s.id}>
+          <h2>{s.title}</h2>
+          {s.lead && <p class="lead">{s.lead}</p>}
+          {chunks ? (
+            <div class={`md ${s.id === 'rules' ? 'rules-md' : ''}`}>
+              {chunks.map((c: any) =>
+                c.title ? (
+                  <details class="fold-sec" open id={`${s.id}-${slugify(c.title)}`}>
+                    <summary><span set:html={c.title} /></summary>
+                    <div class="fold-body"><div set:html={c.body} /></div>
+                  </details>
+                ) : (
+                  <div set:html={c.body} />
+                )
+              )}
+            </div>
+          ) : (
+            <div class="card"><em>Content coming soon — add <code>src/markdown/traders/{trader.slug}/{s.file}.md</code>.</em></div>
+          )}
+        </section>
+      );
+    })}
+
+    <section class="block" id="videos">
+      <h2>Video breakdowns</h2>
+      <p class="lead">Click any thumbnail to open the in-site watch page — big player, playlist, no leaving the site.</p>
+      <div class="grid">
+        {videos.map((v: any) => <VideoCard video={v} />)}
+      </div>
+      {videos.length === 0 && <div class="card"><em>No videos recorded yet.</em></div>}
+    </section>
+
+    <section class="block" id="articles">
+      <h2>Source articles</h2>
+      <p class="lead">Every article read for this research with its key takeaway — rows are clickable, links open in a new tab.</p>
+      {articles.length > 0 ? (
+        <div class="table-wrap">
+          <table class="data">
+            <thead>
+              <tr><th>Article</th><th>Date</th><th>Key takeaway</th></tr>
+            </thead>
+            <tbody>
+              {articles.map((a: any) => (
+                <tr data-href={a.url}>
+                  <td><a href={a.url} target="_blank" rel="noopener">{a.title}</a></td>
+                  <td class="muted">{a.date || ''}</td>
+                  <td>{a.takeaway || ''}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      ) : (
+        <div class="card"><em>No articles recorded yet.</em></div>
+      )}
+    </section>
+
+    <section class="block" id="sources">
+      <h2>Sources</h2>
+      <div class="card">
+        <div class="chips" style="margin:2px 0 10px">
+          {links.youtube && <a class="chip" href={links.youtube} target="_blank" rel="noopener">▶ YouTube channel ↗</a>}
+          {links.site && <a class="chip" href={links.site} target="_blank" rel="noopener">🔗 {links.siteLabel || 'Website'} ↗</a>}
+        </div>
+        {trader.sources?.category && (
+          <p><b>Category:</b> <a href={trader.sources.category} target="_blank" rel="noopener">{trader.sources.category}</a></p>
+        )}
+        {trader.sources?.notes && <p class="meta-text">{trader.sources.notes}</p>}
+        <p class="meta-text">Full crawl logs live in each trader's research folder next to this dashboard (<code>denny/</code>, <code>dmoney/</code>, <code>lucas/</code>, <code>zarb/</code>, <code>youtube/</code>).</p>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

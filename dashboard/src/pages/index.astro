@@ -1,0 +1,134 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// Every JSON file in src/data/traders/ automatically appears here.
+// To add a trader: add a JSON file + markdown content — no code changes needed.
+const mods = import.meta.glob('../data/traders/*.json', { eager: true }) as Record<string, any>;
+const traders = Object.values(mods)
+  .map((m) => m.default ?? m)
+  .sort((a, b) => (a.name || '').localeCompare(b.name || ''));
+
+const totals = traders.reduce(
+  (acc, t) => ({
+    articles: acc.articles + (t.articles?.length || 0),
+    videos: acc.videos + (t.videos?.length || 0),
+    sections: acc.sections + (t.sections?.length || 0),
+  }),
+  { articles: 0, videos: 0, sections: 0 },
+);
+---
+
+<BaseLayout title="Gurans — Trader Strategy Library" activePath="/" crumb="Library / <b>Home</b>">
+  <section class="hero">
+    <div class="wrap">
+      <p class="kicker">Researched 2026-11-16 · from each trader's blog &amp; YouTube</p>
+      <h1>Trader Strategy &amp; Rules Library</h1>
+      <p class="sub">
+        Deep research into how funded prop-firm traders actually trade — strategy playbooks,
+        hard rules, psychology, and the videos behind them. Adding a trader is just data: the
+        pages build themselves.
+      </p>
+      <div class="stats-grid">
+        <div class="stat-card"><div class="st-label">Traders</div><div class="st-value">{traders.length}</div></div>
+        <div class="stat-card"><div class="st-label">Articles read</div><div class="st-value">{totals.articles}</div></div>
+        <div class="stat-card"><div class="st-label">Videos analyzed</div><div class="st-value">{totals.videos}</div></div>
+        <div class="stat-card"><div class="st-label">Playbook sections</div><div class="st-value">{totals.sections}</div></div>
+      </div>
+    </div>
+  </section>
+
+  <main class="content wrap">
+    <section class="block">
+      <h2>Pick a trader</h2>
+      <p class="lead">Each dashboard covers their full playbook: strategy, rules, psychology, videos, and source articles.</p>
+      <div class="grid traders-grid">
+        {traders.map((t) => (
+          <a class="trader-card" href={`/traders/${t.slug}`} style={`--accent:${t.accent};--accent-soft:${t.accentSoft}`}>
+            <span class="show">{t.show}</span>
+            <h3><span class="tdot" style={`background:${t.accent}`}></span>{t.name}</h3>
+            <p>{t.summary}</p>
+            <span class="slot">🕛 {t.streamSlot}</span>
+            {(t.stats || []).length > 0 && (
+              <div class="chips" style="margin-top:12px">
+                {(t.stats || []).slice(0, 3).map((s: any) => (
+                  <span class="chip mini"><b>{s.value}</b>&nbsp;{s.label}</span>
+                ))}
+              </div>
+            )}
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>Jump straight in</h2>
+      <p class="lead">Deep links into each trader's study page — the fastest way to start a session.</p>
+      <div class="jump-list">
+        {traders.map((t) => (
+          <div class="jump-row" style={`--accent:${t.accent};--accent-soft:${t.accentSoft}`}>
+            <a class="jump-name" href={`/traders/${t.slug}`}><span class="tdot"></span>{t.name}</a>
+            <div class="jump-links">
+              <a href={`/traders/${t.slug}#overview`}>overview</a>
+              {(t.sections || []).map((s: any) => (
+                <a href={`/traders/${t.slug}#${s.id}`}>{s.id}</a>
+              ))}
+              <a href={`/traders/${t.slug}#videos`}>videos</a>
+              <a href={`/traders/${t.slug}#articles`}>articles</a>
+              <a href={`/videos#${t.slug}`}>watch</a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>Side-by-side</h2>
+      <p class="lead">The one-line identity of each system.</p>
+      <div class="table-wrap">
+        <table class="data">
+          <thead>
+            <tr><th>Trader</th><th>Show</th><th>Stream slot</th><th>System in one line</th></tr>
+          </thead>
+          <tbody>
+            {traders.map((t) => (
+              <tr data-href={`/traders/${t.slug}`}>
+                <td><a href={`/traders/${t.slug}`}><b>{t.name}</b></a></td>
+                <td class="muted">{t.show}</td>
+                <td class="muted">{t.streamSlot}</td>
+                <td>{t.oneLiner || t.summary}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>Shared DNA</h2>
+      <p class="lead">What the researched traders agree on, regardless of style.</p>
+      <div class="card">
+        <ul>
+          <li><b>Prop-firm futures traders</b> — eval and funded accounts, payout farming over home runs.</li>
+          <li><b>Pre-marked levels, never chasing</b> — every trader maps levels before the session and reacts, never predicts.</li>
+          <li><b>Structural stop losses, always</b> — stops at wick lows / EMA sides / marked levels, never arbitrary.</li>
+          <li><b>Small consistent payouts</b> — base hits, frequent withdrawals, account rotation.</li>
+          <li><b>Walking away is a core skill</b> — no-trade conditions (chop, news, dead sessions) are rules, not suggestions.</li>
+          <li><b>Drawdown is the real account size</b> — trailing vs static vs EOD mechanics drive every sizing decision.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>Extending this dashboard</h2>
+      <p class="lead">Adding a new trader requires no code changes.</p>
+      <div class="card">
+        <ol>
+          <li>Create <code>src/data/traders/&lt;slug&gt;.json</code> (copy the shape of an existing trader file).</li>
+          <li>Add markdown files in <code>src/markdown/traders/&lt;slug&gt;/</code> (e.g. <code>strategy.md</code>, <code>rules.md</code>).</li>
+          <li>Reference them from the <code>"sections"</code> array in the JSON.</li>
+          <li>Run <code>npm run build</code> — the trader page, home card, and video library entries generate automatically.</li>
+        </ol>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

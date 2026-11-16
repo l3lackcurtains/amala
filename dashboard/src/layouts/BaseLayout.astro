@@ -1,0 +1,233 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  accent?: string;
+  accentSoft?: string;
+  activePath?: string;
+  crumb?: string;
+}
+
+const { title, description = 'Trader strategy & rules library — research dashboards for funded prop-firm traders', accent, accentSoft, activePath = '', crumb = '' } = Astro.props;
+const style = [
+  accent ? `--accent:${accent}` : null,
+  accentSoft ? `--accent-soft:${accentSoft}` : null,
+].filter(Boolean).join(';');
+
+const mods = import.meta.glob('../data/traders/*.json', { eager: true }) as Record<string, any>;
+const traders = Object.values(mods)
+  .map((m) => m.default ?? m)
+  .sort((a, b) => (a.name || '').localeCompare(b.name || ''));
+
+const is = (p: string) => (activePath === p ? ' active' : '');
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body class="shell" style={style || undefined}>
+    <aside id="sidebar">
+      <a class="sb-brand" href="/"><span class="dot"></span>$ gurans <span class="b2">— trader strategy library</span></a>
+      <button class="sb-search" id="sb-search" type="button">⌕ <span class="s-label">Search rules, setups, videos…</span> <span class="s-key">Ctrl K</span></button>
+      <div class="sb-scroll">
+        <div class="sb-group">Library</div>
+        <a class={`sb-item${is('/')}`} href="/">Home</a>
+        <a class={`sb-item${is('/videos')}`} href="/videos">Video library</a>
+        <div class="sb-group">Traders</div>
+        {traders.map((t) => (
+          <div class="rail-item" style={`--accent:${t.accent};--accent-soft:${t.accentSoft}`}>
+            <a class={`sb-item${is(`/traders/${t.slug}`)}`} href={`/traders/${t.slug}`}>
+              <span class="tdot"></span>{t.name}
+              <span class="sb-count">{(t.videos || []).length} vid</span>
+            </a>
+          </div>
+        ))}
+      </div>
+      <div class="sb-foot">
+        Sources:
+        <a href="https://onlypropfirms.com/bdh" target="_blank" rel="noopener">onlypropfirms.com/bdh</a> ·
+        <a href="https://iamzarb.com/" target="_blank" rel="noopener">iamzarb.com</a> ·
+        <a href="https://www.youtube.com/@BDHTrading" target="_blank" rel="noopener">BDH on YouTube</a> ·
+        <a href="https://www.youtube.com/@iamzarb" target="_blank" rel="noopener">Zarb on YouTube</a>
+      </div>
+    </aside>
+    <div id="sb-backdrop"></div>
+    <div class="page">
+      <header class="topbar">
+        <button id="sb-toggle" type="button" aria-label="Toggle navigation">☰</button>
+        <span class="tb-brand"><span class="dot"></span>$ gurans</span>
+        {crumb && <span class="crumb" set:html={crumb} />}
+        <div class="search">
+          <span class="s-icon">⌕</span>
+          <input id="global-search" type="search" placeholder="Search rules, setups, videos…" autocomplete="off" spellcheck="false" />
+          <span class="s-key">Ctrl K</span>
+          <div class="s-results" id="search-results"></div>
+        </div>
+      </header>
+      <slot />
+      <footer class="site-footer">
+        <div class="wrap">
+          Compiled from public sources — each trader's blog and YouTube channel · Researched 2026-11-16 ·
+          Educational study material only — not financial advice.
+        </div>
+      </footer>
+    </div>
+    <a class="to-top" href="#top">↑ Top</a>
+
+    <script is:inline>
+      // Sidebar (mobile) toggle
+      var sbToggle = document.getElementById('sb-toggle');
+      var sidebar = document.getElementById('sidebar');
+      var backdrop = document.getElementById('sb-backdrop');
+      function closeSb() { sidebar.classList.remove('open'); backdrop.classList.remove('show'); }
+      if (sbToggle) sbToggle.addEventListener('click', function () {
+        sidebar.classList.toggle('open');
+        backdrop.classList.toggle('show', sidebar.classList.contains('open'));
+      });
+      if (backdrop) backdrop.addEventListener('click', closeSb);
+      sidebar && sidebar.addEventListener('click', function (e) {
+        if (e.target.closest && e.target.closest('a') && window.innerWidth < 1024) closeSb();
+      });
+
+      // Video type filter (Video Library page)
+      document.addEventListener('click', function (e) {
+        var t = e.target;
+        var b = t && t.closest ? t.closest('.filter-btn') : null;
+        if (!b) return;
+        document.querySelectorAll('.filter-btn').forEach(function (x) { x.classList.toggle('active', x === b); });
+        var f = b.getAttribute('data-filter');
+        document.querySelectorAll('.video-card').forEach(function (c) {
+          c.style.display = f === 'all' || c.getAttribute('data-type') === f ? '' : 'none';
+        });
+      });
+
+      // Clickable table rows (articles, sources): open the row's link in a new tab
+      document.addEventListener('click', function (e) {
+        var t = e.target;
+        var row = t && t.closest ? t.closest('tr[data-href]') : null;
+        if (!row) return;
+        if (t.closest && t.closest('a')) return; // let real links behave normally
+        window.open(row.getAttribute('data-href'), '_blank', 'noopener');
+      });
+
+      // Sidebar search trigger focuses the topbar input
+      var sbSearch = document.getElementById('sb-search');
+      if (sbSearch) sbSearch.addEventListener('click', function () {
+        var input = document.getElementById('global-search');
+        if (input) { input.focus(); input.select(); }
+      });
+    </script>
+    <script is:inline>
+      // ---------- Global search ----------
+      (function () {
+        var input = document.getElementById('global-search');
+        var panel = document.getElementById('search-results');
+        if (!input || !panel) return;
+        var docs = [];
+        var loaded = false;
+        var active = -1;
+        var results = [];
+
+        function load() {
+          if (loaded) return;
+          loaded = true;
+          fetch('/search-index.json')
+            .then(function (r) { return r.json(); })
+            .then(function (d) { docs = d; if (input.value.trim()) run(input.value); })
+            .catch(function () { docs = []; });
+        }
+        input.addEventListener('focus', load);
+
+        function esc(s) {
+          return String(s).replace(/[&<>"]/g, function (c) {
+            return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+          });
+        }
+        function hl(text, q) {
+          var safe = esc(text);
+          var i = safe.toLowerCase().indexOf(q.toLowerCase());
+          if (i === -1) return safe;
+          return safe.slice(0, i) + '<mark>' + safe.slice(i, i + q.length) + '</mark>' + safe.slice(i + q.length);
+        }
+        function snippet(text, q) {
+          var safe = esc(text);
+          var i = safe.toLowerCase().indexOf(q.toLowerCase());
+          if (i === -1) return safe.slice(0, 110);
+          var start = Math.max(0, i - 45);
+          return (start > 0 ? '…' : '') + safe.slice(start, i + q.length + 65);
+        }
+
+        function run(q) {
+          q = q.trim();
+          if (q.length < 2) { close(); return; }
+          var ql = q.toLowerCase();
+          results = [];
+          for (var i = 0; i < docs.length; i++) {
+            var d = docs[i];
+            var ti = (d.title || '').toLowerCase().indexOf(ql);
+            var bi = (d.text || '').toLowerCase().indexOf(ql);
+            if (ti === -1 && bi === -1) continue;
+            results.push({ d: d, score: (ti !== -1 ? 100 : 0) + (ti === 0 ? 40 : 0) + (bi !== -1 ? 10 : 0) });
+          }
+          results.sort(function (a, b) { return b.score - a.score; });
+          results = results.slice(0, 12);
+          active = -1;
+          if (!results.length) {
+            panel.innerHTML = '<div class="s-empty">No matches for “' + esc(q) + '”. Try: EMA, drawdown, kill zone, payout…</div>';
+            panel.classList.add('open');
+            return;
+          }
+          var html = '';
+          for (var j = 0; j < results.length; j++) {
+            var d = results[j].d;
+            html += '<a class="s-result" href="' + d.url + (d.anchor ? '#' + d.anchor : '') + '" data-i="' + j + '">' +
+              '<span class="sr-head"><span class="tdot" style="background:' + d.color + ';width:7px;height:7px;border-radius:50%"></span>' +
+              '<span class="sr-trader">' + esc(d.trader) + '</span><span class="sr-sec">' + esc(d.section) + '</span></span>' +
+              '<span class="sr-title">' + hl(d.title, q) + '</span>' +
+              (d.text ? '<span class="sr-snippet">' + snippet(d.text, q) + '</span>' : '') +
+              '</a>';
+          }
+          panel.innerHTML = html;
+          panel.classList.add('open');
+        }
+
+        function close() { panel.classList.remove('open'); active = -1; }
+
+        input.addEventListener('input', function () { run(input.value); });
+        input.addEventListener('keydown', function (e) {
+          var items = panel.querySelectorAll('.s-result');
+          if (e.key === 'Escape') { close(); input.blur(); return; }
+          if (!items.length) return;
+          if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+            e.preventDefault();
+            active = e.key === 'ArrowDown' ? (active + 1) % items.length : (active - 1 + items.length) % items.length;
+            items.forEach(function (x, i) { x.classList.toggle('active', i === active); });
+            items[active].scrollIntoView({ block: 'nearest' });
+          } else if (e.key === 'Enter') {
+            var target = active >= 0 ? items[active] : items[0];
+            if (target) { window.location.href = target.getAttribute('href'); }
+          }
+        });
+        document.addEventListener('click', function (e) {
+          if (!e.target.closest || !e.target.closest('.search')) close();
+        });
+        document.addEventListener('keydown', function (e) {
+          if ((e.ctrlKey || e.metaKey) && (e.key === 'k' || e.key === 'K')) {
+            e.preventDefault();
+            load();
+            input.focus();
+            input.select();
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>

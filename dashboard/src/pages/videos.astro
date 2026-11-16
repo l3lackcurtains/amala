@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import VideoCard from '../components/VideoCard.astro';
+
+const mods = import.meta.glob('../data/traders/*.json', { eager: true }) as Record<string, any>;
+const traders = Object.values(mods)
+  .map((m) => m.default ?? m)
+  .sort((a, b) => (a.name || '').localeCompare(b.name || ''));
+
+const allVideos = traders.flatMap((t) => (t.videos || []).map((v: any) => ({ ...v, trader: t })));
+const totalVideos = allVideos.length;
+const counts = allVideos.reduce((acc: Record<string, number>, v) => {
+  const k = v.type || 'video';
+  acc[k] = (acc[k] || 0) + 1;
+  return acc;
+}, {});
+---
+
+<BaseLayout title="Video Library | Gurans" activePath="/videos" crumb="Library / <b>Video library</b>">
+  <section class="hero grad">
+    <div class="wrap">
+      <p class="kicker">YouTube · every researched channel</p>
+      <h1>Video Library</h1>
+      <p class="sub">
+        All {totalVideos} videos, grouped by trader. Click any thumbnail to open the in-site watch page —
+        big player, playlist, no leaving the site. Strategy details pulled from each video description.
+      </p>
+      <div class="chips">
+        {traders.map((t) => (
+          <a class="chip" href={`#${t.slug}`}><b>{t.name}</b>&nbsp;{t.videos?.length || 0}</a>
+        ))}
+        <span class="chip">📅 Researched 2026-11-16</span>
+      </div>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All ({totalVideos})</button>
+      <button class="filter-btn" data-filter="video">Long-form ({counts.video || 0})</button>
+      <button class="filter-btn" data-filter="short">Shorts ({counts.short || 0})</button>
+      <button class="filter-btn" data-filter="live">Live ({counts.live || 0})</button>
+    </div>
+
+    {traders.map((t) => (
+      <section class="block" id={t.slug}>
+        <h2>{t.name} <span class="meta-text" style="font-weight:400">· {t.show}</span></h2>
+        <p class="lead">{(t.videos || []).length} videos · jump to the study page after watching:
+          <a href={`/traders/${t.slug}`}><b>open {t.name}'s playbook</b></a></p>
+        <div class="grid">
+          {(t.videos || []).map((v: any) => (
+            <VideoCard video={v} accent={t.accent} accentSoft={t.accentSoft} />
+          ))}
+        </div>
+        {(t.videos?.length || 0) === 0 && <div class="card"><em>No videos recorded yet.</em></div>}
+      </section>
+    ))}
+  </main>
+</BaseLayout>

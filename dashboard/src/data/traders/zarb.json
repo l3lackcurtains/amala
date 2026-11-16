@@ -1,0 +1,176 @@
+{
+  "slug": "zarb",
+  "name": "Zarb",
+  "show": "Zarb's Liquidity Lab",
+  "streamSlot": "Live trading daily · 4 hrs",
+  "accent": "#a855f7",
+  "accentSoft": "rgba(168, 85, 247, 0.12)",
+  "tagline": "The WASL approach — Wide Ass Stop Loss as a risk philosophy — streamed live 4 hours a day all the way to $250K+ in documented prop firm payouts.",
+  "summary": "Zarb (Zach Arbucci) is a futures prop-firm trader who streams 4 hours of live trading daily on Prop Firm Match TV and has pulled $250K+ in payouts with every decision shown on stream. His model blends liquidity, market structure, and Volume Profile through an ICT x Volume Profile framework, executed on 'base hits' across Apex, Tradeify, Lucid, Top One, Vest and MyFundedPerps accounts. His signature WASL (Wide Ass Stop Loss) rule refuses tight stops: if a trade gets wicked out before it plays out, the stop was the mistake — $64K of payouts came in just two months (Nov 2026).",
+  "oneLiner": "React to the confirmed liquidity sweep with a wide-ass stop loss on an ICT x Volume Profile framework, take base hits, and farm two payouts per funded account.",
+  "keyQuote": "WASL isn't a meme — it's a risk philosophy. Stops that are too tight get you wicked out of good trades before they ever play out.",
+  "keyQuoteSource": "iamzarb.com — WASL Gang section",
+  "stats": [
+    { "label": "Prop payouts", "value": "$250K+" },
+    { "label": "Videos analyzed", "value": "15" },
+    { "label": "Payouts in 2 months", "value": "$64K" },
+    { "label": "2026 milestone (July)", "value": "$100K" },
+    { "label": "Free community", "value": "2,200+" },
+    { "label": "Coaching cadence", "value": "3×/wk" }
+  ],
+  "highlights": [
+    "WASL = Wide Ass Stop Loss — tight stops wicked you out of good trades before they ever play out; size the stop so the trade can breathe.",
+    "Base hits over home runs — consistent, disciplined entries beat low-probability big swings; base hits secure the payouts.",
+    "React, don't anticipate — his #1 called-out mistake is entering before the liquidity sweep confirms.",
+    "Framework: liquidity + market structure + Volume Profile in the ICT x Volume Profile blend — draw on liquidity, FVGs, order blocks, premium/discount.",
+    "Payout engine: farm TWO payouts per account across Apex, Tradeify, Lucid, Top One, Vest and MyFundedPerps — $64K in 2 months, $250K+ lifetime, receipts published.",
+    "Trade the PM Kill Zone live, 4 hours daily — no highlight reels, every decision and every WASL shown as it happens."
+  ],
+  "sections": [
+    { "id": "strategy", "title": "The WASL Approach", "file": "strategy", "lead": "The ICT x Volume Profile model, liquidity-sweep entries, the PM Kill Zone session focus, and how WASL stop sizing actually works." },
+    { "id": "rules", "title": "Trading Rules", "file": "rules", "lead": "Every documented rule: WASL stop philosophy, sweep-confirmation entries, base-hits payout tactics, two-payouts-per-account, and multi-firm diversification." },
+    { "id": "psychology", "title": "Psychology & Mindset", "file": "psychology", "lead": "Radical transparency, no holy grail, process over lottery tickets, and why the funded stage is a consistency problem." }
+  ],
+  "videos": [
+    {
+      "title": "My Trade Sauce Revealed 😤",
+      "url": "https://www.youtube.com/shorts/LTkUju0iGSY",
+      "date": "2026-11-12",
+      "type": "short",
+      "takeaway": "Short teasing his 'trade sauce' (his model). No description — title-level evidence only."
+    },
+    {
+      "title": "TWO PAYOUTS Per Account Is My Secret 🧪",
+      "url": "https://www.youtube.com/shorts/RWyS7fbVzVw",
+      "date": "2026-11-10",
+      "type": "short",
+      "takeaway": "His payout secret in the title: farm two payouts per funded account instead of one-and-done. Mechanics live in the paid Lab."
+    },
+    {
+      "title": "$60,000 in Payouts in 2 Months—My Trading Model Explained",
+      "url": "https://www.youtube.com/watch?v=8_NEAAT5Tyk",
+      "date": "2026-11-10",
+      "type": "video",
+      "takeaway": "His definitive model explainer: $64K in futures prop payouts in 2 months, payout breakdown, then two worked model examples. Chapters: journey → payout breakdown (1:04) → model & example one (7:05) → example two & methodology (15:47). Tags reveal the framework: ICT, FVG, order block, premium/discount, draw on liquidity."
+    },
+    {
+      "title": "This Secret Checklist is 💨",
+      "url": "https://www.youtube.com/shorts/XLY3f0VQtBA",
+      "date": "2026-11-09",
+      "type": "short",
+      "takeaway": "Teases his secret entry checklist — contents not public; the checklist is part of the Lab curriculum."
+    },
+    {
+      "title": "My Market Structure Secret…",
+      "url": "https://www.youtube.com/shorts/ioBIfRbDots",
+      "date": "2026-08-23",
+      "type": "short",
+      "takeaway": "Market structure teaser — one of the three pillars (liquidity, structure, Volume Profile) of his framework. Most-viewed short at 1.2K."
+    },
+    {
+      "title": "Mask Off..Showing My Total Spend",
+      "url": "https://www.youtube.com/shorts/45UcKOVpgt8",
+      "date": "2026-08-23",
+      "type": "short",
+      "takeaway": "Transparency content: reveals his total prop-firm spend — part of his 'no highlight reel' brand of showing all the numbers."
+    },
+    {
+      "title": "Base Hits Over Home Runs: How I Made $30,000 in Payouts",
+      "url": "https://www.youtube.com/watch?v=bR0HIdX7byM",
+      "date": "2026-08-16",
+      "type": "video",
+      "takeaway": "His payout philosophy as a worked session: verified $30K in payouts built from small consistent base hits. Chapters: payout verification (0:28) → higher-timeframe analysis (4:06) → setup breakdown (9:56) → more trade analysis (16:28)."
+    },
+    {
+      "title": "Here's The Truth…",
+      "url": "https://www.youtube.com/shorts/ROHw0BkzXT8",
+      "date": "2026-07-28",
+      "type": "short",
+      "takeaway": "Truth-telling short in his transparency series — no strategy detail in text form."
+    },
+    {
+      "title": "I Made $250,000 In Payouts And Now Im Spilling My Secrets",
+      "url": "https://www.youtube.com/shorts/IpjDVhBXUxY",
+      "date": "2026-07-24",
+      "type": "short",
+      "takeaway": "The $250K lifetime payout claim, with 'secrets' teased ahead of the mentorship launch."
+    },
+    {
+      "title": "$250K In Prop Firm Payouts. Here's How I'm Teaching It.🔴",
+      "url": "https://www.youtube.com/shorts/65mqih5hEhg",
+      "date": "2026-07-21",
+      "type": "short",
+      "takeaway": "Announcement short: turning his payout method into the Zarb's Liquidity Lab mentorship."
+    },
+    {
+      "title": "My Secret to Over $20,000 in Payouts This Month…",
+      "url": "https://www.youtube.com/shorts/qIbJHwj4pMM",
+      "date": "2026-07-21",
+      "type": "short",
+      "takeaway": "$20K+ single-month payout claim (July 2026) — monthly receipts as marketing proof."
+    },
+    {
+      "title": "I Hit $100K in Prop Firm Payouts in 2026 — Here's How I Did It",
+      "url": "https://www.youtube.com/watch?v=oeM6tpYBXFI",
+      "date": "2026-07-10",
+      "type": "video",
+      "takeaway": "The $100K-in-2026 milestone review containing the ONLY public WASL segment — auto-chapter 'The WASL theory explained' at 5:27. Also: annual goals, payout review (1:40), trading examples (9:16), advanced breakdown (15:44), Lab launch (21:47)."
+    },
+    {
+      "title": "Trade The PM Kill Zone | ASFX TV",
+      "url": "https://www.youtube.com/watch?v=D0DqmVzUpJw",
+      "date": "2026-07-07",
+      "type": "live",
+      "takeaway": "Live PM Kill Zone session on ASFX TV (Prop Firm Match TV network) — confirms his PM-session focus and his Edgeful session-analytics sponsorship."
+    },
+    {
+      "title": "Friday Futures LIVE Trading",
+      "url": "https://www.youtube.com/watch?v=xWTXD-AP0xM",
+      "date": "2026-06-27",
+      "type": "live",
+      "takeaway": "Live Friday futures session — evidence of a multi-day live trading week behind the '4 hrs daily' claim."
+    },
+    {
+      "title": "Trading The PM Kill Zone | ASFX TV",
+      "url": "https://www.youtube.com/watch?v=ICQqePeEt5E",
+      "date": "2026-06-23",
+      "type": "live",
+      "takeaway": "Earlier PM Kill Zone live session — same prop-firm stack (Apex, Tradeify, Lucid, Top One) and Edgeful analytics from the start."
+    }
+  ],
+  "articles": [
+    {
+      "title": "iamzarb.com — Zarb's Liquidity Lab landing page",
+      "url": "https://iamzarb.com/",
+      "date": "2026-11-16",
+      "takeaway": "Single-page funnel (no blog — /blog, /about, /free, /wasl all 404). Contains: hero ('Stop chasing systems. Build yours.'), payout receipts, who-it's-for, the 6 Lab inclusions (23-chapter Liquidity Concepts course, 3 calls/wk, Under The Hood, direct Discord, member PM session, VP x ICT), the WASL Gang definition (Wide Ass Stop Loss), $199 founding pricing, coach bio, and a 5-question FAQ."
+    },
+    {
+      "title": "Whop — Zarbs Liquidity Lab Premium Membership",
+      "url": "https://whop.com/zarbs-liquidity-lab/zarbs-liquidity-lab-premium-membership",
+      "date": "2026-11-16",
+      "takeaway": "Product page: $199/mo (save 20% off $248.75). Description confirms the method: 'Built on Volume Profile x ICT concepts — no copy/paste strategies.' Ten 5-star reviews; members credit the ICT + Volume Profile combination and the group calls."
+    },
+    {
+      "title": "Whop — Zarbs Liquidity Lab (group page)",
+      "url": "https://whop.com/zarbs-liquidity-lab/",
+      "date": "2026-11-16",
+      "takeaway": "Group hub: 5.0 rating from 10 reviews, located New York City, created by zach arbucci (@zarbsta), 35 members joined — the community behind the 2,200+ free Discord."
+    },
+    {
+      "title": "YouTube RSS feed — zach anthony (@iamzarb)",
+      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCRwKDXA83i6W-D8z6JkNGww",
+      "date": "2026-11-16",
+      "takeaway": "Source of the 15-video census (9 shorts, 3 long-forms, 3 live VODs) with dates, views and descriptions; watch pages scraped for chapters and shortDescription fields."
+    }
+  ],
+  "links": {
+    "youtube": "https://www.youtube.com/@iamzarb",
+    "site": "https://iamzarb.com/",
+    "siteLabel": "iamzarb.com"
+  },
+  "sources": {
+    "category": "https://iamzarb.com/",
+    "notes": "Crawled iamzarb.com landing page, both Whop pages, YouTube RSS feed, and all 15 watch pages (shortDescription, keywords, chapters via player-response JSON). WASL = 'Wide Ass Stop Loss' confirmed on landing page + 'The WASL theory explained' chapter in oeM6tpYBXFI. /blog, /about, /free, /wasl returned 404 (site is a landing page only). Researched 2026-11-16."
+  }
+}

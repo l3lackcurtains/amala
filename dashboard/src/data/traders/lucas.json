@@ -1,0 +1,216 @@
+{
+  "slug": "lucas",
+  "name": "Lucas",
+  "show": "Lucas's Trading Playbook",
+  "streamSlot": "Mon–Fri · 5:45–9:00 PM (Asia/Globex)",
+  "accent": "#34d399",
+  "accentSoft": "rgba(52, 211, 153, 0.12)",
+  "tagline": "Asia-session sniper — 15-minute bull/bear flags off the 9/21 EMAs and VWAP, a strict candle-close checklist, structured DCA in drawdown, and a $24K payout week at 21.",
+  "summary": "Lucas is a 21-year-old funded futures trader on the BDH floor who trades NQ through the Asia/Globex overnight and the New York open. His entire system is 15-minute bull and bear flags at 9 EMA / 21 EMA / VWAP confluence, entered only after the candle close with every checklist box ticked. He scales laterally — one small contract across many copy-traded funded accounts — turning 30–50 points a day into a $24,000 payout week and $50,000 in 2.5 weeks.",
+  "oneLiner": "Trade nothing but bull/bear flags at 9 EMA / 21 EMA / VWAP confluence — wait for the candle close, scale out at pre-marked wicks, and grow with more accounts instead of bigger size.",
+  "keyQuote": "You must have a strict checklist. It doesn't matter if your checklist is different than mine; what matters is that you refuse to enter a trade until every single box is checked.",
+  "keyQuoteSource": "Being Right Doesn't Make You Money",
+  "stats": [
+    { "label": "Articles read", "value": "20" },
+    { "label": "Videos analyzed", "value": "7" },
+    { "label": "Best payout week", "value": "$24K" },
+    { "label": "2.5-week run (Oct 2026)", "value": "$50K" },
+    { "label": "Copy-traded accounts", "value": "5+" },
+    { "label": "Age", "value": "21" }
+  ],
+  "highlights": [
+    "Wait for the actual candle close — never jump the gun on the wick.",
+    "No entry until every checklist box is checked: sweep, exhaustion, flag, close through the EMAs.",
+    "Never trade No Man's Land — the ~50 minutes between the Globex open and the true Asia open.",
+    "Size so a standard 20-point wick can't matter; hard stops at flag structure.",
+    "DCA only with trend + target + hard stop — add on new lows, never if a candle closes below the prior low.",
+    "Scale laterally: 1 contract per account, more copy-traded accounts — never bigger size."
+  ],
+  "sections": [
+    { "id": "strategy", "title": "Strategy Playbook", "file": "strategy", "lead": "Asia session sniper system, NY open routine, flag setups, exact DCA method, and trade management." },
+    { "id": "rules", "title": "Trading Rules", "file": "rules", "lead": "Entry, sizing, DCA, stop, payout, and when-not-to-trade rules — plus his 10-rule operating system." },
+    { "id": "psychology", "title": "Psychology & Mindset", "file": "psychology", "lead": "Process over P&L, payout amnesia, the $18K day, and the second-income philosophy." }
+  ],
+  "videos": [
+    {
+      "title": "What I Look For In The Asia Session",
+      "url": "https://www.youtube.com/watch?v=2qMuQZfB0co",
+      "date": "2026-11-12",
+      "type": "video",
+      "takeaway": "Complete overnight playbook: mark wick highs/lows at the 6 PM Globex open, wait out No Man's Land, then take the A+ 5-minute bull flag pulling back to VWAP with the 9/21 EMAs holding. Even conservative targeting gives a 2.5R trade; low-volatility sessions demand sniper entries."
+    },
+    {
+      "title": "I Was Right on These Trades and Still Got Wiped Out",
+      "url": "https://www.youtube.com/watch?v=M0wACkBim_A",
+      "date": "2026-11-15",
+      "type": "video",
+      "takeaway": "Being right on direction is only half the battle — failing to account for market volatility can stop you out of a sound idea. Covers NQ wick stopouts, EMA entry timing, and the pitfalls of bearish markets."
+    },
+    {
+      "title": "Adding To A Trade (When Your In Drawdown) | My Exact Strategy",
+      "url": "https://www.youtube.com/watch?v=PjvckyPQQ4I",
+      "date": "2026-10-08",
+      "type": "video",
+      "takeaway": "The exact DCA method on the 5-minute chart: only average down with a clear bias, obvious target, and hard stop. Adds at the new low and the entry retest — while no candle CLOSES below the protected low — build 2 contracts into 4–6 by design, not panic."
+    },
+    {
+      "title": "My Pre-Market Routine For The New York Open",
+      "url": "https://www.youtube.com/watch?v=2PvQjWRNRsU",
+      "date": "2026-10-02",
+      "type": "video",
+      "takeaway": "Daily 9:25 AM ritual: mark both sides of price (stacked wick highs, deep wick lows) and let the VWAP check be the tiebreaker at the bell. Hold above VWAP targets the London Highs; reject it and short the deep lows — 100 points to first target, 300 points in ~45 minutes."
+    },
+    {
+      "title": "Being Right Doesn't Make You Money",
+      "url": "https://www.youtube.com/watch?v=gE1Z_07_LqM",
+      "date": "2026-10-25",
+      "type": "video",
+      "takeaway": "A perfect macro thesis still blows up with bad execution: a bear-flag wick entry instead of a candle-close entry cost a trader a 35–40 point wick with 5 contracts. Size so the market can breathe — the account is the cage, volatility is the dog."
+    },
+    {
+      "title": "Why Your P&L Is Lying To You",
+      "url": "https://www.youtube.com/watch?v=EJuIWBD475w",
+      "date": "2026-10-22",
+      "type": "video",
+      "takeaway": "A rule-breaking +$5,000 day is worse than a rule-following −$800 day — money is a lagging indicator of your success. He lost for over a year straight before $50,000 in 2.5 weeks once the process caught up."
+    },
+    {
+      "title": "The 5 Trades That Paid Me $24,000 This Week",
+      "url": "https://www.youtube.com/watch?v=kAd0WPd9kt0",
+      "date": "2026-09-29",
+      "type": "video",
+      "takeaway": "Five live 15-minute flag trades across copy-traded Lucid and Tradeify accounts — same structure every time: enter at the candle midpoint or the EMA loss, target the nearest wick. Built ~$24,000 of payouts in one week from small, repeated size."
+    }
+  ],
+  "articles": [
+    {
+      "title": "What I Look For In The Asia Session",
+      "url": "https://onlypropfirms.com/bdh/what-i-look-for-in-the-asia-session",
+      "date": "2026-11-12",
+      "takeaway": "The full overnight playbook: mark prominent highs/lows at the 6 PM Globex open, wait out the 50-minute No Man's Land, then take the A+ 5-minute flag pulling back to VWAP with the 9/21 EMAs holding. Scales out at wick high → PM High → psychological level; ~2.5 RR on a normal day."
+    },
+    {
+      "title": "Trading Full Time? Here's Why You Need A Second Income",
+      "url": "https://onlypropfirms.com/bdh/trading-full-time-heres-why-you-need-a-second-income",
+      "date": "2026-11-11",
+      "takeaway": "The three months after his $18K day: bedrotting, scarcity mindset, and tilt that full-ported a pile of evals and burned $5–6K of real payouts in six weeks. The fix: one proven strategy, size all the way down, stack micro-wins — and a second income so trading money is pressure-free."
+    },
+    {
+      "title": "Being Right Doesn't Make You Money",
+      "url": "https://onlypropfirms.com/bdh/being-right-doesnt-make-you-money",
+      "date": "2026-10-25",
+      "takeaway": "A correct macro thesis only pays with micro execution — wait for the 5-minute flag to confirm instead of jumping in early. A wick entry with 5 contracts cost a 35–40 point drawdown; size so a standard 20-point wick can't blow you."
+    },
+    {
+      "title": "Why Your P&L Is Lying To You",
+      "url": "https://onlypropfirms.com/bdh/why-your-pl-is-lying-to-you",
+      "date": "2026-10-22",
+      "takeaway": "A rule-breaking $5,000 day is worse than a rule-following $1,000 day — P&L rewards lucky oversizing until the luck runs out. Money is a lagging indicator: he lost for over a year before pulling $50,000 in 2.5 weeks once the process caught up."
+    },
+    {
+      "title": "Passed The Eval And Took $3,000+ Out On Vest LIVE",
+      "url": "https://onlypropfirms.com/bdh/passed-the-eval-and-took-3000-out-on-vest-live",
+      "date": "2026-10-17",
+      "takeaway": "Passed the Vest 10K Bespoke eval in 9 minutes by shorting his normal EMA-respecting setup, then farmed a historic 732-point trend day on 1-minute 9/21 EMA retracements. Trend days are rare, but when they appear you have to press your advantage."
+    },
+    {
+      "title": "Adding To A Trade (When Your In Drawdown) | My Exact Strategy",
+      "url": "https://onlypropfirms.com/bdh/adding-to-a-trade-when-your-in-drawdown-my-exact-strategy",
+      "date": "2026-10-08",
+      "takeaway": "The exact DCA method: only average down with a clear prior trend, an obvious target, and a hard stop. Add on the lower-low fake-out and again on the retest — only while no candle closes below the previous low — turning 2 contracts into 4–6 by design."
+    },
+    {
+      "title": "My Pre-Market Routine For The New York Open",
+      "url": "https://onlypropfirms.com/bdh/my-pre-market-routine-for-the-new-york-open",
+      "date": "2026-10-02",
+      "takeaway": "The daily 9:25 AM ritual: mark every obvious wick high and low on both sides of price, then let VWAP be the tiebreaker at the bell. Hold above VWAP targets the London Highs; reject it and short the deep pre-market lows — his example flushed ~300 points in 45 minutes."
+    },
+    {
+      "title": "Why You Forget How To Trade After A Payout",
+      "url": "https://onlypropfirms.com/bdh/why-you-forget-how-to-trade-after-a-payout",
+      "date": "2026-10-01",
+      "takeaway": "A withdrawal shifts your mental reference point, making $500–$1,000 days feel tiny while the drawdown buffer is halved. Fixes: view yourself in third person, recalibrate size down, and stick strictly to the A+ flag setups that got you paid."
+    },
+    {
+      "title": "The 5 Trades That Paid Me $24,000 This Week",
+      "url": "https://onlypropfirms.com/bdh/the-5-trades-that-paid-me-24000-this-week",
+      "date": "2026-09-29",
+      "takeaway": "Five live 15-minute flag trades across copy-traded Lucid and Tradeify accounts, all the same structure: enter at the candle midpoint or the EMA loss, target the nearest wick. Payout receipts totaled ~$24,000 from small, repeated size."
+    },
+    {
+      "title": "I Lost $18,000 In A Single Day — Here's What It Did To Me",
+      "url": "https://onlypropfirms.com/bdh/i-lost-18000-in-a-single-day-heres-what-it-did-to-me",
+      "date": "2026-09-25",
+      "takeaway": "Making $20K/month at 20 made money feel like a video game: $3–5K losses brushed off, purchases priced in points, lifestyle budgeted off best months. He ran to +$11K, forced trades, and finished $18–20K down in one day — mindset must scale with income."
+    },
+    {
+      "title": "The Brutal Reality Of Trading When You're Broke",
+      "url": "https://onlypropfirms.com/bdh/the-brutal-reality-of-trading-when-youre-broke",
+      "date": "2026-09-22",
+      "takeaway": "Your strategy might not be the problem — you might just need the money too badly, which shows up as early stop-outs and cut winners. His fix: a guaranteed outside income (a $25/hr valet job) as a psychological shield."
+    },
+    {
+      "title": "This Crypto Prop Firm That Lets You Keep 100%",
+      "url": "https://onlypropfirms.com/bdh/this-crypto-prop-firm-that-lets-you-keep-100",
+      "date": "2026-09-16",
+      "takeaway": "WarBux firm review: equities 1-step accounts from $36 and crypto Instant Light accounts with a 100% profit split. He highlights the rule freedoms that suit multi-account trading — no payout caps, no news restrictions, no forced move to live."
+    },
+    {
+      "title": "The Days You Shouldn't Trade NQ At All (How I Spot Them)",
+      "url": "https://onlypropfirms.com/bdh/the-days-you-shouldnt-trade-nq-at-all-how-i-spot-them",
+      "date": "2026-09-10",
+      "takeaway": "The anti-setup checklist: after a big overnight trend, indecisive opening candles, barcoding on the EMAs, wicks everywhere, and fake flags all mean sit out. Knowing when to protect capital is the ultimate cheat code — hide the power cable."
+    },
+    {
+      "title": "How I Catch 100-200 Point V-Shapes on NQ (Bull & Bear Flags)",
+      "url": "https://onlypropfirms.com/bdh/how-i-catch-100-200-point-v-shapes-on-nq-bull-bear-flags",
+      "date": "2026-09-08",
+      "takeaway": "On the 1-minute chart he hunts liquidity sweeps, waits for the exhaustion candle, then enters the flag that fails at the EMAs. Scaled through internal wick lows to the untouched Asia low: a 200-point drop in ~70 minutes."
+    },
+    {
+      "title": "What Getting Consistent Payouts Actually Taught Me",
+      "url": "https://onlypropfirms.com/bdh/what-getting-consistent-payouts-actually-taught-me",
+      "date": "2026-09-02",
+      "takeaway": "Getting a payout means nothing; getting them consistently does. The boring math — 1 contract × 5 copy-traded accounts × 30–50 points/day ≈ $60K/month in potential payouts — plus never trading funded accounts in chop and scaling laterally, not vertically."
+    },
+    {
+      "title": "If I Had To Start Trading Over, Here's What I'd Do",
+      "url": "https://onlypropfirms.com/bdh/if-i-had-to-start-trading-over-heres-what-id-do",
+      "date": "2026-09-01",
+      "takeaway": "Beginner blueprint: stop overconsuming content, pick one ticker (ES first, NQ after 6–12 months of consistency), and move from sim to small real risk for skin in the game. Budget eval purchases monthly and never brute-force accounts."
+    },
+    {
+      "title": "My A+ Bear Flag Checklist For 140-Point NQ Setups",
+      "url": "https://onlypropfirms.com/bdh/my-a-bear-flag-checklist-for-140-point-nq-setups",
+      "date": "2026-08-29",
+      "takeaway": "The four-step checklist on a live Asia short: bias from a failed retest, price below VWAP with no closes above the EMAs, targets mapped from wick lows, entry on the flag break with the stop at the flag's top wick. 140 points with zero drawdown in ~90 minutes."
+    },
+    {
+      "title": "Are You Skipping This Step? My NQ Trading Checklist",
+      "url": "https://onlypropfirms.com/bdh/are-you-skipping-this-step-my-nq-trading-checklist",
+      "date": "2026-08-28",
+      "takeaway": "His entry confluence sequence recorded mid-trade: sweep of a prominent low, exhausted price action, V-shape recovery into a bull flag, and a candle close above the EMAs — only then buy the break. First TP hit for +$1,000 and change."
+    },
+    {
+      "title": "The Setup I Use For Every NQ Breakout",
+      "url": "https://onlypropfirms.com/bdh/the-setup-i-use-for-every-nq-breakout",
+      "date": "2026-08-27",
+      "takeaway": "Never trade inside the range: watch the 1-minute chart for a flag at the consolidation's edge and take the break to a new low. Targets are draws on liquidity — and even +$1,300 flashing on screen didn't override the mapped AM-low target."
+    },
+    {
+      "title": "How I Became a Full-Time Trader: The Real Story",
+      "url": "https://onlypropfirms.com/bdh/how-i-became-a-full-time-trader-the-real-story",
+      "date": "2026-08-26",
+      "takeaway": "From options YOLOs and maxed-out credit cards to installing docks on Michigan lakes while trading from his phone, his first $1,200 payout was the light at the end of the tunnel. A discipline overhaul (4 AM wake-ups, gym twice a day, one or two trades a day) built the consistency that got him to the BDH floor."
+    }
+  ],
+  "links": {
+    "youtube": "https://www.youtube.com/@BDHTrading",
+    "site": "https://onlypropfirms.com/bdh/lucas-trading-playbook",
+    "siteLabel": "Lucas's Trading Playbook"
+  },
+  "sources": {
+    "category": "https://onlypropfirms.com/bdh/lucas-trading-playbook",
+    "notes": "20/20 articles crawled pages 1–2; 7 video descriptions extracted; researched 2026-11-16"
+  }
+}

@@ -1,0 +1,170 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// One static shell handles every video via ?v=<id> — client script below does the rest.
+const mods = import.meta.glob('../data/traders/*.json', { eager: true }) as Record<string, any>;
+const traders = Object.values(mods)
+  .map((m) => m.default ?? m)
+  .sort((a, b) => (a.name || '').localeCompare(b.name || ''));
+
+const data = traders.flatMap((t) =>
+  (t.videos || []).map((v: any) => {
+    const id = (v.url || '').match(/(?:v=|youtu\.be\/|shorts\/|embed\/)([\w-]{11})/)?.[1] ?? '';
+    return {
+      id,
+      title: v.title,
+      url: v.url,
+      date: v.date || '',
+      type: v.type || 'video',
+      takeaway: v.takeaway || '',
+      trader: t.name,
+      traderSlug: t.slug,
+      color: t.accent,
+      show: t.show,
+    };
+  })
+);
+---
+
+<BaseLayout title="Watch | Gurans" activePath="/videos" crumb="Library / <b>Watch</b>">
+  <div class="watch-layout" id="top">
+    <div class="watch-main">
+      <div class="player-shell" id="player">
+        <!-- iframe injected by script -->
+      </div>
+      <h1 class="watch-title" id="w-title">Loading…</h1>
+      <div class="watch-meta" id="w-meta"></div>
+      {data.length > 0 && <div class="watch-takeaway" id="w-takeaway" style="display:none"></div>}
+      <div class="watch-prevnext">
+        <button id="w-prev" type="button">← Prev</button>
+        <button id="w-next" type="button">Next →</button>
+        <button id="w-autoplay" type="button" title="Play the next video automatically when this one ends">Autoplay: off</button>
+      </div>
+      <div class="watch-actions">
+        <a id="w-yt" href="#" target="_blank" rel="noopener">Open on YouTube ↗</a>
+        <a id="w-playbook" href="#">Open trader's playbook</a>
+        <a href="/videos">All videos</a>
+      </div>
+    </div>
+    <aside class="watch-side">
+      <div class="playlist-head">
+        <span class="ph-title" id="pl-title">Up next</span>
+        <span class="ph-count" id="pl-count"></span>
+      </div>
+      <div class="playlist" id="playlist"></div>
+      <div class="pl-other" id="pl-other"></div>
+    </aside>
+  </div>
+
+  <script type="application/json" id="video-data" set:html={JSON.stringify(data)} />
+
+  <script is:inline>
+    (function () {
+      var VIDEOS = JSON.parse(document.getElementById('video-data').textContent);
+      var playerEl = document.getElementById('player');
+      var titleEl = document.getElementById('w-title');
+      var metaEl = document.getElementById('w-meta');
+      var takeawayEl = document.getElementById('w-takeaway');
+      var plTitleEl = document.getElementById('pl-title');
+      var plCountEl = document.getElementById('pl-count');
+      var playlistEl = document.getElementById('playlist');
+      var plOtherEl = document.getElementById('pl-other');
+      var prevBtn = document.getElementById('w-prev');
+      var nextBtn = document.getElementById('w-next');
+      var autoplayBtn = document.getElementById('w-autoplay');
+
+      var autoplay = false;
+      try { autoplay = localStorage.getItem('tsl-autoplay') === '1'; } catch (e) {}
+      function renderAutoplay() { autoplayBtn.textContent = 'Autoplay: ' + (autoplay ? 'on' : 'off'); autoplayBtn.style.color = autoplay ? 'var(--accent)' : ''; }
+      renderAutoplay();
+      autoplayBtn.addEventListener('click', function () {
+        autoplay = !autoplay;
+        try { localStorage.setItem('tsl-autoplay', autoplay ? '1' : '0'); } catch (e) {}
+        renderAutoplay();
+        if (autoplay && current) load(current.id, true);
+      });
+
+      var params = new URLSearchParams(location.search);
+      var requested = params.get('v');
+      var current = VIDEOS.find(function (x) { return x.id === requested; }) || VIDEOS[0];
+
+      function sameTrader() { return VIDEOS.filter(function (x) { return x.trader === current.trader; }); }
+      function indexOfCurrent() { return sameTrader().indexOf(current); }
+
+      function load(id, autoplayNow) {
+        var v = VIDEOS.find(function (x) { return x.id === id; });
+        if (!v) return;
+        current = v;
+        playerEl.innerHTML =
+          '<iframe src="https://www.youtube-nocookie.com/embed/' + v.id +
+          (autoplayNow || autoplay ? '?autoplay=1' : '') +
+          '&rel=0&enablejsapi=1&origin=' + encodeURIComponent(location.origin) +
+          '" title="' + v.title.replace(/"/g, '') + '" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+        titleEl.textContent = v.title;
+        document.title = v.title + ' — ' + v.trader + ' | Trader Strategy Library';
+        metaEl.innerHTML =
+          '<span class="badge">' + v.type + '</span>' +
+          '<span class="tdot" style="background:' + v.color + ';width:8px;height:8px;border-radius:50%;display:inline-block"></span>' +
+          '<a href="/traders/' + v.traderSlug + '" style="font-weight:700">' + v.trader + '</a>' +
+          (v.date ? '<span class="meta-text">' + v.date + '</span>' : '');
+        if (v.takeaway) { takeawayEl.style.display = ''; takeawayEl.textContent = v.takeaway; }
+        else { takeawayEl.style.display = 'none'; }
+        document.getElementById('w-yt').href = v.url;
+        document.getElementById('w-playbook').href = '/traders/' + v.traderSlug;
+        try { history.replaceState(null, '', '/watch?v=' + v.id); } catch (e) {}
+        buildPlaylist();
+        var upNext = sameTrader();
+        prevBtn.disabled = indexOfCurrent() === 0;
+        nextBtn.disabled = indexOfCurrent() === upNext.length - 1;
+      }
+
+      function buildPlaylist() {
+        var list = sameTrader();
+        plTitleEl.textContent = 'More from ' + current.trader;
+        plCountEl.textContent = list.length + ' videos';
+        playlistEl.innerHTML = list.map(function (x) {
+          return '<a class="pl-item' + (x.id === current.id ? ' current' : '') + '" href="/watch?v=' + x.id + '">' +
+            '<span class="pl-thumb"><img src="https://i.ytimg.com/vi/' + x.id + '/mqdefault.jpg" alt="" loading="lazy"></span>' +
+            '<span><span class="pl-title">' + x.title + '</span><span class="pl-meta" style="display:block">' + x.type + (x.date ? ' · ' + x.date : '') + '</span></span>' +
+            '</a>';
+        }).join('');
+        var others = VIDEOS.filter(function (x) { return x.trader !== current.trader; });
+        var groups = {};
+        others.forEach(function (x) { (groups[x.trader] = groups[x.trader] || []).push(x); });
+        plOtherEl.innerHTML = Object.keys(groups).map(function (name) {
+          var g = groups[name];
+          return '<details><summary>' + name + ' · ' + g.length + ' videos</summary><div class="playlist" style="margin-top:6px">' +
+            g.map(function (x) {
+              return '<a class="pl-item" href="/watch?v=' + x.id + '">' +
+                '<span class="pl-thumb"><img src="https://i.ytimg.com/vi/' + x.id + '/mqdefault.jpg" alt="" loading="lazy"></span>' +
+                '<span><span class="pl-title">' + x.title + '</span><span class="pl-meta" style="display:block">' + x.type + '</span></span>' +
+                '</a>';
+            }).join('') + '</div></details>';
+        }).join('');
+      }
+
+      prevBtn.addEventListener('click', function () {
+        var list = sameTrader(); var i = indexOfCurrent();
+        if (i > 0) load(list[i - 1].id, true);
+      });
+      nextBtn.addEventListener('click', function () {
+        var list = sameTrader(); var i = indexOfCurrent();
+        if (i < list.length - 1) load(list[i + 1].id, true);
+      });
+
+      // Autoplay on ended — the embed posts player state via postMessage when enablejsapi=1.
+      window.addEventListener('message', function (e) {
+        if (String(e.origin).indexOf('youtube') === -1 && String(e.origin).indexOf('youtube-nocookie') === -1) return;
+        var data = e.data;
+        if (typeof data === 'string') { try { data = JSON.parse(data); } catch (err) { return; } }
+        if (!data || !data.info) return;
+        if (data.info.playerState === 0 && autoplay) {
+          var list = sameTrader(); var i = indexOfCurrent();
+          if (i < list.length - 1) load(list[i + 1].id, true);
+        }
+      });
+
+      if (current) load(current.id, true);
+    })();
+  </script>
+</BaseLayout>

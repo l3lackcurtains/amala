@@ -1,0 +1,30 @@
+---
+// Video card: thumbnail opens the in-site watch page (big player + playlist).
+interface Props {
+  video: any;
+  accent?: string;
+  accentSoft?: string;
+}
+
+const { video, accent, accentSoft } = Astro.props;
+const id = (video.url || '').match(/(?:v=|youtu\.be\/|shorts\/|embed\/)([\w-]{11})/)?.[1] ?? '';
+const style = accent ? `--accent:${accent};--accent-soft:${accentSoft}` : undefined;
+const type = video.type || 'video';
+const watchUrl = id ? `/watch?v=${id}` : video.url;
+---
+
+<div class="card video-card" data-type={type} style={style}>
+  {id && (
+    <a class="vc-thumb" href={watchUrl} aria-label={`Watch: ${video.title}`}>
+      <img src={`https://i.ytimg.com/vi/${id}/hqdefault.jpg`} alt="" loading="lazy" />
+      <span class="vc-play">▶</span>
+    </a>
+  )}
+  <div class="meta-row">
+    <span class="badge">{type}</span>
+    {video.date && <span class="meta-text">{video.date}</span>}
+    <a class="meta-text" style="margin-left:auto" href={video.url} target="_blank" rel="noopener">YouTube ↗</a>
+  </div>
+  <div class="title"><a href={watchUrl}>{video.title}</a></div>
+  {video.takeaway && <div class="takeaway">{video.takeaway}</div>}
+</div>
