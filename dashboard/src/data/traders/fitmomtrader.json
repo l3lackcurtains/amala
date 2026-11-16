@@ -1,0 +1,77 @@
+{
+  "slug": "fitmomtrader",
+  "name": "Fit Mom Trader",
+  "show": "Fit Mom Trader · LIVE Day Trading",
+  "streamSlot": "Mon–Thu · live NY-session streams (NQ & ES) · trades Asia/Tokyo evenings · Fridays off",
+  "accent": "#f472b6",
+  "accentSoft": "rgba(244, 114, 182, 0.12)",
+  "tagline": "The boring 60-minute Initial Balance system — two setups, $200 fixed risk, two losses and done — that took a gym-owning mom of three from blowing accounts to $165K of prop payouts.",
+  "summary": "Krista (Fit Mom Trader, Krista Fudge) is a futures day trader and mom of three who traded NQ ~95% of the time through one 'bread and butter' range: the New York 9:30–10:30 ET Initial Balance, played only as a failed auction at the extremes or a trend continuation off the IB mid/VWAP. She streams live Monday–Thursday, trades the Asia session in the evening (often gold), and pairs the system with $200 fixed risk, a 2-loss daily stop, alert-based entries and hard account lockouts. Her stated 2026 results: $165K in prop payouts, including a $62K month and a video titled 'my trading strategy is boring, but it made me $100,000 in 2 months' (755K views).",
+  "oneLiner": "Mark the 9:30–10:30 NY Initial Balance; long or short only the failed auction back inside the range or the trend continuation off the IB mid; $200 risk per trade, 2 losses max, alerts instead of screen time.",
+  "keyQuote": "My best setup wins about 70% of the time.",
+  "keyQuoteSource": "\"my trading strategy is boring, but it made me $100,000 in 2 months\" (YouTube, Oct 26, 2026)",
+  "stats": [
+    { "label": "Prop payouts 2026 (stated)", "value": "$165K" },
+    { "label": "Best payout month", "value": "$62K" },
+    { "label": "Best setup win rate (stated)", "value": "~70%" },
+    { "label": "Videos analyzed", "value": "25" },
+    { "label": "YouTube subscribers", "value": "45.4K" },
+    { "label": "Fixed risk per trade", "value": "$200" }
+  ],
+  "highlights": [
+    "One range, two setups: the 9:30–10:30 ET Initial Balance is her 'bread and butter' — 'it's like a 60 minute ORB'; failed auction at the extremes or trend continuation off the IB mid.",
+    "Day-type selects the setup: trending days get IB-mid retracements; choppy days get failed auctions — 'you can adjust to the market conditions.'",
+    "Risk is mechanical: $200 fixed per trade, contracts sized from the stop distance, daily loss limit of 2 losses 'then stop' (her 50K-account, $2K-drawdown example).",
+    "Alert-based execution: 'if my alert doesn't go off, then I don't trade' — plus the lockout button: 'it protects my profits, my mental capital, and my time.'",
+    "NQ over ES ~95% of the time; micros (MNQ) to pass evals and protect capital; Asia/Tokyo evening book (18:00–20:00 ET range, gold/MGC) targeting ~3R.",
+    "No-trade conditions are explicit: choppy/flat-VWAP days, the last NY hour, lunch/holiday chop, CPI/PPI/FOMC/NFP days, and anything after the daily loss limit."
+  ],
+  "sections": [
+    { "id": "strategy", "title": "Strategy Playbook", "file": "strategy", "lead": "The 60-minute Initial Balance system: failed auction and trend continuation setups, the 15-min ORB, the Asia-session gold variant, and the VWAP/Volume Profile/Edgeful statistics she trades with." },
+    { "id": "rules", "title": "Trading Rules", "file": "rules", "lead": "Every documented rule: $200 fixed risk, 2-loss daily stop, candle-close confirmation, the explicit no-trade list, lockout discipline, and her prop-firm payout tactics." },
+    { "id": "psychology", "title": "Psychology & Mindset", "file": "psychology", "lead": "Tilt control with alerts and lockouts, journaling and daily report cards, honest blow-up stories, and why boring trading is her whole edge." }
+  ],
+  "videos": [
+    { "title": "LIVE DAY TRADING | FUTURES NQ & ES | November 16, 2026", "url": "https://www.youtube.com/watch?v=1S8azVXiKGg", "date": "2026-11-16", "type": "live", "takeaway": "Live NY-session stream (~1h44m); description names the full toolkit: 15 Min ORB, 60 Min IB + Failed Auctions, Volume Profile, MNQ and MGC." },
+    { "title": "LIVE DAY TRADING | FUTURES NQ & ES | November 17, 2026", "url": "https://www.youtube.com/watch?v=Lrn8wBhOQ8c", "date": "2026-11-16", "type": "live", "takeaway": "Next-day stream captured at launch (0 views at fetch); identical standing description confirming the strategy stack she trades every live session." },
+    { "title": "Best Instant Funded accounts available", "url": "https://www.youtube.com/shorts/tV-LIqcr4FM", "date": "2026-11-16", "type": "short", "takeaway": "Instant-funding prop account promo — no description; title-level evidence only." },
+    { "title": "More screen time doesn't mean more money in trading.", "url": "https://www.youtube.com/shorts/-8-27CdzaGw", "date": "2026-11-14", "type": "short", "takeaway": "Core mindset stance: more screen time does not equal more profit — matches her alert-based, low-screen-time routine." },
+    { "title": "Best ROI in prop firms right now", "url": "https://www.youtube.com/shorts/8mvlzx7K3Jw", "date": "2026-11-13", "type": "short", "takeaway": "Prop-firm ROI comparison short — no description; part of her firm-review content line." },
+    { "title": "Can you trade without tilting? Try this.", "url": "https://www.youtube.com/watch?v=aL1dx15zpBQ", "date": "2026-11-13", "type": "video", "takeaway": "Tilt framework (18:24, 12.6K views): breaks down the psychological triggers of tilt and promises 'the exact method you can use to stop tilting' — emotional discipline framed as the hardest part of the journey." },
+    { "title": "IB Mid Retracement Long — Trade breakdown + live analysis", "url": "https://www.youtube.com/shorts/Yywjou3IcsI", "date": "2026-11-12", "type": "short", "takeaway": "Her #1 setup filmed live: the trend-continuation long on a retracement to the IB mid (4.2K views)." },
+    { "title": "LIVE DAY TRADING | FUTURES NQ & ES | November 12, 2026", "url": "https://www.youtube.com/watch?v=-zZzTjnIx-w", "date": "2026-11-12", "type": "live", "takeaway": "Live stream (~2h8m, 11.7K views) with the standard strategy description: 15 Min ORB, 60 Min IB, Failed Auctions, Volume Profile." },
+    { "title": "LIVE DAY TRADING | FUTURES NQ & ES | November 11, 2026", "url": "https://www.youtube.com/watch?v=tDkYJd7s6Yo", "date": "2026-11-11", "type": "live", "takeaway": "Live stream (~1h17m, 8.6K views) — same daily-session format." },
+    { "title": "The lockout button protects my profits, my mental capital, and my time.", "url": "https://www.youtube.com/shorts/CRtMdaK0qbg", "date": "2026-11-11", "type": "short", "takeaway": "Her risk-control signature: platform lockouts after the planned trades — one trade, maybe two, then locked." },
+    { "title": "Why Position Size Beats All Other Secrets (How many contracts should you trade?)", "url": "https://www.youtube.com/watch?v=KHnT6PEOirw", "date": "2026-11-10", "type": "video", "takeaway": "Position-sizing lecture (19:04): mathematical calculation, planning for losing streaks, emotional discipline, four-step execution process, maintaining consistency (8 chapters)." },
+    { "title": "Switch to micros - pass evals and protect capital", "url": "https://www.youtube.com/shorts/rgXbye2SK2I", "date": "2026-11-10", "type": "short", "takeaway": "Eval tactic: trade MNQ micros to pass evaluations while protecting the account." },
+    { "title": "LIVE DAY TRADING | FUTURES NQ & ES | November 10, 2026", "url": "https://www.youtube.com/watch?v=5l_GaLPM1To", "date": "2026-11-10", "type": "live", "takeaway": "Live stream (~2h8m, 10.6K views) — daily NY-session format." },
+    { "title": "'How many contracts do you trade?' Thats the wrong question to ask.", "url": "https://www.youtube.com/shorts/5RSIRmnbtXE", "date": "2026-11-09", "type": "short", "takeaway": "Sizing philosophy teaser: contract count is a function of stop and account, not a number to copy." },
+    { "title": "LIVE DAY TRADING | FUTURES NQ & ES | November 9, 2026", "url": "https://www.youtube.com/watch?v=ueZ-bJGbrQk", "date": "2026-11-09", "type": "live", "takeaway": "Live stream (~2h23m, 11.6K views) — longest of the captured week." },
+    { "title": "my trading strategy is boring, but it made me $100,000 in 2 months", "url": "https://www.youtube.com/watch?v=LfSeAMzKjwM", "date": "2026-10-26", "type": "video", "takeaway": "THE core strategy video (755K views): daily levels, trading plan, IB setups, Asia session, risk management and rules, when to avoid trading. States $62K Aug + $42K Sep payouts, ~70% win rate on the best setup, $200 risk, 2-loss daily limit." },
+    { "title": "Initial Balance Masterclass: 3 Ways to Trade It", "url": "https://www.youtube.com/watch?v=lOnEKIWj0S8", "date": "2026-04-23", "type": "video", "takeaway": "IB masterclass (16:43): defining the IB, core strategies, indicator setup, market analysis examples, data-backed conclusion." },
+    { "title": "The ORB Strategy Every Trader Should Know", "url": "https://www.youtube.com/watch?v=as3aN2faLxo", "date": "2026-05-23", "type": "video", "takeaway": "ORB education (22:35): three core trade setups, pro tips for execution, avoiding fake breakouts and choppy price action." },
+    { "title": "The ONLY Setup I Need to Trade Futures (Initial Balance)", "url": "https://www.youtube.com/watch?v=Bt8jkLp6JDA", "date": "2026-06-08", "type": "video", "takeaway": "Her two A+ setups named explicitly: IB Failed Auctions and Trend Continuations, validated with Edgeful statistics, opening candle data and breakout level targets." },
+    { "title": "This Initial Balance Setup Has a Statistical Edge", "url": "https://www.youtube.com/watch?v=yrgMYe1P7fI", "date": "2026-07-07", "type": "video", "takeaway": "IB failed-auction trade recap using Edgeful market statistics, key levels and ES confluence; includes trade management segment." },
+    { "title": "15 min OR + vwap strategy", "url": "https://www.youtube.com/watch?v=NU2ZBb0Db9Q", "date": "2025-11-25", "type": "live", "takeaway": "Live VOD teaching the 15-minute opening range combined with VWAP — the faster sibling of her 60-min IB." },
+    { "title": "Futures Prop Firms Explained for Beginners", "url": "https://www.youtube.com/watch?v=UuARZLd0aVM", "date": "2026-05-09", "type": "video", "takeaway": "Prop-firm 101: evaluations, trailing drawdown types, risk rules, consistency rules, payouts, common failure mistakes, choosing a firm." },
+    { "title": "My Honest Opinion on FUNDEDNEXT Futures Accounts", "url": "https://www.youtube.com/watch?v=IYfOI0O5Fck", "date": "2026-06-20", "type": "video", "takeaway": "Firm review: FundedNext account types, rules, payouts, drawdown structure; which accounts she recommends for beginners and which to avoid." },
+    { "title": "Is Lucid Trading Legit? Full Breakdown + Best Account to Choose", "url": "https://www.youtube.com/watch?v=c1tvzE_i6_U", "date": "2025-09-11", "type": "video", "takeaway": "Lucid Test / Pro / Direct breakdown: one-time-fee evaluation, ~15-minute average payouts, which account she prefers and why." },
+    { "title": "Initial Balance Breakdown: My #1 Tool for Day Trading Futures", "url": "https://www.youtube.com/watch?v=pNihvRxPUR0", "date": "2025-06-14", "type": "video", "takeaway": "Earliest strategy video found (June 2025): how to draw the IB, the two setups (failed auction + trend continuation), stops/partials/scale-outs, and the pro tip 'don't trade every breakout — look for retests, liquidity grabs, and price action confirmation.'" }
+  ],
+  "articles": [
+    { "title": "FMT Academy — Waitlist VSL landing page", "url": "https://fitmomtrader.com/waitlist-vsl", "date": "2026-11-16", "takeaway": "The whole site is a funnel (no blog): 'How To Start Securing Consistent Prop Firm Payouts Without Changing Your Strategy', the '$28K in a single week' coaching claim, and student receipts including a payout request 'with lockout applied'." },
+    { "title": "Free 7+ Hour Trading Course page", "url": "https://fitmomtrader.com/free-course", "date": "2026-11-16", "takeaway": "Course promise bullets: the system to 'stop giving my profits back', a repeatable plan, 'the one setup I actually trade', stopping blown funded accounts to 'bank $10k+ payouts', plus Krista's own $10K Lucid payout certificate." },
+    { "title": "The Day Trading Show — 'Mom of 3 Breaks Down Her $165k In Prop Firm Payouts!'", "url": "https://podscan.fm/podcasts/the-day-trading-show/episodes/mom-of-3-breaks-down-her-165k-in-prop-firm-payouts", "date": "2026-10-24", "takeaway": "52-min interview: IB strategy explained in her own words, Asia session, evaluations vs instant funding, journaling to catch emotional patterns, and why chasing payout requirements blew her accounts." },
+    { "title": "Active Edge Strategy Lab — pre-registered mechanization of her strategy", "url": "https://www.activeedgehealth.com/static/strategy_lab/strategies/ib-failed-auction-trend-nq5m-fitmomtrader/PREREG.html", "date": "2026-11-16", "takeaway": "Third-party quant breakdown of her 'boring strategy' video with her stated rules at timestamps: IB 09:30–10:30 ET, failed auction and trend continuation entries/stops/targets, Asia 18:00–20:00 ET variant, $200 risk, 2-loss limit, ~70% win-rate claim." },
+    { "title": "Linktree — Krista Fudge | Fit Mom Trader", "url": "https://linktr.ee/krista_fudge", "date": "2026-11-16", "takeaway": "Confirms her full name and official links: Instagram, YouTube, X, Tradeify, The Futures Desk, Top One Futures, TradeZella." }
+  ],
+  "links": {
+    "youtube": "https://www.youtube.com/@FitMomTrader",
+    "site": "https://fitmomtrader.com/",
+    "siteLabel": "fitmomtrader.com"
+  },
+  "sources": {
+    "category": "https://fitmomtrader.com/",
+    "notes": "Crawled YouTube RSS feed (15 latest videos), all 15 watch pages (shortDescription, lengths, chapters), the about page (45.4K subs, channel description, external links), and 10 additional key videos found via search (strategy masterclasses, position sizing, prop-firm reviews). Site: fitmomtrader.com is a two-page funnel (waitlist-vsl + free-course); /blog, /about, /mentorship are 404 — no articles exist. Bonus sources: The Day Trading Show podcast episode (Oct 24, 2026, partial transcript) and a third-party pre-registered mechanization of her core strategy video with timestamps. Channel has 739 videos total; census covers the RSS window plus key evergreen strategy videos. Her $165K/2026, $62K month, $28K week and ~70% win-rate figures are her own stated claims, not independently verified. Researched 2026-11-16."
+  }
+}

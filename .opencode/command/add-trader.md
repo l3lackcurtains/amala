@@ -43,20 +43,42 @@ Keys, exactly: `slug`, `name`, `show`, `streamSlot`, `accent`, `accentSoft`, `ta
 `sections` (array of {id,title,file,lead} — ids/files: strategy, rules, psychology),
 `videos` (array of {title,url,date,type: live|video|short,takeaway}),
 `articles` (array of {title,url,date,takeaway}), `links` ({youtube,site,siteLabel}),
-`sources` ({category,notes}).
-Pick an `accent` hex not used by existing traders (check `src/data/traders/*.json`) and a matching
-`accentSoft` rgba. Valid JSON, single-line strings, escape quotes.
+`profile` (normalized block — see below), `sources` ({category,notes}).
+
+**`profile` is required** (normalized vocabulary, per STANDARD.md):
+
+```json
+"profile": {
+  "instruments": ["NQ", ...],
+  "style": "one-line description of the model",
+  "sessions": ["Globex open 6:00 PM", "NY open 9:30 AM", ...],
+  "firms": ["Apex", "Tradeify", ...],
+  "niche": "what makes their system distinctive"
+}
+```
 
 ### 2. Markdown content → `dashboard\src\markdown\traders\<slug>\`
-- `strategy.md`, `rules.md`, `psychology.md` — NO frontmatter, NO top-level `#` title,
-  start directly with `## ` subsections, preserve all details/numbers/quotes.
+- Every file **STARTS with YAML frontmatter** (per STANDARD.md):
+
+```yaml
+---
+title: <Strategy Playbook | Trading Rules | Psychology & Mindset>
+trader: <slug>
+topics:
+  - <3-5 topics from the controlled vocabulary in STANDARD.md>
+---
+```
+
+- After frontmatter: NO top-level `#` title — start directly with `## ` subsections,
+  preserve all details/numbers/quotes.
 - In `rules.md` every rule must be ONE item in a TOP-LEVEL ordered list
   (`1. **Rule title.** evidence`); quotes as `> blockquote` indented 3 spaces inside list items.
 
 ## QUALITY BAR
 - Nothing invented. Undocumented = say so honestly, mark gaps. Stated vs inferred distinguished.
 - Quote actual words with sources. Capture specific numbers (points, dollars, R:R, times).
-- Valid JSON (node-parse it to verify before finishing).
+- Valid JSON (node-parse it to verify before finishing). Frontmatter required on all md files.
+- Follow `trading/STANDARD.md` for the full spec (file layout, frontmatter, profile, topics).
 
 ## FINISH
 1. `npm.cmd run build` in `dashboard/` — must succeed (7→8 pages, new trader page appears).
