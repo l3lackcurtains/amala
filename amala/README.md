@@ -7,7 +7,7 @@ their public blogs and YouTube channels — 100+ articles and 45+ videos analyze
 ## Run it
 
 ```bash
-cd dashboard
+cd amala
 npm install     # first time only
 npm run dev     # dev server at http://localhost:4321
 npm run build   # static site in dist/
@@ -47,13 +47,16 @@ Requires Node 18+.
 
 ## Where the research lives
 
-The raw research (markdown, per-article notes, crawl logs) sits next to this folder — one folder per trader:
+The raw research (markdown, per-article notes, crawl logs) lives one level up in `research/` —
+one folder per trader, kept out of the app so only curated data ships:
 
-- `../denny/` — Denny's Trading Desk (34 articles)
-- `../dmoney/` — D-Money's Trading FAQ (35 articles, 50 hard rules)
-- `../lucas/` — Lucas's Trading Playbook (20 articles)
-- `../zarb/` — Zarb / iamzarb.com (blog + YouTube)
-- `../youtube/` — BDH Trading video index + RSS extraction
+- `../research/traders/denny/` — Denny's Trading Desk (34 articles)
+- `../research/traders/dmoney/` — D-Money's Trading FAQ (35 articles, 50 hard rules)
+- `../research/traders/lucas/` — Lucas's Trading Playbook (20 articles)
+- `../research/traders/zarb/` — Zarb / iamzarb.com (blog + YouTube)
+- `../research/traders/danielholmes/` — Daniel Holmes
+- `../research/traders/fitmomtrader/` — FitMomTrader
+- `../research/youtube/` — BDH Trading video index + RSS extraction
 
 Study files: `STRATEGY.md`, `RULES.md`, `PSYCHOLOGY.md`, `ARTICLES.md`, `YOUTUBE-VIDEOS.md`, `SOURCES.md` in each folder.
 

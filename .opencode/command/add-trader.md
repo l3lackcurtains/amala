@@ -24,7 +24,7 @@ Batch independent fetches in parallel. Retry failures once, then log as failed a
 5. **Fill gaps** with websearch (`<name> strategy`, `<name> prop firm`) only if needed.
 6. If they have blog articles, fetch and read EVERY article.
 
-### Research output → `C:\Users\oled\Desktop\faltu\trading\<slug>\`
+### Research output → `C:\Users\oled\Desktop\faltu\trading\research\traders\<slug>\`
 - `STRATEGY.md` — markets, setups, timeframes, sessions, indicators, checklist, trade management
 - `RULES.md` — every explicit rule (risk, stops, sizing, prop-firm tactics, payouts, routines)
 - `PSYCHOLOGY.md` — mindset, lessons, failures
@@ -64,7 +64,7 @@ Before writing PHASE 2 files, grade the extracted material per trader topic:
 Write these files (paths + schema below). This makes the trader appear on the live dashboard
 automatically — no code changes needed.
 
-### 1. `C:\Users\oled\Desktop\faltu\trading\dashboard\src\data\traders\<slug>.json`
+### 1. `C:\Users\oled\Desktop\faltu\trading\amala\src\data\traders\<slug>.json`
 Keys, exactly: `slug`, `name`, `show`, `streamSlot`, `accent`, `accentSoft`, `tagline`, `summary`,
 `oneLiner`, `keyQuote`, `keyQuoteSource`, `stats` (array of {label,value}), `highlights` (6 strings),
 `sections` (array of {id,title,file,lead} — ids/files: strategy, rules, psychology),
@@ -84,7 +84,7 @@ Keys, exactly: `slug`, `name`, `show`, `streamSlot`, `accent`, `accentSoft`, `ta
 }
 ```
 
-### 2. Markdown content → `dashboard\src\markdown\traders\<slug>\`
+### 2. Markdown content → `amala\src\markdown\traders\<slug>\`
 - Every file **STARTS with YAML frontmatter** (per STANDARD.md):
 
 ```yaml
@@ -108,7 +108,7 @@ topics:
 - Follow `trading/STANDARD.md` for the full spec (file layout, frontmatter, profile, topics).
 
 ## FINISH
-1. `npm.cmd run build` in `dashboard/` — must succeed (7→8 pages, new trader page appears).
+1. `npm.cmd run build` in `amala/` — must succeed (7→8 pages, new trader page appears).
 2. Verify `fetch('http://localhost:6789/traders/<slug>/')` if the dev server is running.
 3. `git add -A && git commit -m "Add trader: <name>" && git push` from `trading/` — push auto-deploys to Vercel.
 4. Report: videos processed, rules count, articles count, their niche, top 3 strategy points.

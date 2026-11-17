@@ -16,16 +16,21 @@ A reusable pipeline exists: run **`/add-trader <youtube-handle>`** in OpenCode (
 4. **Build-time normalization, not authoring constraints** — agents write natural markdown; a
    build step (`src/lib/normalize.ts`) extracts, IDs, and tags everything. No databases.
 
-## File layout (per trader)
+## File layout
 
 ```
-trading/
-  <slug>/                        ← raw research (agent output, never rendered)
-    STRATEGY.md RULES.md PSYCHOLOGY.md ARTICLES.md YOUTUBE-VIDEOS.md SOURCES.md
-  dashboard/
+trading/                       ← repo root (GitHub: amala)
+  amala/                       ← THE APP — Astro dashboard (Vercel project "amala")
     src/data/traders/<slug>.json         ← metadata + profile + videos + articles
     src/markdown/traders/<slug>/
       strategy.md  rules.md  psychology.md   ← frontmatter + "## " sections
+  research/                    ← supporting research (agent output, never rendered)
+    traders/<slug>/
+      STRATEGY.md RULES.md PSYCHOLOGY.md ARTICLES.md YOUTUBE-VIDEOS.md SOURCES.md
+    youtube/                   ← BDH Trading master video index + RSS extraction
+  tools/                       ← scripts (yt-transcript.cjs)
+  .opencode/command/           ← agent files (/add-trader, /ask, /enrich-trader)
+  STANDARD.md                  ← this spec
 ```
 
 ## 1. Trader metadata — `src/data/traders/<slug>.json`

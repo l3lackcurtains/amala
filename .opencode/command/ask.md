@@ -8,16 +8,16 @@ argument-hint: <trading question>
 Question: **$ARGUMENTS**
 
 You are answering from the Amala research library — the accumulated playbooks of every trader
-in `trading/dashboard/src/markdown/traders/` and `trading/dashboard/src/data/traders/*.json`.
+in `trading/amala/src/markdown/traders/` and `trading/amala/src/data/traders/*.json`.
 This is retrieval + synthesis from local files, not general knowledge.
 
 ## 1. Gather evidence
 
 1. Pick **5–8 search terms** from the question, including synonyms
    (e.g. "stops" → also search `stop loss`, `risk`, `drawdown`; "when to quit" → `walk away`, `stop trading`, `overtrading`).
-2. Use the grep tool over `trading/dashboard/src/markdown/traders/` with each term
+2. Use the grep tool over `trading/amala/src/markdown/traders/` with each term
    (case-insensitive, `-i`). Read the strongest hits with enough surrounding lines for context.
-3. Read `trading/dashboard/src/data/traders/*.json` — the `profile` block answers
+3. Read `trading/amala/src/data/traders/*.json` — the `profile` block answers
    "what/when/how does X trade" style questions instantly.
 4. If a trader's hits are dense, read their full `rules.md` (rules are ordered items with
    `**bold titles**` — quote them directly).

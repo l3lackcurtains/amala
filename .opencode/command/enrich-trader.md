@@ -6,7 +6,7 @@ argument-hint: <slug>
 # Enrich a trader
 
 Target trader slug: **$ARGUMENTS** — files live under
-`dashboard/src/data/traders/<slug>.json` and `dashboard/src/markdown/traders/<slug>/`.
+`amala/src/data/traders/<slug>.json` and `amala/src/markdown/traders/<slug>/`.
 
 Goal: take a trader whose playbook is thin (often because the public text is link-only
 promos or lives inside videos) and make the content **deep, specific, readable, and organized**
@@ -43,7 +43,7 @@ using evidence only — never invented.
   mined interview/reel URLs), `sources.notes` (what was mined + date).
 
 ## 4. Verify + deploy
-1. `npm.cmd run build` in `dashboard/` — must pass.
+1. `npm.cmd run build` in `amala/` — must pass.
 2. `node -e "JSON.parse(require('fs').readFileSync('src/data/traders/<slug>.json','utf8'))"` — valid.
 3. `git add -A && git commit -m "Enrich trader: <name>" && git push` — push auto-deploys to Vercel.
 4. Report: sections rewritten, new specifics added, source links added.
