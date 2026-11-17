@@ -37,8 +37,8 @@
     "Always use a stop loss: the one time he skipped it cost him a live account plus $3,000 of his own payout money.",
     "Strict 1:1 risk-to-reward on reversals — on NQ a 1:1 is already $300–$400, and 'going for more than that is just getting greedy.'",
     "Scalp the chop box: draw the range on the 5-minute only, execute on the 1-minute, take 10 points ($200) a pop, and stop on the first close outside the box.",
-    "Never trade news candles or election nights — that sequence cost him -$4,000 and two Apex accounts in a single session.",
-    "The business model: small wins, lots of accounts, and compounding — $4,992 of eval fees became $67,468 of payouts in one quarter."
+    "Never trade news candles or election nights — that sequence cost him two Apex accounts in a single session.",
+    "The business model: small wins, lots of accounts, and compounding — modest eval fees became multiples of themselves in payouts."
   ],
   "sections": [
     {
@@ -80,7 +80,7 @@
       "url": "https://www.youtube.com/watch?v=3rImsvS8mgA",
       "date": "2026-11-09",
       "type": "video",
-      "takeaway": "Stopped out -$700 in the first minute of election night, then got it back on a Two in the Chamber (+$705). The full ledger: a 400-point textbook bear flag in 35 minutes, a 1,000-point W retrace, and a three-bar reversal worth $20,000 for those who held it."
+      "takeaway": "Election night proved his no-news rule the hard way — stopped out in the first minute — while the mechanical setups (textbook bear flag, the W retrace, a three-bar reversal) paid whoever followed them."
     },
     {
       "title": "I Lost My Live Account And My Own $3,000",
@@ -101,7 +101,7 @@
       "url": "https://www.youtube.com/watch?v=CTIsmXZhHhs",
       "date": "2026-10-23",
       "type": "video",
-      "takeaway": "The Globex first-candle strategy worked (+$700), then a full rule-breaking cascade: no trail on a 10–15 point winner, a -$4,000 news-candle long that blew two Apex accounts, and FOMO top buys (-$1,000, -$500). \"I didn't follow my strategies. Didn't follow my discipline. Didn't follow my risk management plan.\""
+      "takeaway": "The Globex first-candle strategy worked, then a full rule-breaking cascade: no trail on a winner, a news-candle long that blew two funded accounts, and FOMO top buys. \"I didn't follow my strategies. Didn't follow my discipline. Didn't follow my risk management plan.\""
     },
     {
       "title": "How I Trade Chop (And When I Just Don't)",
@@ -213,7 +213,7 @@
       "title": "Why I Shouldn't Have Traded Election Night",
       "url": "https://onlypropfirms.com/bdh/why-i-shouldnt-have-traded-election-night",
       "date": "2026-11-09",
-      "takeaway": "Election volatility whip-sawed his long for an instant -$700. The mechanical setups paid those who followed them: a three-bar reversal risking ~$1,000 with a potential $20,000, and Two in the Chamber risking $885 for $3,000 through the 1,000-point dump and W reversal."
+      "takeaway": "Election volatility whip-sawed his long instantly. The mechanical setups paid those who followed them: the three-bar reversal at the panic bottom and Two in the Chamber through the dump and W reversal."
     },
     {
       "title": "I Lost My Live Account And My Own $3,000",
@@ -225,19 +225,19 @@
       "title": "Don't Start Scalping Until You Watch This!",
       "url": "https://onlypropfirms.com/bdh/dont-start-scalping-until-you-watch-this",
       "date": "2026-11-04",
-      "takeaway": "The Chop Box system: draw the range on the 5-minute only (multiple taps are the tell), execute on the 1-minute, and take strict 10-point ($200) scalps. Five scalps = $1,000/hour; even after the box breaks with one -10pt stop, the day finishes +$800."
+      "takeaway": "The Chop Box system: draw the range on the 5-minute only (multiple taps are the tell), execute on the 1-minute, and take strict small-point scalps. Banking base hits fast keeps the day green even after the box finally breaks."
     },
     {
       "title": "I Lost Accounts For The First Time In Months",
       "url": "https://onlypropfirms.com/bdh/i-lost-accounts-for-the-first-time-in-months",
       "date": "2026-10-24",
-      "takeaway": "On a 700-point NQ flush day the Globex Strategy (first 5-min candle direction) made $1,000 — a properly trailed version risked $1,600 for ~$13,000. Rule: trail the take-profit by two units of risk in expansion markets."
+      "takeaway": "On a violent NQ flush day the Globex Strategy (first 5-min candle direction) delivered, and a properly trailed runner turned small risk into a large multiple. Rule: trail the take-profit by two units of risk in expansion markets."
     },
     {
       "title": "I Broke Every Rule I Have Today",
       "url": "https://onlypropfirms.com/bdh/i-broke-every-rule-i-have-today",
       "date": "2026-10-23",
-      "takeaway": "The Globex Strat (+$700) was his only win before a rule-breaking cascade: no trail on a 10–15 pt winner, a -$4,000 news-candle long that blew two Apex accounts, and FOMO top buys. Salvaged +$1,000 on a VWAP-rejection short — \"If you don't follow your risk management plan, the market will make you pay.\""
+      "takeaway": "The Globex Strat was his only clean win before a rule-breaking cascade: no trail on a winner, a news-candle long that blew two Apex accounts, and FOMO top buys — salvaged late by a VWAP-rejection short. \"If you don't follow your risk management plan, the market will make you pay.\""
     },
     {
       "title": "How I Trade Chop (And When I Just Don't)",
@@ -255,7 +255,7 @@
       "title": "What I Spent On Prop Firms vs What I Made",
       "url": "https://onlypropfirms.com/bdh/what-i-spent-on-prop-firms-vs-what-i-made",
       "date": "2026-10-15",
-      "takeaway": "90-day ledger transparency: $4,992 spent, $67,468 paid out, $62,476 net (July $1,357 → $25,430; August $25,986; September $1,172 → $16,052). \"Small wins, lots of accounts, and compounding.\""
+      "takeaway": "Ninety-day business transparency — modest eval fees in, multiples of it paid out. \"Small wins, lots of accounts, and compounding.\""
     },
     {
       "title": "The Easiest Prop Firm Evals To Pass",
@@ -267,7 +267,7 @@
       "title": "I Broke My Own Rules And It Worked",
       "url": "https://onlypropfirms.com/bdh/i-broke-my-own-rules-and-it-worked",
       "date": "2026-10-08",
-      "takeaway": "After a -$200 stop he \"loaded the boat\" with 5 contracts on a 300K Apex out of frustration and scalped +$1,000 — then publicly condemns emotion-sizing. Also a Two in the Chamber short +$800 and three Tradeify payouts ($2,400)."
+      "takeaway": "After a stop-out he \"loaded the boat\" with oversized contracts out of frustration and got lucky — then publicly condemns emotion-sizing: winning while breaking your rules is still the wrong habit."
     },
     {
       "title": "Why Most Traders Fail (And How The Army Fixed My Trading)",
@@ -279,7 +279,7 @@
       "title": "I Tried To Trade The News And Got Cooked",
       "url": "https://onlypropfirms.com/bdh/i-tried-to-trade-the-news-and-got-cooked",
       "date": "2026-09-30",
-      "takeaway": "Bull flags +$200/+$415 and a disciplined chop sit-out, then a news-candle gamble on a fresh eval account hit the $1,000 daily loss limit. Key process: the gamble was isolated to a single account so the copied portfolio stayed green."
+      "takeaway": "Bull flags and a disciplined chop sit-out, then a news-candle gamble on a fresh eval account hit the daily loss limit. Key process: the gamble was isolated to a single account so the copied portfolio stayed green."
     },
     {
       "title": "This Is Exactly How I Set Up My TradingView Chart To Day Trade",
@@ -291,7 +291,7 @@
       "title": "One Long Turned My Worst Morning Green",
       "url": "https://onlypropfirms.com/bdh/one-long-turned-my-worst-morning-green",
       "date": "2026-09-25",
-      "takeaway": "Down $5,600 by mid-morning, one 50-point NY-open long via the trade copier across the portfolio produced ~$19,000 gross → +$12,251 net. He also stopped an IQ account at +$988 \"to respect their consistency rule.\""
+      "takeaway": "A red mid-morning turned by one high-conviction NY-open long run through the copier across the whole portfolio. He also stopped an account short of its threshold \"to respect their consistency rule.\""
     },
     {
       "title": "IQ Capital: Everything You Need To Know Before You Buy",
@@ -309,7 +309,7 @@
       "title": "I Trade One Account At A Time. Here's Why",
       "url": "https://onlypropfirms.com/bdh/i-trade-one-account-at-a-time-heres-why",
       "date": "2026-09-15",
-      "takeaway": "He cycles accounts one at a time \"to manage risk and keep my focus sharp,\" using the copier only for the highest-conviction trade (opening 9/21-EMA short across 4–5 Apex accounts, +$4,000). Momentum-flip long (5-min close above both EMAs + 9/21 cross) +$2,000."
+      "takeaway": "He cycles accounts one at a time \"to manage risk and keep my focus sharp,\" using the copier only for the highest-conviction trade. His momentum-flip long: a 5-min close above both EMAs followed by the 9/21 cross."
     },
     {
       "title": "How to Trade Kill Zones Like a Pro",
@@ -321,7 +321,7 @@
       "title": "Lost $900, Then This Happened: A Profitable Comeback",
       "url": "https://onlypropfirms.com/bdh/lost-900-then-this-happened-a-profitable-comeback",
       "date": "2026-09-12",
-      "takeaway": "London chop ground him to -$435, then a high-conviction wick-rejection + tight-consolidation long at 6 contracts → +$2,000, ending +$986. Sizing up only after conviction returns, never after tilt."
+      "takeaway": "London chop ground him down, then a high-conviction wick-rejection + tight-consolidation long recovered the day green. Sizing up only after conviction returns, never after tilt."
     },
     {
       "title": "Apex Changed Every Rule. Is It Still Worth It in 2026?",
@@ -333,13 +333,13 @@
       "title": "Learning Bear Flags Live: My Full London Session Recap",
       "url": "https://onlypropfirms.com/bdh/learning-bear-flags-live-my-full-london-session-recap",
       "date": "2026-09-07",
-      "takeaway": "Seven live flag trades with the core mechanics on display: trend first, prior-high rejection as confirmation, break-and-close entry — plus a FOMO \"I was just guessing\" reversal for -$200 as the counter-example."
+      "takeaway": "Seven live flag trades with the core mechanics on display: trend first, prior-high rejection as confirmation, break-and-close entry — plus a FOMO \"I was just guessing\" reversal as the counter-example."
     },
     {
       "title": "How I Caught These 3 Futures Setups: Daily Trade Recap",
       "url": "https://onlypropfirms.com/bdh/how-i-caught-these-3-futures-setups-daily-trade-recap",
       "date": "2026-09-05",
-      "takeaway": "Two in the Chamber long taken 1:1 for +$770 (\"if I had held… a massive $2,385 run — but I stuck to my rules\"), a bear-flag scalp +$200, and the 3:50 PM MOC short mirroring the 9:30 candle +$600. Announced his 20-Apex-account copy-trading challenge."
+      "takeaway": "Two in the Chamber taken at his strict 1:1 (\"if I had held… a massive run — but I stuck to my rules\"), a bear-flag scalp, and the 3:50 PM MOC short mirroring the 9:30 candle. He announced his 20-account copy-trading challenge."
     },
     {
       "title": "My Funded Futures Review: Why Most Traders Pick the Wrong Plan",
@@ -363,7 +363,7 @@
       "title": "Every Trade I Took On A Bearish NQ Night",
       "url": "https://onlypropfirms.com/bdh/every-trade-i-took-on-a-bearish-nq-night",
       "date": "2026-08-31",
-      "takeaway": "Eight trades in a heavy downtrend (price below 9 EMA, 21 EMA, and VWAP all night), from +$2,000 down to -$200 each. Lesson: in a clean trend, trade the flags with size and let momentum work — and \"Don't anticipate the candle; wait for it to close!\""
+      "takeaway": "A full session of trades in a heavy downtrend (price below 9 EMA, 21 EMA, and VWAP all night) — winners and stopped-outs alike. Lesson: in a clean trend, trade the flags with size and let momentum work — and \"Don't anticipate the candle; wait for it to close!\""
     },
     {
       "title": "BluSky Trading: Why You Should Care About This Firm",
@@ -381,13 +381,13 @@
       "title": "We Were Down $400… Then Made It All Back (Trade Recap)",
       "url": "https://onlypropfirms.com/bdh/we-were-down-400-then-made-it-all-back-trade-recap",
       "date": "2026-08-24",
-      "takeaway": "Two chopped-out shorts and a break-even bailout = -$400, then a Silver Two in the Chamber 1:1 winner and a final NQ short at the round 30,000 → +$600. Cut risk early, switch markets when NQ chops, strict 1:1 (\"a 1:1 win is a win\")."
+      "takeaway": "Two chopped-out shorts and a break-even bailout, then a Silver Two in the Chamber 1:1 winner and a final NQ short at the round level. Cut risk early, switch markets when NQ chops, strict 1:1 (\"a 1:1 win is a win\")."
     },
     {
       "title": "I Made $2,000 Trading The Asia Open (Full Recap)",
       "url": "https://onlypropfirms.com/bdh/i-made-2000-trading-the-asia-open-full-recap",
       "date": "2026-08-23",
-      "takeaway": "Asia-open playbook: 9 EMA + 21 EMA + VWAP aligned bearish with the round \"500 level\" below as a magnet. A 10-second scalp +$400, then 15 minutes through \"trickery\" between the EMAs until a candle closed above 21 EMA/VWAP — ~$1,000 on one account in 30 minutes, +$2,000 across accounts."
+      "takeaway": "Asia-open playbook: 9 EMA + 21 EMA + VWAP aligned bearish with the round \"500 level\" below as a magnet. He sat through \"trickery\" between the EMAs until a candle closed above VWAP — patience first, then one clean trade across accounts."
     },
     {
       "title": "Don't Buy a Prop Account Until You Watch This",
