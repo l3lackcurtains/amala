@@ -21,6 +21,11 @@ const traders = Object.values(mods)
   .map((m) => m.default ?? m)
   .sort((a, b) => (a.name || '').localeCompare(b.name || ''));
 
+const gmods = import.meta.glob('../data/guides/*.json', { eager: true }) as Record<string, any>;
+const guides = Object.values(gmods)
+  .map((m) => m.default ?? m)
+  .sort((a, b) => (a.order || 99) - (b.order || 99) || (a.name || '').localeCompare(b.name || ''));
+
 const is = (p: string) => (activePath === p ? ' active' : '');
 ---
 
@@ -45,12 +50,21 @@ const is = (p: string) => (activePath === p ? ' active' : '');
   </head>
   <body class="shell" style={style || undefined}>
     <aside id="sidebar">
-      <a class="sb-brand" href="/"><span class="dot"></span>$ amala <span class="b2">— trader strategy library</span></a>
-      <button class="sb-search" id="sb-search" type="button">⌕ <span class="s-label">Search rules, setups, videos…</span> <span class="s-key">Ctrl K</span></button>
+      <a class="sb-brand" href="/"><span class="dot"></span>$ amala</a>
+      <button class="sb-search" id="sb-search" type="button">⌕ <span class="s-label">Search</span> <span class="s-key">Ctrl K</span></button>
       <div class="sb-scroll">
         <div class="sb-group">Library</div>
         <a class={`sb-item${is('/')}`} href="/">Home</a>
         <a class={`sb-item${is('/videos')}`} href="/videos">Video library</a>
+        {guides.length > 0 && <div class="sb-group">Guides</div>}
+        {guides.map((g) => (
+          <div class="rail-item" style={`--accent:${g.accent};--accent-soft:${g.accentSoft}`}>
+            <a class={`sb-item${is(`/guides/${g.slug}`)}`} href={`/guides/${g.slug}`}>
+              <span class="tdot"></span>{g.name}
+              <span class="sb-count">{(g.articles || []).length} src</span>
+            </a>
+          </div>
+        ))}
         <div class="sb-group">Traders</div>
         {traders.map((t) => (
           <div class="rail-item" style={`--accent:${t.accent};--accent-soft:${t.accentSoft}`}>
@@ -61,13 +75,6 @@ const is = (p: string) => (activePath === p ? ' active' : '');
           </div>
         ))}
       </div>
-      <div class="sb-foot">
-        Sources:
-        <a href="https://onlypropfirms.com/bdh" target="_blank" rel="noopener">onlypropfirms.com/bdh</a> ·
-        <a href="https://iamzarb.com/" target="_blank" rel="noopener">iamzarb.com</a> ·
-        <a href="https://www.youtube.com/@BDHTrading" target="_blank" rel="noopener">BDH on YouTube</a> ·
-        <a href="https://www.youtube.com/@iamzarb" target="_blank" rel="noopener">Zarb on YouTube</a>
-      </div>
     </aside>
     <div id="sb-backdrop"></div>
     <div class="page">
@@ -77,7 +84,7 @@ const is = (p: string) => (activePath === p ? ' active' : '');
         {crumb && <span class="crumb" set:html={crumb} />}
         <div class="search">
           <span class="s-icon">⌕</span>
-          <input id="global-search" type="search" placeholder="Search rules, setups, videos…" autocomplete="off" spellcheck="false" />
+          <input id="global-search" type="search" placeholder="Search" autocomplete="off" spellcheck="false" />
           <span class="s-key">Ctrl K</span>
           <div class="s-results" id="search-results"></div>
         </div>

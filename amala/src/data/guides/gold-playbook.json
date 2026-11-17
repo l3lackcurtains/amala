@@ -1,0 +1,75 @@
+{
+  "slug": "gold-playbook",
+  "order": 4,
+  "icon": "🥇",
+  "name": "Gold Playbook",
+  "show": "Prop Guide · XAUUSD / MGC",
+  "accent": "#facc15",
+  "accentSoft": "rgba(250, 204, 21, 0.12)",
+  "tagline": "Gold's prop-firm reality in 2026: a dollar range that tripled in two years, news bursts that make firms suspend whole product complexes, the London-breakout and sweep-fade playbook with its measured exceptions — and the 1–2 MGC sizing that keeps a $2,000 floor alive.",
+  "summary": "Gold is the fastest-growing prop instrument and the one the rulebooks punish hardest. The measurements: average daily range went from ~$33 (2024) to ~$120+ (2026) in dollars, one-in-ten sessions now move more than $150, and a single ordinary GC futures session's median range exceeds a sixth of a $2,000 drawdown — which is why the prop sizing unit is MGC at 1–2 contracts, or 0.05–0.20 CFD lots. The tradeable structure is real and specific: Asian compression resolved by London, sweeps that fade into the opposite pool, break-retest after a *close* (gold fakes out by reputation), and news windows quantified down to the median first-5-minute move. The counterweights are all documented: a working paper's bare-rule test of supply/demand zones hit targets below breakeven, prop firms froze all metals for months during the 2026 volatility spike without notice dates, ±2-minute execution windows confiscate profits on fills you didn't choose, and the forum's own gold blowup stories share one plot — the revenge trade after the sweep. This guide is gold's prop game: setups, volatility math, sizing, and availability risk, each with its source class attached.",
+  "oneLiner": "Trade the Asia-range resolution with close-confirmed entries, size 1–2 MGC against the floor, calendar every Tier-1 print, and accept that gold's availability is itself a regime.",
+  "keyQuote": "Gold resolves one side, reverses, then resolves the other — straddling the range is reliably two losses.",
+  "keyQuoteSource": "session-breakout education consensus on gold",
+  "stats": [
+    { "label": "XAUUSD avg daily range 2026", "value": "~$120" },
+    { "label": "Median 5-min move at NFP/CPI", "value": "$9–22" },
+    { "label": "Zones bare-rule 2R hit rate", "value": "26%" },
+    { "label": "Prop sizing unit", "value": "1–2 MGC" }
+  ],
+  "lead": "Gold trades like a macro event with an intraday personality — the guide to surviving both halves is measured numbers, fixed windows, and micros.",
+  "highlights": [
+    "The dollar range tripled in two years — a 2024-sized stop now sits inside an ordinary 2026 day; re-scale from current data, monthly.",
+    "Asia compresses ($10–25), London resolves (15-min close beyond + volume confirmation), NY continues — and the pre-data window and rollover hour are where the fakes live.",
+    "News days are ordinary days with a burst: 3–5× an hour's range in the first 5 minutes, whole-day range only ~1.2×; the release window, not the day, is the risk.",
+    "Mechanical supply/demand zones measured below breakeven without filters — trend alignment and room-to-target are the trade, the rectangle is not.",
+    "One GC session's median range is ~$3,164 — 1.5× a full 50K eval drawdown. MGC at $10/oz, 1–2 contracts, is the same chart at survivable risk.",
+    "Firms suspended the entire metals complex mid-2026 for months, and ±2-minute execution windows count *fills you didn't initiate* as violations."
+  ],
+  "sections": [
+    {
+      "id": "instruments",
+      "title": "XAUUSD, GC, MGC — and Where Gold Lives",
+      "file": "instruments",
+      "lead": "The contract ladder and the forex-vs-futures venue split, which firms list gold, and the availability risk that 2026 proved is real."
+    },
+    {
+      "id": "volatility",
+      "title": "Volatility & the News Burst",
+      "file": "volatility",
+      "lead": "The tripled dollar range, the fat tail statistics, and the median release-window moves that dictate when not to be online."
+    },
+    {
+      "id": "setups",
+      "title": "The Setup Menu",
+      "file": "setups",
+      "lead": "London/session breakout, break-and-retest, sweep fades, and zones — each with its measured limits."
+    },
+    {
+      "id": "risk",
+      "title": "Sizing & Failure Modes",
+      "file": "risk",
+      "lead": "The $200-risk MGC table, the half-of-index rule, and the seven documented ways gold accounts die."
+    }
+  ],
+  "articles": [
+    { "title": "Average daily range of XAUUSD 2026 (full method)", "url": "https://www.mql5.com/en/blogs/post/778649", "date": "2026-10", "takeaway": "$31 (2020) → $33 (2024) → $61 (2025) → $120.5 (2026) dollar ranges; ATR-scaled bands held ~89% containment across regimes while fixed-dollar stops failed silently." },
+    { "title": "Gold daily range tool & tables", "url": "https://midasgrid.com/tools/gold-daily-range.html", "date": "2026-10", "takeaway": "Independent tick-data cross-check: 2026 avg $122 / median $100, widest $771, 1-in-10 days >$152." },
+    { "title": "Gold news days: NFP, CPI, FOMC measured", "url": "https://midasgrid.com/blog/gold-news-days-nfp-cpi-fomc.html", "date": "2026-10", "takeaway": "First-5-min medians $17–22 at releases vs $4–6 ordinary; days are ordinary-with-a-burst (whole-day range only ×1.14–1.27); price runs ≥$20 from pre-release on 90–95% of release days." },
+    { "title": "Gold after the news (fill/held rates)", "url": "https://xaumeter.com/gold-news-reaction", "date": "2026-11", "takeaway": "Median 5-min moves NFP $9.03 / CPI $9.13 / FOMC $6.04; first move held at 60 min on 68–83% of releases." },
+    { "title": "Gold on CPI days (study)", "url": "https://www.xauusdglobal.com/blog/gold-on-cpi-days-study/", "date": "2026-10", "takeaway": "Release hour ×1.94 range; first move reversed by close ~29%; day-after goes against CPI direction 61% — CPI-day biases don't carry." },
+    { "title": "XAUUSD supply & demand zones (scripted test)", "url": "https://www.xauusdglobal.com/strategies/supply-demand-zones-xauusd/", "date": "2026-10", "takeaway": "Bare mechanical zones hit 2R on only 26% of first touches — below the ~33% breakeven; includes a published correction for roll-gap contamination." },
+    { "title": "XAUUSD session breakout (mechanics)", "url": "https://goldhunts.com/gold-strategies/xau-session-breakout", "date": "2026-02", "takeaway": "Asia $10–25 compression, London resolution rules (15-min close + 1.5× volume), the >50%-of-ATR overnight skip, and the never-straddle warning." },
+    { "title": "Gold break & retest guide", "url": "https://www.xauusdglobal.com/strategies/gold-breakout-retest-strategy/", "date": "2026-10", "takeaway": "Gold's false-breakout reputation codified: require a close beyond ≥0.25×ATR; wick-through-close-back is a grab, strong body is intent." },
+    { "title": "Liquidity sweep trading on gold (Judas Swing)", "url": "https://xauproacademy.com/education/liquidity-sweep-gold-trading", "date": "n.d.", "takeaway": "London almost always sweeps one side before the real move; fade only after structure close; double sweeps common — and counter-trend sweeps in a higher-timeframe trend are continuations." },
+    { "title": "Prop firms that allow gold futures (rules tracked)", "url": "https://fondeoreal.com/en/lab/prop-firms-that-allow-gold-futures", "date": "2026-10", "takeaway": "All seven checked futures firms list GC/MGC with caps (Apex 6 minis, Topstep GC-3 volatile-metals cap, MFFU 5 metal micros); measured MGC session median $31.6; Feb–May 2026 metals suspension forensics; firm close times and hedging groups." },
+    { "title": "MGC contract specifications & margin tracker", "url": "https://propdesknews.com/contracts/mgc/", "date": "2026-11", "takeaway": "MGC 10oz, $0.10 = $1.00/tick, $10 per $1 move; CME moved metals margin to %-of-notional and raised it through the 2026 spike; sim props replace margin with drawdown + caps." },
+    { "title": "FTMO trading conditions update — XAUUSD news window", "url": "https://ftmo.com/en/blog/updated-trading-conditions-for-the-dollar-index-dxy-and-xauusd/", "date": "2023-12", "takeaway": "The explicit ±2-minute execution window, profit confiscation on in-window fills, and gold's seconds-fast moves as the stated reason." },
+    { "title": "CME daily metals volume bulletin", "url": "https://www.cmegroup.com/daily_bulletin/current/Section02B_Summary_Volume_And_Open_Interest_Metals_Futures_And_Options.pdf", "date": "2026-11", "takeaway": "One trading day: MGC 336K vs GC 196K vs QO 2.2K vs SGU 3 contracts — the liquidity map that picks your contract." },
+    { "title": "Notice: metals trading halt & return (community records)", "url": "https://www.reddit.com/r/ApexTraderFunding/comments/1t0zr1w/metals_are_back/", "date": "2026-05", "takeaway": "The availability-risk episode in traders' own words: halt Feb 2026, back ~May, caps changed, no official date tables — instrument access as regime risk." },
+    { "title": "Faked out by gold twice (r/propfirm)", "url": "https://www.reddit.com/r/propfirm/comments/1vrslz2/faked_out_by_gold_twice_today_anyone_else/", "date": "2026-08", "takeaway": "The canonical failure sequence, documented: sweep → revenge-size → daily-limit breach across four accounts, weeks of $200–300/day progress erased in one afternoon." }
+  ],
+  "sources": {
+    "notes": "Synthesized from published volatility datasets, scripted zone tests, exchange bulletins, firm rule trackers, and forum post-mortems. Raw log with evidence tags and the suspension-chronology conflict: research/propfirms/ES-GOLD.md. Flagged unpublished: XAUUSD-specific prop pass rates, official per-account max-lot tables, audited funded income by instrument."
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "slug": "discipline",
+  "order": 5,
+  "icon": "🧠",
+  "name": "Discipline",
+  "show": "Prop Guide · The Behavioral Layer",
+  "accent": "#818cf8",
+  "accentSoft": "rgba(129, 140, 248, 0.12)",
+  "tagline": "What the behavioral science, the 300K-account datasets, and the rule-verified simulations all agree on: evals die at the human-machine interface — and the documented fixes are mechanical, boring, and free.",
+  "summary": "The oldest finding in retail-trading research is also the most relevant to prop accounts: turnover is the tax, and the most active quintile of investors earned 11.4% while the market earned 17.9%. The futures-specific version is harsher — of nearly 20,000 Brazilians who began day-trading mini-index futures, roughly four in five quit within the first year, and of those still trading past 300 days, 97% lost money net of fees (the famous version: only the top few percent earned more than a doorman's wage), with no evidence that persistence built skill. Against a trailing drawdown these mechanisms get sharper, not softer: the biggest independent prop dataset says the trade that ends the run is usually the second or third of the day, taken to recover the first, sized larger than plan; the best simulation of a 50K combine found every failed attempt died at the loss limit, mechanically, regardless of market; and the same edge passes at 93% or 9% depending only on whether risk per trade is 0.5% or 2%. The discipline layer is therefore not character advice — it is position sizing, personal stop tables, lockout buttons, written no-trade calendars, payout-day protocols, and grading the day on rule-following instead of P&L. This guide is the evidence and the mechanics, sourced to firms' own rule text, academic studies, and independent datasets.",
+  "oneLiner": "Make the expensive decisions (size, stops, days off, payout claims) before the cheap feelings arrive — the account structure punishes in-the-moment choices by design.",
+  "keyQuote": "You do not pass by having a great day — you pass by having two identical ones.",
+  "keyQuoteSource": "barrier-model working paper on prop challenges",
+  "stats": [
+    { "label": "Mini-futures traders losing net of fees (300+ day survivors)", "value": "97%" },
+    { "label": "Funded-trader failures ending at the loss limit (sim)", "value": "100%" },
+    { "label": "Pass rate at 0.5% vs 2.0% risk (same edge)", "value": "93 / 9" },
+    { "label": "Time to consistency, self-reported median", "value": "18mo–3yr" }
+  ],
+  "lead": "Discipline in the prop game is an engineering problem: the rules, the floor, and the payout gates all punish decisions made during emotion — so the answer is to delete those decisions in advance.",
+  "highlights": [
+    "The academic anchor: turnover taxes returns (11.4% vs 17.9% for the most-active quintile) and futures persistence does not equal skill (97% of long-survivors lost).",
+    "The prop-specific mechanism: the killer trade is the recovery trade — second or third, bigger than plan — and the trailing floor converts each one into a forced exit.",
+    "Risk is the discipline variable, not the sizing variable: identical edges pass at 93% or 9% purely on 0.5% vs 2% risk per trade.",
+    "The documented tools beat intention: personal stops inside the firm's, platform lockouts, trade-count caps, written no-trade calendars, rule-followed journaling.",
+    "Payout day is a psychology event with published failure modes — house-money sizing after a withdrawal, hoarding from audit fear — answer it with a calendar, not willpower.",
+    "Patience has a price schedule, not a virtue: slow small-sizing costs only the monthly fee; fast big-sizing costs the 83%."
+  ],
+  "sections": [
+    {
+      "id": "evidence",
+      "title": "The Evidence",
+      "file": "evidence",
+      "lead": "Academic findings, prop-firm datasets, and rule-verified simulations — the specific behaviors the numbers say end accounts."
+    },
+    {
+      "id": "rules",
+      "title": "The Discipline Mechanics",
+      "file": "rules",
+      "lead": "Twelve pre-committed controls, each tied to the failure mode it was built to delete."
+    }
+  ],
+  "articles": [
+    { "title": "Trading Is Hazardous to Your Wealth (Barber & Odean)", "url": "https://faculty.haas.berkeley.edu/odean/papers%20current%20versions/individual_investor_performance_final.pdf", "date": "2000", "takeaway": "66,465 households: most-active quintile earned 11.4%/yr vs market 17.9%; their own trading lost to their own held stocks — turnover is the measurable tax." },
+    { "title": "Day Trading for a Living? (Chagué, De-Losso, Giovannetti)", "url": "https://ebicapital.nl/wp-content/uploads/2022/05/day-trading.pdf", "date": "2020", "takeaway": "Brazilian regulatory records, 19,646 mini-futures day traders: 80% quit in 2 years; of 300-day survivors 97% lost net of fees; no learning-by-doing evidence; top earner's income came with $2,560/day volatility." },
+    { "title": "Day Trading for a Living? (Barber, Lee, Liu & Odean)", "url": "https://www.scirp.org/reference/referencespapers?referenceid=3664747", "date": "2010", "takeaway": "1,383 dedicated Taiwanese day traders: 1,365 lost; roughly 1 in 100 long-duration traders earned a wage-equivalent — persistence is selection, not proof." },
+    { "title": "Trading Is Hazardous to Your Wealth — disposition effect (Odean)", "url": "https://faculty.haas.berkeley.edu/odean/papers%20current%20versions/are_investors_reluctant_to_realize_their_losses.pdf", "date": "1998", "takeaway": "Winners realized ~2.5× more often than losers — and the kept losers subsequently outperformed the sold winners: the exact mismatch a trailing floor punishes." },
+    { "title": "Why traders fail prop challenges (FPFX dataset analysis)", "url": "https://bit-stat.com/blog/why-traders-fail-prop-challenges", "date": "2026-08", "takeaway": "The second and third trades — recovery-sized — end most challenges; psychology problems survive passing; sizing against the max instead of the daily limit." },
+    { "title": "Prop-firm challenges: the honest maths (barrier model)", "url": "https://tradingwyckoff.com/en/prop-firm-challenges/", "date": "2026-09", "takeaway": "Two identical days beat one great day; forced flattening and trailing floors are where the pass rate lives; withdrawal discipline roughly halves modeled ruin." },
+    { "title": "Topstep 50K combine Monte Carlo (rules verified)", "url": "https://luxalgo.com/mcp/prop-firm-sim/topstep-50k-trading-combine/", "date": "2026-01", "takeaway": "Every simulated failed attempt died at the trailing loss limit — eval failure is a risk-sizing event, mechanically; the consistency rule costs ~6 points of pass probability." },
+    { "title": "10,000 FTMO challenge simulations with a positive edge (r/Forex)", "url": "https://www.reddit.com/r/Forex/comments/1u8ckib/i_simulated_10000_ftmo_challenges_with_a/", "date": "2025", "takeaway": "Same edge: 93% pass at 0.5% risk, 9% at 2% — discipline expressed as an input, not an attitude; code published." },
+    { "title": "Zero-edge prop account simulations by daily swing", "url": "https://algolift.ai/prop-firms", "date": "2026-10", "takeaway": "The patience price list: $100/day swings → 14% pass over a 189-day median (slow is allowed, fees punish it); $800/day → 10 days and ruin explodes." },
+    { "title": "What is responsible trading (firm rule text)", "url": "https://help.topstep.com/en/articles/10406542-what-is-responsible-trading", "date": "2026", "takeaway": "The enumerated account-killers in a firm's own rule language: max position, letting losers run, no stops, going full port / tilt / FOMO / revenge, disrespecting the daily limit." },
+    { "title": "The value of setting a daily loss limit", "url": "https://topstep.com/blog/the-value-of-setting-a-daily-loss-limit", "date": "2026", "takeaway": "Firm-side evidence that the DLL-as-lockout (not instant fail) improved outcomes — enforcement beats intention; borrow the mechanism personally." },
+    { "title": "Prop firm trading psychology (payout-day traps)", "url": "https://thepropfirmguide.com/prop-firm-trading-psychology/", "date": "2026-06", "takeaway": "House-money sizing after payouts and fear-of-denial hoarding named as funded-stage killers; personal stop below the firm's, 15-minute step-away, rest days, journaling the emotional state." },
+    { "title": "How long did it take you to become profitable? (r/TopStepX)", "url": "https://www.reddit.com/r/TopStepX/comments/1rtgt4y/how_long_did_it_take_you_to_become_profitable/", "date": "2026", "takeaway": "The self-reported time distribution to consistency: 9 months to 6 years, median band '18 months to 3 years'; 'you usually blow the first 2–4 funded accounts.'" },
+    { "title": "Faked out by gold twice (r/propfirm)", "url": "https://www.reddit.com/r/propfirm/comments/1vrslz2/faked_out_by_gold_twice_today_anyone_else/", "date": "2026-08", "takeaway": "The recovery-trade death sequence in full: sweep → revenge-size → daily limits breached on four accounts; weeks of $200–300 days erased in one afternoon." },
+    { "title": "Futures risk management — 9 rules (vendor education)", "url": "https://www.edgeful.com/blog/posts/futures-risk-management-9-rules-prevent-blown-accounts", "date": "2026", "takeaway": "The data-platform version of the same list: dollar risk per trade before entry, size down in compressed conditions, stops without exceptions, don't fight the numbers." }
+  ],
+  "sources": {
+    "notes": "Synthesized from peer-reviewed behavioral finance, one 300K+ account prop dataset, two rule-verified simulators, firm rule text, and multi-forum trader-report corpora. Raw log: research/propfirms/PASS-SPEED-DISCIPLINE.md. Flagged gaps: no controlled study of A+-filter effects on prop rule sets (sim-illustrated only); no published payout-day behavioral data."
+  }
+}

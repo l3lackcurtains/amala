@@ -120,6 +120,22 @@ The `/ask` page filters on these. Keep new topics in `normalize.ts` `TOPICS` onl
 Run `/add-trader <youtube-handle> [site]` — or follow this file manually.
 Then: `npm.cmd run build` (must pass), verify the page, `git push` (auto-deploys to Vercel).
 
+## 5b. Adding a guide — `src/data/guides/` (cross-source prop-firm playbooks)
+
+Guides follow the same data-driven pattern as traders, but synthesize sources **beyond** the
+six dashboard traders (firm rule docs, published statistics, quantified backtests, trader reports).
+
+- Metadata: `src/data/guides/<slug>.json` — same required keys as a trader, plus
+  `order` (int, sidebar/card sequence) and optional `icon`; no `videos` array.
+- Content: `src/markdown/guides/<slug>/<file>.md` — frontmatter + `## ` sections, identical rules
+  (a section with `id: "rules"` gets rule-card + per-rule indexing).
+- Pages render automatically at `/guides` and `/guides/<slug>`; sidebar, home block, and Ctrl-K
+  search index pick guides up from the JSON — no code changes.
+- Raw research lives in `research/propfirms/` (never shipped in the app).
+- Content hygiene (section 6) applies to every guide body; source attribution lives in the JSON
+  `articles[]` only. Claims must state their evidence class: vendor marketing / independent /
+  quantified / anecdotal — and unpublished numbers stay flagged as unpublished.
+
 ## 6. Content hygiene (HARD RULES — applies to every dashboard md file)
 
 These rules exist because their violation made pages unreadable; never reintroduce what they ban.

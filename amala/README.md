@@ -20,9 +20,20 @@ Requires Node 18+.
 
 | Route | What it is |
 |---|---|
-| `/` | Home dashboard — trader cards, side-by-side comparison, shared DNA |
+| `/` | Home dashboard — trader cards, guides, side-by-side comparison, shared DNA |
 | `/traders/<slug>` | Per-trader study page — overview, key rules, strategy/rules/psychology playbooks, videos, source articles |
 | `/videos` | Video library — every analyzed video grouped by trader |
+| `/guides` | Prop-firm guides — cross-source playbooks (NQ, ES, Gold, pass speed, discipline, consistency) |
+| `/guides/<slug>` | Per-guide study page — same rendering pipeline as trader pages |
+
+## How to add a guide (no code changes)
+
+Same pipeline as traders, different folder:
+
+1. `src/data/guides/<slug>.json` — same keys as a trader file, plus `order` (int) and optional `icon`.
+2. `src/markdown/guides/<slug>/<file>.md` — frontmatter + `## ` sections (`rules.md` gets rule cards).
+3. `npm run build`. Sidebar, `/guides`, home block, and Ctrl-K search pick it up automatically.
+
 
 ## How to add a trader (no code changes)
 

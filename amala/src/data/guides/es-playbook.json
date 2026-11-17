@@ -1,0 +1,68 @@
+{
+  "slug": "es-playbook",
+  "order": 3,
+  "icon": "⚖️",
+  "name": "ES Playbook",
+  "show": "Prop Guide · S&P 500",
+  "accent": "#38bdf8",
+  "accentSoft": "rgba(56, 189, 248, 0.12)",
+  "tagline": "The slow-money instrument of the futures props: measured range statistics, the ORB evidence that's harsher on ES than on NQ, the gap-and-overnight mechanics that bite funded accounts, and the case for ES when the trailing drawdown is the binding constraint.",
+  "summary": "ES is the deepest, tightest book in index futures — about 1.2 million contracts a day in the cash session — and the market most often recommended to traders who keep losing on NQ wicks. The measurements support the temperament claim and complicate the strategy claim: raw opening-range breakouts fail on ES too (a costs-on 18-year test called the textbook version untradeable), while the *statistical* substrate is friendlier — the first hour carries over half the day's range, only ~4% of days stay inside it, and genuine two-way chop is rare. What ES genuinely offers a funded account is a stop-size profile: with 2026's ~70-point average daily range, the same $200–400 of planned risk fits 4–12-point stops at MES, with dozens of losing streaks of room left on a $2,000 floor. This guide covers the data, the session clock with its firm-specific flat-by times, overnight gap mechanics, and the ES-vs-NQ decision as the sources actually frame it.",
+  "oneLiner": "Trade the open's resolution of the overnight range with confirmation closes, size MES at a fraction of the risk unit, and treat the trailing floor — not the contract's volatility — as the whole game.",
+  "keyQuote": "More than five points is a great day, and more than ten means you crushed it. Five to ten points a day, taken consistently, is the business.",
+  "keyQuoteSource": "veteran ES scalper's public journal, on income expectations",
+  "stats": [
+    { "label": "Average RTH range (2026 sample)", "value": "~70 pts" },
+    { "label": "First-hour share of daily range", "value": "55%" },
+    { "label": "Days staying inside the first hour", "value": "3.8%" },
+    { "label": "MES point value", "value": "$5" }
+  ],
+  "lead": "ES rewards the same discipline NQ punishes at speed — the evidence for which setups work is stricter than the marketing, and the risk arithmetic is where ES wins.",
+  "highlights": [
+    "Textbook ORB fails on ES after costs in the harshest test — but 30-min range + close-confirmation continuation hits ~70% in the statistics.",
+    "The overnight high/low gets taken out by the cash session on ~60% of days — mark it, trade the reaction, don't predict fills.",
+    "Only ~4% of sessions stay inside the opening hour — the IB-break statistics are even stronger than on NQ.",
+    "Weekend repricing is a 49-hour window with 7% limits — the Sunday reopen does Monday's work.",
+    "Firm flat-by times vary from 4:10 to 4:59 PM ET — know yours before holding through a close.",
+    "At 10-point stops, MES risks $50 per contract — the instrument that lets a $2,000 floor breathe."
+  ],
+  "sections": [
+    {
+      "id": "strategy",
+      "title": "Setup Evidence",
+      "file": "strategy",
+      "lead": "What the costs-on backtests and session statistics actually measured for ORB, mean reversion, and break-retest on ES."
+    },
+    {
+      "id": "data",
+      "title": "Range & Session Data",
+      "file": "data",
+      "lead": "The 2026 measured profile: ranges by month and hour, rotation behavior, gap statistics, and what 'slower' means in numbers."
+    },
+    {
+      "id": "clock",
+      "title": "The Clock, The Gap, and The Choice",
+      "file": "clock",
+      "lead": "Globex mechanics, firm-specific session closes, overnight limits, and the ES-vs-NQ decision as documented."
+    }
+  ],
+  "articles": [
+    { "title": "ES futures statistics 2026", "url": "https://juselltradingacademy.com/es-futures-statistics-2026", "date": "2026-11", "takeaway": "The core dataset: 209-session measured ranges (69.9 pts RTH avg, 55.2% in the first hour), IB statistics, overnight-range take-out rates, gap-fill coin flips, monthly regime spread." },
+    { "title": "Opening range breakout strategy (ES backtest)", "url": "https://www.quantifiedstrategies.com/opening-range-breakout-strategy/", "date": "2026-01", "takeaway": "Independent backtester: best long-ORB variant 0.04%/trade; 'nothing close to tradeable' without filters." },
+    { "title": "The ORB study — 11 futures markets, 18 years, costs on", "url": "https://thinridge.io/orb", "date": "2026", "takeaway": "Textbook 15-min ORB failed on ES over 4,796 trades; break-retest variant also failed — the strictest ORB verdict in the research." },
+    { "title": "ORB breakout strategy guide (statistics)", "url": "https://tradingstats.net/orb-breakout-strategy-guide/", "date": "2026", "takeaway": "6,142 ES/NQ days: ES 5-min range broken 100% of days; continuation probability 58.6%→70.7% as confirmation widens." },
+    { "title": "ES vs NQ prop firm challenges", "url": "https://www.futuresfunded.com/blog/es-vs-nq-prop-firm-challenges", "date": "2026-11", "takeaway": "Independent comparison: dollar-range ratios, stop math per contract, correlation warning (long ES + long NQ = one bet)." },
+    { "title": "How to pass a prop firm challenge (contract specs)", "url": "https://smartmoneyfutures.com/post/how-to-pass-a-prop-firm-challenge", "date": "2026-10", "takeaway": "Losers-to-failure table: 6-pt ES stop ≈ 7 losers, MES 6-pt ≈ 67 losers; 'one instrument until it pays' rule." },
+    { "title": "How to size your prop trades", "url": "https://www.investing.com/analysis/how-to-size-your-prop-trades-200665675", "date": "2025-08", "takeaway": "Independent columnist: on $2,500 trails even one ES is too risky — run MES; consistent paid traders cap daily risk near 15% of the drawdown, 1–2% per trade." },
+    { "title": "Realistic day trading income in futures", "url": "https://microstrader.com/library/trading-capital/realistic-day-trading-income-futures/", "date": "2026-07", "takeaway": "Veteran micro-account journal: 5–10 ES points/day as the honest benchmark; income expectations calibrated against years of live tape." },
+    { "title": "ES volatility & daily range framing", "url": "https://volatilitybox.com/research/es-futures-volatility/", "date": "2026-02", "takeaway": "VIX-regime planning bands (40–60 pts at VIX 15–20; 60–100 at 20–30) — heuristic, not measurement; flagged accordingly." },
+    { "title": "NQ vs MES for prop evaluations", "url": "https://propfy.io/news/nq-vs-mes-for-prop-evaluations", "date": "2026-08", "takeaway": "Vendor-journal arithmetic: micros near-automatic at 50K; 'the right instrument is the one whose normal losing day your account shrugs off.'" },
+    { "title": "Opening range breakout at prop firms (rules interaction)", "url": "https://futurespropdesk.com/strategies/opening-range-breakout", "date": "2026-10", "takeaway": "Independent review: news timing around the open, firm ±1-min windows, how intraday trailing raises the floor on fast opens." },
+    { "title": "Holding ES and NQ futures overnight", "url": "https://blueville.capital/holding-es-and-nq-futures-overnight/", "date": "2026-11", "takeaway": "Worked example: −106 ES overnight on election results, +86 gap at the cash open — the 49-hour gap in practice." },
+    { "title": "CME equity index trading hours", "url": "https://www.cmegroup.com/content/dam/cmegroup/education/files/eq-trading-hours.pdf", "date": "exchange doc", "takeaway": "Session clock of record: halts, maintenance break, trade-date rollover, overnight price limits." },
+    { "title": "Topstep instrument & risk-adjustment rules", "url": "https://help.topstep.com/en/articles/13613539-risk-adjustments-high-risk-high-volatility", "date": "2026-11", "takeaway": "Live caps by product including the volatile-metals table; news-window blocks; auto-flat times." }
+  ],
+  "sources": {
+    "notes": "Synthesized from independent backtest publishers, a 209-session measured dataset, CME rule documents, firm help centers, and trader journals. Raw log with full tags, conflicts and gaps: research/propfirms/ES-GOLD.md. Flagged unpublished: per-instrument pass rates, quantified wick/retest studies, funded-trader income by symbol."
+  }
+}

@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// Every JSON file in src/data/guides/ automatically appears here.
+// To add a guide: add a JSON file + markdown content — no code changes needed.
+const mods = import.meta.glob('../data/guides/*.json', { eager: true }) as Record<string, any>;
+const guides = Object.values(mods)
+  .map((m) => m.default ?? m)
+  .sort((a, b) => (a.order || 99) - (b.order || 99) || (a.name || '').localeCompare(b.name || ''));
+
+const totals = guides.reduce(
+  (acc, g) => ({
+    articles: acc.articles + (g.articles?.length || 0),
+    sections: acc.sections + (g.sections?.length || 0),
+  }),
+  { articles: 0, sections: 0 },
+);
+---
+
+<BaseLayout title="Prop Trading Guides | Amala" activePath="/guides" crumb="Library / <b>Guides</b>">
+  <section class="hero">
+    <div class="wrap">
+      <p class="kicker">Researched 2026-11-17 · beyond our six traders — across the prop-firm industry</p>
+      <h1>Prop-Firm Trading Guides</h1>
+      <p class="sub">
+        Cross-source playbooks for the markets and the game itself: how NQ, ES, and Gold are actually
+        traded inside prop accounts, how long funding really takes, and the discipline evidence behind
+        consistent payouts. Each guide is built the same way as the trader pages — data-driven, with every
+        source listed.
+      </p>
+      <div class="stats-grid">
+        <div class="stat-card"><div class="st-label">Guides</div><div class="st-value">{guides.length}</div></div>
+        <div class="stat-card"><div class="st-label">Sources read</div><div class="st-value">{totals.articles}</div></div>
+        <div class="stat-card"><div class="st-label">Playbook sections</div><div class="st-value">{totals.sections}</div></div>
+      </div>
+    </div>
+  </section>
+
+  <main class="content wrap">
+    <section class="block">
+      <h2>Pick a guide</h2>
+      <p class="lead">Market playbooks, the funded roadmap, and the discipline layer — synthesized from independent sources, firm data, and trader reports.</p>
+      <div class="grid traders-grid">
+        {guides.map((g) => (
+          <a class="trader-card" href={`/guides/${g.slug}`} style={`--accent:${g.accent};--accent-soft:${g.accentSoft}`}>
+            <span class="show">{g.show || 'Prop Guide'}</span>
+            <h3><span class="tdot" style={`background:${g.accent}`}></span>{g.icon ? `${g.icon} ` : ''}{g.name}</h3>
+            <p>{g.summary}</p>
+            <span class="slot">🕛 {g.streamSlot || g.readSlot || ''}</span>
+            {(g.stats || []).length > 0 && (
+              <div class="chips" style="margin-top:12px">
+                {(g.stats || []).slice(0, 3).map((s: any) => (
+                  <span class="chip mini"><b>{s.value}</b>&nbsp;{s.label}</span>
+                ))}
+              </div>
+            )}
+          </a>
+        ))}
+      </div>
+      {guides.length === 0 && <div class="card"><em>No guides yet — add JSON files to <code>src/data/guides/</code>.</em></div>}
+    </section>
+
+    <section class="block">
+      <h2>How to read this section</h2>
+      <p class="lead">Guides synthesize sources outside this repo's trader library — firm rule docs, published statistics, quantified backtests, and trader reports.</p>
+      <div class="card">
+        <ul>
+          <li><b>Vendor vs independent</b> — claims from prop firms' own marketing are labeled as such; anything quantified by a third party is marked.</li>
+          <li><b>No invented numbers</b> — where a statistic does not exist publicly, the guide says so instead of estimating.</li>
+          <li><b>Every source is listed</b> — at the bottom of each guide page, with dates and takeaways.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

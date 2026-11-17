@@ -16,6 +16,12 @@ const totals = traders.reduce(
   }),
   { articles: 0, videos: 0, sections: 0 },
 );
+
+// Guides (cross-source prop-firm playbooks) — same data-driven pattern.
+const gmods = import.meta.glob('../data/guides/*.json', { eager: true }) as Record<string, any>;
+const guides = Object.values(gmods)
+  .map((m) => m.default ?? m)
+  .sort((a, b) => (a.order || 99) - (b.order || 99) || (a.name || '').localeCompare(b.name || ''));
 ---
 
 <BaseLayout title="Amala — Trader Strategy Library" activePath="/" crumb="Library / <b>Home</b>">
@@ -60,6 +66,29 @@ const totals = traders.reduce(
       </div>
     </section>
 
+    {guides.length > 0 && (
+      <section class="block">
+        <h2><a href="/guides" style="text-decoration:none">Prop-firm guides</a></h2>
+        <p class="lead">Cross-source playbooks beyond these six traders — markets, pass speed, discipline, and consistent payouts. <a href="/guides">All guides →</a></p>
+        <div class="grid traders-grid">
+          {guides.map((g) => (
+            <a class="trader-card" href={`/guides/${g.slug}`} style={`--accent:${g.accent};--accent-soft:${g.accentSoft}`}>
+              <span class="show">{g.show || 'Prop Guide'}</span>
+              <h3><span class="tdot" style={`background:${g.accent}`}></span>{g.icon ? `${g.icon} ` : ''}{g.name}</h3>
+              <p>{g.summary}</p>
+              {(g.stats || []).length > 0 && (
+                <div class="chips" style="margin-top:12px">
+                  {(g.stats || []).slice(0, 3).map((s: any) => (
+                    <span class="chip mini"><b>{s.value}</b>&nbsp;{s.label}</span>
+                  ))}
+                </div>
+              )}
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
     <section class="block">
       <h2>Jump straight in</h2>
       <p class="lead">Deep links into each trader's study page — the fastest way to start a session.</p>
@@ -84,22 +113,13 @@ const totals = traders.reduce(
     <section class="block">
       <h2>Side-by-side</h2>
       <p class="lead">The one-line identity of each system.</p>
-      <div class="table-wrap">
-        <table class="data">
-          <thead>
-            <tr><th>Trader</th><th>Show</th><th>Stream slot</th><th>System in one line</th></tr>
-          </thead>
-          <tbody>
-            {traders.map((t) => (
-              <tr data-href={`/traders/${t.slug}`}>
-                <td><a href={`/traders/${t.slug}`}><b>{t.name}</b></a></td>
-                <td class="muted">{t.show}</td>
-                <td class="muted">{t.streamSlot}</td>
-                <td>{t.oneLiner || t.summary}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+      <div class="sbs-list">
+        {traders.map((t) => (
+          <a class="sbs-row" href={`/traders/${t.slug}`} style={`--accent:${t.accent}`}>
+            <span class="sbs-name"><span class="tdot"></span>{t.name}</span>
+            <span class="sbs-line">{t.oneLiner || t.summary}</span>
+          </a>
+        ))}
       </div>
     </section>
 
@@ -120,14 +140,15 @@ const totals = traders.reduce(
 
     <section class="block">
       <h2>Extending this dashboard</h2>
-      <p class="lead">Adding a new trader requires no code changes.</p>
+      <p class="lead">Everything is data — you extend the library with OpenCode commands and skills, not by editing pages.</p>
       <div class="card">
-        <ol>
-          <li>Create <code>src/data/traders/&lt;slug&gt;.json</code> (copy the shape of an existing trader file).</li>
-          <li>Add markdown files in <code>src/markdown/traders/&lt;slug&gt;/</code> (e.g. <code>strategy.md</code>, <code>rules.md</code>).</li>
-          <li>Reference them from the <code>"sections"</code> array in the JSON.</li>
-          <li>Run <code>npm run build</code> — the trader page, home card, and video library entries generate automatically.</li>
-        </ol>
+        <ul>
+          <li><b><code>/add-trader &lt;youtube-handle&gt; [site]</code></b> — researches a trader from their channel (and blog), writes the <code>research/</code> logs, and generates the full dashboard page: JSON + strategy/rules/psychology markdown. Same logic is packaged as the <b>add-trader</b> skill.</li>
+          <li><b><code>/enrich-trader &lt;slug&gt;</code></b> — re-mines video descriptions, interviews, and socials for an existing trader, deepens thin sections, cleans filler, rebuilds.</li>
+          <li><b><code>/ask &lt;question&gt;</code></b> — retrieves across every trader's rules and playbooks, then answers with exact quotes, agreements, contrasts, and sources.</li>
+          <li><b>Guides</b> (<code>/guides</code>) — cross-source prop-firm playbooks: add <code>src/data/guides/&lt;slug&gt;.json</code> + <code>src/markdown/guides/&lt;slug&gt;/</code> and the sidebar, home cards, and Ctrl-K index pick it up (spec: <code>STANDARD.md</code> §5b).</li>
+        </ul>
+        <p class="meta-text">After any content change: <code>npm.cmd run build</code> (must pass), then <code>git push</code> — Vercel auto-deploys. Raw research lives in <code>research/</code> and never ships in the app.</p>
       </div>
     </section>
   </main>

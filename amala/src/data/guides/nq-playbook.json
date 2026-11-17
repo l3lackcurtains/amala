@@ -1,0 +1,69 @@
+{
+  "slug": "nq-playbook",
+  "order": 2,
+  "icon": "📈",
+  "name": "NQ Playbook",
+  "show": "Prop Guide · Nasdaq-100",
+  "accent": "#fb923c",
+  "accentSoft": "rgba(251, 146, 60, 0.12)",
+  "tagline": "What the NQ setups that funded traders actually use look like once 16 years of minute data grade them — the opening range, EMA pullbacks, liquidity sweeps and VWAP, plus the contract math that fits inside a $2,000 drawdown.",
+  "summary": "NQ is the prop-firm default because its dollar swing makes $200–600 days reachable with one contract — and because the same volatility quietly decides which setups survive a trailing floor. The measured picture: raw breakout touches fail ~60% of the time and only confirmation-close variants with structural stops pay; the taught liquidity-sweep models carry real information but measured negative expectancy after costs; VWAP fades win often enough to look safe and lose rarely enough to be fatal on a ratcheting floor. This guide ranks the setup menu by evidence class, maps the session clock (the market wakes before 9:30 and the second-biggest minute is 15:50), and reduces sizing to arithmetic: on a 50K account the honest unit is 1–2 MNQ, because one NQ with a normal 30-point stop already spends 30% of the drawdown.",
+  "oneLiner": "Trade confirmation closes at structural stops, size in MNQ against the floor rather than the balance, and let the 9:25–10:30 window carry the day.",
+  "keyQuote": "On the initial break you're volunteering to be that liquidity. Enter on the retest, not the break.",
+  "keyQuoteSource": "futures scalping consensus, trading forums",
+  "stats": [
+    { "label": "First breaks of the 15-min range that fail", "value": "~6 in 10" },
+    { "label": "Taught sweep model win rate (measured)", "value": "48.4%" },
+    { "label": "NQ tick value", "value": "$5" },
+    { "label": "Avg RTH range (2026 sample)", "value": "405 pts" }
+  ],
+  "lead": "Every claim below carries its evidence class — measured, vendor, or folklore — so the setup menu can be trusted at the size it deserves.",
+  "highlights": [
+    "Touch entries lose, close entries survive — the one finding every source class agrees on.",
+    "The sweep moment carries information; the taught sweep SYSTEM does not — measured −0.1 to −0.2R per trade after costs.",
+    "Fade-style 65% win rates come with profit factors near 1.1 — a fat-tail loser erases weeks of a trailing floor.",
+    "NQ wakes around 9:05 AM; a stop sized for the calm pre-open chart is undersized for the open by 2–3×.",
+    "One NQ at a 30-point stop risks 30% of a $2,000 drawdown — micros are the default eval unit, not the cautious one.",
+    "One hero day is a tax: consistency rules convert your best session into a higher target."
+  ],
+  "sections": [
+    {
+      "id": "strategy",
+      "title": "Setup Menu, Graded",
+      "file": "strategy",
+      "lead": "The six setups prop traders quote, ranked by what 16 years of minute-level data and honest simulations actually measured."
+    },
+    {
+      "id": "sessions",
+      "title": "Session & News Clock",
+      "file": "sessions",
+      "lead": "When NQ moves, when the bursts hide (10:00 data, 15:50 MOC), what firms legally allow, and the weekday contradictions."
+    },
+    {
+      "id": "sizing",
+      "title": "Contract Math & Sizing",
+      "file": "sizing",
+      "lead": "Tick values, the $2,000-floor reality table, the micro fee tax, and why the target math made NQ the prop favorite."
+    }
+  ],
+  "articles": [
+    { "title": "Is the opening range breakout profitable on NQ? (2,159-day test)", "url": "https://tradingdecisionslab.com/research/opening-range-breakout-nq", "date": "2026-10", "takeaway": "16-yr 1-min test: ~60% of first breaks fail; far-side-stop ORB deeply negative; only midpoint-stop/close-all variant positive, 1-in-4 hit rate, 18-loss streaks." },
+    { "title": "Do liquidity sweeps work? (measured)", "url": "https://tradingedgejournal.com/blog/do-liquidity-sweeps-work", "date": "2026-11", "takeaway": "Sweep setups beat random controls (real information) but taught models measure 47–48% WR, negative R/trade; viral sweep pass-rate 18.3% vs coin-flip 35.3%." },
+    { "title": "The best time of day to trade ES and NQ (measured)", "url": "https://tradingedgejournal.com/blog/best-time-to-trade-es-nq-futures", "date": "2026-11", "takeaway": "NQ activity triples from 9:25; 9:30 = 3.25× median minute; 15:50 MOC second spike; no consistently directional 15-min slot in 16 years." },
+    { "title": "VWAP 2-standard-deviation fade backtest", "url": "https://cemarketsolutions.com/research/strategies/vwap-2-standard-deviation-fade", "date": "2026-10", "takeaway": "65% win rate, PF ~1.15 pre-costs on 15-min; 5-min variant negative after costs — the fade's fat tail eats the ratchet." },
+    { "title": "Moving averages: 2-year backtest of 12 strategies", "url": "https://cemarketsolutions.com/research/families/moving-averages", "date": "2026-10", "takeaway": "Mechanical EMA crossovers perform poorly on intraday NQ after costs; the pullback discretionary version remains unmeasured." },
+    { "title": "The statistical analysis of trading patterns (IB study)", "url": "https://ninjatrader.com/futures/blogs/the-statistical-analysis-of-trading-patterns", "date": "2025", "takeaway": "Platform-run IB statistics on NQ: single IB break occurs most sessions; the failure/fade variant is the prop-relevant trade." },
+    { "title": "NQ futures trading guide (session statistics)", "url": "https://www.edgeful.com/blog/posts/nq-futures-trading", "date": "2026", "takeaway": "Live-data vendor: ~72% single IB-break probability, NY session carries the bulk of range, ATR ~449 in elevated regime." },
+    { "title": "MNQ or NQ on a prop account", "url": "https://wayofthetrader.com/education/prop-trading/mnq-or-nq-prop-account", "date": "2026-10", "takeaway": "Correct contract math ($20/pt NQ, $2/pt MNQ), the 30-point-stop risk table, micro fee tax, and 10:1 cap conversion across firms." },
+    { "title": "Futures trading strategies for prop firm accounts", "url": "https://propfirmapp.com/learn/futures-trading/strategies", "date": "2026-08", "takeaway": "Vendor-educational but analytically honest: confirmation-close entries, midpoint stops, partials for smooth equity, fade regime gate, 'sitting out is a position.'" },
+    { "title": "Moving average strategies for ES/NQ", "url": "https://futureshive.com/blog/moving-average-strategies-futures-2025", "date": "2026", "takeaway": "The 9/21/50 stack-and-slope filter and the 21-EMA pullback 'workhorse' parameters as commonly taught." },
+    { "title": "Break & retest strategy guide", "url": "https://tradezella.com/strategies/break-retest", "date": "n.d.", "takeaway": "Standard break-retest specification: body-close break, retest rejection entry, stop beyond retest wick, close-through invalidation." },
+    { "title": "Liquidity sweep — does the prior-day high hold?", "url": "https://phidiaspropfirm.com/education/liquidity-sweep", "date": "2026", "takeaway": "10-year NQ test: swept prior-day high led to lower next close 46.9% vs 43.6% base rate — sweep information is thinner than marketed." },
+    { "title": "Topstep 50K combine — verified rules & contract caps", "url": "https://algolift.ai/prop-firms/topstep", "date": "2026-10", "takeaway": "Rule table: trading window, 55% consistency with <$1,650 best-day guidance, ±5-min news blocks on minis, contract caps." },
+    { "title": "ORB 5/15/30-minute comparison ES vs NQ", "url": "https://cemarketsolutions.com/research/compare/opening-range-breakout-5-15-30-minutes-nq-es", "date": "2026-10", "takeaway": "Side-by-side ORB grids: results swing sign across windows/parameters — ORB is a regime bet, not a settings bet." },
+    { "title": "Reddit: 3-month ORB backtest on a 50K account", "url": "https://reddit.com/r/FuturesTradingNQ/comments/1u5l535/", "date": "2026", "takeaway": "Trader-run 76-trade test: 53.9% WR, PF 1.36 — consistent with 'small noisy edge,' not the 65–88% marketing." }
+  ],
+  "sources": {
+    "notes": "Synthesized from a 14-search / 12-fetch sweep of independent backtest publishers, firm rule docs, vendor education, and trader reports. Raw log with full tags and contradictions: research/propfirms/NQ.md. Unpublished data (flagged, not guessed): NQ-specific pass rates, days-to-pass distributions, flag and break-retest win-rate statistics, payout-day behavior."
+  }
+}

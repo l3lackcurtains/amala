@@ -1,0 +1,182 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+import { marked } from 'marked';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { slugify, parseFrontmatter, injectRuleIds } from '../../lib/normalize';
+
+export async function getStaticPaths() {
+  const mods = import.meta.glob('../../data/guides/*.json', { eager: true }) as Record<string, any>;
+  return Object.values(mods).map((m) => {
+    const guide = m.default ?? m;
+    return { params: { slug: guide.slug }, props: { guide } };
+  });
+}
+
+const { guide } = Astro.props as { guide: any };
+
+// Same section renderer as the trader pages: markdown → collapsible chunks at each "## ".
+function renderSection(file: string, rulePrefix?: string): { title: string; body: string }[] | null {
+  const p = path.join(process.cwd(), 'src', 'markdown', 'guides', guide.slug, `${file}.md`);
+  let raw: string;
+  try {
+    raw = fs.readFileSync(p, 'utf8');
+  } catch {
+    return null;
+  }
+  const fm = parseFrontmatter(raw);
+  let html = marked.parse(fm.body, { gfm: true }) as string;
+  if (rulePrefix) html = injectRuleIds(html, rulePrefix).html;
+
+  const chunks: { title: string; body: string }[] = [];
+  const re = /<h2[^>]*>([\s\S]*?)<\/h2>/;
+  let rest = html;
+
+  const first = rest.match(re);
+  if (first && first.index && first.index > 0) {
+    const intro = rest.slice(0, first.index).trim();
+    if (intro) chunks.push({ title: '', body: intro });
+    rest = rest.slice(first.index);
+  }
+  while (rest.trim()) {
+    const m = rest.match(re);
+    if (!m || m.index === undefined) {
+      chunks.push({ title: '', body: rest });
+      break;
+    }
+    const afterHeader = rest.slice(m.index + m[0].length);
+    const next = afterHeader.match(re);
+    const end = next && next.index !== undefined ? m.index + m[0].length + next.index : rest.length;
+    chunks.push({ title: m[1], body: rest.slice(m.index + m[0].length, end) });
+    rest = rest.slice(end);
+  }
+  return chunks.length ? chunks : [{ title: '', body: html }];
+}
+
+const articles = guide.articles || [];
+const links = guide.links || {};
+---
+
+<BaseLayout
+  title={`${guide.name} — ${guide.show || 'Prop Guide'} | Amala`}
+  description={guide.summary}
+  accent={guide.accent}
+  accentSoft={guide.accentSoft}
+  activePath={`/guides/${guide.slug}`}
+  crumb={`Guides / <b>${guide.name}</b>`}
+>
+  <section class="hero">
+    <div class="wrap">
+      <p class="kicker"><span class="tdot" style={`background:${guide.accent};width:9px;height:9px;border-radius:50%;display:inline-block;margin-right:7px`}></span>{guide.show || 'Prop Guide'}</p>
+      <h1>{guide.icon ? `${guide.icon} ` : ''}{guide.name}</h1>
+      <p class="sub">{guide.tagline}</p>
+      <div class="stats-grid">
+        {(guide.stats || []).map((s: any) => (
+          <div class="stat-card"><div class="st-label">{s.label}</div><div class="st-value">{s.value}</div></div>
+        ))}
+      </div>
+      <div class="chips" style="margin-top:4px">
+        <a class="chip" href="/guides">← All guides</a>
+        <a class="chip" href="#articles"><b>{articles.length}</b>&nbsp;sources</a>
+        <span class="chip">📅 Researched {guide.researched || '2026-11-17'}</span>
+      </div>
+    </div>
+  </section>
+
+  <nav class="toc">
+    <div class="wrap">
+      <a href="#overview">Overview</a>
+      {(guide.sections || []).map((s: any) => (
+        <a href={`#${s.id}`}>{s.title}</a>
+      ))}
+      <a href="#articles">Sources ({articles.length})</a>
+      <a href="#method">Method</a>
+    </div>
+  </nav>
+
+  <main class="content wrap">
+    <section class="block" id="overview">
+      <h2>Overview</h2>
+      <p class="lead">{guide.lead || 'What this guide covers and why it matters.'}</p>
+      <div class="card accent-top">
+        <p style="margin-top:0">{guide.summary}</p>
+        {guide.oneLiner && <p><b>In one line:</b> {guide.oneLiner}</p>}
+        {guide.keyQuote && (
+          <div class="callout">
+            <div class="q">“{guide.keyQuote}”</div>
+            {guide.keyQuoteSource && <div class="src">— {guide.keyQuoteSource}</div>}
+          </div>
+        )}
+      </div>
+      {(guide.highlights || []).length > 0 && (
+        <div class="grid">
+          {(guide.highlights || []).map((h: string) => (
+            <div class="card"><span class="badge">Key point</span><p style="margin:10px 0 0">{h}</p></div>
+          ))}
+        </div>
+      )}
+    </section>
+
+    {(guide.sections || []).map((s: any) => {
+      const chunks = renderSection(s.file, s.id === 'rules' ? `rules-r` : undefined);
+      return (
+        <section class="block" id={s.id}>
+          <h2>{s.title}</h2>
+          {s.lead && <p class="lead">{s.lead}</p>}
+          {chunks ? (
+            <div class={`md ${s.id === 'rules' ? 'rules-md' : ''}`}>
+              {chunks.map((c: any) =>
+                c.title ? (
+                  <details class="fold-sec" open id={`${s.id}-${slugify(c.title)}`}>
+                    <summary><span set:html={c.title} /></summary>
+                    <div class="fold-body"><div set:html={c.body} /></div>
+                  </details>
+                ) : (
+                  <div set:html={c.body} />
+                )
+              )}
+            </div>
+          ) : (
+            <div class="card"><em>Content coming soon — add <code>src/markdown/guides/{guide.slug}/{s.file}.md</code>.</em></div>
+          )}
+        </section>
+      );
+    })}
+
+    <section class="block" id="articles">
+      <h2>Sources</h2>
+      <p class="lead">Every article, study, firm doc, and trader report this guide was built from — rows are clickable, links open in a new tab.</p>
+      {articles.length > 0 ? (
+        <div class="table-wrap">
+          <table class="data">
+            <thead>
+              <tr><th>Source</th><th>Date</th><th>Key takeaway</th></tr>
+            </thead>
+            <tbody>
+              {articles.map((a: any) => (
+                <tr data-href={a.url}>
+                  <td><a href={a.url} target="_blank" rel="noopener">{a.title}</a></td>
+                  <td class="muted">{a.date || ''}</td>
+                  <td>{a.takeaway || ''}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      ) : (
+        <div class="card"><em>No sources recorded yet.</em></div>
+      )}
+    </section>
+
+    <section class="block" id="method">
+      <h2>Method & honesty notes</h2>
+      <div class="card">
+        <div class="chips" style="margin:2px 0 10px">
+          {links.site && <a class="chip" href={links.site} target="_blank" rel="noopener">🔗 {links.siteLabel || 'Website'} ↗</a>}
+        </div>
+        {guide.sources?.notes && <p style="margin-top:0">{guide.sources.notes}</p>}
+        <p class="meta-text">Full research logs live in this repo (<code>research/propfirms/</code>) — separate from the app, never rendered.</p>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

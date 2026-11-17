@@ -1,0 +1,97 @@
+{
+  "slug": "prop-firm-playbook",
+  "order": 1,
+  "icon": "🎮",
+  "name": "Prop Firm",
+  "show": "Prop Guide · The Meta-Game",
+  "accent": "#2dd4bf",
+  "accentSoft": "rgba(45, 212, 191, 0.12)",
+  "tagline": "How funded traders actually hack the prop game: what a $50K account really is, how the drawdown ratchet works and how to trade around it, the consistency-rule arithmetic, the payout-gate economics, multi-account scaling, and the traps that end runs after the strategy is already good.",
+  "summary": "A prop evaluation is not a $50,000 account — it is a $2,000 account that pays 90% of its profits if you steer it through target rules, stage clocks, and payout gates. This guide is the meta-game: the drawdown taxonomy (intraday vs EOD vs static trailing, and why 'winning does not buy room — it lifts the floor'), the firms' rule tables compared side by side, the documented tactics consistent earners use (personal loss limits below the firm's, best-day caps under consistency rules, micros until the cushion, immediate small payouts instead of compounded ones, lateral account scaling instead of vertical oversizing), the ROI arithmetic with real published numbers (fees, funnel rates, expected timelines), and the ways the game bites back — payout audits, hedging bans, buffer-stage churn, and the habit-forming luck of rule-breaking wins. Every number is tagged measured, simulated, disclosed, or reported — and every number that is not published anywhere is flagged as missing rather than guessed.",
+  "oneLiner": "Buy cheap options on your edge, size to the floor, cap the best day, claim small payouts daily, and scale sideways across accounts — that is the whole hack.",
+  "keyQuote": "You do not pass by having a great day — you pass by having two identical ones.",
+  "keyQuoteSource": "barrier-model working paper on prop challenges",
+  "stats": [
+    { "label": "Real size of a 50K eval", "value": "$2,000" },
+    { "label": "Eval entry fees", "value": "$35–150" },
+    { "label": "Funded traders who ever get paid", "value": "~33%" },
+    { "label": "Starters who reach live capital", "value": "0.71%" }
+  ],
+  "lead": "The strategy pages teach what to trade. This page teaches the game you're trading inside — because most accounts die to its mechanics, not to the market.",
+  "highlights": [
+    "The trailing floor is the account. Balance above it is your real capital; equity that ratchets the floor up converts yesterday's wins into today's risk.",
+    "Consistency rules are a math problem: best-day caps, day-count resets, and moving targets that a $1,900 hero session raises from $3,000 to $3,800.",
+    "Firm selection is a legal edge: EOD-trail vs intraday-trail, no-DLL plans, news windows, and 1-day passes change your failure modes more than any setup does.",
+    "Payouts are the product: the documented sim math says withdrawing beats reinvesting on the account — profits in a funded account are exposed to your next drawdown.",
+    "Scale sideways, never vertical: five accounts at 1 MNQ is the same strategy with five payout gates; two NQ is one bad day from zero.",
+    "Every published number is read by its denominator: 16.8% per attempt and 51.8% per person are simultaneously true; 'we've paid $880M' counts transfers, not humans."
+  ],
+  "sections": [
+    {
+      "id": "accounts",
+      "title": "Know the Game You're Buying",
+      "file": "accounts",
+      "lead": "Account types, the stage pipeline, what the marketing never says about contract specs, and the side-by-side rule tables."
+    },
+    {
+      "id": "mechanics",
+      "title": "Drawdown Physics",
+      "file": "mechanics",
+      "lead": "Intraday vs EOD vs static, the ratchet trap quantified, and the documented ways traders stop fighting the floor."
+    },
+    {
+      "id": "rules",
+      "title": "The Rules Traders Follow to Beat the Game",
+      "file": "rules",
+      "lead": "Twelve documented operating rules — drawn from firm disclosures, simulations, and paid traders' own reports — ordered by how much each one protects the run."
+    },
+    {
+      "id": "data",
+      "title": "The Data Layer",
+      "file": "data",
+      "lead": "What statistics platforms like Edgeful actually measure, the published NQ numbers with their windows, and where the method ends and the marketing begins."
+    },
+    {
+      "id": "economics",
+      "title": "The ROI Math",
+      "file": "economics",
+      "lead": "Fees, funnels, expected timelines, working capital, and the honest income distribution — with every number's denominator named."
+    },
+    {
+      "id": "traps",
+      "title": "How the Game Bites Back",
+      "file": "traps",
+      "lead": "Payout audits, hedging bans, day-count resets, instrument suspensions, and the psychological traps the rules themselves create."
+    }
+  ],
+  "articles": [
+    { "title": "Topstep 2025 Trader Performance Statistics", "url": "https://www.topstep.com/disclosures-notices", "date": "2026-01", "takeaway": "The cleanest funnel disclosure in the industry: 16.8% of combines, 51.8% of traders, 33.3% of funded ever paid, 0.71% reaching live accounts." },
+    { "title": "Only 7% of 300,000 prop accounts achieved payouts (FPFX data)", "url": "https://www.financemagnates.com/forex/analysis/exclusive-only-7-of-300000-prop-trading-accounts-achieved-payouts/", "date": "2024-09", "takeaway": "Largest independent dataset: 14% funded, ~45% of those paid once, avg payout ≈ 4% of account size, ~$800 lifetime fees, 2.2 firms per trader." },
+    { "title": "Prop-Firm Challenges: A Barrier Model of Pass Rates and Expected Value", "url": "https://tradingwyckoff.com/en/prop-firm-challenges/", "date": "2026-09", "takeaway": "Working paper + author's live ledger: trailing DD cuts pass odds ~10 points, consistency rules bind more in the funded stage, every withdrawal thins the cushion, reinvesting payouts roughly doubles modeled ruin." },
+    { "title": "How long did it take you to pass? (r/TopStepX)", "url": "https://www.reddit.com/r/TopStepX/comments/1rieyvc/how_long_did_it_take_you_to_pass_the_combine/", "date": "2026", "takeaway": "Speedrun culture in the community's own words — 2-day passes, 'resets are cheap, the combine is a learning environment' — versus the same forum's veterans taking 18+ months to consistency." },
+    { "title": "How many evals did you go through? (r/TopStepX)", "url": "https://www.reddit.com/r/TopStepX/comments/1jj7vc5/how_many_evals_did_you_go_through_until_you_got/", "date": "2025", "takeaway": "Person-level persistence reports: 4, 19, 21+ evals, ~25 combines blown in 3 months; the platform-enforced lockout as a discipline device." },
+    { "title": "How long to become profitable? (r/TopStepX)", "url": "https://www.reddit.com/r/TopStepX/comments/1rtgt4y/how_long_did_it_take_you_to_become_profitable/", "date": "2026", "takeaway": "The distribution of journeys: first payout at 9 months to 6 years; the room's summary — '18 months to 3 years'; 'usually you blow the first 2–4 funded accounts.'" },
+    { "title": "I simulated 10,000 FTMO challenges with a profitable strategy (r/Forex)", "url": "https://www.reddit.com/r/Forex/comments/1u8ckib/i_simulated_10000_ftmo_challenges_with_a/", "date": "2025", "takeaway": "Code-shared Monte Carlo: same positive edge passes at 93% with 0.5% risk vs 9% with 2% — sizing, not skill, is the dominant variable." },
+    { "title": "Topstep 50K combine Monte Carlo (open engine)", "url": "https://luxalgo.com/mcp/prop-firm-sim/topstep-50k-trading-combine/", "date": "2026-01", "takeaway": "Rules-verified simulation: 100% of failed attempts died at the trailing maximum loss limit; payout gate, not the eval, is the real filter (71% pass vs 40.5% collect)." },
+    { "title": "Prop firm rules comparison — verified", "url": "https://algolift.ai/prop-firms", "date": "2026-10", "takeaway": "Third-party verified rule tables per firm: min days, consistency percentages, news windows, flat-by times, contract caps, and zero-edge pass simulations by daily swing size." },
+    { "title": "Topstep: What is a Reset / Reset purchase limits", "url": "https://help.topstep.com/en/articles/8284128-what-is-a-reset", "date": "2026", "takeaway": "Official reset mechanics — free on rebill month, fee otherwise; resets zero the MLL, day counts, and consistency target; 2 resets/day cap tied to responsible-trading policy." },
+    { "title": "Apex EOD trailing payout rules", "url": "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-payouts/", "date": "2026", "takeaway": "The stage gates in full: 5 qualifying days at per-day minimums, balance floor before request, safety-net requirement for first payouts, windfall consistency." },
+    { "title": "Apex public payouts ledger", "url": "https://apextraderfunding.com/payouts/", "date": "2026-11", "takeaway": "A live counterweight to screenshot marketing: a normal day's ~120 payouts are overwhelmingly $500–$2,000." },
+    { "title": "Tradeify Growth evaluation & payout policies", "url": "https://help.tradeify.co/en/articles/10495915-growth-evaluation-accounts", "date": "2026", "takeaway": "1-day pass with no eval consistency; funded payout gate of 5+ profitable days and 35% consistency — with the day count resetting after each payout." },
+    { "title": "MFFU payout policy overview", "url": "https://help.myfundedfutures.com/en/articles/13745661-payout-policy-overview-best-and-fastest-prop-firm-payouts", "date": "2026", "takeaway": "Buffer-gated daily payouts ($2,100/$3,100/$4,600 by size), cycle consistency variants, per-plan caps, and live-transition triggers." },
+    { "title": "Why traders fail prop challenges (behavioral analysis)", "url": "https://bit-stat.com/blog/why-traders-fail-prop-challenges", "date": "2026-08", "takeaway": "Independent dataset summary: the killing trade is the second or third, taken to recover the first, sized above plan; sizing against the max instead of the daily limit." },
+    { "title": "The value of setting a daily loss limit", "url": "https://topstep.com/blog/the-value-of-setting-a-daily-loss-limit", "date": "2026", "takeaway": "Firm-side confession that the DLL-as-lockout (rather than instant fail) was changed because it produced better discipline outcomes — enforcement as a feature." },
+    { "title": "Payout Purgatory — heightened compliance audits at a major firm", "url": "https://apextraderfunding.com/news/2026-03-19/payout-purgatory-heightened-compliance-audits-at-apex-trader-funding/", "date": "2026-03", "takeaway": "The company's own news page documenting the 2026 audit wave; community reports of large requests contesting while small payouts cleared." },
+    { "title": "Prop Firm Taxes 2026", "url": "https://www.tradertax.net/prop-firm-taxes", "date": "2026", "takeaway": "Payouts are ordinary self-employment income (Schedule C + ~15.3% SE tax), not 1256 gains; 1099 thresholds and missing-forms reality." },
+    { "title": "The prop-firm trading psychology traps", "url": "https://thepropfirmguide.com/prop-firm-trading-psychology/", "date": "2026-06", "takeaway": "Independent (affiliate) roundup of payout-day traps: house-money sizing after withdrawals, fear-of-denial hoarding, personal stops set below the firm's limit." },
+    { "title": "Business Insider — inside the $12B prop industry", "url": "https://www.businessinsider.com/what-is-prop-trading-pass-challenge-gen-z-millennial-traders-2025-12", "date": "2025-12", "takeaway": "Independent journalism across the industry: firm revenue structures, disclosed funding rates, and which firms refuse to share numbers." },
+    { "title": "Edgeful — market statistics platform (site)", "url": "https://www.edgeful.com/", "date": "2026-11", "takeaway": "150+ live-updating reports (gap fills, IB, ORB, session ATR, power hour, day-of-week) across futures/stocks/crypto, a pre-market 'what's in play' probability scan, Discovery across 700+ setups, TV indicators, prop-oriented algos, and an API/MCP layer; $49/mo, 4.6/5 Trustpilot." },
+    { "title": "Edgeful — reports feature page", "url": "https://www.edgeful.com/features/reports", "date": "2026-11", "takeaway": "The pitch that matters: reports update live, and a pattern that worked at 85% six months ago shows its decay to 50% 'way before you blow an account' — data as regime-shift early warning." },
+    { "title": "Edgeful — NQ futures data-driven guide", "url": "https://www.edgeful.com/blog/posts/nq-futures-trading", "date": "2026-02", "takeaway": "Published recent-window stats: NQ IB single-break ~79.5%, 15-min ORB closes outside ~77%, gap fills 53/59%, overnight ATR exceeds only ~12% of time, power-hour NHOD ~21%, Thursday/Friday peak ranges." },
+    { "title": "Edgeful — ES gap down fill data", "url": "https://www.edgeful.com/blog/posts/gap-down-fill-data-es", "date": "2026-11", "takeaway": "The window-sensitivity exhibit: ES down-gaps filled 63% Jan–Jul but 38% over the last 6 months; large gaps down only 19% — base rates move, re-verify before sizing." },
+    { "title": "TMade Alex (@TMadeAlex)", "url": "https://x.com/TMadeAlex/all", "date": "2026", "takeaway": "Prop-firm trader whose community tooling (a Vest account hub for copying trades across grouped funded accounts) embodies the buffer-stage, multi-account scaling model this playbook describes." }
+  ],
+  "sources": {
+    "notes": "Synthesized across firm rule docs, company disclosures, one 300K-account independent dataset, two rule-verified simulators, an academic-style working paper, and multi-thread trader reports. Raw log with evidence tags and the full contradictions table: research/propfirms/PASS-SPEED-DISCIPLINE.md. Numbers that no firm publishes (median days-to-pass, payout survival curves, % ever paid twice) are flagged missing, never estimated."
+  }
+}
