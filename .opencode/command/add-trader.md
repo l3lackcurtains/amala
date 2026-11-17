@@ -24,7 +24,7 @@ Batch independent fetches in parallel. Retry failures once, then log as failed a
 5. **Fill gaps** with websearch (`<name> strategy`, `<name> prop firm`) only if needed.
 6. If they have blog articles, fetch and read EVERY article.
 
-### Research output → `C:\Users\oled\Desktop\faltu\trading\research\traders\<slug>\`
+### Research output → `C:\Users\oled\Desktop\faltu\projects\agents\trading\research\traders\<slug>\`
 - `STRATEGY.md` — markets, setups, timeframes, sessions, indicators, checklist, trade management
 - `RULES.md` — every explicit rule (risk, stops, sizing, prop-firm tactics, payouts, routines)
 - `PSYCHOLOGY.md` — mindset, lessons, failures
@@ -38,7 +38,7 @@ Descriptions and titles are the floor, not the ceiling. For every video that loo
 teaching video (strategy/setup/how-to/explained/course/review), pull what is ACTUALLY SAID:
 
 1. **Try the transcript tool first:**
-   `node C:\Users\oled\Desktop\faltu\trading\tools\yt-transcript.cjs <videoId> [<videoId> ...]`
+   `node C:\Users\oled\Desktop\faltu\projects\agents\trading\tools\yt-transcript.cjs <videoId> [<videoId> ...]`
    It writes `transcript-<id>.txt` files with `[MM:SS]` timestamps. On success, distill the
    real taught material from the transcript into the playbook (this is what the user reads as
    "deep content").
@@ -64,7 +64,7 @@ Before writing PHASE 2 files, grade the extracted material per trader topic:
 Write these files (paths + schema below). This makes the trader appear on the live dashboard
 automatically — no code changes needed.
 
-### 1. `C:\Users\oled\Desktop\faltu\trading\amala\src\data\traders\<slug>.json`
+### 1. `C:\Users\oled\Desktop\faltu\projects\agents\trading\amala\src\data\traders\<slug>.json`
 Keys, exactly: `slug`, `name`, `show`, `streamSlot`, `accent`, `accentSoft`, `tagline`, `summary`,
 `oneLiner`, `keyQuote`, `keyQuoteSource`, `stats` (array of {label,value}), `highlights` (6 strings),
 `sections` (array of {id,title,file,lead} — ids/files: strategy, rules, psychology),
