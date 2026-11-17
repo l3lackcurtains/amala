@@ -33,6 +33,10 @@ using evidence only — never invented.
 ## 3. Rewrite the playbook (this is the value step)
 - **Delete filler**: video-title listings, view counts, promo copy, "documented via keywords"-style
   hedging — keep only what TEACHES.
+- **Enforce content hygiene (STANDARD.md §6)** while rewriting: strip every article-slug/video-ID
+  reference from body text (`(how-i-trade-…)`, `*(iamzarb.com)*`, `From \`slug\`:` lines) — sources
+  live only in the JSON — and remove example trade recaps from bullets (index levels like
+  `31,215`, per-trade P&L like `+$1,500`). Keep rules, parameters, and direct quotes.
 - **strategy.md**: concrete step-by-step of each model/setup — timeframe, session, trigger,
   confirmation, entry (incl. pending-stop mechanics), stop, target, R:R — every claim with
   a **markdown link** to the source page/video.

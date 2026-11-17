@@ -119,3 +119,27 @@ The `/ask` page filters on these. Keep new topics in `normalize.ts` `TOPICS` onl
 
 Run `/add-trader <youtube-handle> [site]` — or follow this file manually.
 Then: `npm.cmd run build` (must pass), verify the page, `git push` (auto-deploys to Vercel).
+
+## 6. Content hygiene (HARD RULES — applies to every dashboard md file)
+
+These rules exist because their violation made pages unreadable; never reintroduce what they ban.
+Run the **amala-content-hygiene** check (see `faltu/amala-content-hygiene/SKILL.md`) after any content edit.
+
+1. **No source references in body text.** Never write article/video slugs (`how-i-trade-price-action-…`),
+   YouTube video IDs, dates-of-publication, or `(iamzarb.com)`-style tags inside
+   `strategy.md / rules.md / psychology.md`. Sources live ONLY in the trader JSON
+   (`videos[]`, `articles[]`, `links`, `sources`) — the page renders them there.
+   Exception: readable labeled markdown links (`[Trading Nut interview](https://…)`), used sparingly.
+2. **No trade examples in bullet sections.** Bullets teach the rule/mechanism — never a day-specific
+   recap: no index levels (`31,215`, `29,365`), no per-trade P&L (`+$1,500`, `-$1,900`), no
+   "e.g. his trade at…" clauses. Keep rule **parameters** (stop widths, RR ratios, session times,
+   account specs) and the trader's **direct quotes**. If a lesson only exists as an example,
+   state the general rule the example proves — without the numbers.
+3. **No `From \`slug\`:` lead-in lines** between headings and their bullets. The section content
+   stands on its own.
+
+## 7. Quality bar (restated)
+
+Nothing invented · gaps flagged honestly · **clean teaching prose: rules + parameters + quotes,
+zero reference cruft, zero example trade recaps** · valid JSON · frontmatter on all md files ·
+`npm.cmd run build` passes.

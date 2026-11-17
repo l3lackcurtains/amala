@@ -103,7 +103,10 @@ topics:
 
 ## QUALITY BAR
 - Nothing invented. Undocumented = say so honestly, mark gaps. Stated vs inferred distinguished.
-- Quote actual words with sources. Capture specific numbers (points, dollars, R:R, times).
+- Quote actual words with sources. Keep rule parameters (stop widths, RR, session times).
+- **Content hygiene (STANDARD.md §6): NO source references in body md** — no article slugs like
+  `(how-i-trade-…)`, no video IDs, no `From \`slug\`:` lead lines. Sources go only in the JSON.
+  **NO example trade recaps in bullets** — no index levels, no per-trade $ figures; teach the rule.
 - Valid JSON (node-parse it to verify before finishing). Frontmatter required on all md files.
 - Follow `trading/STANDARD.md` for the full spec (file layout, frontmatter, profile, topics).
 
