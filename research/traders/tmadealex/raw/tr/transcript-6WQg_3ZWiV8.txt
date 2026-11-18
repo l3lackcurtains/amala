@@ -1,0 +1,351 @@
+[01:20] What is up everybody? Good morning. Good morning. Welcome to the stream. Very happy to be here today as we are trading a new strategy that I have been back
+[01:40] testing and have had incredible success with recently. Um, so yeah, today we're going to be trading all of our funded accounts uh and seeing uh what we can do here. Very different from how I've traded in the past. So bear with me as I explain stuff to you guys. But a very exciting time here. At least I am very excited.
+[02:00] Screen is black. Don't worry, we are fixing it right now, my friend.
+[02:20] Let me see if I can get this fixed. There we go. We're live. Let me know if you guys see the screen here. Should
+[02:40] be nice and clear here. There we go. Fixed and ready to go.
+[03:00] So, this strategy doesn't care. What's up, Carl? Snaga, how you doing, brother?
+[03:20] So, yeah, guys, this this strategy doesn't care about the uh 4 hour PO3. It doesn't care about um ES. It doesn't really care about anything. So, it just cares about the one minute chart on NQ, which is what I have here on the left, and the 50-minute chart, which is what I have here on the right.
+[03:40] Two things it cares about.
+[04:00] So, I took a trade last night overnight and I'm up 500 bucks going into today. Uh, and it was a 1:1 trade honestly or like a one to 1.5 trade based on the same strategy that we're going to be doing today here in the live.
+[04:20] Okay, I need to figure out why it's switching on me.
+[04:40] Maybe it's the time. Oh, yeah, it's time. Okay, took that off way better. Okay.
+[05:00] We might have missed the uh trade
+[05:20] already. There was no retest of this change state delivery here which is kind of annoying.
+[05:40] Yeah, they're going to fill that gap. So, this is basically the strategy, but we just did not get an entry here. They never retested that change of state.
+[06:00] This is very unfortunate here. See what happens here at midnight open.
+[06:20] So we could target this next 15-minute here, but uh it is kind of far away. Okay. So, we have to wait for us to get closer to that 15-minute
+[06:40] before we can really target that. I was hoping to target this, anticipating this to close with some sort of gap and we could target that uh 15-minute internal. Wasn't the case. So, now we wait and see.
+[07:20] I don't like that we left equal highs there at the all-time highs. So, even though the strategy doesn't require ES at all, we are going to check ES just to see if ES has taken the all-time high. No. Okay. So, we have SMT there. That
+[07:40] makes a little more sense to me. Makes things a little better. And I guess we should do one more check and see if did ES take what else did ES take right from a perspective of London low. Nope.
+[08:00] Okay, cool. So, they look pretty identical so far, which is great. Let's go back to NQ here and let's close all this stuff here.
+[08:20] So, part of me would love to short this. The other part of me doesn't like the fact that we have equal highs on uh the time frames here and that we're holding midnight open, which is pretty important. We also retested this 50-minute wick here, and it looks like we bounced from it.
+[08:40] Did we touch 50% of this leg here? We probably did. Yep, pretty much down to 50%. So, we have to wait, guys. Wait for a better trade here.
+[09:00] Literally right to it. Huh. Interesting. How's the music guys? A little too loud.
+[09:20] Is it good? Also remember guys, thumbs up. Thumbs up. Let's get this channel Let's get the channel building. Let's give it a thumbs up.
+[09:40] Could
+[10:00] try to do like a onetoone here for a push into that change in state, right? Um, it's going without us. That would have been a one to one already.
+[10:20] Yep, there it is.
+[10:40] It's a little frustrating that we we never got a retest of the CISD there. Um, and then it moved all the way to fill that gap. Right? There's no more
+[11:00] gap here on the 15-minute. And also, this would have been a great one to one here, which I was looking to maybe take, but again, price is moving a little too quick. Um, and didn't give me an opportunity in there. But looking at the fact that we're holding this line here was kind of the idea for that long. Um, and again would have been a really nice one to one, but sadly we just don't get it there.
+[11:20] And that's okay, guys. We will continue to look for 1:1 opportunities here. Again, this could be an opportunity for short one to one. I just don't like that we left those highs uh intact cuz I think they were going to just fly through this.
+[11:40] So 130 to 130. I'm not going to pull the trigger here. I don't like that we have
+[12:00] those highs still, but let's see if it would have worked out here. Um, yeah, looks pretty strong. I don't think it would have worked out. Also, we're getting pretty bullish imbalances here, pushing through this bearish imbalance
+[12:20] with a change instead of delivery and some sort of breaker here. But again, those highs never got taken. And so, that puts me at a uh disadvantage here on the higher probability trades, right? We don't want to take trades when there's a draw in the opposite direction that we're trying to go in. Anybody has any questions as to what I'm looking for on my trades, uh, happy to
+[12:40] answer those questions.
+[13:00] So, it looks like he might have been able to get that one to one. Let's see. I was saying 130, right? And I think I
+[13:20] was around here. 130 was here. Yep, there's that one one right there. So, again, that's three one to1's that would have played out. Um, probably should have just taken it for a one to one. I like the riskreward and we'll be kicking ourselves for not taking that. If I talk about a one:1 and somebody
+[13:40] here takes it, please let me know. I'd love to hear in the chat if you guys are taking some of these oneto ones I'm talking about. again uh less it's not A+ because these equal highs up here
+[14:00] could do now a potential uh buy here to target the highs. something like this. And if we go for a one to one, it's 135.
+[14:20] This would have been a nice trade, honestly. Um, but I like it here. I like it. I liked it if we got here just a little further down. Then we tap into this one minute inversion here with a change instead of
+[14:40] delivery. This looks a lot nicer for that potential riskreward there. We could probably do a little We can probably get away with this, guys. A push into the highs here.
+[15:00] Um for a one to one here. We're going to give it a little stab here. It's not A+, but going to try it out. We have another change of state there. We had a really nice pullback from that high. Really nice pullback from the
+[15:20] high. So, maybe something like this. See if we get it. I'm not really a breakout trader, but we'll see if it wants it again. There. Here is that change of state of delivery originally holding held price a few times even had a nice
+[15:40] pullback did not uh did not sellers were not able to keep us lower here and uh looks like we're going to get taken out there. Beautiful trade guys. Um the delay on that is crazy, but we were nicely up there. Let's go, baby. Who else took that trade? Anybody else get into that beautiful trade there? That was a uh $200 trade.
+[16:00] The delay was kind of crazy.
+[16:20] Who took that guys? Let's hear it. Let's go. Plus 200 there. That's what I like to see, guys. Let's do it.
+[16:40] Beautiful. Beautiful. Beautiful. That is beautiful. Beautiful trading. So, again, guys, let's explain that trade, right? So, I wanted to get a short into this area here, but uh again, that just decided to move pretty quickly without a retracement. Once we retraced here and we started to hold that change in state
+[17:00] of delivery, I was no longer interested in trying to ride this thing back down because we had already filled. So I was looking to see if this draw in liquidity can get us uh one to one. And it's exactly what happened there. And so guys, the strategy um is very simple. It is looking for one:one trades using the one minute and the 15-minute, right? So the
+[17:20] 15-minute gives us our uh higher time frame bias and the one and the one minute gives us our entries. That's all it is. I'm not looking at the 4 hour P3. I'm not looking at ES. I'm not looking at anything. No hourly gaps, 4hour gaps, none of that stuff. Uh 15 minute and a one here. And the results have been kind
+[17:40] of insane on the uh back testing sessions. Kind of insane. So, we have this 15-minute gap here, which I would love for us to come and test. And so, I would be looking for a trade into here if we can get below
+[18:00] this, right? So, if we start to get below this, right, and we kind of get to like here and maybe pull back. We can look for a trade from here to here, right into this area with a stop like here, for example, right? So, another onetoone opportunity. we can get we can move down that direction. Uh we have yet to see if that's going to be a
+[18:20] possibility here. It looks like price is pretty bullish so far. Um so we just have to wait and see what we get. One thing to note though is price has very nicely held this kind of area here and that is your um
+[18:40] 0.5 of the previous daily wick. So, just a little note there. We're respecting that previous consequent encroachment of the daily wick of the previous daily wick. Um, and I marked these out recently uh as uh kind of ideas of where price can trade in and out of inside those uh those wicks, right? Whether
+[19:00] it's a daily, a 4 hour, whatever I find that there's a big wick, what what's in those wicks? Well, if this is a huge daily wick right here, right? Let's just say that was it. Obviously, this is a 50-minute chart, but if that was a daily wick, then there's a lot of selling pressure in that wick, right? So, I'm basically just marking out the wick and showing, you know, if there was a ton of
+[19:20] selling in here and we are now holding above certain areas of of a of an area where sellers were, then obviously we are showing signs that we are bullish. Um, pretty simple stuff.
+[19:40] So, what we can do here just to have an idea of where price is currently, you can create a little fib here to show where price could potentially go to if we do start to get a turnaround to the downside here. PD fib. Okay, beautiful. We're going to go ahead and make this much smaller as we don't need it to be so big. Keep it right here on
+[20:00] the right hand side for now. Okay. So, that's kind of the range that we're in, right? So, we're at the high, the low. Um, so we've now created a new all-time high
+[20:20] and we have uh taken out previous day high. Right? So, by the way, September, uh, this part of September, this this this, uh, this next part of September, which is towards the end of September here, I'm pretty bearish. Um, you know, we're at all-time highs. We've been here. We've kind of
+[20:40] been chilling here. And, um, I really think we might start to see a move lower. Um, you know, don't quote me. could be wrong, but I would like to see us sell off a bit and rebalance a ton of the uh the move to this area. But again, we're playing with these we're trading these onetoone strategies
+[21:00] here and we are not um we don't really care too much about what's happening other than these little intraday trades. Just like we're going to go test these
+[21:20] 900s. We're pretty close to those 900s. I would think that if we break 900, we could probably run up into those 950s, 960s, 930s, right around there. Um, but again, a ton of uh a ton of liquidity below. If we decided to start selling off here, we could see a pretty
+[21:40] pretty serious move. Um, and yeah, let's go ahead and make this in line with our with our candles. God, it's taking Trading Juice so long to do stuff. It's crazy. There we go.
+[22:00] But yeah, I think we're going to see higher prices today at least induce more buyers into this market and then maybe towards midweek or end of week we start to bring that bring price down and get people out of their positions. But we'll see.
+[22:20] But very nice uh move here. Very happy with that uh with that first trade there. Right. We had three trades I talked about that we couldn't get into, but they all worked out. out. So that would have been three one to ones. This would have been a fourth one to one and uh probably would have been calling it already on the stream. Would have been up very nicely about a,000 probably or 800 bucks across
+[22:40] that those trades. And now the strategy just tells us to sit and wait. We have to wait for more structure on the 15-minute chart to be able to trade it.
+[23:20] There's a 900s here. Are buyers going to stack into this or are we going to get a rejection at 900? That's a really good question. I don't know the answer to.
+[23:40] And it's one of those things where like we already made money, so we could essentially risk that money we made for a [ __ ] massive push into those 900s. But I'm not liking what I'm seeing so far. I really thought we would see a huge push. All right, maybe here it goes now.
+[24:00] I mean, you know, this this play here is just it's a it's more of an anticipation of what should happen when we get to those 900s. And um it would be a risk of the profits we just made. It's not
+[24:20] really something that I would want to do, but just something that I speak about in case somebody uh can learn from these ideas that I have, right, for ways to get into these trades.
+[24:40] and you guys will see me putting orders on and taking them off as I just look to see what oneto ones look like on the uh trading floor here.
+[25:00] Like this seems like a decent one, right? Hold 900s for a one to one. I just think we might get a pullback here. Yep. That's why I didn't take it.
+[25:20] And again, that's just like that's just trading knowledge that I have is just looking at the fact that these 900s haven't really been like usually when we get into a key area like this, you start to see like a massive push right and we're just kind of chilling. So, it's kind of throwing me off that the buyers aren't present at those 900s
+[25:40] now. If we tap this order block, you know, could you get a one to one out of it? It is counter trend. I mean, it's not counter trend. still on trend for higher, but you know, um, are you catching a a falling knife here is what we got to ask ourselves. I bet
+[26:00] you we can get a one to one out of that though. It looks like we do. See that entry there at 8.90? Do we get the one one? Boom. One to one hits. So, that would have been a profitable trade as well. And that's just using this order block above the all-time high and previous day high, right? That's all that is. So, that kind of makes sense for a trade.
+[26:20] But again, I don't love that we're not holding above 900s, that key area of 900s. I don't love that. But that's why that one:1 works because you're not looking for too big of a move and you can get a bounce off of this. I mean, you should, right? Buyers need to be defending this area. So, even if they
+[26:40] don't defend it with their lives, then they just defend it a little bit. We get that one to one. That's why this one strategy really works, guys. Because it is much easier to find areas in the chart where price should at least do a one one than it is to find area areas in in the chart where price is
+[27:00] going to do one to three, one to four, one to five, right? Uh without you taking some draw down, being in some heat, being uh stressed, you know, all those things that we all get, those emotions that we can't shake. By
+[27:20] the way, guys, thumbs up. Thumbs up. Let's get this uh let's get to the Let's get this to the 10 viewers we have watching. We're at six right now.
+[27:40] So far, really nice trade off this key area here. That 8.90. Really nice trade off that 890 there. I didn't take it. Anybody else take this trade?
+[28:20] Carl says, "Nah, I didn't take it."
+[28:40] Okay, good. Did you take the first one, Carl? Are you up 200 like everybody else is?
+[29:00] I love copy trading, dude. My tossup accounts are up $800 because of that one trade. Guys, I really think one to one is going to be where we find tons of success here. I mean, the the back testing I've
+[29:20] done, and I know that uh 2gen was in there with me watching the back testing, and I mean, it's got really great win uh results right now. I mean, even with a 65 to 70% win rate, we're up 10K in literally uh one one week of trading on that back testing session. And I've traded the P3. I've traded so many
+[29:40] things as far as back testing. And this is one of the the big uh most rewarding strategies that I've tried. And again, guys, sadly, no one took this trade. But again, I mean, to the [ __ ] tea right there at 8.90. It's hard to take this one. I think you get, like I said, I think you get that one pretty
+[30:00] easily, right? We're we're going to go ahead and mark that one here. So I think you get that one one pretty easily which is just using the the order blocks low for a one one right I mean look off even off that one minute candle just off the bounce you get that one to one right so beautiful trade there it is a fourpoint risk or
+[30:20] fivepoint risk for a fivepoint profit so you're going to make at least $100 there um and then you probably would have been a little sad that we get this move after But really nice really nice trade there. And uh again now we're in those 900s. Buyers are showing a willingness to to
+[30:40] keep price above 900s. And uh we have to think about this and see if there is a opportunity to potentially uh take this take a stab at this long. I don't love the structure right now. I don't have a breaker or anything to really trade off of. So I can't take it long yet. Uh but again like if you're looking for one to ones you know what
+[31:00] does that look like? Here's a 160 to a 160, right? Odds are we probably were to hit we probably are going to hit that. But again, I would love to see uh a little bit more if this if this candle here would have taken this low.
+[31:20] Then coming up here would make this a breaker. And I would be more open to scalping this long here with a stop below that breaker and then looking for a one to one, right? Something like this. But without that breaker there, I can't be certain that price will hold. We do have this for a value gap here, which could technically hold.
+[31:40] But again, we have now swept previous 15-minute high. We have now swept previous 30-minute high. And um and yeah, we just have to play very very we have to be very focused here.
+[32:00] I should probably show you guys my P&L. Let's go ahead and set that up here.
+[32:20] I'm setting up my What is this doing, dude?
+[32:40] All right, we're going to have to set one up a new one. Uh,
+[33:00] sorry guys. OBS is a little bit of a pain in the ass here.
+[33:20] Okay. So, that's not it either.
+[33:40] Okay.
+[34:00] Yeah, I don't think this is working. We might have to avoid this situation we have going on here. I'm not able to find the proper screen to get this in. This is very weird.
+[34:20] Yeah. Again, it's it's bringing in the wrong one.
+[34:40] It's kind of frustrating. Let me see. There's another way to do this. Let me see if I can fix it. Uh
+[35:00] go studio mode.
+[36:00] Okay, cool. I think I just figured this out, guys. You learn something new every day, huh? Uh, let's see.
+[36:20] Wow, guys. I figured it out. Let's go.
+[36:40] Never mind. For some reason, this isn't working.
+[37:00] Yeah, there's an issue today with the with this. I don't know what's up. There's a big issue with the OBS. It's not letting me do certain things today.
+[37:40] Yeah, I don't know. I can't get it to work. So, we're going to just stop trying. And sadly, I can't show you guys my piano, but it's currently at 1,700. That's what I was trying to show you guys.
+[38:00] All right, we're focusing back up on the trading, but we haven't got anything. That's why I haven't really been talking. But yeah, it looks like this long here is literally the the best long
+[38:20] ever that I called out. We basically kind of have to wait. I mean, we're just in alltime highs right now. So, we have to we need structure on the 15-minute and we just got to wait it out for some
+[38:40] structure here.
+[39:00] Yeah. So, we got to wait.
+[40:00] So, we have no 15-minute gaps here, but we are creating one right now, which is looks like it could potentially be nice for a short. We have a 15-minute sweep.
+[40:40] So, I'm looking for a potential this potential 50-minute gap that's going to get created right here. Um, watching that to see what that looks like.
+[41:00] Let's see if we get that closure.
+[41:20] So, not taking any trades yet. Just waiting to see if we get a closure, which we haven't gotten. We need that closure below this
+[41:40] No short yet.
+[42:00] This is actually looking even better now. We can get this. We're going to leave this gap open here, which allows
+[42:20] us to trade to it. At least that's the idea. So, we'll see.
+[42:40] I want to be back below this. Make this uh black.
+[43:00] We might get an opportunity here, guys. Let's see. [Music] We need a little more structure on the one minute though for this to play out. But we have uh
+[43:20] 11 minutes or 10 minutes and 45 seconds before this 15-minute closes.
+[43:40] I mean, if it just comes down here without giving us opportunity, I'm going to be very sad. Very, very sad.
+[44:00] That's unfortunate, guys. Like, there's not enough structure for us to get short there, but I knew it.
+[44:20] kind of wanted to try it. I'm going to try it, guys. Um I'm I kind of chased it. Didn't want to do that, but we're going to try it. See if we can get a push into this uh potential gap here. Kind of sucks cuz I I have a a really screwed up um riskreward here. Yeah, I [ __ ] up. I shouldn't have taken that trade.
+[44:40] Really skewed one to uh riskreward there. But we're going to get this back because I'm going to be able to take another trade right now because now we have this low here. We have equal lows here. But that was a big mistake. I shouldn't
+[45:00] have chased it. I should have waited. I just thought price was going to go straight down. That was unfortunate.
+[45:20] So, we're down uh 40 bucks. 40 bucks on the accounts. That's why you don't chase, man. That's why you don't chase. And you just follow your rules, guys. You follow your rules.
+[45:40] Nothing we can do here. We have to wait.
+[46:00] We have to wait for the next trade. That's a little unfortunate how that just un just played out there. [ __ ] market pushed me into a chase. And I'm still working on that on myself because I will do that sometimes. I know it's not good. But now, you know, a change in state is this move. And that's
+[46:20] like a big move for a change of state. So, I don't think you're going to get that. Um yeah, I don't even want to go long here. I just We don't have [ __ ] structure, man. There's no structure.
+[46:40] Unfortunate 302. I mean, I kind of want to try it. I feel like this is the opportunity here. Just drop it down to one maybe. Yeah, I
+[47:00] like the riser. We're going to try it, guys. Um, so this is about a 150 or 160 to 150 160. Make back our money here. I'm looking to target that that gap below and I'm going to use this 30 second inversion here with the 15-minute. So, this is what I'm looking to to hold here. This this right here, I'm going to add into this position here because it's really good risk-to-reward
+[47:20] here. Um, I want to sell one more there if we tap into that 30 second gap. Um, and I'll put another stop here. So, that's how I'm going to play it. All very tight riskreward. I don't I I I really like this trade now for that
+[47:40] lower price for lower prices. We didn't get a change of state, but we did get a 15-minute sweep and a 30-cond inversion. And we have this 15-minute gap that should be filled. should be his key word.
+[48:00] We just still have 6 minutes till the closure, which is a little annoying. So, we may we may we may be a little too early into this short. We'll see.
+[48:20] Come on, baby. Tag us. Give us that money. There we go. Come on. That full move. That full move. Take that low. Got to be careful here because we did take these two lows. There we go, guys. Ah, no way. No way he doesn't take it.
+[48:40] might have to go break even here because that low didn't get taken. And the one to one, you you don't want to hold it when the low doesn't get taken like that.
+[49:00] Slightly frustrating situation here, guys. We got missed by a point. That's annoying as hell. 4 minutes 55 seconds for that closure. So, could this come back up one more time and then come revisit this
+[49:20] potentially? That kind of sucks, man. Can't believe it didn't take that low there. I didn't even have my stop at the low. I have my stop right above the low, which is even the more annoying part about the situation.
+[49:40] Yeah, that's frustrating. All right, I'm going to run to the bathroom real quick, guys. I will be right back. I'm leaving the trade on. We're going to let it run. I probably should have just cut it right there after we didn't take the low there. Um, but whatever. We'll let it run here and see what happens. I'll be right back.
+[51:00] All right, guys. I'm back. We got two contracts in. We got two contracts in, which I like. Um,
+[51:20] we're going to just move this to two here. And now we're going to make this two. So, I've got two contracts in for a one to one here. Um, I don't love that we're still uh we're 2 minutes 30 seconds 30 sec 36 seconds out of uh on this trade. So
+[51:40] 15-minute closes in 2 minutes and 26 25 seconds here. Thing is, we could take the high again one more time, but we will clo we will come to this area here. Almost certain that we'll come to this 15-minute gap here. Just don't know if we'll be in the trade by the time it happens. So, we'll see.
+[52:00] But this is kind of where I would be looking to get into the short to be honest. Right around this time. We have 2 minutes left. gap closing, creating that 15-minute here, and we're looking to target the 15-minute. So, that's what where this trade becomes really good. Um, so we'll see.
+[52:20] Kind of upset about the situation that happened here. We got basically I had 9 I had a 91375 take profit and we got uh we didn't get taken out by 0.25. It is what it is.
+[52:40] takes me out and then comes back down. It will be very frustrating. I just don't want to move my stop anymore. I just I'll just take the loss if it happens. Uh but I really like this trade now.
+[53:00] But I like it more for an entry up here at these 920s uh fives, 926s, right? With a fourpoint stop, five point stop. That would have been a way better trade in my opinion.
+[53:20] It's going to suck if it takes this out because I guarantee this thing turns around here. 15 minute below closing in about 38 seconds here. I really want this new 15-minute candle to just deliver lower fast,
+[53:40] fill that gap, and then continue its its continuation to the upside. I'm okay with us continuing to grind higher all freaking day. I don't care. I just want to see this uh this push into that 15-minute here. And I want it to happen without the new 15-minute candle taking out previous 15-minute high because if it does that, we're out of the trade.
+[54:00] So far, this 30 second gap has been holding price, but the bodies can't close above that 30 second gap. O, pulled back. 15-minute just pulled back here. Let's see if it can continue lower here and not take us out before doing it because that would just suck.
+[54:20] And let's make sure we're doing a one to one here. So, one to one is right there. We're going to move this up here.
+[54:40] Let's see if we can get tagged. Let's see if we can get into profits here. Um, would be nice. I just don't want this candle to take my high here. It might take the high here, which is the thing that we're going to probably get. It's going to happen. Yeah, there it goes. It took the freaking high. Such a shitty situation that just happened to us, guys. So, we're down 384 and 400 on one of the
+[55:00] accounts. That sucks. That really sucks, man. To not get taken out of my trade by 0.25 has got to be the worst trading luck in on the planet.
+[55:20] Okay. So, now we target this uh 15-minute gap if we can get it.
+[55:40] That's unfortunate, man. 0.25 of a
+[56:00] [ __ ] tick and we would have been back in profits, man. And instead, we get taken out of that trade. You can't make it up. Sometimes you just can't make it up.
+[56:40] right there. Another one to one gets hit without me being in the trade. Beautiful. All the one toes we are missing guys sadly. Here it goes. This
+[57:00] is what I wanted to see. Get a closure here. This is the A+ model right here. All right, we got the closure, guys. We're in this trade. Stop is going to be up here. We're in this trade now. We're in two cons. Looking for this push into this 15-minute gap.
+[57:20] So, we have a one minute inversion.
+[57:40] Tiny little breaker here. Closure below changes state of delivery. This looks like a really good trade. I think we make our money back here. Um, I might take one off as soon as we hit around as soon as we get 200 and then I'll hold the other one all the way down. Um, just to
+[58:00] get into profits here would be nice. But this looks way more A+ here. I like this a lot. Basically tapped into we basically took previous 15-minute high also tapped the one day manipulation. Uh, created a change of state of delivery on the one minute. So all the
+[58:20] time frames are aligning between 50 minute and 1 minute. Um and we should see delivery down now. So looks like it is starting to happen. Once we break 200, I'll take one off and then we hold the other one down.
+[58:40] Okay, so took one off there. We hold the other one all the way down to fill this gap. So, this is the A+ strategy. 15-minut sweep with a gap below. This is the the uh A+ strategy here.
+[59:00] So, now we just monitor what a one looks like on this. But this is the strategy here, guys. This is the strategy. So, we've already passed that one to one there, and we're holding to see if we can get a full move here into this 15-minute gap and
+[59:20] rebalancing of it. Let's see. Come on. Come on. Top us. Let's go. This is a beautiful [ __ ] trade. This is A+. A+ A+. There
+[59:40] we go, guys. I'm going to cut it here. We're literally two ticks away. I don't want I don't want to I have PTSD from the last trade. Very very nice trade. Very happy with that. Honestly, very happy with that. Um
+[60:00] Beautiful trade, guys. Let's give it up for that trade. Did anyone take that trade?
+[60:20] Let me know if you took that trade, guys. That is a plus. If 2 Gen's in here, 2Gen knows we back tested the hell out of this strategy. And this strategy is paying big time right here on this trade. So, this was more than a onetoone. This ended up being a one to two here and it was just a gorgeous
+[60:40] trade and everything that I was talking about on that first trade I was in is exactly what we needed to wait for. So we did have to kind of wait for the closure of that 15-minute because it did go and take our previous 15-minute high. But that just gives us even more confidence that this changes to a delivery will hold and continue to fill this gap. Um now do I need this gap to get completely filled? No. I just need a tap of the gap. Um and that suffice for
+[61:00] me. I don't care what price does now. But that right there is a beautiful trade. Michael says he took it with me. Let's go. Michael, how much are you up? Michael.
+[61:20] I'm very happy with that trade, guys. Took us took me right back into the profits. Basically, I'm down 40 bucks now. I was down about 350 to 400. I'm down 40 bucks. But yeah, this is A+ guys. So this is the this is the strategy here. So basically,
+[61:40] yeah, down from earlier but looking much better. Yeah, exactly. Looking way much better. So what happened there is a learning lesson though. I think we all need to journal that Michael. Let's journal this experience here, right? What was the reality is we talked about it last night, you and I. Uh that A+ setup is that 15-minute sweep. It just adds another another uh confident leg to this move, right? Uh but wow, what a
+[62:00] beautiful trade. Barely took any draw down here. held that one minute gap, held this little breaker here and uh a full move straight into this M15 here. Very, very nice trade. That looked beautiful.
+[62:20] So, let's see if we can find another trade here, guys, and get into the profits. This is the beautiful thing about this strategy is that even though we've taken some losses, right? And it was kind of the first loss was my fault. I chased it. Second loss was completely stupid. Um,
+[62:40] did you guys I have a question for you guys who's saying you're down. Um, did you guys take the did you guys not get taken out as well on this trade? Did you guys did you guys get missed by that little 0.25 as well? Did you get taken out by that? Did you
+[63:00] guys miss that 0.25 initial short as well? Yeah, dude. That was brutal. Uh that was brutal. Um that was, you know, and I I was stubborn about it. I knew this trade I was I knew this trade would happen and I was talking about it saying that potentially if we do get taken out of that original trade it'll then come you
+[63:20] know I was hoping we don't get taken out of that original trade but the city the shitty part is guys we got missed by a 0.25 of a tick man 0.25 25, guys. That's the only reason we we're even down right now. We would be up we would currently be up $400, maybe $500 because those two trades that we just took right there,
+[63:40] that would have been $100 and this would have been 300. Yeah, we'd be up 400 bucks here on that. And instead, we are down a little bit of money because we never got we missed this. And like this [ __ ] low doesn't take. This is actually kind of crazy, but it set it up. It set up it set us up perfect for this move here. So, uh, for this move
+[64:00] here. So, with that said, I can't be too mad about it. Now, we need one more. I'm going to keep trading at least till about 12. Uh, I'd like to get a couple more one to ones in where we can walk away with a nice fat profit. I mean, we've done the we've done the research. We know this this strategy pays.
+[64:20] We know the strategy pays.
+[64:40] It feels nice being so confident in the strategy that you're just like, "Okay, whatever. We're down, but we're going to continue to take those trades because we know the back testing shows um that we end up in the green." And it's uh very rare to have red days apparently from our back testing session so far. So we continue this journey here.
+[65:40] I bet we can get something like this out of this. Can probably get something like this if we do get up here. There is another 15-minute gap down here that we might want to touch.
+[66:00] Just something to keep in mind here, guys.
+[66:20] Okay, so we've sucked liquidity here, which is the only reason why I would not want to short this. But we do have another change in state of delivery here, right? Or I would say order block
+[66:40] at least. So I guess there's two scenarios here. This is a push retest the midpoint and then a push towards this gap here uh to
+[67:00] test but I don't know I don't love it but I mean in the back testing we did take a trade like this where we were below 50% of that 15-minute and it did hold for lower not ideal
+[67:20] but the reality is can we get a onetoone here guys. That's all we care about. One to ones is all we care about. I feel like I need to see some sort of one minute closure in this lower this lower area here
+[67:40] before I could try to take it. Let's get our quarters out.
+[68:20] New 15-minute candle about to open here, guys. I've got one minute here for that new 15-minute candle. So, how do you guys like this strategy so far? Obviously, we're down a little bit, but uh do you guys think it's a lot easier to follow along and take the
+[68:40] trades says, "Yep." All right, cool. I like that, guys.
+[69:00] So, this one's a little tricky. We are below 50%. Okay, new 15-minute candle is below 50%. But the problem is that if once we sweep this low at 9007, we could
+[69:20] just get a bounce back up. But I like what this is doing a lot because we could do something and just target that 50-minute low, right? Um
+[69:40] that OB there potentially. I'm going to try it, guys. Very I'm risking like 60 bucks. Like nothing crazy. I'm in pretty quickly here. I'm just looking for that 15-minute to turn around and take the low uh right here. That's all I'm looking for. Just a very quick sweep.
+[70:00] Just wanted to take the low. I'm already at a one to one here. I'm already past the one to one here. So, probably should have just taken profits there. A little quick profits there. Put me in the green uh for the day. But, uh let's see. One. Yeah, I had already hit one to one. So,
+[70:20] but I want that low. I really want that low taken. So, I could go break even here because I've already I've already hit my profit target on this. Could go break even here. I don't really want to, but I could or at least move it to the to this high here. See if we sweep that low there.
+[70:40] Actually, I'll take I'll take 0.5. If we could get to 0.5, I'm out. So, if we can get a move down to 0.5, which is fine with me if we hold. Come on. Come on. Come on. Give us that money. Don't miss me by 0.25 again.
+[71:00] Don't miss your boy by 0.25 again here. So, we know one works. We get one to ones every time. Every time. One to ones. Every time. Beautiful. Let's go.
+[71:20] Just like that, we're back in the green, boys. Back in the green.
+[71:40] All right. 15 minute just took the low there. Now, does this 15-minute hold for lower is the real question now. So,
+[72:00] I don't know if it's going to hold, but uh it doesn't look like a bad trade. I just don't know if it's going to hold. I'm going to try it, guys. I think I already I think it already missed my
+[72:20] entry, but this might play out what I was looking for. So, 115 for 115 would have been a one:1 like that. Yeah, I'm going to take it off there. But I think this idea that I have here potentially plays out
+[72:40] and we might just need to find another way to get in. But that CISD here, stop there is kind of the the best thing that I could find here. Maybe it's something like this if we can get tagged in here. But we've already we
+[73:00] would have already been tagged in. That's the thing that I don't like about it. would have already been tagged in that short. All right, I'm going to put it on here for a one to one. If it tags us in, it tags us in. If it doesn't, it doesn't.
+[73:20] Um, that's what I'm looking for. I'm looking for a retest of this 15-minute gap and a continuation to fill or at least tap this lower gap here.
+[73:40] missed by 0.25 or one point currently.
+[74:00] All right. So, we're now on this short, guys. Let's see if it works out for what I was originally talking about here. Come on. Give me a one to one. One to one, baby. Let's go. One to one. I don't care if this thing moves further. We just need a one one.
+[74:20] Give us a one to one here. NQ. A one to one.
+[74:40] So, we're up $70 on this trade so far. It would have been a nice little profit there, but can't take it. Need to do the one to one. And the good thing about this trade is if we start to close up here above this 15-minute here, we could we could
+[75:00] probably look to close out of this trade early just because if it starts to hold above 50% of this gap, right? And the idea was 50% holds us lower, then I don't really want to be in this anymore. So yeah, uh could make a choice here if you're in this trade guys to just cut it early. Uh we are above 50%. So you could just cut it early. I'm going to hold it, but uh I would just cut it early if I'm
+[75:20] you guys. if you're in the trade. But I'm going to hold it because I'm I'm just I'm just going to go based on the stats, right? The one:1 stats. But we are above 50% of that M15, which is what we wanted to see reject. It's not rejecting currently. And we are above this one minute gap
+[75:40] here. So, a little less probable that this continues lower. So, if you don't want to be on this trade, I would cut it.
+[76:00] This is not part of the strategy, by the
+[76:20] way. This is just me freestyling an idea for a continuation short. Um, and it might have been a bad move, but uh it's okay. This is this is the first time we are trading this strategy live and we have to uh learn
+[76:40] Yeah, we're going to get taken out here. It looks like it's coming for the stop. Um, yep. There you go, guys. Well, that's why I said cut it at break even because once we got above the initial idea, it becomes a lot less likely that this trade is going to work out. Uh, we
+[77:00] do have a change in state now if we close here and we could look to try to take this long now for a continuation to the upside.
+[77:20] I don't know if we're going to get tagged, but uh yeah, this is the idea. [ __ ] thing just goes, man. Hate when price just runs away from us.
+[77:40] Yeah, one to one would have been hit already on this trade. How many times have I said today one to one just got hit and we're not in the trade. Got to
+[78:00] find ways to get in a little quicker I think with this strategy sadly. But as soon as that change state delivery happens, we need to be in this trade essentially. If we want the if we want to trade it properly, pull back here would be okay though.
+[78:20] I would be into this. This looks like a pretty good trade. See if we get tagged. Changes to delivery. One minute gap.
+[78:40] See if it if it takes us into the trade here. 150 for 300. It's a little bit more than a one to one, but if we get 150 in profits, I will be looking to uh take some take out of it. Come on, man. Tag us in this [ __ ] trade, you goddamn market.
+[79:00] Ah, beautiful trade. Running away again. Frustrating, dude. Frustrating. Oh, one to one already hit on this trade as well.
+[79:20] See if it tags us in here. Come on. Tag me in, baby bird.
+[79:40] Come on. Wants to. There we go. We're in this trade. See what happens here, guys. Um, don't know if it's going to hold, especially since we've already got the
+[80:00] one to one on this trade. The one one already hit. Um but yeah, I think we I think we should go to one one to keep it safe because uh this is looking so one one is basically
+[80:20] Okay, so we hit one to one already. [ __ ] me, man. I'm drawing [ __ ] while price is doing all sorts of stuff. Can you please let us trade? Can you please can you please let me trade properly and stop messing us up? That's unfortunate, man. So, we hit a one to one already on this trade, guys. Uh hopefully you took your profits on a
+[80:40] one one. I was trying to draw out the one one. See if it gets me here. Nice one to one. Let's go. Beautiful. Love when the market just [ __ ] with us a little bit, but then gives us our one one. All right, so we've taken our one to one here. We're back in the profits. Looking good. looking good. Now, we need one or two
+[81:00] more trades to end a session here and we'll be nicely green. Um, so that's what I'll be looking for here. But I have called out multiple oneto ones so far today that have all played out. We just have to figure out how to
+[81:20] get into them a little bit better. But the thing is, we had patience here, right? Didn't chase price up here. Waited for that retest of the change in state of delivery. This is the A+ model here, guys. So, we have a change of state delivery, right? So, first off, I want to talk about this. Took a short down into here, which was a beautiful trade, right? Then tried to take another short. We had a one to one on it and we didn't get taken out. We didn't get the
+[81:40] one. We didn't pull off. I didn't take off the one:1. I actually let it come back and take me out. That's my mistake. Uh I told you guys to break even if you're in this. Hope you did. This next trade is very simple. Uh price told us because we had a change day delivery on a 15 on the one minute chart with a 15-minute sweep. Price told us that it wants to go uh in this direction at
+[82:00] least to this 0.5 which is 50% of this move. So we are going to target a one to one into this area. That's our liquidity area, right? So that's why this trade looks so good. But chasing it here skews your stop, right? You don't get a one to one anymore. So we had to wait for that pullback here. Okay. Now the way these candles were printing back and forth was a little sketchy. It didn't like it.
+[82:20] But that was a really nice trade. Anybody take that trade? How are we How are we looking, guys? How are we looking?
+[83:00] You guys see we can get a one to one here. I feel like we can get something like this, guys. I honestly feel like we can get that off that CISD we haven't retested yet.
+[83:20] I'd love to get a little one to one off
+[83:40] of this. Michael says, "Took it. Green on the day." Now, let's [ __ ] go. Michael, today's a little bit tricky. Today, we're still in alltime highs, right? Um, all the back testing that we did was not all I mean, it was kind of alltime highs. I mean, it was all September, but it wasn't all-time highs. And, um, and yeah,
+[84:00] this probably has a really good risk-to-reward here. could probably have done something like this to be honest. This is equal highs here. Equal highs here. This is your order block. So your stop is below that
+[84:20] order block. You take it at the order block entry there. Something like this. And you probably would have already got a one to one. You probably could have got a one to one here. I think it's going to go now. One to one already hit. One to one already hit. Yeah, it's gone.
+[84:40] one to one already hit there. Uh, but I liked it a lot. This is a So, you got one order block here and another order block. You have stacked order blocks, right? So, you could take the order block entry, order block stop, and you could look for a one to one right there. That's already 110 bucks, 120 bucks you make in your pocket right there off that quick trade.
+[85:00] Now, we have three triple highs here. 15-minute highs haven't been taking. They're going to take this now. I'm going to try it, guys. [ __ ] chased it again. God damn it.
+[85:20] That's frustrating. It's a 15-minute sweep here, so got to be careful here. Um, could pull back against me pretty quickly. Hope you guys didn't take this. This is a little bit It's It's nice here here into that 15-minute sweep, but not nice up here because I'm already in. Look at my Look at my long. It's I mean, okay, it worked out, but you see my long, it's
+[85:40] above the 15-minute sweep. So, price could have easily swept that high right there and then just pulled back really quickly and then continued, right? So, for a one to one there was a little bit risky. I would not recommend that. But, we did have a draw. We have all of this liquidity, trend line liquidity, and I was looking to see if that CISD would hold. But now,
+[86:00] we can see that the real trade, the real short that I talked about before gives you that one to one as well. So, that was probably the better trade, but hey, I'll take it. I'm up. Uh I'm up I'm up on these on on this account, so I'm not mad about it.
+[86:20] But look at that nice reaction when we got to that change in the delivery area here that had not been tested previously. Very nice reaction from the market.
+[86:40] 0.5. Let's go to fibs.
+[87:00] Damn. I really like that that short idea. That short idea that I was talking about originally was really nice. Nice. I mean, we were talking about the idea that this uh I did something like this, right? Like right in front of that change to a delivery and I was looking for a one to one. So, that hits 100%. Uh we also have SMT now with ES here.
+[87:20] Changes to a delivery 15-minute sweep. We don't really have a gap to to to go towards. So, it's hard for me to take this, but it is part of the model essentially. A one to one already hit there.
+[87:40] It's a little frustrating once this week is over. Michael, we need
+[88:00] to back test this week specifically at these all-time highs to see how this strategy holds up at the all-time highs cuz I wonder if it's more of like you got to mark it in when you have a CISD because the amount of one minute change deliveries after sweeps, 50-minute sweeps is just uh pretty crazy and they go quick. Again, the only thing we could be
+[88:20] targeting is now this 50-minute low, but I just don't know if that's even the reality. I think we have a lot we can still take out some of those highs as well. Well, I guess we did take out the liquidity. So, we took out this liquidity, so we don't really need to come back up. Um,
+[88:40] yeah, I don't think we're going to retest that CISD. So, sadly, this is a beautiful trade that has gone without us here. Okay, this low's got taken, guys. Um,
+[89:00] don't really want to like jump in, but uh I think this thing has really nice room to this gap here. Like really good risk-to-reward here using the uh 15-minute gap that should
+[89:20] have held. Uh, let's go for 100 to 100 here. Looking to see if this 15-minute gap, this holds. We have a order block here. Sorry, not order block. We have breaker blocks here. So, I need to be above that breaker. So,
+[89:40] that's where we need to be the stop at. Let's look for the one to one here. Uh let's look for that one one to one here. So one one puts me at
+[90:00] this low. Yeah, right there. Okay, one to one here. Using the 15-minute uh to hold price with this breaker here. That's kind of the idea here. So we're looking for that. We never got a we didn't get we didn't get a tag on the change delivery, but this
+[90:20] looks pretty damn bearish. Should continue lower to this to mitigate this gap here. We're going to use this breaker these set of down candles, right, to hold price lower. And I like this for one one. And that's how we're going to take this trade. Oh, wait. I [ __ ] this up, guys. What the hell? But one one is actually
+[90:40] one one is right there. That's a one one. Okay. So, we'll take that. I think this runs down into the gap, but I mean I got to stick with the strategy
+[91:00] of a one to one here. I know that it works. There it goes. That one to one hit. Beautiful trade here. We're up nicely again. up about 200 per account. Again, I think this continues, guys. If you have multiple trade, multiple runners, you could probably hold this a little lower here. Um, as soon as that low gets taken at 8.97, I would at least put your
+[91:20] break even, though, or uh on your runners. And we're looking for 890s here. Can now try a one one like this
+[91:40] if price comes back up. Probably try one to one at 9003. I'm going to try it just to see how this strategy works. The one:1 strategy.
+[92:00] Looking for a quick one to one here again. Continuation trade one to one. See if we can get it. [Music] Okay, took me out there. So, that didn't work out. Still in the profits though.
+[92:20] Very small risk. That was a 904 to 908. That was a four-point risk. Very happy with that risk reward there. Very, very happy. So, still in the profits. did not get back really anything there.
+[92:40] But something to look at is this 15-minute candle did take out these lows. So, I tried to short into after a sweep, right? Which is completely the the wrong idea. And also, here's a 15-minute CIS. Here's the 15 uh the one minute CISD to the upside once this closes. So, again, not the best trade. should have been
+[93:00] looking for a long here. But that's why I like that really, really, really, really, really, really small risk here using this breaker.
+[93:20] All right, one more trade. That's a $200 trade. That puts me at 300 for the day per account and I'll be happy with that.
+[93:40] Now, we don't really have gaps to target, and part of the strategy is the gaps. So, it makes it a little harder
+[94:00] for me right now um to trade this stuff.
+[94:40] Good calling. What? Michael, what were you saying? Good calling or two gen.
+[95:00] Oh yeah. practicing alltime highs is going to be something that's going to I think very important for the strategy just to figure out uh if you need to be more aggressive or if you need to have more patience essentially right part of me wants to take this part of me
+[95:20] thinks it might be a losing trade um but I mean for like 110 for something like this. I feel like it's not it's like why not? It's like quick risk or quick one to one here.
+[95:40] It might just deliver the one to one really quickly. And I need to fix my one to one here. Let me see. Let me fix it. So, it's like we usually get the one to ones off the Yeah, there it is. See, right off the chain state delivery, you're going to get one to ones pretty quickly.
+[96:00] So right there I'm up about 200 on the accounts now. So we need one more good trade and we can uh relax here um and kind of call it for the for the morning session.
+[96:20] Didn't go as well as I wanted it to go, right? Because I mean we're green and we're probably going to end the session which up 300 bucks per account. But I feel like the reality is after back testing this these strategies, I mean we made a lot of money fast and uh
+[97:00] So yeah, I mean this this definitely worked out here. You have a
+[97:20] even there is a one to one, right? That gets missed by a point. Funny. Um, sorry. Let's see. So, 215 to 215.
+[97:40] Actually, yeah, we would have hit one to one. Even if you just took put the low there, took the CISD, you hit one already on this strategy. I can't wait to just [ __ ] size up like five cons on these oneto ones. That's like the next move for sure.
+[98:00] Also, we've done a lot of trading here, Michael, without the uh without our draw, without our gaps, right? We've only had one 15-minute gap today, and we
+[98:20] pretty much mitigated the hell out of it. Um, and we have this one here, but I don't really think it's a draw as much because it's so tiny. Like, not a lot of buyers probably. But I mean, there's probably buyers sitting there ready to defend that previous all-time high. But, um, you know, I like the inefficiency of price. Like, I like the uh the idea that like this area here
+[98:40] has mostly buyers and no sellers, and so we want to come down to fill some more orders. You know what I mean? And that's kind of like why we why we're trading the strategy. Today's a day where we're alltime highs and barely any 50-minute gaps. It's kind of harder to trade in my opinion, at least for the strategy we are trying to trade.
+[99:00] But it has been nice. Yeah, today's P has been very different. But also, it has been nice not having to look at [ __ ] ES and all sorts of other [ __ ] Uh, it has been nice just
+[99:20] focusing on basically trading this strategy and not having to look at anything else. I like the simplicity of it a lot, a lot. A lot, a lot. So, are you guys green so far in the day? What's going on, guys? Are we
+[99:40] green? Are we green? Are we green? Also, guys, remember this stream is specifically for educational content only. It is not financial advice. Remember that. But if you decide on your own free will to take any of my trades, there is a slight few second delay. So, make sure it's one of the trades where I am able
+[100:00] to mark it all out and um and basically uh have a really good feeling about it, right? Um I will I will work to see if we can get a smaller delay. If we can get a smaller delay, um then we'll look to see if we can. But uh Perez, I know you. So, guys, Perez just
+[100:20] posted that he's down 100 bucks. That is the beauty Perez of what we're doing here is how many trades have we taken today and we're you're only down 100 bucks. Like think about that. Um one trade puts you right in the green. Um and that is the beauty of these oneto ones and the risk management behind it is you don't really go into much of a big loss. You're not really into you don't really go into deep deep red which
+[100:40] is nice. Um so again if we kept it A+ and I would ask Michael this cuz he was in the uh in the in the back testing sessions with me. If we keep it A+, Michael, I feel like we've only had like one or two A+ trades. A couple of those of these trades have
+[101:00] been me trying to add my brain power into taking some of these trades.
+[101:40] All right, guys. Trying to find one A+ setup here. We have a new 15-minute candle that just opened. Let's wait for it to take a low or high and see what it wants to do here. It is kind of in the middle between both the high and the low of the previous
+[102:00] candle.
+[102:20] very indecisive area of price here. We just have to wait it out and see what happens. Yeah, that one short was honestly amazing. I mean, and I als I also sized up for it because that's the one I took two cons on because it just it was just so clean.
+[103:00] Guys, this price action is so bad, guys.
+[103:20] Honestly, this is probably would have been a good trade like this order block
+[103:40] or yeah, last or list this little order block here, the entry of that order block and looking for like a 100 bucks or something because you know it's going to go go take this liquidity. I mean, we have one, two, three, four one minute one minute highs there all sitting there. That would have been a good trade.
+[104:00] So now we have SMT at the lows here guys and SMT at the highs. So we are gridlocked currently. Currently gridlocked.
+[104:20] So we took the high here. Could
+[104:40] we get a one to one off of this?
+[105:00] Looks like it could have little rejection at 0 75 there.
+[105:20] holding 0.5 here. Don't love this idea because this 15-minute hasn't put anything on the hasn't put a lower wick yet. But once we put a lower wick in, I
+[105:40] wonder if it's something where we can use that along to uh I don't know. It depends on on what we do here. This is a really critical line right here. Really critical area of price kind of figuring out what it wants.
+[106:00] I like that we're holding the 50% lock. The 50% line. That's a nice hold.
+[106:20] Curious a buy here. Stop loss below that low. But where does that take profit take us to 70? I think it hits
+[106:40] I want to know why the [ __ ] this thing doesn't just stay there. If I put a price there, can Trading View just keep it there? Stop moving our thing around.
+[107:00] Just waiting to see if we could put in a lower wick here on this. I mean, we have a tiny one, right? But I'd like to see a little bit more of a wick here.
+[108:20] We could probably get a one to one off of this to be honest.
+[108:40] again and just size up here to like two cons. That probably would have played out. This gap here maybe even better.
+[109:00] That right there looks pretty promising of an idea. 120 for 120. But we miss 786 by [ __ ] what is like how much we miss this by
+[109:20] 91925 919.7 50. We missed that move. So half a point guys for this move here that we just missed about eight seven point move here
+[109:40] on this move. So we have no sweep here. We have no 15-minute sweep here, but we do have a potential CISD here.
+[110:20] I would have liked to see a little more of a push lower. Um, I wonder if this gives us a trade here. like something like this, right? Like a 100, even like 60 for 100 there or something like that.
+[110:40] This could potentially be a trade, but I'm not going to take it. We didn't take any highs. It's not A+. It's just kind of like an idea.
+[111:00] We also swept this low here or yes swept these lows and NQ didn't which is pretty bullish. I feel like we can get the trade though. I feel like we can get a little bit of
+[111:20] what we want out of it. Let's see if it hold. Let's see if it hits. Let's see if it hits for 70. That one to one there that I was marking out right there. 70 bucks profit.
+[111:40] 3 minutes here for the new 15-minute candle. We're going to have an inside 15inut, which is very strange.
+[112:00] 2 minutes till 15-minute candle.
+[112:20] And this is why you do the one to ones, right? Because we have this the back testing to show that one to one one to ones are are what are how you make the money on these trades. You know, you're going to get some sort of of a of a reaction. can you get a onetoone off of it? And
+[112:40] most of the one:1 ones I'm showing today, we've gotten that reaction uh perfectly. It's just that, like I said, the strategy requires really the 50-minute sweep, but also it requires the 50-minute gaps. And honestly, we have just been trading inside of this 50-minute for [ __ ] the entire trading session, which makes it harder to trade this.
+[113:00] Now, if we would have come down here, guys, if we would have pushed down to 50% here, oh man, I would have been looking for longs right back into this range. But, uh, we didn't. We just tapped the literally the beginning of the 50-minute wick.
+[113:20] Price
+[113:40] is so slow today. It's so slow today. 10 seconds for a new 15-minute candle here. That becomes 12. I usually don't
+[114:00] like to trade at 12, but we'll see what we get here. Maybe there is a trade that arrives here at this hourly open. New 15-minute candle just opened and we just created, I think, an hourly gap below, which makes me think we go lower to fill that gap.
+[114:40] All right, we're going to mark out this hourly wick.
+[115:00] One more trade. Let's go. One more trade.
+[115:20] All right. All right. So, we've got the wick marked out on both sides here. So,
+[116:00] Can we get one last trade here? So, took out previous 15-minute high here.
+[116:20] previous 15-minute high was taken. Nice pullback into this range.
+[116:40] Damn, 12:00 is bringing us a little bit of volatility here.
+[117:00] Could we get that 130? Hm.
+[117:40] Nice push here. Please, market makers, give me a trade so I can get off with a fat check.
+[118:00] I'm not going to take it because I think it's bullish, but just to see if it hits if it would have hit. Why is price always moving, man? and just stay right where I put you
+[118:20] right there. It's too bullish to short it. So, I'm not I'm not looking to short it here. I would short it higher up, but I'm just looking to see. Looks like it would have been hit here almost. Let's see.
+[118:40] not giving us a 1 to 12 yet. Let's see if it does give it to us.
+[119:00] This is good though because we can get a change state delivery up here. Makes it a lot better for us. Now we have this choppy here. Get that change state delivery. 15-minute sweep.
+[119:40] 60 seconds for the closure here. It's not ideal. I would have liked to see this candle taking those highs instead so we can create some sort of
+[120:00] breaker as well. I don't think we're going to get the closure that we need. No closure. So that's taken off. We don't have that.
+[120:20] Okay. So, all-time highs and we're still bullish. So really, we shouldn't be
+[120:40] shorting unless there's really good uh riskreward and we think we can get a push. If we go from 0.5 to 0 75, right, and we look for uh something like this, I think we could probably get this. It makes sense when I'm looking at it.
+[121:00] Oh, it would have tagged us in and made Oh, we would have already [ __ ] Oh, it would have made us the money already, guys. That is sad. That is sad. We would have We would have already hit tag 50% of that wick there and already
+[121:20] would have been a $200 winner. That sucks. Wow. or $120 winner, sorry. But yeah, it was very easy, man. I'm just shorting the 50% into 25%, right?
+[121:40] Just using using those quarters as short as short ideas and putting a stop above the f the next quarter. So, first mid middle of the quarter to the third quarter seems like it seems like a good idea to me.
+[122:00] Come on, man. I hate that [ __ ] like how do I someone know how to make it so that trading view doesn't move around as much? It's really frustrating.
+[122:20] Like, why can't I just put an order and have it sit there? Why does it have to move around? Like I don't want an a dynamic [ __ ] uh order running around doing what it wants. I want it to do what I wanted to do.
+[122:40] 50% being tested now. Looks like mid. It looks like noon is going to deliver us higher here.
+[123:00] Probably can get away with this now. Uh 75. Something like this probably works. We're going to try it, guys. See if we get 100 bucks here.
+[123:20] Seeing if 0 75 of that wick delivers us a little lower to point back towards 0.5 here. Let's see if it does. If not, it's too strong and buyers just [ __ ] run it right through and it is what it is. But we'll see. See if we can get a little bit of a move here. I don't like the fact that this candle wick is holding these wicks here. That there shows uh that we've already traded in
+[123:40] this area. Let's go. We hit another one. We hit another one. All we do is use those quarters. All we do is use those quarters. One quarter to the other quarter that pays the bills. It makes us money. It's one quarter to the
+[124:00] Oh, [ __ ] dead, dude. Um, thank God, guys. One to one because we're out of that trade and we did not just get smashed by the bulls there. Beautiful trading. We are up up on all the accounts. All right, we're going to go ahead and take off our top step accounts because they have already hit the two 230 per
+[124:20] account here on the day, which is exactly what we want on these top steps. It's all about those base hits on a daily basis. 250 on one of them, 264 on the other, and 230 on the other. So, that is $700 across the top step funded accounts. Let's go ahead and take that off. We're
+[124:40] going to go ahead and take some of these accounts off here. I'll show you guys in the Discord what my daily P&L looks like. Okay. [Music]
+[125:00] So guys, we're up $2,296 across all the accounts today. Remember, I came into the morning session with a $500 winner already from last night. So, the reality is that today's session
+[125:20] is what it is. So, I'm at 1,700 because it's about 250 to 260 across all the funded accounts here. Um, so yeah, it took a little bit more work than I wanted to. Again, we're in alltime highs. We're not getting the gaps that we're looking for to take these trades. price is uh acting a little bit wild,
+[125:40] but hey, we were able to get this quick one to one there and um and make a little bit of money there. So, I'm going to call this session here. I might actually come back for the afternoon session. Um I can't remember. Michael, you still in here? Are you still in here, Michael? Because I feel like one of the things that you and I had I wanted to ask like when we were back testing, it was all it was
+[126:00] after we take 12 off and then we come back at one, right? That was the session. So, I think I come back in the afternoon, guys. I'll let you guys know in the Discord uh when I'm going to be live streaming this afternoon, but I think we come back because I think the strategy uh the back testing is is is
+[126:20] both trading the morning and the afternoon. And that's how we were able to um to get the results that we got. So, with that said, I'm going to go ahead and jump off now. go have some food, relax, um, enter some emails, stuff like that. But I'll be back this afternoon, guys, because the strategy that we are trading this entire week,
+[126:40] um, pretty much only works if you trade both the, uh, morning and afternoon using this strategy. So we will be back. Um,
+[127:00] sorry guys, answering a message here. But um, but yeah, I appreciate you guys. Thank you so much for hanging out. I hope everybody is green. Um, sadly it was a little rougher of a day today. uh PA was not great and it it is what it
+[127:20] is, right? So, uh but I like this strategy. I like the idea of just using the 15-inut chart and the one minute chart and uh not having to look at so many damn things that I was looking at before, right? So, yeah, guys, with that said,
+[127:40] appreciate you guys and I appreciate you guys and I'll catch you guys in the afternoon. All right. Peace.

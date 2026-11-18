@@ -1,0 +1,724 @@
+{
+  "slug": "tmadealex",
+  "name": "TMade Alex",
+  "show": "TraderMade (TMADE)",
+  "streamSlot": "Mon–Fri · NY AM from ~9:00 AM, lunch box 12–1 PM, Asia from 8:00 PM ET",
+  "accent": "#a3e635",
+  "accentSoft": "rgba(163, 230, 53, 0.12)",
+  "tagline": "NQ scalper who went from ICT to volume profile and order flow — value tells him where, an inversion tells him when, and his session 'boxes' tell him what time.",
+  "summary": "TMade Alex is a New York–based NQ futures scalper and founder of the TraderMade (TMADE) community, who trades a copy-traded stack of prop-firm and Vest perps accounts and streams the New York, lunch and Asia sessions live. A former ICT and initial-balance trader and longtime PropFirmMatch co-host (the lunch-box slot), he now builds context from weekly and session volume profiles, delta and dealer gamma levels, and uses ICT inversion FVGs only as the entry trigger. He trades named session ranges — the Bento, Sushi, Breakfast and Lunch boxes — sizes evals aggressively and funded accounts small (micros), and takes base hits and frequent payouts.",
+  "oneLiner": "Read weekly and session value with the volume profile, wait for aggression to fail at a value edge or box level, enter on an inversion with the big orders, and take the rotation to VWAP/POC — small size, base hits, breakeven fast.",
+  "keyQuote": "Volume profile confirms it. Now the trigger is the inversion fair value gap.",
+  "keyQuoteSource": "Asia session live stream",
+  "stats": [
+    {
+      "label": "Streams catalogued",
+      "value": "87"
+    },
+    {
+      "label": "Transcripts read",
+      "value": "39"
+    },
+    {
+      "label": "Hard rules",
+      "value": "46"
+    },
+    {
+      "label": "Session boxes",
+      "value": "5"
+    },
+    {
+      "label": "Stated profits",
+      "value": "$200K / 11 mo"
+    }
+  ],
+  "highlights": [
+    "Never short into a weekly value area low or long into a weekly value area high",
+    "If price can't hold above value, trade the rotation to the other side of value",
+    "Volume profile is the context; a 1- or 5-minute inversion FVG is the trigger",
+    "Sushi box sweeps the Bento range → trade back to Bento VWAP; lunch box retraces to 50% and VWAP",
+    "Evals: risk 50–100% to pass fast; funded: 25% per trade, 1–5 micros",
+    "Don't trade the open — the 10, 11 and 2 o'clock hours carry the probability"
+  ],
+  "sections": [
+    {
+      "id": "strategy",
+      "title": "Strategy Playbook",
+      "file": "strategy",
+      "lead": "Volume profile + order flow + gamma for context, ICT inversions for entries, and his named session boxes."
+    },
+    {
+      "id": "rules",
+      "title": "Trading Rules",
+      "file": "rules",
+      "lead": "Level, entry, management, sizing, timing and mindset rules from his streams."
+    },
+    {
+      "id": "psychology",
+      "title": "Psychology & Mindset",
+      "file": "psychology",
+      "lead": "From debt to payouts: patience, owning an aggressive streak, and treating evals and funded accounts as different games."
+    }
+  ],
+  "videos": [
+    {
+      "title": "Scalping NQ",
+      "url": "https://www.youtube.com/watch?v=B2irWjZZIGU",
+      "date": "2026-11",
+      "type": "short",
+      "takeaway": "Short NQ scalping clip: getting to 50% of an evaluation's profit buffer in a single day."
+    },
+    {
+      "title": "RECAPS: +$1080 Secured Live In The TMade Discord",
+      "url": "https://www.youtube.com/watch?v=vVnQdIYfgiw",
+      "date": "2026-11",
+      "type": "short",
+      "takeaway": "Short recap clip from the TMade Discord (music only, no commentary)."
+    },
+    {
+      "title": "Asia Session LIVE | NQ + ES Futures & Perps | Nov 17",
+      "url": "https://www.youtube.com/watch?v=c2vviHxQLFo",
+      "date": "2026-11-17",
+      "type": "live",
+      "takeaway": "Asia stream: holding shorts while the 15-minute gap stays intact as structure, inverting it as invalidation, and why Asia candles print strangely — be in and out."
+    },
+    {
+      "title": "New York AM LIVE | NQ + ES Futures & Perps | Nov 17",
+      "url": "https://www.youtube.com/watch?v=GIXcqNZ3hlg",
+      "date": "2026-11-17",
+      "type": "live",
+      "takeaway": "Live NQ/ES stream — not transcribed for this research (sampled 30 of 78 streams)."
+    },
+    {
+      "title": "Asia SessionLIVE | NQ + ES Futures & Perps | Nov 15",
+      "url": "https://www.youtube.com/watch?v=uPikwwnRBzQ",
+      "date": "2026-11-15",
+      "type": "live",
+      "takeaway": "Live NQ/ES stream — not transcribed for this research (sampled 30 of 78 streams)."
+    },
+    {
+      "title": "New York AM LIVE | NQ + ES Futures & Perps | Nov 15",
+      "url": "https://www.youtube.com/watch?v=FicKYHaBCMY",
+      "date": "2026-11-15",
+      "type": "live",
+      "takeaway": "Live NQ/ES stream — not transcribed for this research (sampled 30 of 78 streams)."
+    },
+    {
+      "title": "Asia Session LIVE | NQ + ES Futures & Perps | Nov 15",
+      "url": "https://www.youtube.com/watch?v=RdG1U26zMrg",
+      "date": "2026-11-15",
+      "type": "live",
+      "takeaway": "Asia stream and his clearest volume-profile lesson: weekly profile, the rotation rule (can't hold value → other side of value), value stacking, LVN inside a gap, POC shifts, and the Bento → Sushi reversal."
+    },
+    {
+      "title": "New York AM LIVE | NQ + ES Futures & Perps | Nov 12",
+      "url": "https://www.youtube.com/watch?v=kH54smHa9II",
+      "date": "2026-11-12",
+      "type": "live",
+      "takeaway": "Seven-hour NY stream: weekly-VWAP and call-wall reads, the lunch-box VWAP 75% stat, devil's marks on 200-second/10-minute charts near x20/x80, and a blown trailing-drawdown account from revenge-chasing a missed target."
+    },
+    {
+      "title": "Asia Session LIVE | NQ + ES Futures & Perps | Nov 12",
+      "url": "https://www.youtube.com/watch?v=nSwS9y-DpFo",
+      "date": "2026-11-12",
+      "type": "live",
+      "takeaway": "Asia stream: eval vs funded sizing (one mini on a 150K eval, 1–5 micros funded), longs only from discount of the leg, follow the session trend, and Asia 'office hours' — one trade and done."
+    },
+    {
+      "title": "New York AM Session LIVE | NQ + ES Futures & Perps | Nov 12",
+      "url": "https://www.youtube.com/watch?v=i_UTAJUHj_4",
+      "date": "2026-11-12",
+      "type": "live",
+      "takeaway": "NY stream with Zarb: never long into a weekly value area high, the 10 AM power-of-three, partials and adds on a copy-traded stack, and his Vest perps setup (one-step only, instant crypto payouts)."
+    },
+    {
+      "title": "Asia Session LIVE | NQ + ES Futures & Perps | Nov 11",
+      "url": "https://www.youtube.com/watch?v=_09EJSMy208",
+      "date": "2026-11-11",
+      "type": "live",
+      "takeaway": "Asia stream hosted by co-host Druby; context on how Alex enters with the big buyer and targets the previous-day POC."
+    },
+    {
+      "title": "New York AM LIVE | NQ + ES Futures & Perps | Nov 11",
+      "url": "https://www.youtube.com/watch?v=JC4NpAa4554",
+      "date": "2026-11-11",
+      "type": "live",
+      "takeaway": "NY stream: the TMade indicator suite walkthrough (levels, liquidity targets, FVGs, sweeps, LVN/HVN, value stacking), eval vs instant-funded math, and why scalpers shouldn't use TradingView."
+    },
+    {
+      "title": "Asia Session LIVE | NQ + ES Futures & Perps | Nov 10",
+      "url": "https://www.youtube.com/watch?v=d4ICOyBiBdk",
+      "date": "2026-11-10",
+      "type": "live",
+      "takeaway": "Asia stream: how he trades Bento (wait for Sushi to sweep it, back to Bento VWAP) and Sushi (low-to-high formation pullback), second sweeps off a previous-day high, and grading C-trades as eval-only."
+    },
+    {
+      "title": "New York AM Session LIVE | NQ + ES Futures & Perps | Nov 10",
+      "url": "https://www.youtube.com/watch?v=3qTrUb7iWGo",
+      "date": "2026-11-10",
+      "type": "live",
+      "takeaway": "NY stream: delta absorption ('aggression must be rewarded'), never short into a weekly value area low, gamma zero-level longs, breaking his own rule and paying for it."
+    },
+    {
+      "title": "Asia Session LIVE | NQ + ES Futures & Perps | Nov 9",
+      "url": "https://www.youtube.com/watch?v=8DwrB6Q56Ss",
+      "date": "2026-11-09",
+      "type": "live",
+      "takeaway": "Asia stream: 'volume profile beats any FVG', weekly levels over daily, the 15-minute close above weekly VAL as the signature, the Bento sweep that 'happens almost every night', and evaluating prop-firm plans live."
+    },
+    {
+      "title": "New York AM Session LIVE | NQ + ES Futures & Perps | Nov 9",
+      "url": "https://www.youtube.com/watch?v=4kC8RG-Gckc",
+      "date": "2026-11-09",
+      "type": "live",
+      "takeaway": "NY stream: his debt-to-payouts story, ICT vs volume profile ('the next evolution for me'), weekly HVN zones, and the fear that drives his work ethic."
+    },
+    {
+      "title": "Asia Session LIVE | NQ + ES Futures & Perps | Nov 8",
+      "url": "https://www.youtube.com/watch?v=SQFUFmnif-Q",
+      "date": "2026-11-08",
+      "type": "live",
+      "takeaway": "Asia stream: volume profile + order flow + gamma explained (auction theory, failed auctions, 70% inside value), IFVG as the trigger, location-based confirmation timeframe, and micros over minis."
+    },
+    {
+      "title": "New York AM Session LIVE | NQ + ES Futures & Perps | Nov 6",
+      "url": "https://www.youtube.com/watch?v=d8852XmmG5s",
+      "date": "2026-11-06",
+      "type": "live",
+      "takeaway": "NY stream on NFP day: his eval vs funded sizing rule (50–100% vs 25%), stacked-confluence longs, the 15-minute gap as invalidation, re-entering with double size after a stop, and avoiding daily-loss-limit add-ons."
+    },
+    {
+      "title": "Asia Session LIVE | NQ + ES Futures & Perps | Nov 5",
+      "url": "https://www.youtube.com/watch?v=lTpwbRBxW_Y",
+      "date": "2026-11-05",
+      "type": "live",
+      "takeaway": "Asia stream: Bento box (6–8 PM) and Sushi box defined as accumulation → manipulation, the sushi-sweeps-bento trade back to Bento VWAP, and when a gamma level blocks the target."
+    },
+    {
+      "title": "New York AM LIVE | NQ + ES Futures & Perps | Nov 5",
+      "url": "https://www.youtube.com/watch?v=B9RDdJSCVT4",
+      "date": "2026-11-05",
+      "type": "live",
+      "takeaway": "Seven-hour NY stream on a big down day: one account at a time on wild days, eval-only trades, all five 'boxes' defined, lunch-box behaviour in a range, and his TMade indicator suite."
+    },
+    {
+      "title": "Asia Session LIVE | NQ Futures | Nov 4",
+      "url": "https://www.youtube.com/watch?v=mwQ8r2uz9Mo",
+      "date": "2026-11-04",
+      "type": "live",
+      "takeaway": "Asia stream: G1/G2 gamma levels in Asia, the cost of catching a falling knife through a gamma level, and why he doesn't trade perps in Asia."
+    },
+    {
+      "title": "New York AM LIVE | NQ + ES Futures & Perps | Nov4",
+      "url": "https://www.youtube.com/watch?v=_ifzXYkl3S0",
+      "date": "2026-11-04",
+      "type": "live",
+      "takeaway": "NY stream: mixing ICT liquidity with order flow, devil's marks, aggression without continuation, weekly HVN support, and his self-named flaw — getting aggressive into a level after a green day."
+    },
+    {
+      "title": "Asia Session LIVE | NQ Futures | Nov 3",
+      "url": "https://www.youtube.com/watch?v=JyLeJ91Gyvs",
+      "date": "2026-11-03",
+      "type": "live",
+      "takeaway": "Asia stream run by TMade co-hosts (sushi-box and measured-move ideas) — context only."
+    },
+    {
+      "title": "New York AM Session LIVE | NQ + ES Futures & Perps | Nov 3",
+      "url": "https://www.youtube.com/watch?v=-kf7KmKAxak",
+      "date": "2026-11-03",
+      "type": "live",
+      "takeaway": "NY stream with Zarb: overnight session value, the 10 AM manipulation, the session boxes introduced, and why 150K of his 200K came from the AM session."
+    },
+    {
+      "title": "Asia Session LIVE | NQ Futures | Nov 2",
+      "url": "https://www.youtube.com/watch?v=EhuYu1Y0GNI",
+      "date": "2026-11-02",
+      "type": "live",
+      "takeaway": "Asia stream run by TMade co-hosts — retest of the Asia low into the new-week opening gap; office hours and trade limits."
+    },
+    {
+      "title": "New York AM Session LIVE | NQ Futures | Nov 2",
+      "url": "https://www.youtube.com/watch?v=E6x-AiXBxp0",
+      "date": "2026-11-02",
+      "type": "live",
+      "takeaway": "Seven-hour NY stream: 'the IB is dead', 'I'm a continuation trader', put/call wall rules, fading obvious gaps, the lunch-box retrace rule, and fear and greed as why funded accounts die."
+    },
+    {
+      "title": "Asia Session LIVE | NQ Futures | Nov 1",
+      "url": "https://www.youtube.com/watch?v=RfEKBQV8cUU",
+      "date": "2026-11-01",
+      "type": "live",
+      "takeaway": "Asia stream run by TMade co-hosts — sushi-box 50%/VWAP targets and 5-minute gaps; context only."
+    },
+    {
+      "title": "New York AM Session  LIVE | NQ Futures | Oct 30",
+      "url": "https://www.youtube.com/watch?v=0LZeoBF6kQk",
+      "date": "2026-10-30",
+      "type": "live",
+      "takeaway": "Long NY stream (Alex joins after ~2 hours): profile shapes, VWAP placement, Topstep 5-in-5-out payout routine, and Vest payouts."
+    },
+    {
+      "title": "Asia Session  LIVE | NQ Futures | Oct 29",
+      "url": "https://www.youtube.com/watch?v=R7YkqakQePQ",
+      "date": "2026-10-29",
+      "type": "live",
+      "takeaway": "Asia stream run by TMade co-hosts — small-account eval plan and sushi-box targets; context only."
+    },
+    {
+      "title": "New York AM Session  LIVE | NQ Futures | Oct 29",
+      "url": "https://www.youtube.com/watch?v=Cm5O075GC8Y",
+      "date": "2026-10-29",
+      "type": "live",
+      "takeaway": "NY stream: POC position in the range, five-micro longs off 50% of the range, call wall above longs, and 'why didn't anybody tell me to just trade micros'."
+    },
+    {
+      "title": "Asia Session LIVE | NQ Futures | Oct 28",
+      "url": "https://www.youtube.com/watch?v=UMLYsb11ad8",
+      "date": "2026-10-28",
+      "type": "live",
+      "takeaway": "Asia stream with co-host Drew: his one-screen Deep Charts setup and his background — prop firms since 2020, full-time since 2025, $27K spent before profitability."
+    },
+    {
+      "title": "Asia Session LIVE | NQ Futures | Oct 27",
+      "url": "https://www.youtube.com/watch?v=nMIm9UgwqnQ",
+      "date": "2026-10-27",
+      "type": "live",
+      "takeaway": "Live NQ/ES stream — not transcribed for this research (sampled 30 of 78 streams)."
+    },
+    {
+      "title": "Asia Session LIVE | NQ Futures | Oct 26",
+      "url": "https://www.youtube.com/watch?v=2tQpOIKNdF0",
+      "date": "2026-10-26",
+      "type": "live",
+      "takeaway": "Live NQ/ES stream — not transcribed for this research (sampled 30 of 78 streams)."
+    },
+    {
+      "title": "New York AM Session LIVE | NQ Futures | Oct 26",
+      "url": "https://www.youtube.com/watch?v=IsdqCc0cdhg",
+      "date": "2026-10-26",
+      "type": "live",
+      "takeaway": "NY stream at the order-flow turning point: value-area rotation to POC, delta absorption, 'throw away ICT, throw away IB… just order flow it up', and 'volume is money'."
+    },
+    {
+      "title": "Asia Session LIVE | NQ Futures | Oct 25",
+      "url": "https://www.youtube.com/watch?v=dndMgIMhmZs",
+      "date": "2026-10-25",
+      "type": "live",
+      "takeaway": "Live NQ/ES stream — not transcribed for this research (sampled 30 of 78 streams)."
+    },
+    {
+      "title": "Asia Session LIVE | NQ Futures | Oct 22",
+      "url": "https://www.youtube.com/watch?v=2OvZN7zJNz4",
+      "date": "2026-10-22",
+      "type": "live",
+      "takeaway": "Live NQ/ES stream — not transcribed for this research (sampled 30 of 78 streams)."
+    },
+    {
+      "title": "Asia Session LIVE | NQ Futures | Oct 21",
+      "url": "https://www.youtube.com/watch?v=xtkJtEEJhf0",
+      "date": "2026-10-21",
+      "type": "live",
+      "takeaway": "Live NQ/ES stream — not transcribed for this research (sampled 30 of 78 streams)."
+    },
+    {
+      "title": "New York AM Session LIVE | NQ Futures | Oct 21",
+      "url": "https://www.youtube.com/watch?v=ZJS9NCWKDtg",
+      "date": "2026-10-21",
+      "type": "live",
+      "takeaway": "Live NQ/ES stream — not transcribed for this research (sampled 30 of 78 streams)."
+    },
+    {
+      "title": "Asia Session LIVE | NQ Futures | Oct 20",
+      "url": "https://www.youtube.com/watch?v=mouOmbUdIjM",
+      "date": "2026-10-20",
+      "type": "live",
+      "takeaway": "Live NQ/ES stream — not transcribed for this research (sampled 30 of 78 streams)."
+    },
+    {
+      "title": "New York AM Session LIVE | NQ Futures | Oct 20",
+      "url": "https://www.youtube.com/watch?v=RY25xm9C25M",
+      "date": "2026-10-20",
+      "type": "live",
+      "takeaway": "Live NQ/ES stream — not transcribed for this research (sampled 30 of 78 streams)."
+    },
+    {
+      "title": "Asia Session LIVE | NQ Futures | Oct 19",
+      "url": "https://www.youtube.com/watch?v=Vcmdwq5NUZk",
+      "date": "2026-10-19",
+      "type": "live",
+      "takeaway": "Live NQ/ES stream — not transcribed for this research (sampled 30 of 78 streams)."
+    },
+    {
+      "title": "Asia Session LIVE | NQ Futures | Oct 18",
+      "url": "https://www.youtube.com/watch?v=gHt9ZXoLmF0",
+      "date": "2026-10-18",
+      "type": "live",
+      "takeaway": "Live NQ/ES stream — not transcribed for this research (sampled 30 of 78 streams)."
+    },
+    {
+      "title": "Asia Session LIVE | NQ Futures | Oct 15",
+      "url": "https://www.youtube.com/watch?v=-so2WRYBK4c",
+      "date": "2026-10-15",
+      "type": "live",
+      "takeaway": "Live NQ/ES stream — not transcribed for this research (sampled 30 of 78 streams)."
+    },
+    {
+      "title": "Asia Session LIVE | NQ Futures | Oct 14",
+      "url": "https://www.youtube.com/watch?v=gF569re24yQ",
+      "date": "2026-10-14",
+      "type": "live",
+      "takeaway": "Live NQ/ES stream — not transcribed for this research (sampled 30 of 78 streams)."
+    },
+    {
+      "title": "Asia Session LIVE | NQ Futures | Oct 13",
+      "url": "https://www.youtube.com/watch?v=LHX4uKBQ9Hk",
+      "date": "2026-10-13",
+      "type": "live",
+      "takeaway": "Live NQ/ES stream — not transcribed for this research (sampled 30 of 78 streams)."
+    },
+    {
+      "title": "Asia Session LIVE | NQ Futures | Oct 12",
+      "url": "https://www.youtube.com/watch?v=2vEAZ5M_ibk",
+      "date": "2026-10-12",
+      "type": "live",
+      "takeaway": "Live NQ/ES stream — not transcribed for this research (sampled 30 of 78 streams)."
+    },
+    {
+      "title": "Asia Session LIVE | NQ Futures | Oct 11",
+      "url": "https://www.youtube.com/watch?v=joiQwquOYpg",
+      "date": "2026-10-11",
+      "type": "live",
+      "takeaway": "Live NQ/ES stream — not transcribed for this research (sampled 30 of 78 streams)."
+    },
+    {
+      "title": "Asia Session LIVE | NQ Futures | Oct 8",
+      "url": "https://www.youtube.com/watch?v=ERmruDyfHBI",
+      "date": "2026-10-08",
+      "type": "live",
+      "takeaway": "Live NQ/ES stream — not transcribed for this research (sampled 30 of 78 streams)."
+    },
+    {
+      "title": "Asia Session LIVE | NQ Futures | Oct 7",
+      "url": "https://www.youtube.com/watch?v=yOB5OBc5OMw",
+      "date": "2026-10-07",
+      "type": "live",
+      "takeaway": "Live NQ/ES stream — not transcribed for this research (sampled 30 of 78 streams)."
+    },
+    {
+      "title": "Asia Session LIVE | NQ Futures | Oct 6",
+      "url": "https://www.youtube.com/watch?v=VRWmr7JqZHM",
+      "date": "2026-10-06",
+      "type": "live",
+      "takeaway": "Live NQ/ES stream — not transcribed for this research (sampled 30 of 78 streams)."
+    },
+    {
+      "title": "Asia Session LIVE | NQ Futures | Oct 5",
+      "url": "https://www.youtube.com/watch?v=pJiyhdgn3lE",
+      "date": "2026-10-05",
+      "type": "live",
+      "takeaway": "Live NQ/ES stream — not transcribed for this research (sampled 30 of 78 streams)."
+    },
+    {
+      "title": "Asia Session LIVE | NQ Futures | Oct 4",
+      "url": "https://www.youtube.com/watch?v=XQUXwLNsiE4",
+      "date": "2026-10-04",
+      "type": "live",
+      "takeaway": "Live NQ/ES stream — not transcribed for this research (sampled 30 of 78 streams)."
+    },
+    {
+      "title": "Asia Session LIVE | NQ Futures | Oct 1",
+      "url": "https://www.youtube.com/watch?v=cl_-hLSukEc",
+      "date": "2026-10-01",
+      "type": "live",
+      "takeaway": "Live NQ/ES stream — not transcribed for this research (sampled 30 of 78 streams)."
+    },
+    {
+      "title": "Asia Session LIVE | NQ Futures | Sep 30",
+      "url": "https://www.youtube.com/watch?v=WahU7Qd7RGc",
+      "date": "2026-09-30",
+      "type": "live",
+      "takeaway": "Live NQ/ES stream — not transcribed for this research (sampled 30 of 78 streams)."
+    },
+    {
+      "title": "Asia Session LIVE | NQ Futures | Sep 29",
+      "url": "https://www.youtube.com/watch?v=TxgKYFcBqsk",
+      "date": "2026-09-29",
+      "type": "live",
+      "takeaway": "Live NQ/ES stream — not transcribed for this research (sampled 30 of 78 streams)."
+    },
+    {
+      "title": "Asia Session LIVE | NQ Futures | Sep 28",
+      "url": "https://www.youtube.com/watch?v=yq8vBCY5Ml0",
+      "date": "2026-09-28",
+      "type": "live",
+      "takeaway": "Live NQ/ES stream — not transcribed for this research (sampled 30 of 78 streams)."
+    },
+    {
+      "title": "Asia Session LIVE | NQ Futures | Sep 27",
+      "url": "https://www.youtube.com/watch?v=uMXWsMDEjdo",
+      "date": "2026-09-27",
+      "type": "live",
+      "takeaway": "Live NQ/ES stream — not transcribed for this research (sampled 30 of 78 streams)."
+    },
+    {
+      "title": "Asia Session LIVE | NQ Futures | Sep 24",
+      "url": "https://www.youtube.com/watch?v=aSvsOGpsKUc",
+      "date": "2026-09-24",
+      "type": "live",
+      "takeaway": "Live NQ/ES stream — not transcribed for this research (sampled 30 of 78 streams)."
+    },
+    {
+      "title": "Asia Session LIVE | NQ Futures | Sep 23",
+      "url": "https://www.youtube.com/watch?v=fwCTvsPq3L8",
+      "date": "2026-09-23",
+      "type": "live",
+      "takeaway": "Live NQ/ES stream — not transcribed for this research (sampled 30 of 78 streams)."
+    },
+    {
+      "title": "Asia Session LIVE | NQ Futures | Sep 22",
+      "url": "https://www.youtube.com/watch?v=JcpjW1Ym5G0",
+      "date": "2026-09-22",
+      "type": "live",
+      "takeaway": "Live NQ/ES stream — not transcribed for this research (sampled 30 of 78 streams)."
+    },
+    {
+      "title": "Asia Session LIVE | NQ Futures | Sep 21",
+      "url": "https://www.youtube.com/watch?v=V1q88TNtVMI",
+      "date": "2026-09-21",
+      "type": "live",
+      "takeaway": "Live NQ/ES stream — not transcribed for this research (sampled 30 of 78 streams)."
+    },
+    {
+      "title": "Live Trading Futures | NY AM Session | Funded Trader | ICT ORDERFLOW",
+      "url": "https://www.youtube.com/watch?v=Q3MizFFoGUA",
+      "date": "",
+      "type": "live",
+      "takeaway": "Live NQ/ES stream — not transcribed for this research (sampled 30 of 78 streams)."
+    },
+    {
+      "title": "Live Trading Futures | NY AM Session | Funded Trader | ICT ORDERFLOW",
+      "url": "https://www.youtube.com/watch?v=qmz4ZeVrnyM",
+      "date": "",
+      "type": "live",
+      "takeaway": "Live NQ/ES stream — not transcribed for this research (sampled 30 of 78 streams)."
+    },
+    {
+      "title": "Live Trading Futures | NY AM Session | Funded Trader | ICT",
+      "url": "https://www.youtube.com/watch?v=8_1_aRvjOY4",
+      "date": "",
+      "type": "live",
+      "takeaway": "Live NQ/ES stream — not transcribed for this research (sampled 30 of 78 streams)."
+    },
+    {
+      "title": "Live Trading Futures | NY AM Session | Funded Trader | NEW STRATEGY",
+      "url": "https://www.youtube.com/watch?v=DRHZYqPZ3vQ",
+      "date": "",
+      "type": "live",
+      "takeaway": "'New strategy' stream: the A+ 15-minute sweep + 1-minute change of state + retest model aimed at the 15-minute gap, and non-model trades on evals only."
+    },
+    {
+      "title": "Live Trading Futures | NY AM Session | Funded Trader | NEW STRATEGY",
+      "url": "https://www.youtube.com/watch?v=6WQg_3ZWiV8",
+      "date": "",
+      "type": "live",
+      "takeaway": "'New strategy' launch: only the NQ 15-minute and 1-minute charts, 1:1 targets, a 65–70% backtest win rate, and why chasing ruins the 1:1."
+    },
+    {
+      "title": "Live Trading Futures | NY AM Session | Funded Trader",
+      "url": "https://www.youtube.com/watch?v=g_nVMn8aoKk",
+      "date": "",
+      "type": "live",
+      "takeaway": "Live NQ/ES stream — not transcribed for this research (sampled 30 of 78 streams)."
+    },
+    {
+      "title": "Live Trading Futures | NY AM Session | Funded Trader",
+      "url": "https://www.youtube.com/watch?v=88bF_LSrB4s",
+      "date": "",
+      "type": "live",
+      "takeaway": "Live NQ/ES stream — not transcribed for this research (sampled 30 of 78 streams)."
+    },
+    {
+      "title": "Live Trading Futures | NY AM Session | Funded Trader",
+      "url": "https://www.youtube.com/watch?v=Q9eexqhY-1g",
+      "date": "",
+      "type": "live",
+      "takeaway": "Live NQ/ES stream — not transcribed for this research (sampled 30 of 78 streams)."
+    },
+    {
+      "title": "Live Trading Futures | NY AM Session | Funded Trader",
+      "url": "https://www.youtube.com/watch?v=SoHUFJ5uoYs",
+      "date": "",
+      "type": "live",
+      "takeaway": "Live NQ/ES stream — not transcribed for this research (sampled 30 of 78 streams)."
+    },
+    {
+      "title": "Live Trading Futures | NY AM Session | Funded Trader",
+      "url": "https://www.youtube.com/watch?v=6jNTBIH0GXU",
+      "date": "",
+      "type": "live",
+      "takeaway": "Live NQ/ES stream — not transcribed for this research (sampled 30 of 78 streams)."
+    },
+    {
+      "title": "Live Trading Futures | NY AM Session | Funded Traders",
+      "url": "https://www.youtube.com/watch?v=sIq2Gbugh3E",
+      "date": "",
+      "type": "live",
+      "takeaway": "Live NQ/ES stream — not transcribed for this research (sampled 30 of 78 streams)."
+    },
+    {
+      "title": "Live Trading Futures | NY AM Session | Funded Trader",
+      "url": "https://www.youtube.com/watch?v=WMKQNfq5DiA",
+      "date": "",
+      "type": "live",
+      "takeaway": "ICT-era stream: midnight open + hourly FVG + breaker zones, 1–3-minute inversions, 'a 15-minute sweep unlocks a 30-second inversion', and his speech on patience and not trading the open."
+    },
+    {
+      "title": "Live Trading Futures | ASIA Session | Funded Trader",
+      "url": "https://www.youtube.com/watch?v=pKDLB9TKQ9o",
+      "date": "",
+      "type": "live",
+      "takeaway": "Live NQ/ES stream — not transcribed for this research (sampled 30 of 78 streams)."
+    },
+    {
+      "title": "Live Futures Trading | NY AM Session | Prop Funded",
+      "url": "https://www.youtube.com/watch?v=TWo5VEGJfhU",
+      "date": "",
+      "type": "live",
+      "takeaway": "Live NQ/ES stream — not transcribed for this research (sampled 30 of 78 streams)."
+    },
+    {
+      "title": "Live Futures Trading | NY PM Session | Prop Funded",
+      "url": "https://www.youtube.com/watch?v=70Fj7wj1Ygk",
+      "date": "",
+      "type": "live",
+      "takeaway": "Live NQ/ES stream — not transcribed for this research (sampled 30 of 78 streams)."
+    },
+    {
+      "title": "Live Futures Trading | ASIA Session W/ TMade Matt",
+      "url": "https://www.youtube.com/watch?v=N1dzuXvCFVE",
+      "date": "",
+      "type": "live",
+      "takeaway": "Live NQ/ES stream — not transcribed for this research (sampled 30 of 78 streams)."
+    },
+    {
+      "title": "Live Futures Trading | Labor Day Special | Prop-Firm Trading",
+      "url": "https://www.youtube.com/watch?v=ErRxjMX-6Lo",
+      "date": "",
+      "type": "live",
+      "takeaway": "Live NQ/ES stream — not transcribed for this research (sampled 30 of 78 streams)."
+    },
+    {
+      "title": "Live Futures Trading | NY PM Session w/ TMade Alex | Passing Prop Firm Evaluations",
+      "url": "https://www.youtube.com/watch?v=-_PypteqyOg",
+      "date": "",
+      "type": "live",
+      "takeaway": "Live NQ/ES stream — not transcribed for this research (sampled 30 of 78 streams)."
+    },
+    {
+      "title": "Prop Firm Match TV — London & New York Session (Alex on the lunch/PM slot)",
+      "url": "https://www.youtube.com/watch?v=cZPjYzTO0gw",
+      "date": "2026-10-29",
+      "type": "live",
+      "takeaway": "Alex hosts the 12:20–3 PM ET block: the lunch box (12:00–1:00 with a VWAP anchored at noon), trading back to lunch-box VWAP after a sweep, ES vs NQ strength, and gamma confluence."
+    },
+    {
+      "title": "Prop Firm Match TV — London & New York Session (Alex on the lunch/PM slot)",
+      "url": "https://www.youtube.com/watch?v=9AhgcNBSW9g",
+      "date": "2026-10-02",
+      "type": "live",
+      "takeaway": "Alex hosts the 12:13–2 PM ET lunch-box session alone: 'retrace 50% before taking the lows', two stabs at the VWAP return, and continuation over reversal."
+    },
+    {
+      "title": "LIVE Futures Trading with Zarb: NY Session Scalping With TmadeAlex (Prop Firm Match TV)",
+      "url": "https://www.youtube.com/watch?v=_8b5w852Yis",
+      "date": "",
+      "type": "live",
+      "takeaway": "Alex's segment with Zarb: ICT inversions as trapped traders, continuation entries, and base-hit exits — 'being a dick for a tick' costs money."
+    },
+    {
+      "title": "LIVE Futures Trading | New York Open with Zach & TMadeAlex (Prop Firm Match TV)",
+      "url": "https://www.youtube.com/watch?v=sl4Phv8Gadc",
+      "date": "",
+      "type": "live",
+      "takeaway": "Morning model era: no trades before 10:00–10:15, trade the pullback after the 10 AM candle with VWAP as bias, and the 15-minute-sweep inversion that passed a Topstep Combine on stream."
+    },
+    {
+      "title": "LIVE Futures Trading | New York Open with Zach & TMadeAlex (Prop Firm Match TV)",
+      "url": "https://www.youtube.com/watch?v=Pcv1ZQg7LyM",
+      "date": "",
+      "type": "live",
+      "takeaway": "The 9 AM setup (9:00 sweeps the 8 AM hour, then a 1–3-minute inversion), two trades a day with the second as the edge, and IB direction stats."
+    },
+    {
+      "title": "LIVE Futures Trading | New York Open with Zach & TMadeAlex (Prop Firm Match TV)",
+      "url": "https://www.youtube.com/watch?v=nfXb6bqOwHk",
+      "date": "",
+      "type": "live",
+      "takeaway": "Continuation trading after the 10 AM candle, partials when the other index sweeps first, and 'FAFO' accounts kept separate from funded risk."
+    },
+    {
+      "title": "Alex Passes the Topstep Combine by Waiting for the 15-Minute Setup (PFM short)",
+      "url": "https://www.youtube.com/watch?v=YxoBfqOn7Do",
+      "date": "",
+      "type": "short",
+      "takeaway": "Waiting for the 15-minute candle to sweep and close, then entering on the inversion inside its wick toward the 15-minute gap."
+    },
+    {
+      "title": "There was a reason Alex was watching this level closely (PFM short)",
+      "url": "https://www.youtube.com/watch?v=jdjphVOca4s",
+      "date": "",
+      "type": "short",
+      "takeaway": "Why a pre-marked level with liquidity behind it is worth waiting for instead of chasing the move."
+    }
+  ],
+  "articles": [
+    {
+      "title": "TRADERMADE — Whop community page",
+      "url": "https://whop.com/tradermade/",
+      "date": "2026-11",
+      "takeaway": "\"Transparency. Accountability. Results.\" A futures day-trading community built on live sessions Monday–Friday; free Discord tier (~1.1K members) and a paid plan; 5.0 from 18 reviews — members single out his trade-by-trade explanations and his lunch-session trading."
+    },
+    {
+      "title": "Prop Firm Match TV — daily London & New York stream (Alex as host)",
+      "url": "https://www.youtube.com/@propfirmmatch/streams",
+      "date": "2026-10",
+      "takeaway": "Alex co-hosted PropFirmMatch's daily 12-hour stream (58 streams Apr–Oct 2026 list him), mostly the lunch/PM slot, plus morning shows with Zach (Zarb)."
+    }
+  ],
+  "profile": {
+    "instruments": [
+      "NQ",
+      "ES",
+      "Perps",
+      "Gold"
+    ],
+    "style": "intraday NQ scalping — volume profile/order flow context with ICT inversion entries",
+    "sessions": [
+      "NY AM 10–11 AM",
+      "Lunch box 12–1 PM",
+      "PM 2 PM open",
+      "Asia open 8:00 PM"
+    ],
+    "firms": [
+      "Topstep",
+      "Lucid",
+      "Tradeify",
+      "Top One Futures",
+      "Futures Elite",
+      "Funded Next",
+      "Apex",
+      "Take Profit Trader",
+      "Vest"
+    ],
+    "niche": "named session 'boxes' (Bento, Sushi, Breakfast, Lunch) + weekly value rotations, traded on copy-traded prop and perps stacks"
+  },
+  "links": {
+    "youtube": "https://www.youtube.com/@TMadeAlex",
+    "site": "https://whop.com/tradermade/",
+    "siteLabel": "TraderMade (Whop)"
+  },
+  "sources": {
+    "category": "https://www.youtube.com/@TMadeAlex/streams",
+    "notes": "79 channel streams catalogued; 39 transcripts read (~1.18M words: 30 own streams, 5 PropFirmMatch co-hosted streams, 2 PFM 12-hour streams at the lunch slot, 2 shorts), distilled with timestamps; Whop community page; researched 2026-11-18. Many streams are co-hosted (Zarb/Zach, Druby, others) — only Alex's own statements are used. Profit figures are his own on-stream claims."
+  }
+}
