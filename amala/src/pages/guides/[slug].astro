@@ -76,8 +76,9 @@ const links = guide.links || {};
         ))}
       </div>
       <div class="chips" style="margin-top:4px">
-        <a class="chip" href="/guides">← All guides</a>
-        <a class="chip" href="#articles"><b>{articles.length}</b>&nbsp;sources</a>
+        <button class="chip print-btn no-print" type="button" onclick="window.print()">🖨 Print</button>
+        <a class="chip no-print" href="/guides">← All guides</a>
+        <a class="chip no-print" href="#articles"><b>{articles.length}</b>&nbsp;sources</a>
         <span class="chip">📅 Researched {guide.researched || '2026-11-17'}</span>
       </div>
     </div>
@@ -103,8 +104,8 @@ const links = guide.links || {};
         {guide.oneLiner && <p><b>In one line:</b> {guide.oneLiner}</p>}
         {guide.keyQuote && (
           <div class="callout">
-            <div class="q">“{guide.keyQuote}”</div>
-            {guide.keyQuoteSource && <div class="src">— {guide.keyQuoteSource}</div>}
+            <div class="q">{guide.keyQuote}</div>
+            {guide.keyQuoteSource && <div class="src">{guide.keyQuoteSource}</div>}
           </div>
         )}
       </div>
@@ -143,7 +144,7 @@ const links = guide.links || {};
       );
     })}
 
-    <section class="block" id="articles">
+    <section class="block no-print" id="articles">
       <h2>Sources</h2>
       <p class="lead">Every article, study, firm doc, and trader report this guide was built from — rows are clickable, links open in a new tab.</p>
       {articles.length > 0 ? (
@@ -168,7 +169,7 @@ const links = guide.links || {};
       )}
     </section>
 
-    <section class="block" id="method">
+    <section class="block no-print" id="method">
       <h2>Method & honesty notes</h2>
       <div class="card">
         <div class="chips" style="margin:2px 0 10px">

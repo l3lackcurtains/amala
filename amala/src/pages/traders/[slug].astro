@@ -79,11 +79,12 @@ const links = trader.links || {};
         ))}
       </div>
       <div class="chips" style="margin-top:4px">
+        <button class="chip print-btn no-print" type="button" onclick="window.print()">🖨 Print</button>
         <span class="chip">🕛 {trader.streamSlot}</span>
-        {links.youtube && <a class="chip" href={links.youtube} target="_blank" rel="noopener">▶ YouTube ↗</a>}
-        {links.site && <a class="chip" href={links.site} target="_blank" rel="noopener">🔗 {links.siteLabel || 'Website'} ↗</a>}
-        <a class="chip" href="#videos"><b>{videos.length}</b>&nbsp;videos — watch in-site</a>
-        <a class="chip" href="#articles"><b>{articles.length}</b>&nbsp;source articles</a>
+        {links.youtube && <a class="chip no-print" href={links.youtube} target="_blank" rel="noopener">▶ YouTube ↗</a>}
+        {links.site && <a class="chip no-print" href={links.site} target="_blank" rel="noopener">🔗 {links.siteLabel || 'Website'} ↗</a>}
+        <a class="chip no-print" href="#videos"><b>{videos.length}</b>&nbsp;videos — watch in-site</a>
+        <a class="chip no-print" href="#articles"><b>{articles.length}</b>&nbsp;source articles</a>
         <span class="chip">📅 Researched 2026-11-16</span>
       </div>
     </div>
@@ -110,8 +111,8 @@ const links = trader.links || {};
         {trader.oneLiner && <p><b>System in one line:</b> {trader.oneLiner}</p>}
         {trader.keyQuote && (
           <div class="callout">
-            <div class="q">“{trader.keyQuote}”</div>
-            {trader.keyQuoteSource && <div class="src">— {trader.keyQuoteSource}</div>}
+            <div class="q">{trader.keyQuote}</div>
+            {trader.keyQuoteSource && <div class="src">{trader.keyQuoteSource}</div>}
           </div>
         )}
       </div>
@@ -150,7 +151,7 @@ const links = trader.links || {};
       );
     })}
 
-    <section class="block" id="videos">
+    <section class="block no-print" id="videos">
       <h2>Video breakdowns</h2>
       <p class="lead">Click any thumbnail to open the in-site watch page — big player, playlist, no leaving the site.</p>
       <div class="grid">
@@ -159,7 +160,7 @@ const links = trader.links || {};
       {videos.length === 0 && <div class="card"><em>No videos recorded yet.</em></div>}
     </section>
 
-    <section class="block" id="articles">
+    <section class="block no-print" id="articles">
       <h2>Source articles</h2>
       <p class="lead">Every article read for this research with its key takeaway — rows are clickable, links open in a new tab.</p>
       {articles.length > 0 ? (
@@ -184,7 +185,7 @@ const links = trader.links || {};
       )}
     </section>
 
-    <section class="block" id="sources">
+    <section class="block no-print" id="sources">
       <h2>Sources</h2>
       <div class="card">
         <div class="chips" style="margin:2px 0 10px">
