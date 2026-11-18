@@ -1,0 +1,978 @@
+Yush Capital · The Order Flow Course
+Skip to content
+YUSH CAPITAL
+Course
+Reviews
+About
+How it works
+Pricing
+Membership
+FAQ
+Member login
+Enroll
+The Yush Capital Course
+Read the flow. Learn the models. Book your 1-on-1.
+Read
+the
+flow.
+Learn
+the
+models.
+Book
+your
+1-on-1.
+The order flow course for NQ and ES futures. Levels 1 to 5, lifetime access, and a
+30-minute
+1-on-1
+call with Yush after your first week.
+Get the course
+›
+See inside the course
+5.0
+on Whop ·
+54
+reviews
+One-time payment
+Lifetime access
+Instant access via Whop
+01
+The flow
+02
+The models
+03
+1-on-1 call
+Price hits a low-volume node
+Sellers get absorbed
+Delta flips to buyers
+LBF long: look below and fail
+LBF MODEL
+LVN
+AGGRESSION
+ABSORPTION
+DELTA
+PRICE
+TARGET
+LBF LONG
+STOP
+DELTA
+SELLERS
+BUYERS
+Volume profile, delta and absorption, one level at a time. Video lessons, written lessons and interactive assignments.
+Levels 1 to 5
+Lifetime access
+Real NQ and ES sessions
+Look Below and Fail (LBF), Look Above and Fail (LAF), low-volume nodes (LVN). A setup counts only when all five boxes are ticked.
+LBF and LVN models
+Entry, stop, target
+When to stay out
+Book it from your dashboard once you've had a week with the course, and bring your questions. One call per course purchase.
+30 minutes with Yush
+Opens after week one
+Video call
+See the five levels
+Try one of Yush's setups
+How the 1-on-1 works
+Scroll
+ONE LOGIN
+Every level,
+one dashboard.
+Sign in with Whop and every level is there in order, with your progress saved as you go and your 1-on-1 call to book after your first week.
+Preview of the
+Yush Capital
+course dashboard: the Learn page with progress through Levels 1 to 5, the lesson to continue, and the 1-on-1 call card, which opens after the first week.
+yushcapital.co
+/dashboard/learn
+Live
+YUSH CAPITAL
+Read first
+Get started
+Overview
+Learn
+Plan
+The course
+Lifetime access
+Learn · The library
+Welcome back, trader
+Course
+· lifetime access
+TR
+Continue learning
+Lesson 02 / 07
+22:14
+Level 4 · Learning the models
+Look Above and Fail (LAF)
+62%
+complete
+14 min left
+Up next
+Look Below and Fail (LBF)
+Resume
+Your 1-on-1 call
+Y
+30 minutes with Yush
+Opens after day
+7
+Book it here once you've had a week with the course.
+Day
+5
+of
+7
+2
+days to go
+Book your call
+After day
+7
+Levels 1 to 5
+9
+of
+19
+lessons
+L1
+Building the framework
+Level 1
+·
+2
+lessons
+2
+/
+2
+L2
+Understanding the tools
+Level 2
+·
+4
+lessons
+4
+/
+4
+L3
+Building the template with the tools
+Level 3
+·
+2
+lessons
+2
+/
+2
+L4
+Learning the models
+Level 4
+·
+7
+lessons
+1
+/
+7
+L5
+Apply the knowledge in live action
+Level 5
+·
+4
+lessons
+0
+/
+4
+INSIDE THE COURSE
+The full order flow course.
+Levels 1 to 5.
+Level by level, from the auction to the models in live action. Not a signal service: you learn to read the market yourself.
+Levels
+5
+Lessons
+19
++3 bonus
+Assignments
+6
+Read first lessons
+11
+1-on-1 call with Yush
+1
+Try one of Yush's setups
+›
+Pick a level
+Level 1
+:
+Building the framework
+01
+L1
+Level 1
+Building the framework
+Level 2
+:
+Understanding the tools
+02
+L2
+Level 2
+Understanding the tools
+Level 3
+:
+Building the template with the tools
+03
+L3
+Level 3
+Building the template with the tools
+Level 4
+:
+Learning the models
+04
+L4
+Level 4
+Learning the models
+Level 5
+:
+Apply the knowledge in live action
+05
+L5
+Level 5
+Apply the knowledge in live action
+Bonus series
+:
+The GEX Playbook and Psychology & Risk
+Bonus
+GEX Playbook, Psychology & Risk
+Level 01
+· Beginner
+2 lessons · 2 assignments
+Building the framework
+The base the whole course stands on.
+What you'll learn
+Read the market as an auction
+Tell balance from imbalance
+Find the POC, value area and thin areas
+yushcapital.co/dashboard/learn/level-1-building-the-framework
+Illustration: price rotates inside a range while a volume profile builds beside it, its point of control and value area are marked, then price leaves balance for imbalance.
+Lessons
+02
+01
+Auction market theory
+Video
+02
+Volume profile concepts
+Video
+Assignments
+02
+Spot balance and imbalance
+Label the lesson's chart, then mark up one yourself.
+Read the volume profile
+Use the profile to call balance or imbalance.
+Next
+·
+Level 2
+Understanding the tools
+Level 02
+4 lessons · 2 assignments
+Understanding the tools
+Every tool on the chart, one at a time.
+What you'll learn
+Delta and big trades: who pushes, who absorbs
+Mark market generated levels
+Anchor your own volume profiles
+yushcapital.co/dashboard/learn/level-2-understanding-the-tools
+Illustration: the four Level 2 tools switch on over one chart, one after another: the delta profile, big trades, market generated levels and the volume profile.
+Lessons
+04
+01
+Delta profile
+Written
+02
+Big trades
+Video
+03
+Market generated levels
+Written
+04
+Volume profile
+Written
+Assignments
+02
+Read the tools
+Name what price does at your levels.
+Anchor the profile
+Mark the levels, then fast forward a week.
+Next
+·
+Level 3
+Building the template with the tools
+Level 03
+2 lessons
+Building the template with the tools
+Put the Level 2 tools on your platform once, as a template.
+What you'll learn
+Setup guides for Deepcharts and MotiveWave
+The four Level 2 tools on one chart
+One layout, saved for every session
+yushcapital.co/dashboard/learn/level-3-building-the-template
+Illustration: the four Level 2 tools are added to a chart layout one by one, then the layout is saved as a template.
+Lessons
+02
+01
+Deepcharts setup guide
+Guide + video
+02
+MotiveWave setup guide
+Guide + video
+With the membership
+Ready-made templates are shared in the members' Discord.
+See the membership
+Next
+·
+Level 4
+Learning the models
+Level 04
+7 lessons · 2 assignments
+Learning the models
+The models Yush trades, built on the tools.
+What you'll learn
+LBF / LAF: trade failed auctions at the edge of value
+LVN: trade the thin spots a fast move leaves behind
+Put the stop where the idea is wrong, and know when to stand aside
+yushcapital.co/dashboard/learn/level-4-learning-the-models
+LOADING
+...
+Interactive order flow lesson built from two of the founder's own trades: an LBF long (a sweep and reclaim of the value area low) and an LVN short (a breakdown from balance and a retest of the low volume node). Step through each setup, watch the five-box checklist tick, make your own entry call, then see the trade plan and the result. Educational examples, not signals.
+Two of Yush's own trades: step through one, then make the entry call. Educational examples, not signals.
+Lessons
+07
+LBF / LAF model
+01
+Framework for the model
+Video
+02
+Look Above and Fail (LAF)
+Video
+03
+Look Below and Fail (LBF)
+Video
+04
+When to avoid
+Video
+LVN model
+05
+Framework for the model
+Video
+06
+LVN model
+Video
+07
+When to avoid
+Video
+Assignments
+02
+Trade the failed sweep
+Tick the five boxes, plan the stop, know when to stand aside.
+Trade the defended breakout
+Read the pullback into the LVN. Skip failed breakouts.
+Next
+·
+Level 5
+Apply the knowledge in live action
+Level 05
+4 lessons
+Apply the knowledge in live action
+Real trades, broken down.
+What you'll learn
+Follow a trade from context to exit
+See the LBF and LVN models traded start to finish
+Decide the level, trigger and stop before you take a setup
+yushcapital.co/dashboard/learn/trade-recaps
+Illustration: a trade recap plays through its chapters: the context, the trigger, the management and the exit.
+Lessons
+04
+01
+Look Below and Fail: Reclaim Trade Recap
+Video
+02
+Nasdaq Pull Wall Trade
+Video
+03
+Absorption Example & Short Setup
+Video
+04
+LVN Short Setup Breakdown
+Video
+Next
+·
+Bonus series
+The GEX Playbook and Psychology & Risk
+Bonus series
+3 lessons
+The GEX Playbook and Psychology & Risk
+Two extra series: reading gamma levels, and the rules and risk of prop trading.
+What you'll learn
+Read call walls, put walls and the gamma flip
+Fade breakouts that run into gamma levels
+Drawdown math, consistency rules and defined risk
+yushcapital.co/dashboard/learn/gex-playbook
+Illustration: price breaks above the call wall, fails and rotates back inside, a false breakout read with gamma levels.
+Lessons
+03
+The GEX Playbook
+01
+Trading False Breakouts with Gamma Levels
+Video
+02
+GEX + Retest of Distribution
+Video
+Psychology & Risk
+03
+Prop Trading Rules and Scaling
+Video
+With the membership
+The real-time GEX app is part of the membership.
+See the membership
+Videos are added to your library as they're recorded.
+EVERY WAY IT TEACHES
+More than videos.
+7 years of trading,
+11 lessons.
+Most of them cost Yush money to learn, and most come with an interactive check.
+01
+Every day is a new day.
+02
+Consistency over big days.
+03
+Most traders fail from overconfidence and over-leverage.
+04
+Markets change. Your risk has to change with them.
+05
+You will lose. Cap the damage.
+06
+The market reflects your habits.
+07
+When you think it's time to scale up, you're probably wrong.
+08
+Respect the small wins.
+09
+Money won't fix your life. People will.
+10
+"I need to make $X today" is when you've lost.
+11
+If you can't accept losing, quit trading.
+Video lessons
+Per level, plus two bonus series. Videos are added to your library as they're recorded.
+L1
+2
+lessons
+L2
+1
+lesson
+L3
+2
+lessons
+L4
+7
+lessons
+L5
+4
+lessons
+Bonus
+3
+lessons
+Written lessons
+Interactive reading for Level 2's tools, with figures you can play with.
+Interactive assignments
+Quizzes, chart drills and mark-ups, scored as you go.
+The Get started ladder
+Get set up, then one rung per level, each with a checkpoint.
+L0
+Get set up
+L1
+L2
+L3
+L4
+L5
+AFTER YOUR FIRST WEEK
+Included
+A 30-minute
+1-on-1
+call with Yush after your first week
+Book it from your dashboard once you've had a week with the course. One call per course purchase.
+Video call
+Your first week
+Day 1 to
+7
+1
+2
+3
+4
+5
+6
+7
+You get the course
+Your call opens
+Y
+30-minute call with Yush
+Opens after day 7
+Ready to book
+Get the course
+›
+MEMBER REVIEWS
+How Yush teaches,
+in members’ words.
+Reviews of Yush's Discord membership on Whop, written before the course existed. Excerpts about the teaching, quoted word for word.
+5.0
+on Whop ·
+54
+reviews
+4.98
+average
+Review
+01
+/
+06
+Rated 5 out of 5.
+Member review
+“
+This is not a copy trading service. Yush teaches you to read the market yourself. ... I've re-watched the videos more times than I can count just to drill it into my head.
+”
+DH
+Dom Houghton
+Written
+6 months after purchase
+Rated 5 out of 5.
+Member review
+“
+yush's ability to teach something more complex in trading is pretty straight forward and easy to learn. he shows his trades, wins and losses, everytime.
+”
+C
+cey
+Written
+3 months after purchase
+Rated 5 out of 5.
+Member review
+“
+Been trading for 5 years now and the level of education and knowledge he shares is unmatched.
+”
+J
+Jakerami
+Written
+3 months after purchase
+Rated 5 out of 5.
+Member review
+“
+He basically covers two models that will help you navigate both unbalanced (trending) and balanced (choppy) conditions.
+”
+FB
+Francisco Balarezo
+Written
+2 weeks after purchase
+Rated 5 out of 5.
+Member review
+“
+Yush is a genuinely skilled trader who stays transparent and composed regardless of what the market is doing. ... he explains the exact reasoning and structure behind every setup so you actually learn what to look for yourself.
+”
+D
+Doc
+Written
+1 month after purchase
+Rated 5 out of 5.
+Member review
+“
+what seemed obscure before, has now been laid bare, with in depth and interactive learning materials.
+”
+G
+G_TradesFutures
+Written
+4 days after purchase
+Read all
+54
+member reviews on Whop
+(opens in a new tab)
+Excerpts from member reviews on Whop, written by members of the Discord membership. Everyone's experience is different, and trading involves risk.
+Rating as of
+November 11, 2026
+.
+Y
+About me
+Meet
+Yush
+.
+@TraderYush
+·
+Futures trader & order flow educator
+Ex-software engineer who blew accounts trading hope, then rebuilt everything around structure. Yush trades NQ and ES through prop firms and teaches the models in this course.
+Read my story
+@TraderYush
+on
+X
+(opens in a new tab)
+@TraderYush
+on
+YouTube
+(opens in a new tab)
+@traderyush_
+on
+Instagram
+(opens in a new tab)
+HOW IT WORKS
+After checkout:
+sign in, learn, book your call.
+The course · $499.99 once
+Membership
+·
+Optional
+01
+Buy
+Buy the course
+02
+Sign in
+03
+Learn
+04
+Call
+1-on-1 call
+05
+Add-on
+Add the membership
+Step
+01
+of
+05
+·
+The course
+Buy the course once
+No subscription, nothing to cancel.
+$499.99 one-time
+Lifetime access
+Checkout by Whop
+Step
+02
+of
+05
+·
+The course
+Sign in with Whop
+Use the Whop account you paid with. Your course unlocks the moment you sign in.
+One login
+No separate password
+Instant access
+Step
+03
+of
+05
+·
+The course
+Work through Levels 1 to 5
+At your own pace. Read first and the Get started ladder show you where to begin.
+Levels 1 to 5
+Interactive assignments
+Your own pace
+Step
+04
+of
+05
+·
+The course
+Book your 1-on-1 call with Yush
+A 30-minute video call on Google Meet for your questions on the lessons. Book it from your dashboard once you've had a week with the course. One call per course purchase.
+30 minutes, 1-on-1
+Bookable after 7 days
+Google Meet
+Step
+05
+of
+05
+·
+The membership
+Optional: add the membership
+Course owners can add it later for $149.99/month. Your course access stays the same either way.
+For course owners
+Cancel anytime
+Course access unchanged
+Checkout
+Whop
+The Yush Capital Course
+$499.99
+Billing
+One-time
+Renews
+Never
+Access
+Lifetime
+Pay
+$499.99
+Course purchased · lifetime access
+PRICING
+Buy the course once.
+Lifetime access.
+PLAN · THE COURSE
+Start here
+The Yush Capital Course
+List price
+$624.99
+20% off
+Now
+$499.99
+$499
+.99
+one-time
+What's included
+Levels 1 to 5 video lessons
+Videos are added to your library as they're recorded.
+Written lessons
+Interactive assignments
+Read first: lessons from 7 years of trading
+The Get started ladder
+A 30-minute 1-on-1 call with Yush after your first week
+Book it from your dashboard once you've had a week with the course. One call per course purchase.
+One-time payment
+Lifetime access
+Instant access via Whop
+Get the course on Whop
+›
+Every payment is final and non-refundable.
+Read the Refund Policy
+Checkout & billing by Whop
+Already own it?
+Log in
+Before you buy
+Try one of Yush's setups
+Read 54 member reviews on Whop
+(opens in a new tab)
+Ask Yush on X
+(opens in a new tab)
+PLAN · MEMBERSHIP
+Add-on
+Yush Capital Membership
+$149.99
+/
+month
+Billed
+monthly
+through Whop.
+What it adds
+Free 50K eval, every billing cycle
+Real-time GEX web app
+Discord community
+Live trading daily
+Weekly giveaways
+For course owners
+Cancel anytime
+Eval credit resets every renewal
+Own the course? Sign in to add it
+›
+Add-on for course owners
+The course teaches the read.
+The membership puts it to work.
+01
+Free 50K eval
+,
+Every renewal
+02
+GEX app
+,
+Real-time levels
+03
+Discord + live
+,
+Live trading daily
+04
+Giveaways
+,
+Every week
+01
+of
+04
+· The membership
+A free 50K eval, every renewal
+Every renewal unlocks one free 50K evaluation in your dashboard, at one of two partner prop firms (revealed inside). Pick the firm, agree to the no-refund terms, and your code is delivered usually within 24 hours.
+50K account
+One per renewal
+Code usually within 24 hours
+Your code covers the eval's first payment. Any later firm charges, like a renewal before you pass or an activation fee, are yours.
+02
+of
+04
+· The membership
+The real-time GEX web app
+Live dealer gamma levels for ES, NQ and GC: call wall, put wall, zero-gamma flip.
+ES, NQ and GC
+Walls and zero gamma
+Context, not signals
+03
+of
+04
+· The membership
+The Discord, with live trading daily
+The private members' Discord. Yush trades live there daily, and members post trade ideas before taking them.
+Live trading daily
+Post your trade ideas
+Joined through Whop
+04
+of
+04
+· The membership
+A giveaway for members, every week
+A weekly giveaway in the Discord, each with official rules on who can enter, the prize and how winners are chosen.
+Every week
+In the Discord
+Official rules for each one
+yushcapital.co/dashboard/evals
+LOADING
+...
+Working preview of the member eval dashboard: pick one of two partner prop firms (revealed inside) for this cycle's free 50K eval, agree to the no-refund terms, request it, then simulate a renewal to unlock the next one. No real codes are issued.
+Member reviews on Whop
+What members say.
+5.0
+on Whop ·
+54
+reviews
+“
+Yush is a great teacher and breaks down exactly what he is seeing before during and after trades live. It’s one thing to learn about these concepts from YouTube videos, but it’s another thing entirely to see it play out live with real money on the line.
+”
+A
+Andrew Minton
+Member review · Written
+4 months after purchase
+“
+If you're an intraday trader who wants to learn trading using volume profile, this is the Discord you want to be in. You gain the most by attending the NY sessions live.
+”
+M
+Mel
+Member review · Written
+1 month after purchase
+“
+real traders sharing real trades, discussing real challenges, and being transparent about both wins and losses.
+”
+M
+Matheus Rocha
+Member review · Written
+1 week after purchase
+Excerpts from member reviews on Whop, written by members of the Discord membership. Everyone's experience is different, and trading involves risk.
+Your path
+Where do you start?
+I'm new here
+I own the course
+I'm already a member
+Start with the course
+Buy the course once, for $499.99. Book your 30-minute 1-on-1 call with Yush from your dashboard after your first week.
+Every payment is final and non-refundable.
+Get the course on Whop
+›
+Compare the plans
+Add the membership when you want it
+Sign in with the Whop account you bought the course with, and the membership checkout opens.
+Sign in to add it
+›
+You keep the course
+A membership that started before the course launched includes the course for as long as it stays active. Just sign in.
+The 1-on-1 call comes with buying the course. If you cancel and join again later, you'll need the course like anyone else.
+Log in
+›
+What you can open
+The course
+Levels 1 to 5 and a 1-on-1 call with Yush
+$499.99 one-time, lifetime access
+then
+The membership
+The free eval, the GEX app, the Discord and live trading
+Opens once you own the course
+FAQ
+Everything you
+need to know.
+Still unsure? Ask
+Yush
+directly on X.
+Message
+@TraderYush
+(opens in a new tab)
+Q_01
+What exactly do I get?
+The course: $499.99 one-time, lifetime access to Levels 1 to 5 video lessons, written lessons, interactive assignments, Read first and the Get started ladder. It also comes with a 30-minute 1-on-1 call with Yush after your first week.
+Q_02
+Is this a signal service?
+Q_03
+What markets is this for?
+Q_04
+How does the 1-on-1 call work?
+Q_05
+What's your refund policy?
+Q_06
+Can I cancel?
+Q_07
+How do I log in?
+Q_08
+How do I join the Discord?
+Q_09
+Can I get the membership without the course?
+Q_10
+I'm already a member. Do I keep the course?
+Q_11
+How does the free eval work?
+Q_12
+Can I switch firms or redeem later?
+The thesis
+THE THESIS
+Most traders don't need another indicator. They need a read on who's trapped and a setup they can repeat. That's the course.
+Most
+traders
+don't
+need
+another
+indicator.
+They
+need
+a
+read
+on
+who's
+trapped
+and
+a
+setup
+they
+can
+repeat.
+That's
+the
+course.
+YUSH · FOUNDER
+SCROLL_TO_READ
+Session_open
+Start here.
+Read the flow yourself.
+Levels 1 to 5, from the first framework to real trade recaps, plus
+a 30-minute 1-on-1 call with Yush after your first week
+.
+Get the course
+›
+Member login
+Instant access
+·
+Lifetime access
+·
+Price
+$499.99 one-time (20% off $624.99)
+YUSH CAPITAL
+The full order flow course for NQ and ES futures: Levels 1 to 5 with lifetime access, plus a 30-minute 1-on-1 call with Yush after your first week. Built by Yush, who trades the course's setups live every day.
+The Order Flow Course
+Explore
+Course
+Reviews
+About
+How it works
+Pricing
+Membership
+FAQ
+Members
+Login
+Dashboard
+Legal
+Terms
+Refund policy
+Privacy
+Risk disclaimer
+Social
+X
+(opens in a new tab)
+YouTube
+(opens in a new tab)
+Instagram
+(opens in a new tab)
+Risk
+Trading futures involves substantial risk of loss and is not suitable for every investor. Past performance, including payouts shown on this site, is not indicative of future results. Nothing here is financial advice. Yush Capital is an education and tools provider, not a broker, adviser or prop firm.
+YUSH CAPITAL
+SESSION_END
+·
+© 2026 Yush Capital. Not financial advice.
+All systems operational

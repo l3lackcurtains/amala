@@ -1,0 +1,510 @@
+{
+  "slug": "yush",
+  "name": "Yush",
+  "show": "Yush Capital",
+  "streamSlot": "Mon–Fri · 9:30 AM–12:00 PM ET · NY morning only",
+  "accent": "#f87171",
+  "accentSoft": "rgba(248, 113, 113, 0.12)",
+  "tagline": "Ex-software engineer turned NQ/ES order-flow scalper — volume profile tells him where, delta and big trades tell him who's trapped.",
+  "summary": "Yush is a former software engineer who trades NQ and ES futures full-time through prop firms (Lucid, Tradeify, Take Profit Trader, Apex and others) and a personal account, and says prop firms have paid him over $2M. After years of options losses and a year and a half on ICT concepts, he rebuilt his trading on Auction Market Theory, volume profile and order flow. He builds areas of interest from four tools — market-generated levels, the RTH volume profile, big trades (NQ 75+, ES 200+ lots) and the delta profile — and trades two models: look-above/below-and-fail at the value edges in balance, and pullbacks into low-volume nodes in trend. He trades only the New York morning, takes 2–3 trades a day, and never holds into news.",
+  "oneLiner": "Map value with the volume profile, wait for price to reach an edge where two of four tools agree, then enter only when order flow shows absorption or trapped traders — fade failed breakouts in balance, buy LVN pullbacks in trend.",
+  "keyQuote": "Most traders don't need another indicator. They need a read on who's trapped and a setup they can repeat.",
+  "keyQuoteSource": "Yush Capital course site",
+  "stats": [
+    {
+      "label": "Videos analyzed",
+      "value": "54"
+    },
+    {
+      "label": "Interviews read",
+      "value": "4"
+    },
+    {
+      "label": "Hard rules",
+      "value": "54"
+    },
+    {
+      "label": "Setup models",
+      "value": "2"
+    },
+    {
+      "label": "Stated payouts",
+      "value": "$2M+"
+    }
+  ],
+  "highlights": [
+    "An area of interest needs 2 of 4 tools — market levels, volume profile, big trades, delta profile",
+    "No return to the level, no trade — and never trade the middle of the range",
+    "Balance: look-above/below-and-fail at the value edge, enter on the reclaim, target the other side of value",
+    "Trend: let it break out, then enter the pullback into the low-volume node — never the breakout itself",
+    "Daily loss set before the open, split into 2–3 losing trades — the last one ends the day",
+    "Average up, never down; never let a winning trade go red"
+  ],
+  "sections": [
+    {
+      "id": "strategy",
+      "title": "Strategy Playbook",
+      "file": "strategy",
+      "lead": "Auction theory, the four AOI tools, both order-flow models, the pre-market plan and regime filters."
+    },
+    {
+      "id": "rules",
+      "title": "Trading Rules",
+      "file": "rules",
+      "lead": "Setup, sizing, management, daily-risk, timing and prop-firm rules in his own words."
+    },
+    {
+      "id": "psychology",
+      "title": "Psychology & Mindset",
+      "file": "psychology",
+      "lead": "From blown accounts to structure: accepting losses, expectations, tilt and treating props like a business."
+    }
+  ],
+  "videos": [
+    {
+      "title": "Read Market Structure Like A PRO (Auction Market Theory",
+      "url": "https://www.youtube.com/watch?v=vDEZPfght-U",
+      "date": "2026-11-15",
+      "type": "video",
+      "takeaway": "Auction Market Theory from zero: price moves until one side stops showing up. Excess vs poor highs, balance vs imbalance, and the three morning questions — where is value, are we opening inside or outside it, is the new price accepted or rejected."
+    },
+    {
+      "title": "Trading Was Hard Until I Stopped Reading Candlesticks",
+      "url": "https://www.youtube.com/watch?v=AQF7m0oOrpo",
+      "date": "2026-11-08",
+      "type": "video",
+      "takeaway": "What's inside a candle: every trade has a buyer and seller, price moves on urgency (aggressive market orders vs passive limits). Level 1 vs Level 2 vs order flow, and why he now uses candles only as a clock."
+    },
+    {
+      "title": "Live Trading NQ & ES Futures | Order flow",
+      "url": "https://www.youtube.com/watch?v=05uA3UQ2XI0",
+      "date": "2026-10-30",
+      "type": "live",
+      "takeaway": "Choppy gap-down session at monthly lows: sets a hard daily loss limit and no profit target, quits a range after being chopped in it, skips an LAF whose value area was too narrow for 2R, and wins back the day on an LBF at the developing VAL with zero-gamma confluence."
+    },
+    {
+      "title": "Would you buy or sell? #trading #daytrading #orderflow #volumeprofile",
+      "url": "https://www.youtube.com/watch?v=XSTpurOlmUw",
+      "date": "2026-10-29",
+      "type": "short",
+      "takeaway": "Buy-or-sell quiz: price breaks under VAL, a big negative delta bar prints with no follow-through, enter on the close back above VAL, stop just below, target VAH — an LBF."
+    },
+    {
+      "title": "How to trade FVG with orderflow #trading #daytrading",
+      "url": "https://www.youtube.com/watch?v=QRBzMmJoOmg",
+      "date": "2026-10-27",
+      "type": "short",
+      "takeaway": "Trading an FVG with order flow: treat it as a low-volume node, wait for the pullback, and require proof — aggression, absorption or trapped traders — before entering; stop beyond the LVN, target the prior high."
+    },
+    {
+      "title": "The Ultimate Guide to Orderflow Delta Profile",
+      "url": "https://www.youtube.com/watch?v=P13Q2hoztxo",
+      "date": "2026-10-25",
+      "type": "video",
+      "takeaway": "Delta = ask volume minus bid volume — it measures aggression, not 'more buyers'. How the delta profile shows absorption (aggression with no result), aligned aggression that gets paid, and trapped traders at the value edges."
+    },
+    {
+      "title": "This one orderflow strategy has made me over $200,000 from one prop firm #daytrading #futurestrading",
+      "url": "https://www.youtube.com/watch?v=fnFkCkztccg",
+      "date": "2026-10-17",
+      "type": "short",
+      "takeaway": "The look-below-and-fail setup explained: breakout sellers FOMO under VAL, big buyers absorb them, the candle closes back above VAL — enter, stop under the swing low, target the other side of balance and VAH."
+    },
+    {
+      "title": "Live Trading NQ & ES Futures | Order flow | yushcapital.co",
+      "url": "https://www.youtube.com/watch?v=iWe0GGj9_3Y",
+      "date": "2026-10-13",
+      "type": "live",
+      "takeaway": "Pre-market lesson on anchoring the larger-timeframe volume profile to a range: extreme high, midpoint, extreme low, acceptance above prior value, and why A+ setups come only at the extremes."
+    },
+    {
+      "title": "How I Made $3,000 on Nasdaq Using Orderflow & GEX",
+      "url": "https://www.youtube.com/watch?v=8elta_G28QE",
+      "date": "2026-10-04",
+      "type": "video",
+      "takeaway": "Absorption at a put wall on an opening-drive up day: buyers defend the developing VAL repeatedly, negative delta fails to push lower, long only on the reclaim of the key level; targets value midpoint then VAH."
+    },
+    {
+      "title": "Don't Miss This Nasdaq Absorption Pattern",
+      "url": "https://www.youtube.com/watch?v=p7y_FGOZgV0",
+      "date": "2026-09-20",
+      "type": "video",
+      "takeaway": "Reading absorption with big trades + delta profile: the first stall gets your attention, the second failed push confirms, the third sweep of the highs that fails is the entry — trapped buyers fuel the break of structure."
+    },
+    {
+      "title": "How I Made $3,400 Trading the GEX Levels",
+      "url": "https://www.youtube.com/watch?v=fch_wNLxEQ0",
+      "date": "2026-09-08",
+      "type": "video",
+      "takeaway": "How a call wall works (dealer hedging, pinning vs fuel) and why you never trade a GEX level alone: an LAF at the value area high that lined up with the call wall, managed to POC then zero gamma."
+    },
+    {
+      "title": "Live Trading NQ & ES Futures | Order flow | yushcapital.co",
+      "url": "https://www.youtube.com/watch?v=GO-clL6YiE0",
+      "date": "2026-09-04",
+      "type": "live",
+      "takeaway": "NFP Friday before Labor Day: thin holiday volume, 'there is no right way to anchor the profile', leans long at weekly highs with higher lows, LAF short at VAH below zero gamma, and why ES/NQ alignment gives the best follow-through."
+    },
+    {
+      "title": "LAF Model live execution with gex confluence #orderflow #trading #futurestrading",
+      "url": "https://www.youtube.com/watch?v=qiadKAgJfsc",
+      "date": "2026-08-22",
+      "type": "short",
+      "takeaway": "LAF short at the value area high with zero gamma on both ES and NQ as confluence, risking just above the high of day."
+    },
+    {
+      "title": "Live Trading NQ & ES Futures | Order flow | yushcapital.co",
+      "url": "https://www.youtube.com/watch?v=Q84I7xDYsNs",
+      "date": "2026-08-21",
+      "type": "live",
+      "takeaway": "First stream with his own GEX platform: call wall, put wall and zero gamma as confluence, put-wall absorption long, won't long back into the range until zero gamma is reclaimed and held, LAF short at the developing VAH."
+    },
+    {
+      "title": "Teaching my little brother how to trade futures  | yushcapital.co",
+      "url": "https://www.youtube.com/watch?v=CsfJpNSL6Kk",
+      "date": "2026-07-31",
+      "type": "live",
+      "takeaway": "Three-hour session teaching his brother from zero: market structure, balance vs trend, value area edges, trapped traders, planning stop and target first, tilt and revenge trading, and quitting a range after being wrong in it."
+    },
+    {
+      "title": "Live Trading NQ & ES Futures | Order flow | yushcapital.co",
+      "url": "https://www.youtube.com/watch?v=lAqRPLhLAwM",
+      "date": "2026-07-29",
+      "type": "live",
+      "takeaway": "FOMC day: no bias, wait for the reaction after the 2:00 release and 2:30 presser, why the thin news-time book makes technicals unreliable, ES stops usually five points or less, and micros when an idea needs a wide stop."
+    },
+    {
+      "title": "Trapped buyers at the highs for 3R trade on ES #daytrading #orderflow #futurestrading",
+      "url": "https://www.youtube.com/watch?v=ZWVEjxqMSS8",
+      "date": "2026-07-25",
+      "type": "short",
+      "takeaway": "Short into a low-volume area at call resistance where big buys came in and stalled — trapped buyers at the highs."
+    },
+    {
+      "title": "July 17th Live Trading NQ AND ES  | yushcapital.co",
+      "url": "https://www.youtube.com/watch?v=otyCwmA5TQc",
+      "date": "2026-07-17",
+      "type": "live",
+      "takeaway": "Huge overnight range day on OPEX Friday: overnight profile for the expansion, monthly lows as the key level, lower weight on volume from the expired contract, size down with wider stops, add to winners — '2 for 7 and green'."
+    },
+    {
+      "title": "3R on a Nasdaq trade within few minutes #futurestrading #scalping #orderflow #volumeprofile",
+      "url": "https://www.youtube.com/watch?v=7YMK6SOwi2A",
+      "date": "2026-07-16",
+      "type": "short",
+      "takeaway": "A failed extension below balance, then the rotation back to the other side of balance on NQ."
+    },
+    {
+      "title": "2R Trade - LBF Model #futurestrading #scalping #orderflow #volumeprofile #daytrader",
+      "url": "https://www.youtube.com/watch?v=DhILc7x2sY0",
+      "date": "2026-07-12",
+      "type": "short",
+      "takeaway": "Live execution of a look-below-and-fail long."
+    },
+    {
+      "title": "3R trade with $100 drawdown trading ES #futurestrading #scalping #orderflow #daytrading",
+      "url": "https://www.youtube.com/watch?v=UpVXN7EN2fw",
+      "date": "2026-07-09",
+      "type": "short",
+      "takeaway": "ES short above which big trades showed buy-side absorption, stop just above those prints, targeting new lows."
+    },
+    {
+      "title": "July 6th Pre Market Stream  | yushcapital.co",
+      "url": "https://www.youtube.com/watch?v=7dTSRKTjlac",
+      "date": "2026-07-06",
+      "type": "live",
+      "takeaway": "Monday pre-market plan: anchored profiles from the prior range and breakout, higher-timeframe LBF, ISM caution, and the rule to trade only the extremes of the week's range."
+    },
+    {
+      "title": "2.5R trade using volume profile & orderflow #futurestrading #scalping #orderflow #volumeprofile",
+      "url": "https://www.youtube.com/watch?v=AK4ACEJps74",
+      "date": "2026-07-03",
+      "type": "short",
+      "takeaway": "Long after selling pours into a little volume pocket but price refuses to go lower — absorption read with volume profile and delta."
+    },
+    {
+      "title": "Real Time Absorption Example on Nasdaq - Sellers Getting Trapped",
+      "url": "https://www.youtube.com/watch?v=jEzuPegZFhM",
+      "date": "2026-07-01",
+      "type": "video",
+      "takeaway": "Real-time NQ absorption at the lows: repeated big orders hitting the bid with no downside follow-through. Uses NQ absorption as confirmation to add to an ES position, but notes a long against the morning trend should wait for a reclaim."
+    },
+    {
+      "title": "Live Trading NQ & ES Futures | Order flow | yushcapital.co",
+      "url": "https://www.youtube.com/watch?v=9aNP10gBRb4",
+      "date": "2026-06-30",
+      "type": "live",
+      "takeaway": "Grinding trend-day stream with a Discord member and no trades taken: why LBF/LAF don't work in trends, real breakouts leave LVNs and don't come back, higher timeframe always wins, and patience as the number-one skill."
+    },
+    {
+      "title": "$3000 in seconds with absorption setup #futurestrading #trading #orderflow #scalping",
+      "url": "https://www.youtube.com/watch?v=eT-HIzQOA7k",
+      "date": "2026-06-21",
+      "type": "short",
+      "takeaway": "Absorption setup clip (no captions available)."
+    },
+    {
+      "title": "4.2R Trade, max drawdown on trade $140, profit $2,200 #futurestrading #orderflowtrading #scalping",
+      "url": "https://www.youtube.com/watch?v=AfTtZagX5Bg",
+      "date": "2026-06-19",
+      "type": "short",
+      "takeaway": "Live management: enter, move the stop to green quickly, trail it up behind the move and cut into strength."
+    },
+    {
+      "title": "June 18th Pre-Market Stream  | yushcapital.co",
+      "url": "https://www.youtube.com/watch?v=j_70jtO38Uo",
+      "date": "2026-06-18",
+      "type": "live",
+      "takeaway": "Pre-market plan the day after FOMC (quad witching, rollover): D-1/D-2 value levels, weekly POC, round numbers validated by reaction count, traps at overnight highs and lows, and widening stops when VIX is above 20."
+    },
+    {
+      "title": "Learn Volume Profile in 5 Minutes",
+      "url": "https://www.youtube.com/watch?v=GEbUj2vI2XI",
+      "date": "2026-06-14",
+      "type": "video",
+      "takeaway": "Volume profile in five minutes: POC, value area (70%), VAH/VAL, HVNs as battlegrounds and LVNs as trapdoors. Setup 1: value-area false breakout (stop above the wick, TP POC then VAL). Setup 2: LVN retest in trend."
+    },
+    {
+      "title": "2R trade with live risk management. #futurestrading #orderflow #scalping #trading",
+      "url": "https://www.youtube.com/watch?v=zUpmgTwUK7U",
+      "date": "2026-06-13",
+      "type": "short",
+      "takeaway": "Short into low-volume pockets with live risk management: add only after the rejection holds, then pull the stop to green so the position can't come back."
+    },
+    {
+      "title": "LVN 2R Trade with risk management #daytrading #futurestrading #scalping #orderflow",
+      "url": "https://www.youtube.com/watch?v=zw4blFiaa5A",
+      "date": "2026-06-11",
+      "type": "short",
+      "takeaway": "LVN long with a starter position, adding only after price pushes aggressively through the trigger level, then taking partial profits."
+    },
+    {
+      "title": "PPI Day Trading Game Plan  | yushcapital.co",
+      "url": "https://www.youtube.com/watch?v=pCmrsXoHFiM",
+      "date": "2026-06-11",
+      "type": "live",
+      "takeaway": "PPI-day game plan: read the RTH range sequence (inside day after expansion), anchor the balance profile, validate levels by 30-minute reactions and big trades, and the first-30-minutes rule — only trade the pre-marked areas."
+    },
+    {
+      "title": "Making $2,300 in two minutes with a plan #daytrading #futurestrading #scalping #orderflow",
+      "url": "https://www.youtube.com/watch?v=PR5b39BwzRE",
+      "date": "2026-06-07",
+      "type": "short",
+      "takeaway": "Short off a pre-planned higher-timeframe zone as selling steps in, cut quickly into the move."
+    },
+    {
+      "title": "Quick scalp for a move to new high of day #scalping #futurestrading #trading #orderflow",
+      "url": "https://www.youtube.com/watch?v=sEcsi68m_sI",
+      "date": "2026-06-05",
+      "type": "short",
+      "takeaway": "Buy-stop scalp for a quick push to a new high of day."
+    },
+    {
+      "title": "Live Trading NQ & ES Futures | Order flow | yushcapital.co",
+      "url": "https://www.youtube.com/watch?v=i5KLs6MsRtw",
+      "date": "2026-06-04",
+      "type": "live",
+      "takeaway": "Afternoon stream with a guest: why he moved from MotiveWave to Deepcharts, an LVN retest that was also a gamma level, LAF after an opening drive, and 'market tuition' from his early options and averaging-down years."
+    },
+    {
+      "title": "4R trade LIVE with LVN Model #futurestrading #orderflow #scalping #trading",
+      "url": "https://www.youtube.com/watch?v=UeBOsdL6u6E",
+      "date": "2026-05-31",
+      "type": "short",
+      "takeaway": "LVN model live: price tests the edge of the LVN, big trades on the bid get trapped, limit in, go to breakeven and trail the target up."
+    },
+    {
+      "title": "Making $13,000 off trapped selling. #orderflow #scalping #trading #daytrading #futurestrading #nq",
+      "url": "https://www.youtube.com/watch?v=ShdjTGI4FP8",
+      "date": "2026-05-27",
+      "type": "short",
+      "takeaway": "Adding into trapped selling at the lows with a wider stop and high of day as the target."
+    },
+    {
+      "title": "Making $3000 in 30 seconds. #futurestrading #trading #scalping #orderflow",
+      "url": "https://www.youtube.com/watch?v=7-Emv8xMoLU",
+      "date": "2026-05-24",
+      "type": "short",
+      "takeaway": "Long as ES and NQ dip back into low-volume pockets; requires an aggressive push through the trigger level or he cuts it early."
+    },
+    {
+      "title": "3R live on stream with zero drawdown #trading #futurestrading #scalping #orderflow",
+      "url": "https://www.youtube.com/watch?v=emWtYikB474",
+      "date": "2026-05-21",
+      "type": "short",
+      "takeaway": "Heavy selling and big bid fills at the overnight low with no downside progress — waits for aggression to reclaim before entering, risk just over five points."
+    },
+    {
+      "title": "How I made $36k on stream #futurestrading #trading #scalping #propfirm",
+      "url": "https://www.youtube.com/watch?v=QegR8xbsoW0",
+      "date": "2026-05-17",
+      "type": "short",
+      "takeaway": "Yesterday's look-under-and-reclaim level flips from support to resistance; short when aggressive sellers return to it."
+    },
+    {
+      "title": "Live Trading NQ & ES Futures | Order flow | yushcapital.co",
+      "url": "https://www.youtube.com/watch?v=TWxuWaydoJY",
+      "date": "2026-05-13",
+      "type": "live",
+      "takeaway": "All-time-high grind day: no shorting ATHs, LVN pullback longs only with good R:R, a voided trade stays void, tight absorption scalps, and capping trades per day as the cure for overtrading."
+    },
+    {
+      "title": "Treat props like a business #propfirm #futurestrading #trading #trading",
+      "url": "https://www.youtube.com/watch?v=-1Mz51onFsM",
+      "date": "2026-05-12",
+      "type": "short",
+      "takeaway": "Treat props like a small business: payouts are revenue, evals are expenses, funded accounts are inventory, a cash buffer is working capital — and pay yourself a fixed amount."
+    },
+    {
+      "title": "Why I switched to orderflow #futurestrading #orderflow #ictconcepts #daytrading #stockmarket",
+      "url": "https://www.youtube.com/watch?v=klYjmp60t_w",
+      "date": "2026-05-10",
+      "type": "short",
+      "takeaway": "Why he left ICT after a year and a half with no payout: frameworks that explain the past perfectly fail in real time. Order flow answers one question — what is actually printing behind the candle?"
+    },
+    {
+      "title": "Live Trading NQ & ES Futures | Order flow | yushcapital.co",
+      "url": "https://www.youtube.com/watch?v=Lsa6uOrfAnQ",
+      "date": "2026-05-08",
+      "type": "live",
+      "takeaway": "NFP day at all-time highs: weekly RTH profile levels, the 30-second ORB as a pivot not a trigger, two losing ATH shorts and the lesson 'don't short all-time highs — I faded my system'."
+    },
+    {
+      "title": "How to spot absorption using delta profile #trading #futurestrading #scalping #orderflow",
+      "url": "https://www.youtube.com/watch?v=IPWpfnMcoBY",
+      "date": "2026-05-06",
+      "type": "short",
+      "takeaway": "Spotting absorption on the delta profile: heavy negative delta inside an overnight cluster with price stuck. Two ways to play it — aggressive sell stop below, or wait for the look-under to fail and buy the reclaim (Model 2)."
+    },
+    {
+      "title": "A+ setup recap from stream #trading #futurestrading #orderflow",
+      "url": "https://www.youtube.com/watch?v=wKKtRkGJMXA",
+      "date": "2026-04-29",
+      "type": "short",
+      "takeaway": "A+ setup recap: ES long on a reclaim with a slightly wider stop, targeting the other side of the range."
+    },
+    {
+      "title": "Live Trading NQ & ES Futures | Trading FOMC | Order flow | Apr 29th",
+      "url": "https://www.youtube.com/watch?v=HyU62IlYkY8",
+      "date": "2026-04-29",
+      "type": "live",
+      "takeaway": "FOMC afternoon: flat into the 2:30 Powell presser, trades the stronger index long and the weaker short when ES and NQ diverge, reads a reloading seller on the DOM — 'AM is king'."
+    },
+    {
+      "title": "A+ setup yielding over six figures #daytrading #futurestrading #orderflow #tradingstrategy",
+      "url": "https://www.youtube.com/watch?v=q1Sb6IBS33U",
+      "date": "2026-04-27",
+      "type": "short",
+      "takeaway": "A+ setup in real time: volume built in a cluster with no expansion lower, short into the low-volume pockets above where buyers got trapped."
+    },
+    {
+      "title": "Live Trading NQ & ES Futures | Order flow | Apr 23th",
+      "url": "https://www.youtube.com/watch?v=QCcQmsjWb-I",
+      "date": "2026-04-23",
+      "type": "live",
+      "takeaway": "Personal account plus eval copy: DOM walkthrough (stacking/pulling, fills column, session delta), averaging up never down, starting on micros after hitting the daily loss limit the day before, and inside-day chop."
+    },
+    {
+      "title": "Live trading with no drawdown entry #trading #daytrading #futurestrading",
+      "url": "https://www.youtube.com/watch?v=sIX6_eYvido",
+      "date": "2026-04-22",
+      "type": "short",
+      "takeaway": "A short timed off order flow with almost no drawdown."
+    },
+    {
+      "title": "Live Trading NQ & ES Futures | Order flow | Apr 21th",
+      "url": "https://www.youtube.com/watch?v=5C8Wx_oqfHA",
+      "date": "2026-04-21",
+      "type": "live",
+      "takeaway": "'Pass an eval live' challenge: daily risk set before the open, default 20-point NQ stops, LAF definition, exhaustion plays, sitting out the minutes before 10:00 news, and trading trailing-drawdown props differently."
+    },
+    {
+      "title": "Live Trading NQ & ES Futures | Order flow | Apr 20th",
+      "url": "https://www.youtube.com/watch?v=ta0J2nAv2oA",
+      "date": "2026-04-20",
+      "type": "live",
+      "takeaway": "Personal live account: defines a daily loss limit split into 2–3 red trades, explains both models (LBF/LAF in balance, LVN retest in trend), his template (levels indicator, delta profile, big trades 75/200), and sizing evals vs funded."
+    },
+    {
+      "title": "Live Trading NQ & ES Futures | Order flow | Apr 14th",
+      "url": "https://www.youtube.com/watch?v=LXINkzt6kIc",
+      "date": "2026-04-14",
+      "type": "live",
+      "takeaway": "Afternoon eval stream: the 9:30-anchored session profile, how LVNs form and what to want at them, absorption vs trapped traders on the delta profile, ES/NQ divergence, and 'always looking for 2R'."
+    },
+    {
+      "title": "Mental side of trading",
+      "url": "https://www.youtube.com/watch?v=GHimGe3iuo8",
+      "date": "2026-04-13",
+      "type": "short",
+      "takeaway": "The mental side: sleep, anxiety and profit targets are risk. Coming in needing a number for a payout has preceded every red day he's had."
+    }
+  ],
+  "articles": [
+    {
+      "title": "Yush's Strategy: Trading Trapped Buyers & Sellers with Order Flow (Chart Fanatics)",
+      "url": "https://www.chartfanatics.com/strategies/order-flow-strategy",
+      "date": "2026",
+      "takeaway": "Full written strategy: AOIs need 2 of 4 tools (market levels, volume profile, big trades NQ 75+/ES 200+, delta profile). Model 1 range — fade only the edges, TP1 midpoint then opposite value, breakeven after TP1. Model 2 trend — enter LVN pullbacks, scale into strength. 2–3 trades a day, never trade into momentum."
+    },
+    {
+      "title": "74% Win Rate Trader Shares His EXACT OrderFlow Strategy ($2M+ Payouts) — Chart Fanatics interview",
+      "url": "https://www.youtube.com/watch?v=hvyf6frvCcA",
+      "date": "2026-05-03",
+      "takeaway": "Whiteboard walk-through of the four AOI tools and both models, aggressive vs confirmation entries, value migration as 'a big part of my edge', never trading breakouts or into momentum, and a live NY session."
+    },
+    {
+      "title": "He Switched ICT Concepts For OrderFlow And Made $2M+ in Payouts — PropFirmTrader",
+      "url": "https://www.youtube.com/watch?v=3SoMtHNUeNU",
+      "date": "2026-03-16",
+      "takeaway": "Rules over setups: the daily loss limit is the rule that saved him the most money, stop after 2–3 losses, bench a firm after a red day, one contract per $1K of buffer, and 'most prop traders fail from expectations, not risk'."
+    },
+    {
+      "title": "TOP Ranked Futures Prop Trader with $2+ Million in Payouts — Words of Rizdom",
+      "url": "https://www.youtube.com/watch?v=29HfHgBQQmA",
+      "date": "2026-04-02",
+      "takeaway": "His story from software engineer to prop trader, why order flow gave the confirmation ICT never did, no cross-firm copy trading, eval spending caps, no edge in Asia, and building a skill that transfers to live markets."
+    },
+    {
+      "title": "The $17M+ Prop Firm Roundtable — Words of Rizdom",
+      "url": "https://www.youtube.com/watch?v=ps5In64-2So",
+      "date": "2026-04-23",
+      "takeaway": "Roundtable with other funded traders: risking 15–20 NQ points for 40–50+, adding to winners on micros, confidence-based sizing, vetting new prop firms, and 'a loss is just a pullback for new highs'."
+    },
+    {
+      "title": "Yush Capital — The Order Flow Course (yushcapital.co)",
+      "url": "https://yushcapital.co/",
+      "date": "2026-11",
+      "takeaway": "Course outline (auction theory → tools → template → LBF/LAF and LVN models → live recaps → GEX playbook), the five-box setup checklist, his story timeline, four operating principles and eleven lessons from seven years of trading."
+    }
+  ],
+  "profile": {
+    "instruments": [
+      "NQ",
+      "ES"
+    ],
+    "style": "intraday order-flow scalping — volume profile value edges + delta/big-trade confirmation",
+    "sessions": [
+      "NY open 9:30 AM",
+      "NY AM until ~12:00 PM"
+    ],
+    "firms": [
+      "Lucid",
+      "Tradeify",
+      "Take Profit Trader",
+      "Apex",
+      "FundedNext",
+      "Fundedseat"
+    ],
+    "niche": "trapped traders & absorption at value edges (LBF/LAF) and LVN pullbacks, with GEX as confluence"
+  },
+  "links": {
+    "youtube": "https://www.youtube.com/@TraderYush",
+    "site": "https://yushcapital.co/",
+    "siteLabel": "Yush Capital"
+  },
+  "sources": {
+    "category": "https://www.chartfanatics.com/strategies/order-flow-strategy",
+    "notes": "54/54 channel uploads catalogued (8 videos, 27 shorts, 19 live streams); 53 transcripts read (~209K words) plus 4 external interviews (~76K words); yushcapital.co course site and the Chart Fanatics strategy page read in full; researched 2026-11-18. Payout figures are his own claims and vary by source ($1.5M–$3M+)."
+  }
+}
